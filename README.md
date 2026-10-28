@@ -14,7 +14,8 @@ It is intended to be cited via a **Zenodo DOI** produced through the Zenodo–Gi
 integration (a release tag on this repository is archived by Zenodo as an immutable
 snapshot). The DOI is filled in after the first Zenodo-archived release:
 
-- **Archive DOI:** `10.5281/zenodo.XXXXXXX` (to be updated after the Zenodo release)
+- **Archive DOI (concept, all versions):** `https://doi.org/10.5281/zenodo.23735193`
+- **This release (v2.0.0):** `https://doi.org/10.5281/zenodo.23735194`
 
 The historical identifier `10.5281/zenodo.22876119` is provenance of an earlier local
 package only; nothing here is fetched from or depends on that older upload.
