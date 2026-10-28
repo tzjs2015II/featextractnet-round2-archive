@@ -1,0 +1,175 @@
+{
+  "protocol": "R2-THERMAL-REFERENCE-02-v2",
+  "protocol_version": "v2",
+  "module": "R2-THERMAL-FEM-02",
+  "mode": "v2_operator_fix",
+  "created_utc": "2026-10-22T16:15:15Z",
+  "config_sha256": "35464cf2357baf407e56f3266eeed175779656d32fb4b8cf5bb67da790816c0e",
+  "source_hashes": {
+    "src/fem_reference/__init__.py": "32affee2eda9846f578235d127ba82135ac629db0469332d668bdaff578f0fc7",
+    "src/fem_reference/geometry.py": "5c694a0aac1cd4c50be88d8c7f4f73a1a0f214afa9f1f9a7440ac14653d0ab96",
+    "src/fem_reference/fenics_solver.py": "004f87096e032552e2f0039c5ffd3e0fd84d53a2c77e0a0301c895adf2f2ce18",
+    "scripts/exp_r2_thermal_fem.py": "c6fff713ff5ceaa74aadb6d2f27ff75cf2c08466dcda83ad5e371fb7e57e343c",
+    "scripts/probe_r2_thermal_fem.py": "f5b609ff53c6590091d6bda474fc46a6ece322ba41b09868b1172a2df5db2937",
+    "scripts/sbatch/r2_thermal_fem.sbatch": "802aa5f0d82231f1eb488b117f345e14591f8bdafade0a5b15406cfb04d238ef"
+  },
+  "input_hashes": {
+    "geometry_spec": "9214c18a934dfddcf3dda09243f7fd434df24f605035e17ed361c7f93778d3d5",
+    "split_config": "6fa469f7dfa34748ccebf7903650b494c3e908033176a3d4f30ad7cecc853cfe",
+    "boundary_data": "e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26"
+  },
+  "python": "3.11.9",
+  "numpy": "2.4.4",
+  "fem_dependency_status": {
+    "dolfinx": false,
+    "ufl": false,
+    "basix": false,
+    "petsc4py": false,
+    "mpi4py": false,
+    "gmsh": false,
+    "isolated_environment": "pinnap-fem",
+    "isolation_command": "conda create -n pinnap-fem -c conda-forge fenics-dolfinx=0.8.0 python-gmsh mpi4py petsc4py pyvista numpy scipy  # requires network and explicit installation authorisation",
+    "all_present": false
+  },
+  "physics": {
+    "pressure_gauge_eps": 1e-08,
+    "domain": "square [-1,1]^2 minus a centred regular polygon hole",
+    "boundary_conditions": {
+      "walls_velocity": "u = v = 0 on both the outer square and the inner polygon",
+      "temperature": "T = 1 on the inner polygon, T = 0 on the outer square"
+    },
+    "rho": 1.0,
+    "cp": 1.0,
+    "g_beta": 1.0,
+    "T_ref": 0.0,
+    "mu": 0.00894427190999916,
+    "kappa": 0.00894427190999916,
+    "Ra": 100000.0,
+    "Pr": 1.0,
+    "Ra_identity": "Ra = rho^2 cp g_beta DeltaT L^3 / (mu kappa) with L=2, DeltaT=1",
+    "pressure": {
+      "meaning": "pressure enters only through its gradient",
+      "gauge": "mass-penalty zero-mean: add eps*integral(p*q); eps must be reported with true constraint div(u)=-eps*p and sensitivity; not exact gauge",
+      "gauge_alternative": "fixed reference DOF is allowed by the protocol but was replaced after an environment-specific BC issue; the mass penalty is an explicit gauge choice, not a physical force"
+    },
+    "sign_check": {
+      "convention": "y upward; buoyancy term +rho*g_beta*(T-T_ref) in the y-momentum equation",
+      "source_evidence": "paper/main.tex modelling assumptions; docs/P1_热场NS_PINN设计.md residual definitions; data boundary T=1 inner/T=0 outer; data velocity ~0 on all walls"
+    }
+  },
+  "geometries": {
+    "geometry_spec": "results/thermal_geometry_spec.json",
+    "split_config": "configs/splits_thermal.json",
+    "split_protocol": "protocol_A",
+    "boundary_data": "../../HeatTransferData.npy",
+    "boundary_n": 660,
+    "outer_n": 492,
+    "representative": {
+      "seven": 46,
+      "eight": 17,
+      "nine": 96
+    },
+    "pilot": 17,
+    "geometry_classes": {
+      "46": 7,
+      "17": 8,
+      "96": 9
+    }
+  },
+  "mesh": {
+    "type": "independent polar triangle mesh: radial rays from the domain centre between the polygon and the outer square",
+    "radial_distribution": "cosine",
+    "levels": [
+      {
+        "name": "h008",
+        "target_h": 0.08
+      },
+      {
+        "name": "h004",
+        "target_h": 0.04
+      },
+      {
+        "name": "h002",
+        "target_h": 0.02
+      }
+    ],
+    "probe": {
+      "n_theta": 32,
+      "n_radial": 10
+    },
+    "record": "node/element counts, actual h_max, boundary tags, area conservation, min triangle angle and edge ratios are written for every mesh"
+  },
+  "elements": {
+    "velocity": "P2 (Taylor-Hood)",
+    "pressure": "P1 (Taylor-Hood)",
+    "temperature": "P2",
+    "quadrature": "Dunavant degree-5 (7 points)",
+    "verified_by": "manufactured Stokes and advection-diffusion convergence; pressure nullspace; boundary probes"
+  },
+  "solver": {
+    "steady": true,
+    "nonlinear_method": "Picard (Oseen) iterations with under-relaxation",
+    "max_iterations": 200,
+    "relaxation": 0.7,
+    "convergence": {
+      "update_rel_tolerance": 1e-08,
+      "weak_residual_rel_tolerance": 1e-08,
+      "absolute_update_tolerance": 1e-12
+    },
+    "linear_solver": "scipy.sparse.linalg.spsolve (SuperLU)",
+    "stabilization": "none in this first review implementation; if a real pilot shows unresolved oscillation/divergence, record it as a blocker instead of claiming convergence or tuning test-set coefficients",
+    "continuation_gbeta": [
+      0.01,
+      0.1,
+      0.5,
+      1.0
+    ]
+  },
+  "acceptance_thresholds": {
+    "geometry": {
+      "inner_point_to_polygon_rms_max": 1e-09,
+      "outer_hausdorff_max": 1e-09,
+      "boundary_counts": {
+        "outer": 492,
+        "inner": 168
+      }
+    },
+    "boundary": {
+      "wall_velocity_max": 1e-12,
+      "temperature_inner_max_dev": 1e-12,
+      "temperature_outer_max_dev": 1e-12
+    },
+    "mesh": {
+      "area_relative_error": 1e-10,
+      "min_triangle_angle_deg": 1.0,
+      "max_edge_ratio": 50.0,
+      "quality_note": "threshold pre-registered for the independent polar probe mesh; production gmsh meshes must report their own quality and are not silently substituted"
+    },
+    "pressure": {
+      "constant_mode_null_residual_rel": 1e-10,
+      "pinned_value": 0.0
+    },
+    "manufactured": {
+      "stokes_velocity_l2_order_min": 2.5,
+      "stokes_pressure_l2_order_min": 1.5,
+      "energy_temperature_l2_order_min": 2.5,
+      "stokes_velocity_h1_order_min": 1.5,
+      "errors_must_decrease": true
+    },
+    "natural_convection": {
+      "weak_continuity_rel_residual_max": 1e-08,
+      "strong_momentum_l2_max": 1e-06,
+      "strong_energy_l2_max": 1e-06,
+      "wall_velocity_max": 1e-10,
+      "temperature_bc_max_dev": 1e-10,
+      "finite_all_fields": true,
+      "newton_reason_must_be_converged": true,
+      "mass_flux_relative_max": 1e-08,
+      "note": "a finite field or a Stokes pass is NOT natural-convection acceptance; all of these must hold, and no threshold may be tuned on test labels",
+      "weak_momentum_rel_residual_max": 0.01,
+      "weak_energy_rel_residual_max": 0.01,
+      "weak_residual_definition": "variational residual vector assembled at solution, all velocity/T Dirichlet rows zeroed; block norms relative to velocity/temperature L2 scales"
+    }
+  },
+  "note": "Implementation protocol snapshot only; no formal result is claimed by this file."
+}

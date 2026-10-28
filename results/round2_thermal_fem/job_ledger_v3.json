@@ -1,0 +1,112 @@
+{
+  "jobs": [
+    [
+      "51016",
+      "r2_fem_v2levels",
+      "COMPLETED",
+      "0:0",
+      "00:01:27",
+      "geom17 3h + actual support"
+    ],
+    [
+      "51020",
+      "r2_fem_v2reps2",
+      "COMPLETED",
+      "0:0",
+      "00:03:18",
+      "46/96 3h + actual support"
+    ],
+    [
+      "51021",
+      "r2_fem_v2me2",
+      "COMPLETED",
+      "0:0",
+      "00:00:20",
+      "model eval actual FEM refs"
+    ],
+    [
+      "51022",
+      "r2_fem_v2pilot2",
+      "COMPLETED",
+      "0:0",
+      "00:00:07",
+      "geom17 pilot final"
+    ],
+    [
+      "51023",
+      "r2_fem_eps",
+      "COMPLETED",
+      "0:0",
+      "00:00:12",
+      "eps summary 1e-9/1e-7"
+    ],
+    [
+      "51027",
+      "r2_fem_v3eps",
+      "COMPLETED",
+      "0:0",
+      "00:00:09",
+      "eps 1e-9/1e-7 support arrays"
+    ],
+    [
+      "51029",
+      "r2_fem_v3verify2",
+      "COMPLETED",
+      "0:0",
+      "00:00:08",
+      "final v3 probe 37 checks"
+    ],
+    [
+      "51030",
+      "r2_fem_v3modeleval",
+      "COMPLETED",
+      "0:0",
+      "00:00:22",
+      "model eval regenerated with current source hashes"
+    ],
+    [
+      "51028",
+      "r2_fem_v3verify",
+      "FAILED",
+      "1:0",
+      "00:00:08",
+      "pre-final probe, retained"
+    ],
+    [
+      "51026",
+      "r2_fem_v2verify4",
+      "COMPLETED",
+      "0:0",
+      "00:00:08",
+      "v2 final probe 37 checks"
+    ],
+    [
+      "50910",
+      "pinnap_r2fdtdconv",
+      "RUNNING",
+      "n/a",
+      "running",
+      "pre-existing FDTD untouched"
+    ]
+  ],
+  "source_hashes": {
+    "src/fem_reference/__init__.py": "32affee2eda9846f578235d127ba82135ac629db0469332d668bdaff578f0fc7",
+    "src/fem_reference/geometry.py": "5c694a0aac1cd4c50be88d8c7f4f73a1a0f214afa9f1f9a7440ac14653d0ab96",
+    "src/fem_reference/fenics_solver.py": "02d54782aa52b7aecc41f06d7bf2b82cd15d23f9fcc24add6fe5aa85f3bbb194",
+    "src/fem_reference/featextractnet_symmetric.py": "9f8d2acbd5a6441dbed2102f6d7a6d27d37669fe5ff1a4884f946a6ea44c02c7",
+    "scripts/exp_r2_thermal_fem.py": "5e82f85e86608f854f692a598ac35d77ec1bc2cfa30f21fa98aeb32c5bc40c64",
+    "scripts/probe_r2_thermal_fem.py": "2798c5fcad5343a151d12bc96d84a783af964fab0c44c322a34bac7de1c64b95",
+    "scripts/exp_r2_fem_model_eval.py": "2973caffdd5bea29806ffad700026a6609b134a43e69b322077ea4a263e50ddc",
+    "scripts/probe_r2_fem_model_eval.py": "f84fa42894b125a50ad85ec0b641fb07f133e83aeccfbc334568b94fbe1ca340",
+    "scripts/postprocess_r2_thermal_fem_acceptance.py": "27d4c4e4f1b42b953c1c951219ed674708fa80d31b97f272353d920270ccce81",
+    "scripts/sbatch/r2_thermal_fem.sbatch": "802aa5f0d82231f1eb488b117f345e14591f8bdafade0a5b15406cfb04d238ef",
+    "configs/r2_thermal_fem.json": "536329883ff523e1c0e66c6c7d4b06d2dd4350fbea1cdb7182bcc43f439e4978"
+  },
+  "archive_hashes": {
+    "results/round2_thermal_fem/archive_v1/FINAL_DELIVERY_v1.md": "3d8da5d10ee39a67ec4454c7165cba512da9e22316d962d138af2883b70e5b80",
+    "results/round2_thermal_fem/archive_v2_prepost/FINAL_DELIVERY_V2_prepost.md": "4d3db4d287d73a6cf561436e9efaaa271ed2cb8833767c384c88024eb9016c33",
+    "results/round2_thermal_fem/archive_v2_prepost/report_prepost.md": "3f711419b7c7440ba4ab6a13a55ae97681da6fad7c121ee904f95883b1ed377d",
+    "results/round2_thermal_fem/archive_v2_prepost/levels_geom17_prepost.json": "1fdb603bd2baef1bac27020a73917096c58f76559adada30264ba75e50909bf1",
+    "results/round2_thermal_fem/archive_v2_prepost/representatives_46_96_prepost.json": "afd14094d297361028afa98db59336098fec8cfd7f666a10a490de2ce7d87969"
+  }
+}

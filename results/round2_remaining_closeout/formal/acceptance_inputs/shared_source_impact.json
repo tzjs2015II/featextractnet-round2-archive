@@ -1,0 +1,56 @@
+{
+  "task": "R2-REMAINING-FINALIZE-03",
+  "created_local": "2026-10-27T09:46:25+08:00",
+  "current_source_hashes": {
+    "scripts/exp_thermal.py": {
+      "sha256": "1503c50b1e5044f8f51009d0d20a8fdf538d02c8b3a3a1b9df2aeff1f3fc50be",
+      "mtime": "2026-10-26T20:59:10+08:00"
+    },
+    "scripts/exp_ablation_thermal.py": {
+      "sha256": "73063f4c96905235ce194150934162b382a1dc1f2593bf7d19e25e41af15cf3b",
+      "mtime": "2026-10-26T21:03:45+08:00"
+    },
+    "scripts/exp_acoustic.py": {
+      "sha256": "c7dd60300fd7228f45586ca3a26fe2b64ea6fe0fe3692938d66c585c5cddc27d",
+      "mtime": "2026-10-27T09:41:09+08:00"
+    },
+    "scripts/exp_r2_pinn_thermal.py": {
+      "sha256": "15f30ad86b6121be873dc9bb4e95769390e38ecb926882f9ab71f2e7a2ce70df",
+      "mtime": "2026-10-26T21:04:03+08:00"
+    },
+    "src/models/featextractnet_variants.py": {
+      "sha256": "542c26a291bd0408f361938fc3a55c081a4d79813143bd5ee9fb4bb065de7854",
+      "mtime": "2026-10-21T12:01:31+08:00"
+    },
+    "src/models/featextractnet.py": {
+      "sha256": "9f8d2acbd5a6441dbed2102f6d7a6d27d37669fe5ff1a4884f946a6ea44c02c7",
+      "mtime": "2026-10-21T10:54:37+08:00"
+    },
+    "src/models/unified/cond_mlps.py": {
+      "sha256": "cae7f227efd4e8959d3985d7ff0314feb5c4cd20037f73d6c258d2a53ba80540",
+      "mtime": "2026-10-21T11:20:16+08:00"
+    },
+    "src/models/unified/unified_net.py": {
+      "sha256": "ab84a44958e5c98318a9ff9fd622d93b0770000c7fbb75b724eebbf190db5b5e",
+      "mtime": "2026-10-21T11:20:01+08:00"
+    },
+    "src/models/baselines/transolver_official/adapter.py": {
+      "sha256": "3ac5a12eaea4e7e95a4bad79cffe2829764fbebe4a76c21edf04382345ed7af4",
+      "mtime": "2026-10-26T21:01:00+08:00"
+    }
+  },
+  "observed_implementation_versions": [
+    "None",
+    "R2-IMPL-01B",
+    "R2-IMPL-04B"
+  ],
+  "group_version_match": true,
+  "conclusions": [
+    "Saved checkpoints are state_dict artifacts; later code changes do not rewrite existing checkpoint files.",
+    "Old 0-2 metrics are retained read-only and were not re-evaluated after shared-code changes; current code is not claimed to reproduce old test values bitwise.",
+    "New 3-4 runs used the current implementations; group_manifest records source metric hashes, params, val-best and protocol signatures.",
+    "exp_acoustic.py was edited for FNO/UNO fixed-source-primary/steps guards after the 66 acoustic runs; existing acoustic checkpoints/metrics were not overwritten or re-evaluated.",
+    "Remote featextractnet_variants.py/featextractnet.py/cond_mlps.py/unified_net.py were synchronized during recovery; successful saved weights remained untouched.",
+    "Transolver adapter changed B2N acceptance before 51492; separate transolver_source_audit.json records preflight vs final SHA and the lack of an embedded training SHA."
+  ]
+}

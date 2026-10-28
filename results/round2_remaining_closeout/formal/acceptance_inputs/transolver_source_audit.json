@@ -1,0 +1,255 @@
+{
+  "task": "R2-REMAINING-FINALIZE-03",
+  "created_local": "2026-10-27T09:46:13+08:00",
+  "preflight_job": "51482",
+  "training_job": "51492",
+  "training_started": "2026-10-26T21:01:13+08:00",
+  "training_finished": "2026-10-26T21:33:29+08:00",
+  "preflight_adapter_sha256": "c39a448e6d544031fb0d823953fe4e35e30fee45b0016d93f591983a926d62df",
+  "final_adapter_sha256": "3ac5a12eaea4e7e95a4bad79cffe2829764fbebe4a76c21edf04382345ed7af4",
+  "adapter_sha256_changed": true,
+  "adapter_mtime": "2026-10-26T21:01:00+08:00",
+  "final_adapter_source": "src/models/baselines/transolver_official/adapter.py",
+  "behavior_change": "adapter accepts production [B,2,N] by transpose to [B,N,2] and returns [B,4,N]; preflight used [B,N,2]. Official Transolver model and config unchanged.",
+  "preflight_input_shape": [
+    4,
+    5000,
+    2
+  ],
+  "formal_runner_input_shape": [
+    4,
+    2,
+    5000
+  ],
+  "formal_metrics_model_label": "transolver",
+  "formal_n_seeds": 5,
+  "formal_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "training_source_sha_binding": "metrics do not embed a source-file SHA; final adapter SHA is inferred from job chronology (adapter mtime precedes 51492 start). This is not cryptographic binding.",
+  "preflight_config_sha256": "ddf52bceac3913623a03a9a6110685791349e2eaaec10d6bae667730b75f0d46",
+  "current_config_sha256": "d3fdda7a1db2afcfea211493a0f29a1138b39e6e1db03c6de2bd9e7ee2db2e46",
+  "checkpoint_validation": {
+    "n": 5,
+    "all_loaded": true,
+    "all_epoch_match": true,
+    "all_val_match": true,
+    "items": [
+      {
+        "metrics": "results/round2_remaining_closeout/formal/transolver/transolver/seed0/metrics_seed0.json",
+        "checkpoint": "results/round2_remaining_closeout/formal/transolver/transolver/seed0/checkpoint_best.pth",
+        "loaded": true,
+        "checkpoint_sha256": "c3503d5c4a9bb7aeb4f5a6950e98bbdb50d90ff69afc0b74c62f2b203a3f37c6",
+        "checkpoint_epoch": 500,
+        "checkpoint_val_score": 0.04462453141216402,
+        "metrics_val_epoch": 500,
+        "metrics_val_score": 0.04462453141216402,
+        "epoch_match": true,
+        "val_match": true,
+        "state_tensors": 109,
+        "state_numel": 1805260,
+        "state_finite": true,
+        "metrics_params": 1805260,
+        "params_match": true
+      },
+      {
+        "metrics": "results/round2_remaining_closeout/formal/transolver/transolver/seed1/metrics_seed1.json",
+        "checkpoint": "results/round2_remaining_closeout/formal/transolver/transolver/seed1/checkpoint_best.pth",
+        "loaded": true,
+        "checkpoint_sha256": "2f41e9857134250278cfbeb10b88815012b8224a58057a922fcbb082c7cf819e",
+        "checkpoint_epoch": 325,
+        "checkpoint_val_score": 0.046017041193569634,
+        "metrics_val_epoch": 325,
+        "metrics_val_score": 0.046017041193569634,
+        "epoch_match": true,
+        "val_match": true,
+        "state_tensors": 109,
+        "state_numel": 1805260,
+        "state_finite": true,
+        "metrics_params": 1805260,
+        "params_match": true
+      },
+      {
+        "metrics": "results/round2_remaining_closeout/formal/transolver/transolver/seed2/metrics_seed2.json",
+        "checkpoint": "results/round2_remaining_closeout/formal/transolver/transolver/seed2/checkpoint_best.pth",
+        "loaded": true,
+        "checkpoint_sha256": "e462a3f3cbd12273f4e3db198c5d4d1b6489a5bf28cd263e1a2672c81e5a3879",
+        "checkpoint_epoch": 325,
+        "checkpoint_val_score": 0.04675759808895485,
+        "metrics_val_epoch": 325,
+        "metrics_val_score": 0.04675759808895485,
+        "epoch_match": true,
+        "val_match": true,
+        "state_tensors": 109,
+        "state_numel": 1805260,
+        "state_finite": true,
+        "metrics_params": 1805260,
+        "params_match": true
+      },
+      {
+        "metrics": "results/round2_remaining_closeout/formal/transolver/transolver/seed3/metrics_seed3.json",
+        "checkpoint": "results/round2_remaining_closeout/formal/transolver/transolver/seed3/checkpoint_best.pth",
+        "loaded": true,
+        "checkpoint_sha256": "57c06632afa64533e0aa5a40cb4d7a013149b12250aeaf973f5a41ebf17aef61",
+        "checkpoint_epoch": 450,
+        "checkpoint_val_score": 0.045170501832741496,
+        "metrics_val_epoch": 450,
+        "metrics_val_score": 0.045170501832741496,
+        "epoch_match": true,
+        "val_match": true,
+        "state_tensors": 109,
+        "state_numel": 1805260,
+        "state_finite": true,
+        "metrics_params": 1805260,
+        "params_match": true
+      },
+      {
+        "metrics": "results/round2_remaining_closeout/formal/transolver/transolver/seed4/metrics_seed4.json",
+        "checkpoint": "results/round2_remaining_closeout/formal/transolver/transolver/seed4/checkpoint_best.pth",
+        "loaded": true,
+        "checkpoint_sha256": "c614fe7669d178ca2454c90b7157474132cbb02f0b16d1c1c341dc4ca6f3cbdf",
+        "checkpoint_epoch": 500,
+        "checkpoint_val_score": 0.04618703641797829,
+        "metrics_val_epoch": 500,
+        "metrics_val_score": 0.04618703641797829,
+        "epoch_match": true,
+        "val_match": true,
+        "state_tensors": 109,
+        "state_numel": 1805260,
+        "state_finite": true,
+        "metrics_params": 1805260,
+        "params_match": true
+      }
+    ]
+  },
+  "preflight_all_pass": true,
+  "formal_summary": {
+    "re": {
+      "mean": {
+        "u": 0.07692762902851151,
+        "v": 0.05705616036634355,
+        "p": 0.020470042652902025,
+        "T": 0.018936134076074935
+      },
+      "std": {
+        "u": 0.0011664440720036541,
+        "v": 0.0013549144181355384,
+        "p": 0.0009927769552339327,
+        "T": 0.0008572021071636089
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "mae": {
+      "mean": {
+        "u": 0.0027226986929058603,
+        "v": 0.003389301999372492,
+        "p": 0.002393471108631148,
+        "T": 0.004291281504047362
+      },
+      "std": {
+        "u": 0.00015091649709581933,
+        "v": 0.00020487635337850183,
+        "p": 0.0003276473452531349,
+        "T": 0.0005670649716791791
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "max_err": {
+      "mean": {
+        "u": 0.04622165285050869,
+        "v": 0.08951156901195645,
+        "p": 0.03872873779386282,
+        "T": 0.09231419801712035
+      },
+      "std": {
+        "u": 0.0010846530719463875,
+        "v": 0.0031558430806915582,
+        "p": 0.0024807614946987665,
+        "T": 0.00714697243143389
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "re_bd": {
+      "mean": {
+        "u": null,
+        "v": null,
+        "p": 0.03553036903491017,
+        "T": 0.02143844062095097
+      },
+      "std": {
+        "u": null,
+        "v": null,
+        "p": 0.0006988121903325464,
+        "T": 0.002037688019628862
+      },
+      "n_per_field": {
+        "u": 0,
+        "v": 0,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "mae_bd": {
+      "mean": {
+        "u": 0.002087135099515335,
+        "v": 0.0038731951796098277,
+        "p": 0.00446487364937658,
+        "T": 0.004641600457539704
+      },
+      "std": {
+        "u": 0.00018665323465575083,
+        "v": 0.0008265252444541913,
+        "p": 0.00030341379723308965,
+        "T": 0.0005129816157157007
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "max_bd": {
+      "mean": {
+        "u": 0.045053033083677294,
+        "v": 0.08563059505075217,
+        "p": 0.03872873779386282,
+        "T": 0.08932569384574889
+      },
+      "std": {
+        "u": 0.0009375642130237126,
+        "v": 0.004153869315347575,
+        "p": 0.0024807614946987665,
+        "T": 0.009663801772045422
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    }
+  },
+  "final_adapter_copy": "results/round2_remaining_closeout/formal/acceptance_inputs/transolver_final_adapter.py",
+  "final_adapter_copy_sha256": "3ac5a12eaea4e7e95a4bad79cffe2829764fbebe4a76c21edf04382345ed7af4",
+  "final_adapter_matches_current": true
+}

@@ -1,0 +1,130 @@
+{
+  "task": "R3.16 source trace and dataset provenance",
+  "protocol": "R2-PRESSURE-REFERENCE-CLOSURE-03",
+  "version": "v1",
+  "accessed_local": "2026-10-23T01:45:00+08:00",
+  "search_scope_and_boundaries": {
+    "allowed": "public paper HTML/PDF, public dataset URL, public code repositories, public bibliographic records",
+    "forbidden": "contacting authors/email/issues, uploading manuscript or private arrays, reading credentials",
+    "result": "no public generator code or exact historical gauge record located within finite search scope"
+  },
+  "sources": [
+    {
+      "id": "pipn_jcp_2022",
+      "type": "peer-reviewed paper",
+      "authors": [
+        "Ali Kashefi",
+        "Tapan Mukerji"
+      ],
+      "title": "Physics-informed PointNet: A deep learning solver for steady-state incompressible flows and thermal fields on multiple sets of irregular geometries",
+      "journal": "Journal of Computational Physics 468 (2022) 111510",
+      "doi": "10.1016/j.jcp.2022.111510",
+      "arxiv": "2202.05476v2",
+      "version_note": "arXiv v2, 27 Oct 2022; PDF creation metadata D:20221028011705Z",
+      "urls": [
+        "https://doi.org/10.1016/j.jcp.2022.111510",
+        "https://arxiv.org/abs/2202.05476v2",
+        "https://arxiv.org/pdf/2202.05476v2",
+        "https://arxiv.org/html/2202.05476v2"
+      ],
+      "local_evidence": [
+        {
+          "path": "source_evidence/pipn_2202.05476v2.pdf",
+          "sha256": "ea43817733e69d571e80792f0f930dafb59d0dd625264c773847f874a6cd2817"
+        },
+        {
+          "path": "source_evidence/pipn_pressure_excerpts.txt",
+          "sha256": "f472dff2765fc0e43f74102380df8e64045f4486ee4ee7a372beb7b129b9bf61"
+        }
+      ],
+      "findings": [
+        "Section 4.2 uses 135 generated geometries: 108 in Phi (train) and 27 in Psi (test); point clouds are subsets of finite-element mesh vertices.",
+        "Section 4.2 says: 'Note that no boundary condition is specified for the pressure in the loss function (Eq. 39).' This is the natural-convection inverse case, not the Section 4.1 manufactured-solution pressure BC.",
+        "Section 4.2 says the sparse data and inquiry-point validation use 'one of our high fidelity finite-element numerical solvers already used in the literature [34, 29, 28, 30, 31]'.",
+        "Section 4.1.2 separately studies a manufactured-solution pressure boundary condition; that condition must not be transplanted to Section 4.2.",
+        "Section 4.2 reports noisy/absent pressure-observation sensitivity but does not record a pressure gauge, reference node, zero-mean rule, or output re-scaling."
+      ],
+      "historical_reference_identified": false,
+      "why_not": "the paper names a class of in-house solvers but not the generating version, pressure gauge, reference node, or output postprocessing; no corresponding data-generation code was found"
+    },
+    {
+      "id": "github_pipn",
+      "type": "official public code repository",
+      "url": "https://github.com/Ali-Stanford/PhysicsInformedPointNet",
+      "commit": "dcce412d20f5bf44891c96b8d2415560be95718d",
+      "commit_date": "2025-06-27T09:19:53Z",
+      "readme_version": "README says Version 1.0; alternative/README.md documents installation and data download",
+      "tree_observed": [
+        "README.md",
+        "alternative/README.md",
+        "alternative/physics_informed_PointNet.py",
+        "figures"
+      ],
+      "findings": [
+        "The public repository contains the PIPN training/implementation script, not a data generator or FEM solver.",
+        "alternative/README.md step 5 states the dataset is a public NumPy array downloaded from https://web.stanford.edu/~kashefi/data/HeatTransferData.npy.",
+        "No pressure-gauge, solver-version, mesh, or generation-parameter file is present in the public tree."
+      ],
+      "data_url": "https://web.stanford.edu/~kashefi/data/HeatTransferData.npy",
+      "historical_reference_identified": false
+    },
+    {
+      "id": "public_dataset",
+      "type": "public dataset distribution",
+      "url": "https://web.stanford.edu/~kashefi/data/HeatTransferData.npy",
+      "download_checked_on_lab_server": true,
+      "downloaded_bytes": 32400128,
+      "downloaded_sha256": "e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26",
+      "local_canonical_data_sha256": "e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26",
+      "match": true,
+      "shape": [
+        135,
+        5000,
+        6
+      ],
+      "dtype": "float64",
+      "finding": "the public distribution is byte-identical to the local canonical HeatTransferData.npy; this identifies the data distribution but not the historical solver gauge"
+    },
+    {
+      "id": "cgp_2018",
+      "type": "arXiv paper cited by PIPN as one of the in-house FEM solver family",
+      "title": "A coarse grid projection method for accelerating heat transfer computations",
+      "author": "Ali Kashefi",
+      "arxiv": "1802.09744v2",
+      "url": "https://arxiv.org/abs/1802.09744v2",
+      "local_evidence": {
+        "path": "source_evidence/cgp_1802.09744v2.pdf",
+        "sha256": "70fabe1cf0ce30ff978fb2a7ffbe6092651ecf2cdb8397fe198fb3bbc14c4718"
+      },
+      "findings": [
+        "The paper describes a semi-implicit unstructured-triangular finite-element CGP version and pressure Poisson step.",
+        "It is an algorithmic/family reference, not a record that the exact 135-geometry dataset was generated by this version.",
+        "No public code or 135-geometry generation record identified."
+      ],
+      "historical_reference_identified": false
+    },
+    {
+      "id": "gresho_sani_1987",
+      "type": "bibliographic pressure-BC reference cited by PIPN",
+      "title": "On pressure boundary conditions for the incompressible Navier-Stokes equations",
+      "journal": "International Journal for Numerical Methods in Fluids 7 (1987) 1111-1145",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/fld.1650071008",
+      "finding": "general pressure-boundary review; not a record of the actual dataset gauge"
+    }
+  ],
+  "bibliographic_refs_from_pipn": {
+    "PIPN_ref_34": "Kashefi, A., Staples, A.E., 2018. A finite-element coarse-grid projection method for incompressible flow simulations. Advances in Computational Mathematics 44, 1063-1090.",
+    "PIPN_refs_29_28_30_31": [
+      "Kashefi 2020a/2020b/2020c coarse-grid projection papers",
+      "Kashefi 2021 coarse-grid projection for MHD"
+    ],
+    "finding": "the cited family is algorithmic; PIPN §4.2 does not state which member/version generated this dataset"
+  },
+  "synthesis": {
+    "historical_reference_identified": false,
+    "compatible_only": true,
+    "current_gauge_evaluation_closed": "see exact_gauge_comparison.json and model_metric_sensitivity.json",
+    "unavailable_provenance": "no public generator code, solver version, reference-node record, zero-mean rule, or output rescaling record was found",
+    "mathematical_note": "the pressure enters the incompressible equations only through its gradient; p+C with the same velocity/temperature is an equivalent solution. Without a recorded anchor condition, C is not uniquely recoverable from the equations or the stored fields."
+  }
+}

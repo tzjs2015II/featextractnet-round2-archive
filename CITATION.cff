@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "Local revision preparation; cite the associated manuscript and original data source. Single new DOI placeholder: 10.5281/zenodo.XXXXXXX."
+title: "FeatExtractNet for Thermal Field Prediction and an Evaluation of Acoustic Coordinate Models — revision code"
+version: round2-standalone
+license: MIT
+type: software
+authors:
+  - family-names: Yuan
+    given-names: Xun
+    affiliation: "School of Computer Science and Engineering, Macau University of Science and Technology, Macau, China"
+  - family-names: Wang
+    given-names: Gulin
+    affiliation: "School of Computer Science and Engineering, Macau University of Science and Technology, Macau, China"
+  - family-names: Yang
+    given-names: Junxiang
+    affiliation: "School of Computer Science and Engineering, Macau University of Science and Technology, Macau, China"
+  - family-names: Guo
+    given-names: Hongfei
+    affiliation: "College of Intelligent Science and Technology (College of Cyberspace Security), Inner Mongolia University of Technology, Hohhot, China"
+  - family-names: Li
+    given-names: Jianqing
+    affiliation: "School of Computer Science and Engineering, Macau University of Science and Technology, Macau, China"
+    email: jqli@must.edu.mo
+keywords:
+  - physics-informed machine learning
+  - point cloud neural network
+  - surrogate model
+  - thermal field prediction
+  - acoustic scattering
+  - FDTD
+references:
+  - type: article
+    title: "Physics-informed PointNet: A deep learning solver for steady-state incompressible flows and thermal fields on multiple sets of irregular geometries"
+    authors:
+      - family-names: Kashefi
+        given-names: Ali
+      - family-names: Mukerji
+        given-names: Tapan
+    journal: "Journal of Computational Physics"
+    volume: 468
+    start: 111510
+    year: 2022
+    doi: "10.1016/j.jcp.2022.111510"
+doi: "10.5281/zenodo.XXXXXXX"

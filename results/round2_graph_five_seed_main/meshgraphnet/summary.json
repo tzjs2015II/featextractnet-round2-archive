@@ -1,0 +1,151 @@
+{
+  "experiment_id": "T_T1_meshgraphnet",
+  "model": "meshgraphnet",
+  "pool_context": "legacy_index_bins",
+  "implementation_version": "R2-IMPL-01B",
+  "cuda_matmul_allow_tf32": false,
+  "cudnn_allow_tf32": false,
+  "model_label": "MeshGraphNet-style encode-process-decode GNN (assembled, hidden=128, layers=8, k=16) 976,516 params",
+  "model_params": 976516,
+  "split_version": "splits_thermal_v1_protocolA",
+  "n_seeds": 5,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "epochs": 500,
+  "lr": 0.001,
+  "agg": {
+    "re": {
+      "mean": {
+        "u": 0.04109208281428798,
+        "v": 0.031612202092637605,
+        "p": 0.014664433115491654,
+        "T": 0.013591548478238022
+      },
+      "std": {
+        "u": 0.00458862654535252,
+        "v": 0.004356868874360511,
+        "p": 0.0009997170383780735,
+        "T": 0.0018099633206115006
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "mae": {
+      "mean": {
+        "u": 0.0018989013340691176,
+        "v": 0.0025459456729832277,
+        "p": 0.0024216738317065487,
+        "T": 0.0041310804570658475
+      },
+      "std": {
+        "u": 0.00017843192457139376,
+        "v": 0.0003102483032050451,
+        "p": 0.0001427630526472962,
+        "T": 0.0005922365460325941
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "max_err": {
+      "mean": {
+        "u": 0.018009437554283067,
+        "v": 0.023239363571628927,
+        "p": 0.01822771696606651,
+        "T": 0.036059677600860596
+      },
+      "std": {
+        "u": 0.004304002038777369,
+        "v": 0.0030686304480424206,
+        "p": 0.004757587595071247,
+        "T": 0.0062844339571906
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "re_bd": {
+      "mean": {
+        "u": null,
+        "v": null,
+        "p": 0.01653264225723209,
+        "T": 0.003950983565632898
+      },
+      "std": {
+        "u": null,
+        "v": null,
+        "p": 0.0014544788666683655,
+        "T": 0.0008193673506625073
+      },
+      "n_per_field": {
+        "u": 0,
+        "v": 0,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "mae_bd": {
+      "mean": {
+        "u": 0.0005099593807209302,
+        "v": 0.0005851427382221649,
+        "p": 0.002971021578947412,
+        "T": 0.00137367846089064
+      },
+      "std": {
+        "u": 9.277635717680824e-05,
+        "v": 0.0001470067943582817,
+        "p": 0.00029526493117904744,
+        "T": 0.0003552191668351496
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "max_bd": {
+      "mean": {
+        "u": 0.006527058349456638,
+        "v": 0.007197045219363646,
+        "p": 0.01799220267217606,
+        "T": 0.016008803248405458
+      },
+      "std": {
+        "u": 0.0027531804982051473,
+        "v": 0.00410392754356451,
+        "p": 0.00496726779393921,
+        "T": 0.005640689105624938
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    }
+  },
+  "seed_files": [
+    "results/round2_graph_five_seed_main/meshgraphnet/seed0/metrics_seed0.json",
+    "results/round2_graph_five_seed_main/meshgraphnet/seed1/metrics_seed1.json",
+    "results/round2_graph_five_seed_main/meshgraphnet/seed2/metrics_seed2.json",
+    "results/round2_graph_five_seed_main/meshgraphnet/seed3/metrics_seed3.json",
+    "results/round2_graph_five_seed_main/meshgraphnet/seed4/metrics_seed4.json"
+  ],
+  "s_per_epoch_mean": 2.6405377999999997
+}

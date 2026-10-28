@@ -1,0 +1,151 @@
+{
+  "experiment_id": "T_T1_pointtransformer",
+  "model": "pointtransformer",
+  "pool_context": "legacy_index_bins",
+  "implementation_version": "R2-IMPL-01B",
+  "cuda_matmul_allow_tf32": false,
+  "cudnn_allow_tf32": false,
+  "model_label": "PointTransformerBaseline(official PointTransformerConv, hidden=320, layers=3, k=16) 928,644 params",
+  "model_params": 928644,
+  "split_version": "splits_thermal_v1_protocolA",
+  "n_seeds": 5,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "epochs": 500,
+  "lr": 0.001,
+  "agg": {
+    "re": {
+      "mean": {
+        "u": 0.17920418347394365,
+        "v": 0.13685951727574183,
+        "p": 0.06429443204024815,
+        "T": 0.06021244474601302
+      },
+      "std": {
+        "u": 0.004889338263569605,
+        "v": 0.00533206992047006,
+        "p": 0.0015339183530460351,
+        "T": 0.00402109767406933
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "mae": {
+      "mean": {
+        "u": 0.009446952500131006,
+        "v": 0.01212440242502357,
+        "p": 0.010163862116733261,
+        "T": 0.020236308539141698
+      },
+      "std": {
+        "u": 0.0002887990398330553,
+        "v": 0.0005719345611393167,
+        "p": 0.00023141159964617085,
+        "T": 0.0016213211467083165
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "max_err": {
+      "mean": {
+        "u": 0.06313966723246267,
+        "v": 0.1023878971580416,
+        "p": 0.07087825214490295,
+        "T": 0.1345900580332849
+      },
+      "std": {
+        "u": 0.002185667015651143,
+        "v": 0.001014401041936626,
+        "p": 0.00536655384263894,
+        "T": 0.0065154438143446205
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "re_bd": {
+      "mean": {
+        "u": null,
+        "v": null,
+        "p": 0.06665379724906122,
+        "T": 0.045801270132637156
+      },
+      "std": {
+        "u": null,
+        "v": null,
+        "p": 0.002846600630392644,
+        "T": 0.0038631535379629895
+      },
+      "n_per_field": {
+        "u": 0,
+        "v": 0,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "mae_bd": {
+      "mean": {
+        "u": 0.007559297996362594,
+        "v": 0.010992538972381793,
+        "p": 0.011201374318978606,
+        "T": 0.017107493731405705
+      },
+      "std": {
+        "u": 0.0003209677003618971,
+        "v": 0.0010744610012922394,
+        "p": 0.0004968874345636655,
+        "T": 0.0014922002605719763
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "max_bd": {
+      "mean": {
+        "u": 0.04584942659363151,
+        "v": 0.08265064984560014,
+        "p": 0.06771673939190806,
+        "T": 0.11259768769112406
+      },
+      "std": {
+        "u": 0.0016519062449874855,
+        "v": 0.004762274140123908,
+        "p": 0.006462014134750241,
+        "T": 0.012210774435846141
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    }
+  },
+  "seed_files": [
+    "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer/seed0/metrics_seed0.json",
+    "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer/seed1/metrics_seed1.json",
+    "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer/seed2/metrics_seed2.json",
+    "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer/seed3/metrics_seed3.json",
+    "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer/seed4/metrics_seed4.json"
+  ],
+  "s_per_epoch_mean": 2.9080407999999998
+}

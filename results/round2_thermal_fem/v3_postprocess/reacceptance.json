@@ -1,0 +1,2019 @@
+{
+  "n_records": 9,
+  "n_passed": 9,
+  "n_failed": 0,
+  "failed": [],
+  "intentionally_large_free_rejected": true,
+  "records": [
+    {
+      "level": "h008",
+      "target_h": 0.08,
+      "mesh": {
+        "n_cells": 1476,
+        "n_vertices": 808,
+        "target_h": 0.08,
+        "h_max": null
+      },
+      "newton_reason": 2,
+      "newton_iterations": 7,
+      "continuation": [
+        {
+          "g_beta_fraction": 0.01,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.1,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.5,
+          "reason": 2,
+          "iterations": 6
+        },
+        {
+          "g_beta_fraction": 1.0,
+          "reason": 2,
+          "iterations": 7
+        }
+      ],
+      "weak_residual": {
+        "n_dirichlet_dofs": 840,
+        "blocks": {
+          "full": {
+            "full": 0.15226368257637116,
+            "free": 1.6308947452937892e-16
+          },
+          "continuity": {
+            "full": 2.5203454712886944e-10,
+            "free": 2.5203454712886944e-10,
+            "relative_free": 9.306380396964153e-10
+          },
+          "momentum": {
+            "full": 0.0023980671712256355,
+            "free": 0.0021691071430248077,
+            "relative_free": 0.008009432208688152
+          },
+          "energy": {
+            "full": 0.0014476283499704286,
+            "free": 0.0013973597106892762,
+            "relative_free": 0.0017983904776723962
+          }
+        },
+        "dirichlet_zeroed": 1.6308947452937892e-16
+      },
+      "diagnostics": {
+        "area": 3.4698066401624357,
+        "divergence_l2": 0.16618151840364623,
+        "mass_flux": 6.545870616381233e-17,
+        "pressure_mean": 2.254894608627275e-10,
+        "pressure_std": 0.19856478846424377,
+        "velocity_l2": 0.27081909010627375,
+        "temperature_l2": 0.7770057326470265,
+        "residual": {
+          "continuity_l2": 0.16618151840364623,
+          "momentum_l2": 0.12311411670002308,
+          "energy_l2": 0.05385400888489497
+        },
+        "boundary": {
+          "wall_velocity_max": 0.0,
+          "inner_temperature_max_dev": 0.0,
+          "outer_temperature_max_dev": 0.0
+        },
+        "finite": true
+      },
+      "acceptance": {
+        "checks": {
+          "finite_all_fields": true,
+          "newton_converged": true,
+          "weak_continuity": true,
+          "weak_momentum": true,
+          "weak_energy": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "pressure_reported": true
+        },
+        "all_passed": true,
+        "weak_residual_used": true,
+        "note": "Acceptance uses the variational weak residual blocks with all Dirichlet rows zeroed; strong cell residuals are reported separately as diagnostics (P2 second derivatives at polygon corners are not a validated acceptance metric). Stokes/finite-only results never count as natural-convection acceptance."
+      },
+      "fields_file": "results/round2_thermal_fem/v2/levels/fields_geom17_h008.npz",
+      "comparison_original_nodes": {
+        "n_points": 5000,
+        "n_evaluated": 5000,
+        "n_outside_mesh": 0,
+        "metrics": {
+          "u": {
+            "n": 5000,
+            "re": 0.060295316669515035,
+            "mae": 0.002172771526293951,
+            "max_err": 0.022587895182971628,
+            "denominator": 4.805561131273337
+          },
+          "v": {
+            "n": 5000,
+            "re": 0.04067265998459485,
+            "mae": 0.003113842487352863,
+            "max_err": 0.03328691557207131,
+            "denominator": 8.278867115465562
+          },
+          "p_raw": {
+            "n": 5000,
+            "re": 0.039922069575422776,
+            "mae": 0.0074003858674010275,
+            "max_err": 0.027233618199367846,
+            "denominator": 14.760120228802993
+          },
+          "p_centered": {
+            "n": 5000,
+            "re": 0.03988475690647478,
+            "mae": 0.007446304279949863,
+            "max_err": 0.02686157953294563,
+            "denominator": 14.75919781695392
+          },
+          "T": {
+            "n": 5000,
+            "re": 0.026868756160906844,
+            "mae": 0.008874801291619473,
+            "max_err": 0.040156694445904195,
+            "denominator": 30.717670246090297
+          }
+        },
+        "pressure_note": "raw and equal-weight point-mean-centered pressure are reported separately; this is not an FE area gauge normalization",
+        "boundary_layer": {
+          "n_points": 660,
+          "first_n_original_nodes": 660,
+          "metrics": {
+            "u": {
+              "n": 660,
+              "re": 268064.2592003334,
+              "mae": 4.62804318649013e-17,
+              "max_err": 7.949939068349164e-16,
+              "denominator": 1.146401040994643e-20
+            },
+            "v": {
+              "n": 660,
+              "re": 539056.5311823597,
+              "mae": 8.342130638215195e-17,
+              "max_err": 1.5267818491175636e-15,
+              "denominator": 1.1601711303189717e-20
+            },
+            "p_raw": {
+              "n": 660,
+              "re": 0.04450410829814323,
+              "mae": 0.008765361040673303,
+              "max_err": 0.027233618199367846,
+              "denominator": 5.806317156349686
+            },
+            "p_centered": {
+              "n": 660,
+              "re": 0.04456992931152508,
+              "mae": 0.008795471516045202,
+              "max_err": 0.02693571212915668,
+              "denominator": 5.795198907519636
+            },
+            "T": {
+              "n": 660,
+              "re": 2.9454897540247612e-12,
+              "mae": 1.2831343203585e-12,
+              "max_err": 1.7212323472066208e-12,
+              "denominator": 12.96148139681572
+            }
+          }
+        }
+      },
+      "fem_support": {
+        "path": "results/round2_thermal_fem/v2_reference/fem_reference_geom17_h0.08.npz",
+        "n_points": 5000,
+        "n_valid": 5000,
+        "n_outside": 0,
+        "n_nonfinite": 0
+      },
+      "saved_file": "results\\round2_thermal_fem\\v2\\levels\\levels_geom17.json",
+      "saved_file_sha256": "1fdb603bd2baef1bac27020a73917096c58f76559adada30264ba75e50909bf1",
+      "postprocess": {
+        "checks": {
+          "galerkin_free_absolute": true,
+          "galerkin_free_relative": true,
+          "newton_converged": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "finite_all_fields": true
+        },
+        "all_passed": true,
+        "galerkin_free_absolute": 1.6308947452937892e-16,
+        "galerkin_free_relative": 1.071098976261643e-15,
+        "galerkin_raw_full": 0.15226368257637116,
+        "cell_strong_against_test_projection": {
+          "continuity": {
+            "full": 2.5203454712886944e-10,
+            "free": 2.5203454712886944e-10,
+            "relative_free": 9.306380396964153e-10
+          },
+          "momentum": {
+            "full": 0.0023980671712256355,
+            "free": 0.0021691071430248077,
+            "relative_free": 0.008009432208688152
+          },
+          "energy": {
+            "full": 0.0014476283499704286,
+            "free": 0.0013973597106892762,
+            "relative_free": 0.0017983904776723962
+          }
+        },
+        "note": "free is the assembled nonlinear residual after zeroing all Dirichlet rows; cell projection is diagnostic only"
+      }
+    },
+    {
+      "level": "h004",
+      "target_h": 0.04,
+      "mesh": {
+        "n_cells": 5436,
+        "n_vertices": 2854,
+        "target_h": 0.04,
+        "h_max": null
+      },
+      "newton_reason": 2,
+      "newton_iterations": 7,
+      "continuation": [
+        {
+          "g_beta_fraction": 0.01,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.1,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.5,
+          "reason": 2,
+          "iterations": 6
+        },
+        {
+          "g_beta_fraction": 1.0,
+          "reason": 2,
+          "iterations": 7
+        }
+      ],
+      "weak_residual": {
+        "n_dirichlet_dofs": 1632,
+        "blocks": {
+          "full": {
+            "full": 0.10792033633569337,
+            "free": 1.9312261703349275e-16
+          },
+          "continuity": {
+            "full": 1.3134815688140588e-10,
+            "free": 1.3134815688140588e-10,
+            "relative_free": 4.854537972619286e-10
+          },
+          "momentum": {
+            "full": 0.001429677643561297,
+            "free": 0.0013463201624045978,
+            "relative_free": 0.0049759071667805875
+          },
+          "energy": {
+            "full": 0.000878499679595546,
+            "free": 0.0008628214090835561,
+            "relative_free": 0.0011109543057495816
+          }
+        },
+        "dirichlet_zeroed": 1.9312261703349275e-16
+      },
+      "diagnostics": {
+        "area": 3.469806640162443,
+        "divergence_l2": 0.10737286407502263,
+        "mass_flux": -3.2534535504037676e-18,
+        "pressure_mean": -1.128568395227326e-09,
+        "pressure_std": 0.198398317326257,
+        "velocity_l2": 0.2705677813671245,
+        "temperature_l2": 0.7766488726117268,
+        "residual": {
+          "continuity_l2": 0.10737286407502263,
+          "momentum_l2": 0.11753501952596236,
+          "energy_l2": 0.05532675415947876
+        },
+        "boundary": {
+          "wall_velocity_max": 0.0,
+          "inner_temperature_max_dev": 0.0,
+          "outer_temperature_max_dev": 0.0
+        },
+        "finite": true
+      },
+      "acceptance": {
+        "checks": {
+          "finite_all_fields": true,
+          "newton_converged": true,
+          "weak_continuity": true,
+          "weak_momentum": true,
+          "weak_energy": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "pressure_reported": true
+        },
+        "all_passed": true,
+        "weak_residual_used": true,
+        "note": "Acceptance uses the variational weak residual blocks with all Dirichlet rows zeroed; strong cell residuals are reported separately as diagnostics (P2 second derivatives at polygon corners are not a validated acceptance metric). Stokes/finite-only results never count as natural-convection acceptance."
+      },
+      "fields_file": "results/round2_thermal_fem/v2/levels/fields_geom17_h004.npz",
+      "comparison_original_nodes": {
+        "n_points": 5000,
+        "n_evaluated": 5000,
+        "n_outside_mesh": 0,
+        "metrics": {
+          "u": {
+            "n": 5000,
+            "re": 0.059044739293254975,
+            "mae": 0.0021191125440610478,
+            "max_err": 0.018969033537520053,
+            "denominator": 4.805561131273337
+          },
+          "v": {
+            "n": 5000,
+            "re": 0.03940421389088958,
+            "mae": 0.003020255557903907,
+            "max_err": 0.01794472612705489,
+            "denominator": 8.278867115465562
+          },
+          "p_raw": {
+            "n": 5000,
+            "re": 0.04065241449457029,
+            "mae": 0.007548494025985627,
+            "max_err": 0.026656243516936916,
+            "denominator": 14.760120228802993
+          },
+          "p_centered": {
+            "n": 5000,
+            "re": 0.04061471004712081,
+            "mae": 0.0075950373874544026,
+            "max_err": 0.026278759478297248,
+            "denominator": 14.75919781695392
+          },
+          "T": {
+            "n": 5000,
+            "re": 0.027175666696379993,
+            "mae": 0.008972680435285357,
+            "max_err": 0.03993436137125661,
+            "denominator": 30.717670246090297
+          }
+        },
+        "pressure_note": "raw and equal-weight point-mean-centered pressure are reported separately; this is not an FE area gauge normalization",
+        "boundary_layer": {
+          "n_points": 660,
+          "first_n_original_nodes": 660,
+          "metrics": {
+            "u": {
+              "n": 660,
+              "re": 287393.4055969486,
+              "mae": 4.7634733413942125e-17,
+              "max_err": 8.918736000926456e-16,
+              "denominator": 1.146401040994643e-20
+            },
+            "v": {
+              "n": 660,
+              "re": 566514.5058267078,
+              "mae": 8.382828513977948e-17,
+              "max_err": 1.7392666281056533e-15,
+              "denominator": 1.1601711303189717e-20
+            },
+            "p_raw": {
+              "n": 660,
+              "re": 0.04574407621470387,
+              "mae": 0.00906375179046699,
+              "max_err": 0.026656243516936916,
+              "denominator": 5.806317156349686
+            },
+            "p_centered": {
+              "n": 660,
+              "re": 0.04580684865512946,
+              "mae": 0.009093865466044059,
+              "max_err": 0.026314886549030456,
+              "denominator": 5.795198907519636
+            },
+            "T": {
+              "n": 660,
+              "re": 2.945487239124501e-12,
+              "mae": 1.2831389425972514e-12,
+              "max_err": 1.7212084975530108e-12,
+              "denominator": 12.96148139681572
+            }
+          }
+        }
+      },
+      "fem_support": {
+        "path": "results/round2_thermal_fem/v2_reference/fem_reference_geom17_h0.04.npz",
+        "n_points": 5000,
+        "n_valid": 5000,
+        "n_outside": 0,
+        "n_nonfinite": 0
+      },
+      "saved_file": "results\\round2_thermal_fem\\v2\\levels\\levels_geom17.json",
+      "saved_file_sha256": "1fdb603bd2baef1bac27020a73917096c58f76559adada30264ba75e50909bf1",
+      "postprocess": {
+        "checks": {
+          "galerkin_free_absolute": true,
+          "galerkin_free_relative": true,
+          "newton_converged": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "finite_all_fields": true
+        },
+        "all_passed": true,
+        "galerkin_free_absolute": 1.9312261703349275e-16,
+        "galerkin_free_relative": 1.7894923569620097e-15,
+        "galerkin_raw_full": 0.10792033633569337,
+        "cell_strong_against_test_projection": {
+          "continuity": {
+            "full": 1.3134815688140588e-10,
+            "free": 1.3134815688140588e-10,
+            "relative_free": 4.854537972619286e-10
+          },
+          "momentum": {
+            "full": 0.001429677643561297,
+            "free": 0.0013463201624045978,
+            "relative_free": 0.0049759071667805875
+          },
+          "energy": {
+            "full": 0.000878499679595546,
+            "free": 0.0008628214090835561,
+            "relative_free": 0.0011109543057495816
+          }
+        },
+        "note": "free is the assembled nonlinear residual after zeroing all Dirichlet rows; cell projection is diagnostic only"
+      }
+    },
+    {
+      "level": "h002",
+      "target_h": 0.02,
+      "mesh": {
+        "n_cells": 20702,
+        "n_vertices": 10619,
+        "target_h": 0.02,
+        "h_max": null
+      },
+      "newton_reason": 2,
+      "newton_iterations": 7,
+      "continuation": [
+        {
+          "g_beta_fraction": 0.01,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.1,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.5,
+          "reason": 2,
+          "iterations": 6
+        },
+        {
+          "g_beta_fraction": 1.0,
+          "reason": 2,
+          "iterations": 7
+        }
+      ],
+      "weak_residual": {
+        "n_dirichlet_dofs": 3216,
+        "blocks": {
+          "full": {
+            "full": 0.07642605530843187,
+            "free": 2.863908379762951e-16
+          },
+          "continuity": {
+            "full": 6.753138453586418e-11,
+            "free": 6.753138453586418e-11,
+            "relative_free": 2.4970099256248657e-10
+          },
+          "momentum": {
+            "full": 0.0009374106912524652,
+            "free": 0.0008850708264655424,
+            "relative_free": 0.003272597850251052
+          },
+          "energy": {
+            "full": 0.0005314899131608233,
+            "free": 0.0005197775727129008,
+            "relative_free": 0.0006693837912414775
+          }
+        },
+        "dirichlet_zeroed": 2.863908379762951e-16
+      },
+      "diagnostics": {
+        "area": 3.469806640162442,
+        "divergence_l2": 0.06965423491954172,
+        "mass_flux": 2.3649780024645296e-16,
+        "pressure_mean": 5.501689712967349e-09,
+        "pressure_std": 0.19832573046152824,
+        "velocity_l2": 0.27044900319715287,
+        "temperature_l2": 0.7765015817740247,
+        "residual": {
+          "continuity_l2": 0.06965423491954172,
+          "momentum_l2": 0.13509485009878763,
+          "energy_l2": 0.06393992584129649
+        },
+        "boundary": {
+          "wall_velocity_max": 0.0,
+          "inner_temperature_max_dev": 0.0,
+          "outer_temperature_max_dev": 0.0
+        },
+        "finite": true
+      },
+      "acceptance": {
+        "checks": {
+          "finite_all_fields": true,
+          "newton_converged": true,
+          "weak_continuity": true,
+          "weak_momentum": true,
+          "weak_energy": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "pressure_reported": true
+        },
+        "all_passed": true,
+        "weak_residual_used": true,
+        "note": "Acceptance uses the variational weak residual blocks with all Dirichlet rows zeroed; strong cell residuals are reported separately as diagnostics (P2 second derivatives at polygon corners are not a validated acceptance metric). Stokes/finite-only results never count as natural-convection acceptance."
+      },
+      "fields_file": "results/round2_thermal_fem/v2/levels/fields_geom17_h002.npz",
+      "comparison_original_nodes": {
+        "n_points": 5000,
+        "n_evaluated": 5000,
+        "n_outside_mesh": 0,
+        "metrics": {
+          "u": {
+            "n": 5000,
+            "re": 0.05868579684438351,
+            "mae": 0.002109113515653375,
+            "max_err": 0.01888887165067124,
+            "denominator": 4.805561131273337
+          },
+          "v": {
+            "n": 5000,
+            "re": 0.03914085921140486,
+            "mae": 0.0029986678211706428,
+            "max_err": 0.017921733897558495,
+            "denominator": 8.278867115465562
+          },
+          "p_raw": {
+            "n": 5000,
+            "re": 0.04125628399902269,
+            "mae": 0.007635628619551758,
+            "max_err": 0.03750347983024221,
+            "denominator": 14.760120228802993
+          },
+          "p_centered": {
+            "n": 5000,
+            "re": 0.04121920517655222,
+            "mae": 0.007682872386514489,
+            "max_err": 0.03712598744130859,
+            "denominator": 14.75919781695392
+          },
+          "T": {
+            "n": 5000,
+            "re": 0.02729521512417808,
+            "mae": 0.009010078617854168,
+            "max_err": 0.03977357870734999,
+            "denominator": 30.717670246090297
+          }
+        },
+        "pressure_note": "raw and equal-weight point-mean-centered pressure are reported separately; this is not an FE area gauge normalization",
+        "boundary_layer": {
+          "n_points": 660,
+          "first_n_original_nodes": 660,
+          "metrics": {
+            "u": {
+              "n": 660,
+              "re": 296982.57768900524,
+              "mae": 4.8273904961720585e-17,
+              "max_err": 1.1330867343969121e-15,
+              "denominator": 1.146401040994643e-20
+            },
+            "v": {
+              "n": 660,
+              "re": 588803.7897413308,
+              "mae": 8.551278160854226e-17,
+              "max_err": 1.878571659504079e-15,
+              "denominator": 1.1601711303189717e-20
+            },
+            "p_raw": {
+              "n": 660,
+              "re": 0.04762685587217159,
+              "mae": 0.009327957632725837,
+              "max_err": 0.03750347983024221,
+              "denominator": 5.806317156349686
+            },
+            "p_centered": {
+              "n": 660,
+              "re": 0.04769387327015911,
+              "mae": 0.009354758618197543,
+              "max_err": 0.03715960417505142,
+              "denominator": 5.795198907519636
+            },
+            "T": {
+              "n": 660,
+              "re": 2.9454859061095563e-12,
+              "mae": 1.283136847876503e-12,
+              "max_err": 1.7212020627025255e-12,
+              "denominator": 12.96148139681572
+            }
+          }
+        }
+      },
+      "fem_support": {
+        "path": "results/round2_thermal_fem/v2_reference/fem_reference_geom17_h0.02.npz",
+        "n_points": 5000,
+        "n_valid": 5000,
+        "n_outside": 0,
+        "n_nonfinite": 0
+      },
+      "saved_file": "results\\round2_thermal_fem\\v2\\levels\\levels_geom17.json",
+      "saved_file_sha256": "1fdb603bd2baef1bac27020a73917096c58f76559adada30264ba75e50909bf1",
+      "postprocess": {
+        "checks": {
+          "galerkin_free_absolute": true,
+          "galerkin_free_relative": true,
+          "newton_converged": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "finite_all_fields": true
+        },
+        "all_passed": true,
+        "galerkin_free_absolute": 2.863908379762951e-16,
+        "galerkin_free_relative": 3.747293208062492e-15,
+        "galerkin_raw_full": 0.07642605530843187,
+        "cell_strong_against_test_projection": {
+          "continuity": {
+            "full": 6.753138453586418e-11,
+            "free": 6.753138453586418e-11,
+            "relative_free": 2.4970099256248657e-10
+          },
+          "momentum": {
+            "full": 0.0009374106912524652,
+            "free": 0.0008850708264655424,
+            "relative_free": 0.003272597850251052
+          },
+          "energy": {
+            "full": 0.0005314899131608233,
+            "free": 0.0005197775727129008,
+            "relative_free": 0.0006693837912414775
+          }
+        },
+        "note": "free is the assembled nonlinear residual after zeroing all Dirichlet rows; cell projection is diagnostic only"
+      }
+    },
+    {
+      "geom": 46,
+      "fields_file": "results/round2_thermal_fem/v2/representatives/fields_geom46_h0.08.npz",
+      "comparison_original_nodes": {
+        "n_points": 5000,
+        "n_evaluated": 5000,
+        "n_outside_mesh": 0,
+        "metrics": {
+          "u": {
+            "n": 5000,
+            "re": 0.0557323207829074,
+            "mae": 0.0021720368633732553,
+            "max_err": 0.020752273295564103,
+            "denominator": 4.900945544270385
+          },
+          "v": {
+            "n": 5000,
+            "re": 0.040564456939779246,
+            "mae": 0.0032273753174039085,
+            "max_err": 0.03735301937032798,
+            "denominator": 8.298372006874866
+          },
+          "p_raw": {
+            "n": 5000,
+            "re": 0.047589283438185866,
+            "mae": 0.008661239598999277,
+            "max_err": 0.030943225498875654,
+            "denominator": 14.334631776347385
+          },
+          "p_centered": {
+            "n": 5000,
+            "re": 0.04756667879497192,
+            "mae": 0.00869869682302731,
+            "max_err": 0.03062154850432615,
+            "denominator": 14.333469404389934
+          },
+          "T": {
+            "n": 5000,
+            "re": 0.02879977942348289,
+            "mae": 0.009792020239592154,
+            "max_err": 0.02913713922967076,
+            "denominator": 30.61119390087519
+          }
+        },
+        "pressure_note": "raw and equal-weight point-mean-centered pressure are reported separately; this is not an FE area gauge normalization",
+        "boundary_layer": {
+          "n_points": 660,
+          "first_n_original_nodes": 660,
+          "metrics": {
+            "u": {
+              "n": 660,
+              "re": 485676.7846288616,
+              "mae": 1.6618655896426527e-16,
+              "max_err": 2.9762935999752253e-15,
+              "denominator": 2.472632769044081e-20
+            },
+            "v": {
+              "n": 660,
+              "re": 826469.0786211027,
+              "mae": 2.653110546502302e-16,
+              "max_err": 5.8068464182062604e-15,
+              "denominator": 2.5318724126503697e-20
+            },
+            "p_raw": {
+              "n": 660,
+              "re": 0.05125738202320439,
+              "mae": 0.01014226599754296,
+              "max_err": 0.030943225498875654,
+              "denominator": 5.7248615391786535
+            },
+            "p_centered": {
+              "n": 660,
+              "re": 0.051331887697653164,
+              "mae": 0.01016906185106526,
+              "max_err": 0.0305356927251626,
+              "denominator": 5.712912462511554
+            },
+            "T": {
+              "n": 660,
+              "re": 7.9335018326334e-13,
+              "mae": 3.4590244482991515e-13,
+              "max_err": 4.636299399786501e-13,
+              "denominator": 12.96148139681572
+            }
+          }
+        }
+      },
+      "fem_support": {
+        "path": "results/round2_thermal_fem/v2_reference/fem_reference_geom46_h0.08.npz",
+        "n_points": 5000,
+        "n_valid": 5000,
+        "n_outside": 0,
+        "n_nonfinite": 0
+      },
+      "geometry_class": 7,
+      "target_h": 0.08,
+      "mesh": {
+        "n_cells": 1403,
+        "n_vertices": 769,
+        "target_h": 0.08,
+        "h_max": null
+      },
+      "newton_reason": 2,
+      "newton_iterations": 7,
+      "continuation": [
+        {
+          "g_beta_fraction": 0.01,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.1,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.5,
+          "reason": 2,
+          "iterations": 7
+        },
+        {
+          "g_beta_fraction": 1.0,
+          "reason": 2,
+          "iterations": 7
+        }
+      ],
+      "weak_residual": {
+        "n_dirichlet_dofs": 810,
+        "blocks": {
+          "full": {
+            "full": 0.14941746852804064,
+            "free": 1.5713325065094313e-16
+          },
+          "continuity": {
+            "full": 2.5100380881403996e-10,
+            "free": 2.5100380881403996e-10,
+            "relative_free": 9.106917560665297e-10
+          },
+          "momentum": {
+            "full": 0.0029496488656908116,
+            "free": 0.0026747093781106152,
+            "relative_free": 0.009704377762346221
+          },
+          "energy": {
+            "full": 0.001842718625624961,
+            "free": 0.0017973115220711526,
+            "relative_free": 0.0023328259390128655
+          }
+        },
+        "dirichlet_zeroed": 1.5713325065094313e-16
+      },
+      "diagnostics": {
+        "area": 3.515872014647893,
+        "divergence_l2": 0.19592789734220314,
+        "mass_flux": 8.770009729281575e-17,
+        "pressure_mean": 7.7148097056513e-10,
+        "pressure_std": 0.19283520101956483,
+        "velocity_l2": 0.27561884374376955,
+        "temperature_l2": 0.7704439032565303,
+        "residual": {
+          "continuity_l2": 0.19592789734220314,
+          "momentum_l2": 0.13693488495695516,
+          "energy_l2": 0.06259398932035524
+        },
+        "boundary": {
+          "wall_velocity_max": 0.0,
+          "inner_temperature_max_dev": 0.0,
+          "outer_temperature_max_dev": 0.0
+        },
+        "finite": true
+      },
+      "acceptance": {
+        "checks": {
+          "finite_all_fields": true,
+          "newton_converged": true,
+          "weak_continuity": true,
+          "weak_momentum": true,
+          "weak_energy": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "pressure_reported": true
+        },
+        "all_passed": true,
+        "weak_residual_used": true,
+        "note": "Acceptance uses the variational weak residual blocks with all Dirichlet rows zeroed; strong cell residuals are reported separately as diagnostics (P2 second derivatives at polygon corners are not a validated acceptance metric). Stokes/finite-only results never count as natural-convection acceptance."
+      },
+      "saved_file": "results\\round2_thermal_fem\\v2\\representatives\\representatives_46_96.json",
+      "saved_file_sha256": "afd14094d297361028afa98db59336098fec8cfd7f666a10a490de2ce7d87969",
+      "postprocess": {
+        "checks": {
+          "galerkin_free_absolute": true,
+          "galerkin_free_relative": true,
+          "newton_converged": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "finite_all_fields": true
+        },
+        "all_passed": true,
+        "galerkin_free_absolute": 1.5713325065094313e-16,
+        "galerkin_free_relative": 1.0516390901205403e-15,
+        "galerkin_raw_full": 0.14941746852804064,
+        "cell_strong_against_test_projection": {
+          "continuity": {
+            "full": 2.5100380881403996e-10,
+            "free": 2.5100380881403996e-10,
+            "relative_free": 9.106917560665297e-10
+          },
+          "momentum": {
+            "full": 0.0029496488656908116,
+            "free": 0.0026747093781106152,
+            "relative_free": 0.009704377762346221
+          },
+          "energy": {
+            "full": 0.001842718625624961,
+            "free": 0.0017973115220711526,
+            "relative_free": 0.0023328259390128655
+          }
+        },
+        "note": "free is the assembled nonlinear residual after zeroing all Dirichlet rows; cell projection is diagnostic only"
+      }
+    },
+    {
+      "geom": 46,
+      "fields_file": "results/round2_thermal_fem/v2/representatives/fields_geom46_h0.04.npz",
+      "comparison_original_nodes": {
+        "n_points": 5000,
+        "n_evaluated": 5000,
+        "n_outside_mesh": 0,
+        "metrics": {
+          "u": {
+            "n": 5000,
+            "re": 0.05293132938904255,
+            "mae": 0.0020397449288637208,
+            "max_err": 0.01636901944684893,
+            "denominator": 4.900945544270385
+          },
+          "v": {
+            "n": 5000,
+            "re": 0.03852664938848174,
+            "mae": 0.0030913316451553377,
+            "max_err": 0.0156198757369604,
+            "denominator": 8.298372006874866
+          },
+          "p_raw": {
+            "n": 5000,
+            "re": 0.04854921383602173,
+            "mae": 0.008843948311814096,
+            "max_err": 0.03167083305617237,
+            "denominator": 14.334631776347385
+          },
+          "p_centered": {
+            "n": 5000,
+            "re": 0.048529590108274574,
+            "mae": 0.008882674687206842,
+            "max_err": 0.03136426099664495,
+            "denominator": 14.333469404389934
+          },
+          "T": {
+            "n": 5000,
+            "re": 0.029447423914068578,
+            "mae": 0.009984266898625464,
+            "max_err": 0.029783367001432137,
+            "denominator": 30.61119390087519
+          }
+        },
+        "pressure_note": "raw and equal-weight point-mean-centered pressure are reported separately; this is not an FE area gauge normalization",
+        "boundary_layer": {
+          "n_points": 660,
+          "first_n_original_nodes": 660,
+          "metrics": {
+            "u": {
+              "n": 660,
+              "re": 519480.80220458517,
+              "mae": 1.6854937262077316e-16,
+              "max_err": 3.917527210105609e-15,
+              "denominator": 2.472632769044081e-20
+            },
+            "v": {
+              "n": 660,
+              "re": 860539.3295379621,
+              "mae": 2.705595748490183e-16,
+              "max_err": 6.7819878911508794e-15,
+              "denominator": 2.5318724126503697e-20
+            },
+            "p_raw": {
+              "n": 660,
+              "re": 0.05246834186049918,
+              "mae": 0.010431632108411056,
+              "max_err": 0.03167083305617237,
+              "denominator": 5.7248615391786535
+            },
+            "p_centered": {
+              "n": 660,
+              "re": 0.052529926101664945,
+              "mae": 0.010469492558954909,
+              "max_err": 0.031170524346202627,
+              "denominator": 5.712912462511554
+            },
+            "T": {
+              "n": 660,
+              "re": 7.933477422771873e-13,
+              "mae": 3.4590371130632303e-13,
+              "max_err": 4.636063253160514e-13,
+              "denominator": 12.96148139681572
+            }
+          }
+        }
+      },
+      "fem_support": {
+        "path": "results/round2_thermal_fem/v2_reference/fem_reference_geom46_h0.04.npz",
+        "n_points": 5000,
+        "n_valid": 5000,
+        "n_outside": 0,
+        "n_nonfinite": 0
+      },
+      "geometry_class": 7,
+      "target_h": 0.04,
+      "mesh": {
+        "n_cells": 5518,
+        "n_vertices": 2894,
+        "target_h": 0.04,
+        "h_max": null
+      },
+      "newton_reason": 2,
+      "newton_iterations": 7,
+      "continuation": [
+        {
+          "g_beta_fraction": 0.01,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.1,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.5,
+          "reason": 2,
+          "iterations": 7
+        },
+        {
+          "g_beta_fraction": 1.0,
+          "reason": 2,
+          "iterations": 7
+        }
+      ],
+      "weak_residual": {
+        "n_dirichlet_dofs": 1620,
+        "blocks": {
+          "full": {
+            "full": 0.10566378782595993,
+            "free": 1.8976399262023832e-16
+          },
+          "continuity": {
+            "full": 1.2888646488402227e-10,
+            "free": 1.2888646488402227e-10,
+            "relative_free": 4.682591555675974e-10
+          },
+          "momentum": {
+            "full": 0.0016236957856215362,
+            "free": 0.001537387372511727,
+            "relative_free": 0.00558550281816188
+          },
+          "energy": {
+            "full": 0.0010396050274836127,
+            "free": 0.001019815652865338,
+            "relative_free": 0.001324666706909727
+          }
+        },
+        "dirichlet_zeroed": 1.8976399262023832e-16
+      },
+      "diagnostics": {
+        "area": 3.515872014647898,
+        "divergence_l2": 0.12137956263877954,
+        "mass_flux": 6.33976632449058e-17,
+        "pressure_mean": 7.033024554678783e-10,
+        "pressure_std": 0.19256849885960511,
+        "velocity_l2": 0.2752460114267138,
+        "temperature_l2": 0.7698658444012937,
+        "residual": {
+          "continuity_l2": 0.12137956263877954,
+          "momentum_l2": 0.1297209524036457,
+          "energy_l2": 0.0651812860041184
+        },
+        "boundary": {
+          "wall_velocity_max": 0.0,
+          "inner_temperature_max_dev": 0.0,
+          "outer_temperature_max_dev": 0.0
+        },
+        "finite": true
+      },
+      "acceptance": {
+        "checks": {
+          "finite_all_fields": true,
+          "newton_converged": true,
+          "weak_continuity": true,
+          "weak_momentum": true,
+          "weak_energy": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "pressure_reported": true
+        },
+        "all_passed": true,
+        "weak_residual_used": true,
+        "note": "Acceptance uses the variational weak residual blocks with all Dirichlet rows zeroed; strong cell residuals are reported separately as diagnostics (P2 second derivatives at polygon corners are not a validated acceptance metric). Stokes/finite-only results never count as natural-convection acceptance."
+      },
+      "saved_file": "results\\round2_thermal_fem\\v2\\representatives\\representatives_46_96.json",
+      "saved_file_sha256": "afd14094d297361028afa98db59336098fec8cfd7f666a10a490de2ce7d87969",
+      "postprocess": {
+        "checks": {
+          "galerkin_free_absolute": true,
+          "galerkin_free_relative": true,
+          "newton_converged": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "finite_all_fields": true
+        },
+        "all_passed": true,
+        "galerkin_free_absolute": 1.8976399262023832e-16,
+        "galerkin_free_relative": 1.795922676298533e-15,
+        "galerkin_raw_full": 0.10566378782595993,
+        "cell_strong_against_test_projection": {
+          "continuity": {
+            "full": 1.2888646488402227e-10,
+            "free": 1.2888646488402227e-10,
+            "relative_free": 4.682591555675974e-10
+          },
+          "momentum": {
+            "full": 0.0016236957856215362,
+            "free": 0.001537387372511727,
+            "relative_free": 0.00558550281816188
+          },
+          "energy": {
+            "full": 0.0010396050274836127,
+            "free": 0.001019815652865338,
+            "relative_free": 0.001324666706909727
+          }
+        },
+        "note": "free is the assembled nonlinear residual after zeroing all Dirichlet rows; cell projection is diagnostic only"
+      }
+    },
+    {
+      "geom": 46,
+      "fields_file": "results/round2_thermal_fem/v2/representatives/fields_geom46_h0.02.npz",
+      "comparison_original_nodes": {
+        "n_points": 5000,
+        "n_evaluated": 5000,
+        "n_outside_mesh": 0,
+        "metrics": {
+          "u": {
+            "n": 5000,
+            "re": 0.05258897702813442,
+            "mae": 0.002027532225600323,
+            "max_err": 0.016297137798404165,
+            "denominator": 4.900945544270385
+          },
+          "v": {
+            "n": 5000,
+            "re": 0.038250993686522246,
+            "mae": 0.003069370754232401,
+            "max_err": 0.015638797298218834,
+            "denominator": 8.298372006874866
+          },
+          "p_raw": {
+            "n": 5000,
+            "re": 0.049293788233328514,
+            "mae": 0.008952593517133236,
+            "max_err": 0.0436811565553686,
+            "denominator": 14.334631776347385
+          },
+          "p_centered": {
+            "n": 5000,
+            "re": 0.04927565235322891,
+            "mae": 0.008992042792314744,
+            "max_err": 0.04338174405976043,
+            "denominator": 14.333469404389934
+          },
+          "T": {
+            "n": 5000,
+            "re": 0.02966415157970769,
+            "mae": 0.010043417728197522,
+            "max_err": 0.030030362449624537,
+            "denominator": 30.61119390087519
+          }
+        },
+        "pressure_note": "raw and equal-weight point-mean-centered pressure are reported separately; this is not an FE area gauge normalization",
+        "boundary_layer": {
+          "n_points": 660,
+          "first_n_original_nodes": 660,
+          "metrics": {
+            "u": {
+              "n": 660,
+              "re": 537003.7105649592,
+              "mae": 1.7399471213712493e-16,
+              "max_err": 4.530665827003917e-15,
+              "denominator": 2.472632769044081e-20
+            },
+            "v": {
+              "n": 660,
+              "re": 862050.1114606645,
+              "mae": 2.6784093366291647e-16,
+              "max_err": 7.55199358376288e-15,
+              "denominator": 2.5318724126503697e-20
+            },
+            "p_raw": {
+              "n": 660,
+              "re": 0.054628116508736384,
+              "mae": 0.01071449948112707,
+              "max_err": 0.0436811565553686,
+              "denominator": 5.7248615391786535
+            },
+            "p_centered": {
+              "n": 660,
+              "re": 0.05469851201637152,
+              "mae": 0.01075924296580431,
+              "max_err": 0.043193930642268286,
+              "denominator": 5.712912462511554
+            },
+            "T": {
+              "n": 660,
+              "re": 7.933462989721816e-13,
+              "mae": 3.4590123732556983e-13,
+              "max_err": 4.636013987520687e-13,
+              "denominator": 12.96148139681572
+            }
+          }
+        }
+      },
+      "fem_support": {
+        "path": "results/round2_thermal_fem/v2_reference/fem_reference_geom46_h0.02.npz",
+        "n_points": 5000,
+        "n_valid": 5000,
+        "n_outside": 0,
+        "n_nonfinite": 0
+      },
+      "geometry_class": 7,
+      "target_h": 0.02,
+      "mesh": {
+        "n_cells": 21359,
+        "n_vertices": 10946,
+        "target_h": 0.02,
+        "h_max": null
+      },
+      "newton_reason": 2,
+      "newton_iterations": 7,
+      "continuation": [
+        {
+          "g_beta_fraction": 0.01,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.1,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.5,
+          "reason": 2,
+          "iterations": 7
+        },
+        {
+          "g_beta_fraction": 1.0,
+          "reason": 2,
+          "iterations": 7
+        }
+      ],
+      "weak_residual": {
+        "n_dirichlet_dofs": 3198,
+        "blocks": {
+          "full": {
+            "full": 0.07481540070822244,
+            "free": 2.8263486866970725e-16
+          },
+          "continuity": {
+            "full": 6.554213186839272e-11,
+            "free": 6.554213186839272e-11,
+            "relative_free": 2.3825565792918447e-10
+          },
+          "momentum": {
+            "full": 0.0010437454268550656,
+            "free": 0.0009917024144457855,
+            "relative_free": 0.0036049897140694826
+          },
+          "energy": {
+            "full": 0.0006072617953600695,
+            "free": 0.0005950920640037092,
+            "relative_free": 0.0007731798928965467
+          }
+        },
+        "dirichlet_zeroed": 2.8263486866970725e-16
+      },
+      "diagnostics": {
+        "area": 3.5158720146479094,
+        "divergence_l2": 0.07917933812471362,
+        "mass_flux": -9.392252705479895e-17,
+        "pressure_mean": -3.4391975524231577e-09,
+        "pressure_std": 0.19247156061715792,
+        "velocity_l2": 0.27509160721746,
+        "temperature_l2": 0.7696683132489763,
+        "residual": {
+          "continuity_l2": 0.07917933812471362,
+          "momentum_l2": 0.15296847455092927,
+          "energy_l2": 0.07611278087726606
+        },
+        "boundary": {
+          "wall_velocity_max": 0.0,
+          "inner_temperature_max_dev": 0.0,
+          "outer_temperature_max_dev": 0.0
+        },
+        "finite": true
+      },
+      "acceptance": {
+        "checks": {
+          "finite_all_fields": true,
+          "newton_converged": true,
+          "weak_continuity": true,
+          "weak_momentum": true,
+          "weak_energy": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "pressure_reported": true
+        },
+        "all_passed": true,
+        "weak_residual_used": true,
+        "note": "Acceptance uses the variational weak residual blocks with all Dirichlet rows zeroed; strong cell residuals are reported separately as diagnostics (P2 second derivatives at polygon corners are not a validated acceptance metric). Stokes/finite-only results never count as natural-convection acceptance."
+      },
+      "saved_file": "results\\round2_thermal_fem\\v2\\representatives\\representatives_46_96.json",
+      "saved_file_sha256": "afd14094d297361028afa98db59336098fec8cfd7f666a10a490de2ce7d87969",
+      "postprocess": {
+        "checks": {
+          "galerkin_free_absolute": true,
+          "galerkin_free_relative": true,
+          "newton_converged": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "finite_all_fields": true
+        },
+        "all_passed": true,
+        "galerkin_free_absolute": 2.8263486866970725e-16,
+        "galerkin_free_relative": 3.777763214447969e-15,
+        "galerkin_raw_full": 0.07481540070822244,
+        "cell_strong_against_test_projection": {
+          "continuity": {
+            "full": 6.554213186839272e-11,
+            "free": 6.554213186839272e-11,
+            "relative_free": 2.3825565792918447e-10
+          },
+          "momentum": {
+            "full": 0.0010437454268550656,
+            "free": 0.0009917024144457855,
+            "relative_free": 0.0036049897140694826
+          },
+          "energy": {
+            "full": 0.0006072617953600695,
+            "free": 0.0005950920640037092,
+            "relative_free": 0.0007731798928965467
+          }
+        },
+        "note": "free is the assembled nonlinear residual after zeroing all Dirichlet rows; cell projection is diagnostic only"
+      }
+    },
+    {
+      "geom": 96,
+      "fields_file": "results/round2_thermal_fem/v2/representatives/fields_geom96_h0.08.npz",
+      "comparison_original_nodes": {
+        "n_points": 5000,
+        "n_evaluated": 5000,
+        "n_outside_mesh": 0,
+        "metrics": {
+          "u": {
+            "n": 5000,
+            "re": 0.056697860641738325,
+            "mae": 0.0021799998508743802,
+            "max_err": 0.017788607902711806,
+            "denominator": 4.894833819643296
+          },
+          "v": {
+            "n": 5000,
+            "re": 0.03887679603450306,
+            "mae": 0.003150654474700632,
+            "max_err": 0.026712680699383096,
+            "denominator": 8.423157391342638
+          },
+          "p_raw": {
+            "n": 5000,
+            "re": 0.043446913997967136,
+            "mae": 0.007845161441014993,
+            "max_err": 0.025138558551825924,
+            "denominator": 14.480323430871273
+          },
+          "p_centered": {
+            "n": 5000,
+            "re": 0.043163291091835226,
+            "mae": 0.007933087027687412,
+            "max_err": 0.024117047015917555,
+            "denominator": 14.47908678012969
+          },
+          "T": {
+            "n": 5000,
+            "re": 0.026964642181806876,
+            "mae": 0.009234707448852589,
+            "max_err": 0.032695292446985436,
+            "denominator": 31.151111272924584
+          }
+        },
+        "pressure_note": "raw and equal-weight point-mean-centered pressure are reported separately; this is not an FE area gauge normalization",
+        "boundary_layer": {
+          "n_points": 660,
+          "first_n_original_nodes": 660,
+          "metrics": {
+            "u": {
+              "n": 660,
+              "re": 138167.90596115222,
+              "mae": 4.569922876436889e-17,
+              "max_err": 8.205109887082109e-16,
+              "denominator": 2.2500274575023305e-20
+            },
+            "v": {
+              "n": 660,
+              "re": 226937.76288967207,
+              "mae": 7.059347088989176e-17,
+              "max_err": 1.4190405907878026e-15,
+              "denominator": 2.171209110399641e-20
+            },
+            "p_raw": {
+              "n": 660,
+              "re": 0.047193607057417146,
+              "mae": 0.009385100767739697,
+              "max_err": 0.025138558551825924,
+              "denominator": 5.7736240325588435
+            },
+            "p_centered": {
+              "n": 660,
+              "re": 0.047091173657095364,
+              "mae": 0.00942199808252499,
+              "max_err": 0.024154782526461246,
+              "denominator": 5.761238543227678
+            },
+            "T": {
+              "n": 660,
+              "re": 7.342284252745144e-13,
+              "mae": 3.199429434265389e-13,
+              "max_err": 4.290824600186803e-13,
+              "denominator": 12.96148139681572
+            }
+          }
+        }
+      },
+      "fem_support": {
+        "path": "results/round2_thermal_fem/v2_reference/fem_reference_geom96_h0.08.npz",
+        "n_points": 5000,
+        "n_valid": 5000,
+        "n_outside": 0,
+        "n_nonfinite": 0
+      },
+      "geometry_class": 9,
+      "target_h": 0.08,
+      "mesh": {
+        "n_cells": 1428,
+        "n_vertices": 782,
+        "target_h": 0.08,
+        "h_max": null
+      },
+      "newton_reason": 2,
+      "newton_iterations": 7,
+      "continuation": [
+        {
+          "g_beta_fraction": 0.01,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.1,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.5,
+          "reason": 2,
+          "iterations": 7
+        },
+        {
+          "g_beta_fraction": 1.0,
+          "reason": 2,
+          "iterations": 7
+        }
+      ],
+      "weak_residual": {
+        "n_dirichlet_dofs": 816,
+        "blocks": {
+          "full": {
+            "full": 0.15111432603714503,
+            "free": 1.6067063332611922e-16
+          },
+          "continuity": {
+            "full": 2.5350626209783506e-10,
+            "free": 2.5350626209783506e-10,
+            "relative_free": 9.247733799027306e-10
+          },
+          "momentum": {
+            "full": 0.002345644898357704,
+            "free": 0.0021304546727604666,
+            "relative_free": 0.007771751877663332
+          },
+          "energy": {
+            "full": 0.0014754063856764303,
+            "free": 0.0014303416290351878,
+            "relative_free": 0.0018505802044393846
+          }
+        },
+        "dirichlet_zeroed": 1.6067063332611922e-16
+      },
+      "diagnostics": {
+        "area": 3.4882486467104745,
+        "divergence_l2": 0.16376192113198867,
+        "mass_flux": -2.6068285984698347e-17,
+        "pressure_mean": -9.503079810492448e-10,
+        "pressure_std": 0.19605592940974023,
+        "velocity_l2": 0.274127983792634,
+        "temperature_l2": 0.7729152325329752,
+        "residual": {
+          "continuity_l2": 0.16376192113198867,
+          "momentum_l2": 0.11772312143548705,
+          "energy_l2": 0.05116424931017985
+        },
+        "boundary": {
+          "wall_velocity_max": 0.0,
+          "inner_temperature_max_dev": 0.0,
+          "outer_temperature_max_dev": 0.0
+        },
+        "finite": true
+      },
+      "acceptance": {
+        "checks": {
+          "finite_all_fields": true,
+          "newton_converged": true,
+          "weak_continuity": true,
+          "weak_momentum": true,
+          "weak_energy": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "pressure_reported": true
+        },
+        "all_passed": true,
+        "weak_residual_used": true,
+        "note": "Acceptance uses the variational weak residual blocks with all Dirichlet rows zeroed; strong cell residuals are reported separately as diagnostics (P2 second derivatives at polygon corners are not a validated acceptance metric). Stokes/finite-only results never count as natural-convection acceptance."
+      },
+      "saved_file": "results\\round2_thermal_fem\\v2\\representatives\\representatives_46_96.json",
+      "saved_file_sha256": "afd14094d297361028afa98db59336098fec8cfd7f666a10a490de2ce7d87969",
+      "postprocess": {
+        "checks": {
+          "galerkin_free_absolute": true,
+          "galerkin_free_relative": true,
+          "newton_converged": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "finite_all_fields": true
+        },
+        "all_passed": true,
+        "galerkin_free_absolute": 1.6067063332611922e-16,
+        "galerkin_free_relative": 1.0632389234004537e-15,
+        "galerkin_raw_full": 0.15111432603714503,
+        "cell_strong_against_test_projection": {
+          "continuity": {
+            "full": 2.5350626209783506e-10,
+            "free": 2.5350626209783506e-10,
+            "relative_free": 9.247733799027306e-10
+          },
+          "momentum": {
+            "full": 0.002345644898357704,
+            "free": 0.0021304546727604666,
+            "relative_free": 0.007771751877663332
+          },
+          "energy": {
+            "full": 0.0014754063856764303,
+            "free": 0.0014303416290351878,
+            "relative_free": 0.0018505802044393846
+          }
+        },
+        "note": "free is the assembled nonlinear residual after zeroing all Dirichlet rows; cell projection is diagnostic only"
+      }
+    },
+    {
+      "geom": 96,
+      "fields_file": "results/round2_thermal_fem/v2/representatives/fields_geom96_h0.04.npz",
+      "comparison_original_nodes": {
+        "n_points": 5000,
+        "n_evaluated": 5000,
+        "n_outside_mesh": 0,
+        "metrics": {
+          "u": {
+            "n": 5000,
+            "re": 0.055079771792095146,
+            "mae": 0.002085269545391553,
+            "max_err": 0.01721830481487767,
+            "denominator": 4.894833819643296
+          },
+          "v": {
+            "n": 5000,
+            "re": 0.03777256383099386,
+            "mae": 0.003051023102931681,
+            "max_err": 0.016183047774390627,
+            "denominator": 8.423157391342638
+          },
+          "p_raw": {
+            "n": 5000,
+            "re": 0.04434450310173902,
+            "mae": 0.008004374028227757,
+            "max_err": 0.027915092884195396,
+            "denominator": 14.480323430871273
+          },
+          "p_centered": {
+            "n": 5000,
+            "re": 0.044073502122103536,
+            "mae": 0.008099536173710715,
+            "max_err": 0.026905758567306755,
+            "denominator": 14.47908678012969
+          },
+          "T": {
+            "n": 5000,
+            "re": 0.027422134752165466,
+            "mae": 0.009375744671805492,
+            "max_err": 0.032406383218950396,
+            "denominator": 31.151111272924584
+          }
+        },
+        "pressure_note": "raw and equal-weight point-mean-centered pressure are reported separately; this is not an FE area gauge normalization",
+        "boundary_layer": {
+          "n_points": 660,
+          "first_n_original_nodes": 660,
+          "metrics": {
+            "u": {
+              "n": 660,
+              "re": 143043.3471082878,
+              "mae": 4.699090333161138e-17,
+              "max_err": 8.118458511590425e-16,
+              "denominator": 2.2500274575023305e-20
+            },
+            "v": {
+              "n": 660,
+              "re": 234156.95740681794,
+              "mae": 7.052953700948813e-17,
+              "max_err": 1.795425259749841e-15,
+              "denominator": 2.171209110399641e-20
+            },
+            "p_raw": {
+              "n": 660,
+              "re": 0.04871685699079451,
+              "mae": 0.009735817108635534,
+              "max_err": 0.027915092884195396,
+              "denominator": 5.7736240325588435
+            },
+            "p_centered": {
+              "n": 660,
+              "re": 0.048633006425619435,
+              "mae": 0.009788434003456456,
+              "max_err": 0.026953712990424504,
+              "denominator": 5.761238543227678
+            },
+            "T": {
+              "n": 660,
+              "re": 7.34225744124108e-13,
+              "mae": 3.1994076118969763e-13,
+              "max_err": 4.290617142718494e-13,
+              "denominator": 12.96148139681572
+            }
+          }
+        }
+      },
+      "fem_support": {
+        "path": "results/round2_thermal_fem/v2_reference/fem_reference_geom96_h0.04.npz",
+        "n_points": 5000,
+        "n_valid": 5000,
+        "n_outside": 0,
+        "n_nonfinite": 0
+      },
+      "geometry_class": 9,
+      "target_h": 0.04,
+      "mesh": {
+        "n_cells": 5584,
+        "n_vertices": 2928,
+        "target_h": 0.04,
+        "h_max": null
+      },
+      "newton_reason": 2,
+      "newton_iterations": 7,
+      "continuation": [
+        {
+          "g_beta_fraction": 0.01,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.1,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.5,
+          "reason": 2,
+          "iterations": 7
+        },
+        {
+          "g_beta_fraction": 1.0,
+          "reason": 2,
+          "iterations": 7
+        }
+      ],
+      "weak_residual": {
+        "n_dirichlet_dofs": 1632,
+        "blocks": {
+          "full": {
+            "full": 0.10689375357873376,
+            "free": 1.9567577942392947e-16
+          },
+          "continuity": {
+            "full": 1.292101045282746e-10,
+            "free": 1.292101045282746e-10,
+            "relative_free": 4.717653062487525e-10
+          },
+          "momentum": {
+            "full": 0.0013362410641488676,
+            "free": 0.0012570348620073288,
+            "relative_free": 0.004589621212716193
+          },
+          "energy": {
+            "full": 0.0008203416947014909,
+            "free": 0.0008041391523737051,
+            "relative_free": 0.0010409879353914426
+          }
+        },
+        "dirichlet_zeroed": 1.9567577942392947e-16
+      },
+      "diagnostics": {
+        "area": 3.488248646710483,
+        "divergence_l2": 0.09654204616150212,
+        "mass_flux": -2.076713028430731e-17,
+        "pressure_mean": -3.138587953188838e-11,
+        "pressure_std": 0.19585297356647188,
+        "velocity_l2": 0.2738864066874487,
+        "temperature_l2": 0.7724769183528766,
+        "residual": {
+          "continuity_l2": 0.09654204616150212,
+          "momentum_l2": 0.11262240664960561,
+          "energy_l2": 0.05296025817429556
+        },
+        "boundary": {
+          "wall_velocity_max": 0.0,
+          "inner_temperature_max_dev": 0.0,
+          "outer_temperature_max_dev": 0.0
+        },
+        "finite": true
+      },
+      "acceptance": {
+        "checks": {
+          "finite_all_fields": true,
+          "newton_converged": true,
+          "weak_continuity": true,
+          "weak_momentum": true,
+          "weak_energy": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "pressure_reported": true
+        },
+        "all_passed": true,
+        "weak_residual_used": true,
+        "note": "Acceptance uses the variational weak residual blocks with all Dirichlet rows zeroed; strong cell residuals are reported separately as diagnostics (P2 second derivatives at polygon corners are not a validated acceptance metric). Stokes/finite-only results never count as natural-convection acceptance."
+      },
+      "saved_file": "results\\round2_thermal_fem\\v2\\representatives\\representatives_46_96.json",
+      "saved_file_sha256": "afd14094d297361028afa98db59336098fec8cfd7f666a10a490de2ce7d87969",
+      "postprocess": {
+        "checks": {
+          "galerkin_free_absolute": true,
+          "galerkin_free_relative": true,
+          "newton_converged": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "finite_all_fields": true
+        },
+        "all_passed": true,
+        "galerkin_free_absolute": 1.9567577942392947e-16,
+        "galerkin_free_relative": 1.8305632730896882e-15,
+        "galerkin_raw_full": 0.10689375357873376,
+        "cell_strong_against_test_projection": {
+          "continuity": {
+            "full": 1.292101045282746e-10,
+            "free": 1.292101045282746e-10,
+            "relative_free": 4.717653062487525e-10
+          },
+          "momentum": {
+            "full": 0.0013362410641488676,
+            "free": 0.0012570348620073288,
+            "relative_free": 0.004589621212716193
+          },
+          "energy": {
+            "full": 0.0008203416947014909,
+            "free": 0.0008041391523737051,
+            "relative_free": 0.0010409879353914426
+          }
+        },
+        "note": "free is the assembled nonlinear residual after zeroing all Dirichlet rows; cell projection is diagnostic only"
+      }
+    },
+    {
+      "geom": 96,
+      "fields_file": "results/round2_thermal_fem/v2/representatives/fields_geom96_h0.02.npz",
+      "comparison_original_nodes": {
+        "n_points": 5000,
+        "n_evaluated": 5000,
+        "n_outside_mesh": 0,
+        "metrics": {
+          "u": {
+            "n": 5000,
+            "re": 0.054770154668541786,
+            "mae": 0.0020716017648968236,
+            "max_err": 0.01716058798565627,
+            "denominator": 4.894833819643296
+          },
+          "v": {
+            "n": 5000,
+            "re": 0.03756230789082768,
+            "mae": 0.0030268328572596224,
+            "max_err": 0.016173088833737984,
+            "denominator": 8.423157391342638
+          },
+          "p_raw": {
+            "n": 5000,
+            "re": 0.04483153800586243,
+            "mae": 0.00808226745427122,
+            "max_err": 0.03395394673902982,
+            "denominator": 14.480323430871273
+          },
+          "p_centered": {
+            "n": 5000,
+            "re": 0.044563323913943076,
+            "mae": 0.008177160213314624,
+            "max_err": 0.03294413450235985,
+            "denominator": 14.47908678012969
+          },
+          "T": {
+            "n": 5000,
+            "re": 0.027540213076390978,
+            "mae": 0.009411028751815905,
+            "max_err": 0.032276136162100455,
+            "denominator": 31.151111272924584
+          }
+        },
+        "pressure_note": "raw and equal-weight point-mean-centered pressure are reported separately; this is not an FE area gauge normalization",
+        "boundary_layer": {
+          "n_points": 660,
+          "first_n_original_nodes": 660,
+          "metrics": {
+            "u": {
+              "n": 660,
+              "re": 140712.69012648647,
+              "mae": 4.5866103236107274e-17,
+              "max_err": 8.927565173945926e-16,
+              "denominator": 2.2500274575023305e-20
+            },
+            "v": {
+              "n": 660,
+              "re": 240914.11034762466,
+              "mae": 6.937107701707382e-17,
+              "max_err": 2.163423158833186e-15,
+              "denominator": 2.171209110399641e-20
+            },
+            "p_raw": {
+              "n": 660,
+              "re": 0.05027634202824365,
+              "mae": 0.00999084615640669,
+              "max_err": 0.03395394673902982,
+              "denominator": 5.7736240325588435
+            },
+            "p_centered": {
+              "n": 660,
+              "re": 0.05019732856215925,
+              "mae": 0.010046991676408247,
+              "max_err": 0.03298111591347236,
+              "denominator": 5.761238543227678
+            },
+            "T": {
+              "n": 660,
+              "re": 7.34224229279601e-13,
+              "mae": 3.1993741692654963e-13,
+              "max_err": 4.290559217533458e-13,
+              "denominator": 12.96148139681572
+            }
+          }
+        }
+      },
+      "fem_support": {
+        "path": "results/round2_thermal_fem/v2_reference/fem_reference_geom96_h0.02.npz",
+        "n_points": 5000,
+        "n_valid": 5000,
+        "n_outside": 0,
+        "n_nonfinite": 0
+      },
+      "geometry_class": 9,
+      "target_h": 0.02,
+      "mesh": {
+        "n_cells": 21257,
+        "n_vertices": 10896,
+        "target_h": 0.02,
+        "h_max": null
+      },
+      "newton_reason": 2,
+      "newton_iterations": 7,
+      "continuation": [
+        {
+          "g_beta_fraction": 0.01,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.1,
+          "reason": 2,
+          "iterations": 4
+        },
+        {
+          "g_beta_fraction": 0.5,
+          "reason": 2,
+          "iterations": 7
+        },
+        {
+          "g_beta_fraction": 1.0,
+          "reason": 2,
+          "iterations": 7
+        }
+      ],
+      "weak_residual": {
+        "n_dirichlet_dofs": 3210,
+        "blocks": {
+          "full": {
+            "full": 0.07570999096664903,
+            "free": 2.8748059523935916e-16
+          },
+          "continuity": {
+            "full": 6.64264068003552e-11,
+            "free": 6.64264068003552e-11,
+            "relative_free": 2.4260940707613415e-10
+          },
+          "momentum": {
+            "full": 0.0007860851481961475,
+            "free": 0.0007443526865131124,
+            "relative_free": 0.002718602023337323
+          },
+          "energy": {
+            "full": 0.00047206693460495353,
+            "free": 0.00046231419438568465,
+            "relative_free": 0.0005985787801639712
+          }
+        },
+        "dirichlet_zeroed": 2.8748059523935916e-16
+      },
+      "diagnostics": {
+        "area": 3.488248646710472,
+        "divergence_l2": 0.061162029736914404,
+        "mass_flux": -7.21533898811143e-17,
+        "pressure_mean": -1.1607943966156046e-09,
+        "pressure_std": 0.195794087678164,
+        "velocity_l2": 0.27379979861831855,
+        "temperature_l2": 0.7723531299573316,
+        "residual": {
+          "continuity_l2": 0.061162029736914404,
+          "momentum_l2": 0.12131369940334755,
+          "energy_l2": 0.058068916402895694
+        },
+        "boundary": {
+          "wall_velocity_max": 0.0,
+          "inner_temperature_max_dev": 0.0,
+          "outer_temperature_max_dev": 0.0
+        },
+        "finite": true
+      },
+      "acceptance": {
+        "checks": {
+          "finite_all_fields": true,
+          "newton_converged": true,
+          "weak_continuity": true,
+          "weak_momentum": true,
+          "weak_energy": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "pressure_reported": true
+        },
+        "all_passed": true,
+        "weak_residual_used": true,
+        "note": "Acceptance uses the variational weak residual blocks with all Dirichlet rows zeroed; strong cell residuals are reported separately as diagnostics (P2 second derivatives at polygon corners are not a validated acceptance metric). Stokes/finite-only results never count as natural-convection acceptance."
+      },
+      "saved_file": "results\\round2_thermal_fem\\v2\\representatives\\representatives_46_96.json",
+      "saved_file_sha256": "afd14094d297361028afa98db59336098fec8cfd7f666a10a490de2ce7d87969",
+      "postprocess": {
+        "checks": {
+          "galerkin_free_absolute": true,
+          "galerkin_free_relative": true,
+          "newton_converged": true,
+          "wall_velocity": true,
+          "temperature_bc": true,
+          "mass_flux": true,
+          "finite_all_fields": true
+        },
+        "all_passed": true,
+        "galerkin_free_absolute": 2.8748059523935916e-16,
+        "galerkin_free_relative": 3.797128906883599e-15,
+        "galerkin_raw_full": 0.07570999096664903,
+        "cell_strong_against_test_projection": {
+          "continuity": {
+            "full": 6.64264068003552e-11,
+            "free": 6.64264068003552e-11,
+            "relative_free": 2.4260940707613415e-10
+          },
+          "momentum": {
+            "full": 0.0007860851481961475,
+            "free": 0.0007443526865131124,
+            "relative_free": 0.002718602023337323
+          },
+          "energy": {
+            "full": 0.00047206693460495353,
+            "free": 0.00046231419438568465,
+            "relative_free": 0.0005985787801639712
+          }
+        },
+        "note": "free is the assembled nonlinear residual after zeroing all Dirichlet rows; cell projection is diagnostic only"
+      }
+    }
+  ],
+  "postprocess_source_sha256": "27d4c4e4f1b42b953c1c951219ed674708fa80d31b97f272353d920270ccce81",
+  "saved_inputs": {
+    "results\\round2_thermal_fem\\v2\\levels\\levels_geom17.json": "1fdb603bd2baef1bac27020a73917096c58f76559adada30264ba75e50909bf1",
+    "results\\round2_thermal_fem\\v2\\representatives\\representatives_46_96.json": "afd14094d297361028afa98db59336098fec8cfd7f666a10a490de2ce7d87969"
+  },
+  "note": "No solve was rerun. Old v2 acceptance statements are archived in archive_v2_prepost; this is a post-process re-acceptance."
+}

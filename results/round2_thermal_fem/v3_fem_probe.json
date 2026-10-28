@@ -1,0 +1,2162 @@
+{
+  "protocol": {
+    "Ra": 99999.99999999999,
+    "Ra_expected": 100000.0,
+    "Ra_relative_error": 1.4551915228366853e-16,
+    "Pr": 1.0,
+    "Pr_expected": 1.0,
+    "mu": 0.00894427190999916,
+    "kappa": 0.00894427190999916,
+    "mu_expected": 0.00894427190999916,
+    "mu_relative_error": 0.0,
+    "domain": "square [-1,1]^2 minus a centred regular polygon hole",
+    "boundary_conditions": {
+      "walls_velocity": "u = v = 0 on both the outer square and the inner polygon",
+      "temperature": "T = 1 on the inner polygon, T = 0 on the outer square"
+    },
+    "sign_convention": {
+      "convention": "y upward; buoyancy term +rho*g_beta*(T-T_ref) in the y-momentum equation",
+      "source_evidence": "paper/main.tex modelling assumptions; docs/P1_热场NS_PINN设计.md residual definitions; data boundary T=1 inner/T=0 outer; data velocity ~0 on all walls"
+    }
+  },
+  "protocol_version": "v2",
+  "module": "R2-THERMAL-FEM-02",
+  "status": "geometry_protocol_and_manufactured_probes_ran",
+  "created_utc": "2026-10-22T17:13:07Z",
+  "config_sha256": "536329883ff523e1c0e66c6c7d4b06d2dd4350fbea1cdb7182bcc43f439e4978",
+  "python": "3.12.15",
+  "numpy": "2.5.4",
+  "checks": [
+    {
+      "name": "Ra_identity",
+      "ok": true,
+      "detail": {
+        "Ra": 99999.99999999999,
+        "Ra_expected": 100000.0,
+        "Ra_relative_error": 1.4551915228366853e-16,
+        "Pr": 1.0,
+        "Pr_expected": 1.0,
+        "mu": 0.00894427190999916,
+        "kappa": 0.00894427190999916,
+        "mu_expected": 0.00894427190999916,
+        "mu_relative_error": 0.0,
+        "domain": "square [-1,1]^2 minus a centred regular polygon hole",
+        "boundary_conditions": {
+          "walls_velocity": "u = v = 0 on both the outer square and the inner polygon",
+          "temperature": "T = 1 on the inner polygon, T = 0 on the outer square"
+        },
+        "sign_convention": {
+          "convention": "y upward; buoyancy term +rho*g_beta*(T-T_ref) in the y-momentum equation",
+          "source_evidence": "paper/main.tex modelling assumptions; docs/P1_热场NS_PINN设计.md residual definitions; data boundary T=1 inner/T=0 outer; data velocity ~0 on all walls"
+        }
+      }
+    },
+    {
+      "name": "Pr_identity",
+      "ok": true,
+      "detail": {
+        "Ra": 99999.99999999999,
+        "Ra_expected": 100000.0,
+        "Ra_relative_error": 1.4551915228366853e-16,
+        "Pr": 1.0,
+        "Pr_expected": 1.0,
+        "mu": 0.00894427190999916,
+        "kappa": 0.00894427190999916,
+        "mu_expected": 0.00894427190999916,
+        "mu_relative_error": 0.0,
+        "domain": "square [-1,1]^2 minus a centred regular polygon hole",
+        "boundary_conditions": {
+          "walls_velocity": "u = v = 0 on both the outer square and the inner polygon",
+          "temperature": "T = 1 on the inner polygon, T = 0 on the outer square"
+        },
+        "sign_convention": {
+          "convention": "y upward; buoyancy term +rho*g_beta*(T-T_ref) in the y-momentum equation",
+          "source_evidence": "paper/main.tex modelling assumptions; docs/P1_热场NS_PINN设计.md residual definitions; data boundary T=1 inner/T=0 outer; data velocity ~0 on all walls"
+        }
+      }
+    },
+    {
+      "name": "mu_value",
+      "ok": true,
+      "detail": {
+        "Ra": 99999.99999999999,
+        "Ra_expected": 100000.0,
+        "Ra_relative_error": 1.4551915228366853e-16,
+        "Pr": 1.0,
+        "Pr_expected": 1.0,
+        "mu": 0.00894427190999916,
+        "kappa": 0.00894427190999916,
+        "mu_expected": 0.00894427190999916,
+        "mu_relative_error": 0.0,
+        "domain": "square [-1,1]^2 minus a centred regular polygon hole",
+        "boundary_conditions": {
+          "walls_velocity": "u = v = 0 on both the outer square and the inner polygon",
+          "temperature": "T = 1 on the inner polygon, T = 0 on the outer square"
+        },
+        "sign_convention": {
+          "convention": "y upward; buoyancy term +rho*g_beta*(T-T_ref) in the y-momentum equation",
+          "source_evidence": "paper/main.tex modelling assumptions; docs/P1_热场NS_PINN设计.md residual definitions; data boundary T=1 inner/T=0 outer; data velocity ~0 on all walls"
+        }
+      }
+    },
+    {
+      "name": "geometry_residuals_geom46",
+      "ok": true,
+      "detail": {
+        "geom": 46,
+        "n": 7,
+        "outer_count": 492,
+        "inner_count": 168,
+        "outer_hausdorff_like_max": 5.551115123125783e-17,
+        "inner_point_to_polygon_rms": 3.643984661279437e-16,
+        "inner_point_to_polygon_max": 7.264329320467944e-16,
+        "polygon_centre_norm": 3.1225336644341736e-17,
+        "polygon_radius": 0.4206195889506541,
+        "polygon_side": 0.36500000000000027,
+        "polygon_phase_deg": 13.428571428571301,
+        "independent_polygon_fit": {
+          "n": 7,
+          "rms": 3.5911549328058603e-16,
+          "radius": 0.4206195889506541,
+          "side": 0.36500000000000027,
+          "phase_deg": 13.428571428571301,
+          "centre": [
+            1.0515341042065624e-17,
+            -2.940151784043676e-17
+          ]
+        },
+        "fit_radius_abs_error": 0.0,
+        "fit_side_abs_error": 0.0,
+        "fit_phase_abs_error_deg": 0.0,
+        "vertices": [
+          [
+            0.32622180451319954,
+            0.2655186864783136
+          ],
+          [
+            -0.004194900014370728,
+            0.42059867025810554
+          ],
+          [
+            -0.3314527592707539,
+            0.2589592766842324
+          ],
+          [
+            -0.409119930392135,
+            -0.09768173403943954
+          ],
+          [
+            -0.17871144940254835,
+            -0.3807664066871678
+          ],
+          [
+            0.18627039803637116,
+            -0.3771262088802489
+          ],
+          [
+            0.4109868365302373,
+            -0.08950228381379571
+          ]
+        ],
+        "wall_velocity_max": 9.8553e-22,
+        "inner_temperature_min": 1.0,
+        "inner_temperature_max": 1.0,
+        "outer_temperature_min": 4.63589e-13,
+        "outer_temperature_max": 4.63589e-13,
+        "representative_label": "seven",
+        "in_protocol_A_test": true,
+        "is_pilot": false,
+        "mesh": {
+          "n_nodes": 429,
+          "n_triangles": 780,
+          "h_max": 0.36450719969522866,
+          "area": 3.5158720146475533,
+          "expected_area": 3.5158720146478877,
+          "area_relative_error": 9.511130485521585e-14,
+          "min_triangle_angle_deg": 2.7314839011452783,
+          "max_edge_ratio": 17.447567558589643
+        },
+        "mesh_boundary": {
+          "inner_max_distance_to_polygon": 1.3877787807814457e-16,
+          "outer_max_distance_to_square": 2.482534153247273e-16,
+          "inner_nodes": 39,
+          "outer_nodes": 39
+        }
+      }
+    },
+    {
+      "name": "boundary_counts_geom46",
+      "ok": true,
+      "detail": {
+        "geom": 46,
+        "n": 7,
+        "outer_count": 492,
+        "inner_count": 168,
+        "outer_hausdorff_like_max": 5.551115123125783e-17,
+        "inner_point_to_polygon_rms": 3.643984661279437e-16,
+        "inner_point_to_polygon_max": 7.264329320467944e-16,
+        "polygon_centre_norm": 3.1225336644341736e-17,
+        "polygon_radius": 0.4206195889506541,
+        "polygon_side": 0.36500000000000027,
+        "polygon_phase_deg": 13.428571428571301,
+        "independent_polygon_fit": {
+          "n": 7,
+          "rms": 3.5911549328058603e-16,
+          "radius": 0.4206195889506541,
+          "side": 0.36500000000000027,
+          "phase_deg": 13.428571428571301,
+          "centre": [
+            1.0515341042065624e-17,
+            -2.940151784043676e-17
+          ]
+        },
+        "fit_radius_abs_error": 0.0,
+        "fit_side_abs_error": 0.0,
+        "fit_phase_abs_error_deg": 0.0,
+        "vertices": [
+          [
+            0.32622180451319954,
+            0.2655186864783136
+          ],
+          [
+            -0.004194900014370728,
+            0.42059867025810554
+          ],
+          [
+            -0.3314527592707539,
+            0.2589592766842324
+          ],
+          [
+            -0.409119930392135,
+            -0.09768173403943954
+          ],
+          [
+            -0.17871144940254835,
+            -0.3807664066871678
+          ],
+          [
+            0.18627039803637116,
+            -0.3771262088802489
+          ],
+          [
+            0.4109868365302373,
+            -0.08950228381379571
+          ]
+        ],
+        "wall_velocity_max": 9.8553e-22,
+        "inner_temperature_min": 1.0,
+        "inner_temperature_max": 1.0,
+        "outer_temperature_min": 4.63589e-13,
+        "outer_temperature_max": 4.63589e-13,
+        "representative_label": "seven",
+        "in_protocol_A_test": true,
+        "is_pilot": false,
+        "mesh": {
+          "n_nodes": 429,
+          "n_triangles": 780,
+          "h_max": 0.36450719969522866,
+          "area": 3.5158720146475533,
+          "expected_area": 3.5158720146478877,
+          "area_relative_error": 9.511130485521585e-14,
+          "min_triangle_angle_deg": 2.7314839011452783,
+          "max_edge_ratio": 17.447567558589643
+        },
+        "mesh_boundary": {
+          "inner_max_distance_to_polygon": 1.3877787807814457e-16,
+          "outer_max_distance_to_square": 2.482534153247273e-16,
+          "inner_nodes": 39,
+          "outer_nodes": 39
+        }
+      }
+    },
+    {
+      "name": "boundary_values_geom46",
+      "ok": true,
+      "detail": {
+        "geom": 46,
+        "n": 7,
+        "outer_count": 492,
+        "inner_count": 168,
+        "outer_hausdorff_like_max": 5.551115123125783e-17,
+        "inner_point_to_polygon_rms": 3.643984661279437e-16,
+        "inner_point_to_polygon_max": 7.264329320467944e-16,
+        "polygon_centre_norm": 3.1225336644341736e-17,
+        "polygon_radius": 0.4206195889506541,
+        "polygon_side": 0.36500000000000027,
+        "polygon_phase_deg": 13.428571428571301,
+        "independent_polygon_fit": {
+          "n": 7,
+          "rms": 3.5911549328058603e-16,
+          "radius": 0.4206195889506541,
+          "side": 0.36500000000000027,
+          "phase_deg": 13.428571428571301,
+          "centre": [
+            1.0515341042065624e-17,
+            -2.940151784043676e-17
+          ]
+        },
+        "fit_radius_abs_error": 0.0,
+        "fit_side_abs_error": 0.0,
+        "fit_phase_abs_error_deg": 0.0,
+        "vertices": [
+          [
+            0.32622180451319954,
+            0.2655186864783136
+          ],
+          [
+            -0.004194900014370728,
+            0.42059867025810554
+          ],
+          [
+            -0.3314527592707539,
+            0.2589592766842324
+          ],
+          [
+            -0.409119930392135,
+            -0.09768173403943954
+          ],
+          [
+            -0.17871144940254835,
+            -0.3807664066871678
+          ],
+          [
+            0.18627039803637116,
+            -0.3771262088802489
+          ],
+          [
+            0.4109868365302373,
+            -0.08950228381379571
+          ]
+        ],
+        "wall_velocity_max": 9.8553e-22,
+        "inner_temperature_min": 1.0,
+        "inner_temperature_max": 1.0,
+        "outer_temperature_min": 4.63589e-13,
+        "outer_temperature_max": 4.63589e-13,
+        "representative_label": "seven",
+        "in_protocol_A_test": true,
+        "is_pilot": false,
+        "mesh": {
+          "n_nodes": 429,
+          "n_triangles": 780,
+          "h_max": 0.36450719969522866,
+          "area": 3.5158720146475533,
+          "expected_area": 3.5158720146478877,
+          "area_relative_error": 9.511130485521585e-14,
+          "min_triangle_angle_deg": 2.7314839011452783,
+          "max_edge_ratio": 17.447567558589643
+        },
+        "mesh_boundary": {
+          "inner_max_distance_to_polygon": 1.3877787807814457e-16,
+          "outer_max_distance_to_square": 2.482534153247273e-16,
+          "inner_nodes": 39,
+          "outer_nodes": 39
+        }
+      }
+    },
+    {
+      "name": "representative_in_test_geom46",
+      "ok": true,
+      "detail": {
+        "geom": 46,
+        "n": 7,
+        "outer_count": 492,
+        "inner_count": 168,
+        "outer_hausdorff_like_max": 5.551115123125783e-17,
+        "inner_point_to_polygon_rms": 3.643984661279437e-16,
+        "inner_point_to_polygon_max": 7.264329320467944e-16,
+        "polygon_centre_norm": 3.1225336644341736e-17,
+        "polygon_radius": 0.4206195889506541,
+        "polygon_side": 0.36500000000000027,
+        "polygon_phase_deg": 13.428571428571301,
+        "independent_polygon_fit": {
+          "n": 7,
+          "rms": 3.5911549328058603e-16,
+          "radius": 0.4206195889506541,
+          "side": 0.36500000000000027,
+          "phase_deg": 13.428571428571301,
+          "centre": [
+            1.0515341042065624e-17,
+            -2.940151784043676e-17
+          ]
+        },
+        "fit_radius_abs_error": 0.0,
+        "fit_side_abs_error": 0.0,
+        "fit_phase_abs_error_deg": 0.0,
+        "vertices": [
+          [
+            0.32622180451319954,
+            0.2655186864783136
+          ],
+          [
+            -0.004194900014370728,
+            0.42059867025810554
+          ],
+          [
+            -0.3314527592707539,
+            0.2589592766842324
+          ],
+          [
+            -0.409119930392135,
+            -0.09768173403943954
+          ],
+          [
+            -0.17871144940254835,
+            -0.3807664066871678
+          ],
+          [
+            0.18627039803637116,
+            -0.3771262088802489
+          ],
+          [
+            0.4109868365302373,
+            -0.08950228381379571
+          ]
+        ],
+        "wall_velocity_max": 9.8553e-22,
+        "inner_temperature_min": 1.0,
+        "inner_temperature_max": 1.0,
+        "outer_temperature_min": 4.63589e-13,
+        "outer_temperature_max": 4.63589e-13,
+        "representative_label": "seven",
+        "in_protocol_A_test": true,
+        "is_pilot": false,
+        "mesh": {
+          "n_nodes": 429,
+          "n_triangles": 780,
+          "h_max": 0.36450719969522866,
+          "area": 3.5158720146475533,
+          "expected_area": 3.5158720146478877,
+          "area_relative_error": 9.511130485521585e-14,
+          "min_triangle_angle_deg": 2.7314839011452783,
+          "max_edge_ratio": 17.447567558589643
+        },
+        "mesh_boundary": {
+          "inner_max_distance_to_polygon": 1.3877787807814457e-16,
+          "outer_max_distance_to_square": 2.482534153247273e-16,
+          "inner_nodes": 39,
+          "outer_nodes": 39
+        }
+      }
+    },
+    {
+      "name": "mesh_boundary_conformity_geom46",
+      "ok": true,
+      "detail": {
+        "inner_max_distance_to_polygon": 1.3877787807814457e-16,
+        "outer_max_distance_to_square": 2.482534153247273e-16,
+        "inner_nodes": 39,
+        "outer_nodes": 39
+      }
+    },
+    {
+      "name": "independent_polygon_fit_geom46",
+      "ok": true,
+      "detail": {
+        "n": 7,
+        "rms": 3.5911549328058603e-16,
+        "radius": 0.4206195889506541,
+        "side": 0.36500000000000027,
+        "phase_deg": 13.428571428571301,
+        "centre": [
+          1.0515341042065624e-17,
+          -2.940151784043676e-17
+        ]
+      }
+    },
+    {
+      "name": "geometry_residuals_geom17",
+      "ok": true,
+      "detail": {
+        "geom": 17,
+        "n": 8,
+        "outer_count": 492,
+        "inner_count": 168,
+        "outer_hausdorff_like_max": 5.551115123125783e-17,
+        "inner_point_to_polygon_rms": 1.0367725572701099e-16,
+        "inner_point_to_polygon_max": 2.482534153247273e-16,
+        "polygon_centre_norm": 4.175153192470519e-17,
+        "polygon_radius": 0.4329568801169576,
+        "polygon_side": 0.33137084989847604,
+        "polygon_phase_deg": 17.0,
+        "independent_polygon_fit": {
+          "n": 8,
+          "rms": 6.812175905300678e-17,
+          "radius": 0.4329568801169576,
+          "side": 0.33137084989847604,
+          "phase_deg": 17.0,
+          "centre": [
+            -3.5190104798386656e-17,
+            2.2468799307890073e-17
+          ]
+        },
+        "fit_radius_abs_error": 0.0,
+        "fit_side_abs_error": 0.0,
+        "fit_phase_abs_error_deg": 0.0,
+        "vertices": [
+          [
+            0.3340801722450944,
+            0.2753944417618076
+          ],
+          [
+            0.0414970779836182,
+            0.43096363252533393
+          ],
+          [
+            -0.27539444176180755,
+            0.3340801722450945
+          ],
+          [
+            -0.430963632525334,
+            0.04149707798361838
+          ],
+          [
+            -0.33408017224509456,
+            -0.27539444176180744
+          ],
+          [
+            -0.04149707798361842,
+            -0.43096363252533393
+          ],
+          [
+            0.2753944417618074,
+            -0.3340801722450945
+          ],
+          [
+            0.4309636325253339,
+            -0.041497077983618395
+          ]
+        ],
+        "wall_velocity_max": 4.51596e-22,
+        "inner_temperature_min": 1.0,
+        "inner_temperature_max": 1.0,
+        "outer_temperature_min": 1.72119e-12,
+        "outer_temperature_max": 1.72119e-12,
+        "representative_label": "eight",
+        "in_protocol_A_test": true,
+        "is_pilot": true,
+        "mesh": {
+          "n_nodes": 440,
+          "n_triangles": 800,
+          "h_max": 0.3600588790628855,
+          "area": 3.4698066401620626,
+          "expected_area": 3.4698066401624383,
+          "area_relative_error": 1.0827677461461215e-13,
+          "min_triangle_angle_deg": 2.9697887025125214,
+          "max_edge_ratio": 16.611171779843183
+        },
+        "mesh_boundary": {
+          "inner_max_distance_to_polygon": 1.7554167342883506e-16,
+          "outer_max_distance_to_square": 1.5700924586837752e-16,
+          "inner_nodes": 40,
+          "outer_nodes": 40
+        }
+      }
+    },
+    {
+      "name": "boundary_counts_geom17",
+      "ok": true,
+      "detail": {
+        "geom": 17,
+        "n": 8,
+        "outer_count": 492,
+        "inner_count": 168,
+        "outer_hausdorff_like_max": 5.551115123125783e-17,
+        "inner_point_to_polygon_rms": 1.0367725572701099e-16,
+        "inner_point_to_polygon_max": 2.482534153247273e-16,
+        "polygon_centre_norm": 4.175153192470519e-17,
+        "polygon_radius": 0.4329568801169576,
+        "polygon_side": 0.33137084989847604,
+        "polygon_phase_deg": 17.0,
+        "independent_polygon_fit": {
+          "n": 8,
+          "rms": 6.812175905300678e-17,
+          "radius": 0.4329568801169576,
+          "side": 0.33137084989847604,
+          "phase_deg": 17.0,
+          "centre": [
+            -3.5190104798386656e-17,
+            2.2468799307890073e-17
+          ]
+        },
+        "fit_radius_abs_error": 0.0,
+        "fit_side_abs_error": 0.0,
+        "fit_phase_abs_error_deg": 0.0,
+        "vertices": [
+          [
+            0.3340801722450944,
+            0.2753944417618076
+          ],
+          [
+            0.0414970779836182,
+            0.43096363252533393
+          ],
+          [
+            -0.27539444176180755,
+            0.3340801722450945
+          ],
+          [
+            -0.430963632525334,
+            0.04149707798361838
+          ],
+          [
+            -0.33408017224509456,
+            -0.27539444176180744
+          ],
+          [
+            -0.04149707798361842,
+            -0.43096363252533393
+          ],
+          [
+            0.2753944417618074,
+            -0.3340801722450945
+          ],
+          [
+            0.4309636325253339,
+            -0.041497077983618395
+          ]
+        ],
+        "wall_velocity_max": 4.51596e-22,
+        "inner_temperature_min": 1.0,
+        "inner_temperature_max": 1.0,
+        "outer_temperature_min": 1.72119e-12,
+        "outer_temperature_max": 1.72119e-12,
+        "representative_label": "eight",
+        "in_protocol_A_test": true,
+        "is_pilot": true,
+        "mesh": {
+          "n_nodes": 440,
+          "n_triangles": 800,
+          "h_max": 0.3600588790628855,
+          "area": 3.4698066401620626,
+          "expected_area": 3.4698066401624383,
+          "area_relative_error": 1.0827677461461215e-13,
+          "min_triangle_angle_deg": 2.9697887025125214,
+          "max_edge_ratio": 16.611171779843183
+        },
+        "mesh_boundary": {
+          "inner_max_distance_to_polygon": 1.7554167342883506e-16,
+          "outer_max_distance_to_square": 1.5700924586837752e-16,
+          "inner_nodes": 40,
+          "outer_nodes": 40
+        }
+      }
+    },
+    {
+      "name": "boundary_values_geom17",
+      "ok": true,
+      "detail": {
+        "geom": 17,
+        "n": 8,
+        "outer_count": 492,
+        "inner_count": 168,
+        "outer_hausdorff_like_max": 5.551115123125783e-17,
+        "inner_point_to_polygon_rms": 1.0367725572701099e-16,
+        "inner_point_to_polygon_max": 2.482534153247273e-16,
+        "polygon_centre_norm": 4.175153192470519e-17,
+        "polygon_radius": 0.4329568801169576,
+        "polygon_side": 0.33137084989847604,
+        "polygon_phase_deg": 17.0,
+        "independent_polygon_fit": {
+          "n": 8,
+          "rms": 6.812175905300678e-17,
+          "radius": 0.4329568801169576,
+          "side": 0.33137084989847604,
+          "phase_deg": 17.0,
+          "centre": [
+            -3.5190104798386656e-17,
+            2.2468799307890073e-17
+          ]
+        },
+        "fit_radius_abs_error": 0.0,
+        "fit_side_abs_error": 0.0,
+        "fit_phase_abs_error_deg": 0.0,
+        "vertices": [
+          [
+            0.3340801722450944,
+            0.2753944417618076
+          ],
+          [
+            0.0414970779836182,
+            0.43096363252533393
+          ],
+          [
+            -0.27539444176180755,
+            0.3340801722450945
+          ],
+          [
+            -0.430963632525334,
+            0.04149707798361838
+          ],
+          [
+            -0.33408017224509456,
+            -0.27539444176180744
+          ],
+          [
+            -0.04149707798361842,
+            -0.43096363252533393
+          ],
+          [
+            0.2753944417618074,
+            -0.3340801722450945
+          ],
+          [
+            0.4309636325253339,
+            -0.041497077983618395
+          ]
+        ],
+        "wall_velocity_max": 4.51596e-22,
+        "inner_temperature_min": 1.0,
+        "inner_temperature_max": 1.0,
+        "outer_temperature_min": 1.72119e-12,
+        "outer_temperature_max": 1.72119e-12,
+        "representative_label": "eight",
+        "in_protocol_A_test": true,
+        "is_pilot": true,
+        "mesh": {
+          "n_nodes": 440,
+          "n_triangles": 800,
+          "h_max": 0.3600588790628855,
+          "area": 3.4698066401620626,
+          "expected_area": 3.4698066401624383,
+          "area_relative_error": 1.0827677461461215e-13,
+          "min_triangle_angle_deg": 2.9697887025125214,
+          "max_edge_ratio": 16.611171779843183
+        },
+        "mesh_boundary": {
+          "inner_max_distance_to_polygon": 1.7554167342883506e-16,
+          "outer_max_distance_to_square": 1.5700924586837752e-16,
+          "inner_nodes": 40,
+          "outer_nodes": 40
+        }
+      }
+    },
+    {
+      "name": "representative_in_test_geom17",
+      "ok": true,
+      "detail": {
+        "geom": 17,
+        "n": 8,
+        "outer_count": 492,
+        "inner_count": 168,
+        "outer_hausdorff_like_max": 5.551115123125783e-17,
+        "inner_point_to_polygon_rms": 1.0367725572701099e-16,
+        "inner_point_to_polygon_max": 2.482534153247273e-16,
+        "polygon_centre_norm": 4.175153192470519e-17,
+        "polygon_radius": 0.4329568801169576,
+        "polygon_side": 0.33137084989847604,
+        "polygon_phase_deg": 17.0,
+        "independent_polygon_fit": {
+          "n": 8,
+          "rms": 6.812175905300678e-17,
+          "radius": 0.4329568801169576,
+          "side": 0.33137084989847604,
+          "phase_deg": 17.0,
+          "centre": [
+            -3.5190104798386656e-17,
+            2.2468799307890073e-17
+          ]
+        },
+        "fit_radius_abs_error": 0.0,
+        "fit_side_abs_error": 0.0,
+        "fit_phase_abs_error_deg": 0.0,
+        "vertices": [
+          [
+            0.3340801722450944,
+            0.2753944417618076
+          ],
+          [
+            0.0414970779836182,
+            0.43096363252533393
+          ],
+          [
+            -0.27539444176180755,
+            0.3340801722450945
+          ],
+          [
+            -0.430963632525334,
+            0.04149707798361838
+          ],
+          [
+            -0.33408017224509456,
+            -0.27539444176180744
+          ],
+          [
+            -0.04149707798361842,
+            -0.43096363252533393
+          ],
+          [
+            0.2753944417618074,
+            -0.3340801722450945
+          ],
+          [
+            0.4309636325253339,
+            -0.041497077983618395
+          ]
+        ],
+        "wall_velocity_max": 4.51596e-22,
+        "inner_temperature_min": 1.0,
+        "inner_temperature_max": 1.0,
+        "outer_temperature_min": 1.72119e-12,
+        "outer_temperature_max": 1.72119e-12,
+        "representative_label": "eight",
+        "in_protocol_A_test": true,
+        "is_pilot": true,
+        "mesh": {
+          "n_nodes": 440,
+          "n_triangles": 800,
+          "h_max": 0.3600588790628855,
+          "area": 3.4698066401620626,
+          "expected_area": 3.4698066401624383,
+          "area_relative_error": 1.0827677461461215e-13,
+          "min_triangle_angle_deg": 2.9697887025125214,
+          "max_edge_ratio": 16.611171779843183
+        },
+        "mesh_boundary": {
+          "inner_max_distance_to_polygon": 1.7554167342883506e-16,
+          "outer_max_distance_to_square": 1.5700924586837752e-16,
+          "inner_nodes": 40,
+          "outer_nodes": 40
+        }
+      }
+    },
+    {
+      "name": "mesh_boundary_conformity_geom17",
+      "ok": true,
+      "detail": {
+        "inner_max_distance_to_polygon": 1.7554167342883506e-16,
+        "outer_max_distance_to_square": 1.5700924586837752e-16,
+        "inner_nodes": 40,
+        "outer_nodes": 40
+      }
+    },
+    {
+      "name": "independent_polygon_fit_geom17",
+      "ok": true,
+      "detail": {
+        "n": 8,
+        "rms": 6.812175905300678e-17,
+        "radius": 0.4329568801169576,
+        "side": 0.33137084989847604,
+        "phase_deg": 17.0,
+        "centre": [
+          -3.5190104798386656e-17,
+          2.2468799307890073e-17
+        ]
+      }
+    },
+    {
+      "name": "geometry_residuals_geom96",
+      "ok": true,
+      "detail": {
+        "geom": 96,
+        "n": 9,
+        "outer_count": 492,
+        "inner_count": 168,
+        "outer_hausdorff_like_max": 5.551115123125783e-17,
+        "inner_point_to_polygon_rms": 1.0281499902524463e-16,
+        "inner_point_to_polygon_max": 2.7755575615628914e-16,
+        "polygon_centre_norm": 9.118268296306215e-17,
+        "polygon_radius": 0.4206195889506538,
+        "polygon_side": 0.28772074419697297,
+        "polygon_phase_deg": 31.0,
+        "independent_polygon_fit": {
+          "n": 9,
+          "rms": 1.0758216328123338e-16,
+          "radius": 0.4206195889506538,
+          "side": 0.28772074419697297,
+          "phase_deg": 31.0,
+          "centre": [
+            -6.967805961840175e-17,
+            -5.88153864235946e-17
+          ]
+        },
+        "fit_radius_abs_error": 0.0,
+        "fit_side_abs_error": 0.0,
+        "fit_phase_abs_error_deg": 0.0,
+        "vertices": [
+          [
+            0.2647044842016473,
+            0.32688281486269166
+          ],
+          [
+            -0.007340824021849897,
+            0.4205555265499399
+          ],
+          [
+            -0.27595127910135225,
+            0.31744563341042287
+          ],
+          [
+            -0.41544106383248025,
+            0.06579940038293733
+          ],
+          [
+            -0.360541357683264,
+            -0.21663510336260308
+          ],
+          [
+            -0.1369403433031923,
+            -0.39770363461379243
+          ],
+          [
+            0.15073657963083245,
+            -0.3926822152456293
+          ],
+          [
+            0.36788218170511366,
+            -0.2039204231873372
+          ],
+          [
+            0.41289162240454447,
+            0.08025800120336915
+          ]
+        ],
+        "wall_velocity_max": 8.75822e-22,
+        "inner_temperature_min": 1.0,
+        "inner_temperature_max": 1.0,
+        "outer_temperature_min": 4.29042e-13,
+        "outer_temperature_max": 4.29042e-13,
+        "representative_label": "nine",
+        "in_protocol_A_test": true,
+        "is_pilot": false,
+        "mesh": {
+          "n_nodes": 451,
+          "n_triangles": 820,
+          "h_max": 0.3632840286682271,
+          "area": 3.4882486467101583,
+          "expected_area": 3.488248646710474,
+          "area_relative_error": 9.051746597856609e-14,
+          "min_triangle_angle_deg": 1.6330840789704895,
+          "max_edge_ratio": 34.86072664181961
+        },
+        "mesh_boundary": {
+          "inner_max_distance_to_polygon": 2.0014830212433605e-16,
+          "outer_max_distance_to_square": 1.3877787807814457e-16,
+          "inner_nodes": 41,
+          "outer_nodes": 41
+        }
+      }
+    },
+    {
+      "name": "boundary_counts_geom96",
+      "ok": true,
+      "detail": {
+        "geom": 96,
+        "n": 9,
+        "outer_count": 492,
+        "inner_count": 168,
+        "outer_hausdorff_like_max": 5.551115123125783e-17,
+        "inner_point_to_polygon_rms": 1.0281499902524463e-16,
+        "inner_point_to_polygon_max": 2.7755575615628914e-16,
+        "polygon_centre_norm": 9.118268296306215e-17,
+        "polygon_radius": 0.4206195889506538,
+        "polygon_side": 0.28772074419697297,
+        "polygon_phase_deg": 31.0,
+        "independent_polygon_fit": {
+          "n": 9,
+          "rms": 1.0758216328123338e-16,
+          "radius": 0.4206195889506538,
+          "side": 0.28772074419697297,
+          "phase_deg": 31.0,
+          "centre": [
+            -6.967805961840175e-17,
+            -5.88153864235946e-17
+          ]
+        },
+        "fit_radius_abs_error": 0.0,
+        "fit_side_abs_error": 0.0,
+        "fit_phase_abs_error_deg": 0.0,
+        "vertices": [
+          [
+            0.2647044842016473,
+            0.32688281486269166
+          ],
+          [
+            -0.007340824021849897,
+            0.4205555265499399
+          ],
+          [
+            -0.27595127910135225,
+            0.31744563341042287
+          ],
+          [
+            -0.41544106383248025,
+            0.06579940038293733
+          ],
+          [
+            -0.360541357683264,
+            -0.21663510336260308
+          ],
+          [
+            -0.1369403433031923,
+            -0.39770363461379243
+          ],
+          [
+            0.15073657963083245,
+            -0.3926822152456293
+          ],
+          [
+            0.36788218170511366,
+            -0.2039204231873372
+          ],
+          [
+            0.41289162240454447,
+            0.08025800120336915
+          ]
+        ],
+        "wall_velocity_max": 8.75822e-22,
+        "inner_temperature_min": 1.0,
+        "inner_temperature_max": 1.0,
+        "outer_temperature_min": 4.29042e-13,
+        "outer_temperature_max": 4.29042e-13,
+        "representative_label": "nine",
+        "in_protocol_A_test": true,
+        "is_pilot": false,
+        "mesh": {
+          "n_nodes": 451,
+          "n_triangles": 820,
+          "h_max": 0.3632840286682271,
+          "area": 3.4882486467101583,
+          "expected_area": 3.488248646710474,
+          "area_relative_error": 9.051746597856609e-14,
+          "min_triangle_angle_deg": 1.6330840789704895,
+          "max_edge_ratio": 34.86072664181961
+        },
+        "mesh_boundary": {
+          "inner_max_distance_to_polygon": 2.0014830212433605e-16,
+          "outer_max_distance_to_square": 1.3877787807814457e-16,
+          "inner_nodes": 41,
+          "outer_nodes": 41
+        }
+      }
+    },
+    {
+      "name": "boundary_values_geom96",
+      "ok": true,
+      "detail": {
+        "geom": 96,
+        "n": 9,
+        "outer_count": 492,
+        "inner_count": 168,
+        "outer_hausdorff_like_max": 5.551115123125783e-17,
+        "inner_point_to_polygon_rms": 1.0281499902524463e-16,
+        "inner_point_to_polygon_max": 2.7755575615628914e-16,
+        "polygon_centre_norm": 9.118268296306215e-17,
+        "polygon_radius": 0.4206195889506538,
+        "polygon_side": 0.28772074419697297,
+        "polygon_phase_deg": 31.0,
+        "independent_polygon_fit": {
+          "n": 9,
+          "rms": 1.0758216328123338e-16,
+          "radius": 0.4206195889506538,
+          "side": 0.28772074419697297,
+          "phase_deg": 31.0,
+          "centre": [
+            -6.967805961840175e-17,
+            -5.88153864235946e-17
+          ]
+        },
+        "fit_radius_abs_error": 0.0,
+        "fit_side_abs_error": 0.0,
+        "fit_phase_abs_error_deg": 0.0,
+        "vertices": [
+          [
+            0.2647044842016473,
+            0.32688281486269166
+          ],
+          [
+            -0.007340824021849897,
+            0.4205555265499399
+          ],
+          [
+            -0.27595127910135225,
+            0.31744563341042287
+          ],
+          [
+            -0.41544106383248025,
+            0.06579940038293733
+          ],
+          [
+            -0.360541357683264,
+            -0.21663510336260308
+          ],
+          [
+            -0.1369403433031923,
+            -0.39770363461379243
+          ],
+          [
+            0.15073657963083245,
+            -0.3926822152456293
+          ],
+          [
+            0.36788218170511366,
+            -0.2039204231873372
+          ],
+          [
+            0.41289162240454447,
+            0.08025800120336915
+          ]
+        ],
+        "wall_velocity_max": 8.75822e-22,
+        "inner_temperature_min": 1.0,
+        "inner_temperature_max": 1.0,
+        "outer_temperature_min": 4.29042e-13,
+        "outer_temperature_max": 4.29042e-13,
+        "representative_label": "nine",
+        "in_protocol_A_test": true,
+        "is_pilot": false,
+        "mesh": {
+          "n_nodes": 451,
+          "n_triangles": 820,
+          "h_max": 0.3632840286682271,
+          "area": 3.4882486467101583,
+          "expected_area": 3.488248646710474,
+          "area_relative_error": 9.051746597856609e-14,
+          "min_triangle_angle_deg": 1.6330840789704895,
+          "max_edge_ratio": 34.86072664181961
+        },
+        "mesh_boundary": {
+          "inner_max_distance_to_polygon": 2.0014830212433605e-16,
+          "outer_max_distance_to_square": 1.3877787807814457e-16,
+          "inner_nodes": 41,
+          "outer_nodes": 41
+        }
+      }
+    },
+    {
+      "name": "representative_in_test_geom96",
+      "ok": true,
+      "detail": {
+        "geom": 96,
+        "n": 9,
+        "outer_count": 492,
+        "inner_count": 168,
+        "outer_hausdorff_like_max": 5.551115123125783e-17,
+        "inner_point_to_polygon_rms": 1.0281499902524463e-16,
+        "inner_point_to_polygon_max": 2.7755575615628914e-16,
+        "polygon_centre_norm": 9.118268296306215e-17,
+        "polygon_radius": 0.4206195889506538,
+        "polygon_side": 0.28772074419697297,
+        "polygon_phase_deg": 31.0,
+        "independent_polygon_fit": {
+          "n": 9,
+          "rms": 1.0758216328123338e-16,
+          "radius": 0.4206195889506538,
+          "side": 0.28772074419697297,
+          "phase_deg": 31.0,
+          "centre": [
+            -6.967805961840175e-17,
+            -5.88153864235946e-17
+          ]
+        },
+        "fit_radius_abs_error": 0.0,
+        "fit_side_abs_error": 0.0,
+        "fit_phase_abs_error_deg": 0.0,
+        "vertices": [
+          [
+            0.2647044842016473,
+            0.32688281486269166
+          ],
+          [
+            -0.007340824021849897,
+            0.4205555265499399
+          ],
+          [
+            -0.27595127910135225,
+            0.31744563341042287
+          ],
+          [
+            -0.41544106383248025,
+            0.06579940038293733
+          ],
+          [
+            -0.360541357683264,
+            -0.21663510336260308
+          ],
+          [
+            -0.1369403433031923,
+            -0.39770363461379243
+          ],
+          [
+            0.15073657963083245,
+            -0.3926822152456293
+          ],
+          [
+            0.36788218170511366,
+            -0.2039204231873372
+          ],
+          [
+            0.41289162240454447,
+            0.08025800120336915
+          ]
+        ],
+        "wall_velocity_max": 8.75822e-22,
+        "inner_temperature_min": 1.0,
+        "inner_temperature_max": 1.0,
+        "outer_temperature_min": 4.29042e-13,
+        "outer_temperature_max": 4.29042e-13,
+        "representative_label": "nine",
+        "in_protocol_A_test": true,
+        "is_pilot": false,
+        "mesh": {
+          "n_nodes": 451,
+          "n_triangles": 820,
+          "h_max": 0.3632840286682271,
+          "area": 3.4882486467101583,
+          "expected_area": 3.488248646710474,
+          "area_relative_error": 9.051746597856609e-14,
+          "min_triangle_angle_deg": 1.6330840789704895,
+          "max_edge_ratio": 34.86072664181961
+        },
+        "mesh_boundary": {
+          "inner_max_distance_to_polygon": 2.0014830212433605e-16,
+          "outer_max_distance_to_square": 1.3877787807814457e-16,
+          "inner_nodes": 41,
+          "outer_nodes": 41
+        }
+      }
+    },
+    {
+      "name": "mesh_boundary_conformity_geom96",
+      "ok": true,
+      "detail": {
+        "inner_max_distance_to_polygon": 2.0014830212433605e-16,
+        "outer_max_distance_to_square": 1.3877787807814457e-16,
+        "inner_nodes": 41,
+        "outer_nodes": 41
+      }
+    },
+    {
+      "name": "independent_polygon_fit_geom96",
+      "ok": true,
+      "detail": {
+        "n": 9,
+        "rms": 1.0758216328123338e-16,
+        "radius": 0.4206195889506538,
+        "side": 0.28772074419697297,
+        "phase_deg": 31.0,
+        "centre": [
+          -6.967805961840175e-17,
+          -5.88153864235946e-17
+        ]
+      }
+    },
+    {
+      "name": "mesh_area_geom46",
+      "ok": true,
+      "detail": {
+        "n_nodes": 429,
+        "n_triangles": 780,
+        "h_max": 0.36450719969522866,
+        "area": 3.5158720146475533,
+        "expected_area": 3.5158720146478877,
+        "area_relative_error": 9.511130485521585e-14,
+        "min_triangle_angle_deg": 2.7314839011452783,
+        "max_edge_ratio": 17.447567558589643
+      }
+    },
+    {
+      "name": "mesh_quality_geom46",
+      "ok": true,
+      "detail": {
+        "n_nodes": 429,
+        "n_triangles": 780,
+        "h_max": 0.36450719969522866,
+        "area": 3.5158720146475533,
+        "expected_area": 3.5158720146478877,
+        "area_relative_error": 9.511130485521585e-14,
+        "min_triangle_angle_deg": 2.7314839011452783,
+        "max_edge_ratio": 17.447567558589643
+      }
+    },
+    {
+      "name": "mesh_area_geom17",
+      "ok": true,
+      "detail": {
+        "n_nodes": 440,
+        "n_triangles": 800,
+        "h_max": 0.3600588790628855,
+        "area": 3.4698066401620626,
+        "expected_area": 3.4698066401624383,
+        "area_relative_error": 1.0827677461461215e-13,
+        "min_triangle_angle_deg": 2.9697887025125214,
+        "max_edge_ratio": 16.611171779843183
+      }
+    },
+    {
+      "name": "mesh_quality_geom17",
+      "ok": true,
+      "detail": {
+        "n_nodes": 440,
+        "n_triangles": 800,
+        "h_max": 0.3600588790628855,
+        "area": 3.4698066401620626,
+        "expected_area": 3.4698066401624383,
+        "area_relative_error": 1.0827677461461215e-13,
+        "min_triangle_angle_deg": 2.9697887025125214,
+        "max_edge_ratio": 16.611171779843183
+      }
+    },
+    {
+      "name": "mesh_area_geom96",
+      "ok": true,
+      "detail": {
+        "n_nodes": 451,
+        "n_triangles": 820,
+        "h_max": 0.3632840286682271,
+        "area": 3.4882486467101583,
+        "expected_area": 3.488248646710474,
+        "area_relative_error": 9.051746597856609e-14,
+        "min_triangle_angle_deg": 1.6330840789704895,
+        "max_edge_ratio": 34.86072664181961
+      }
+    },
+    {
+      "name": "mesh_quality_geom96",
+      "ok": true,
+      "detail": {
+        "n_nodes": 451,
+        "n_triangles": 820,
+        "h_max": 0.3632840286682271,
+        "area": 3.4882486467101583,
+        "expected_area": 3.488248646710474,
+        "area_relative_error": 9.051746597856609e-14,
+        "min_triangle_angle_deg": 1.6330840789704895,
+        "max_edge_ratio": 34.86072664181961
+      }
+    },
+    {
+      "name": "representative_minimal_test_ids",
+      "ok": true,
+      "detail": {
+        "test_count": 20,
+        "min_id_by_sides": {
+          "7": 46,
+          "8": 17,
+          "9": 96
+        },
+        "expected_min_id_by_sides": {
+          "7": 46,
+          "8": 17,
+          "9": 96
+        },
+        "configured_representatives": [
+          17,
+          46,
+          96
+        ],
+        "pilot": 17,
+        "ok": true
+      }
+    },
+    {
+      "name": "manufactured_source_formulas_fd",
+      "ok": true,
+      "detail": {
+        "records": [
+          {
+            "point": [
+              0.23,
+              -0.37
+            ],
+            "divergence_abs": 0.0,
+            "fx_abs_error": 8.4656706089703e-09,
+            "fy_abs_error": 7.852066108426925e-09,
+            "fT_abs_error": 1.3058184158976083e-08
+          },
+          {
+            "point": [
+              -0.41,
+              0.22
+            ],
+            "divergence_abs": 4.163336342344337e-12,
+            "fx_abs_error": 9.142385792859642e-09,
+            "fy_abs_error": 1.2379006819607241e-08,
+            "fT_abs_error": 1.8736323742496452e-09
+          },
+          {
+            "point": [
+              0.12,
+              0.48
+            ],
+            "divergence_abs": 2.2551405187698492e-12,
+            "fx_abs_error": 6.720055623077315e-10,
+            "fy_abs_error": 2.7106174527169458e-09,
+            "fT_abs_error": 6.966819648956957e-09
+          }
+        ],
+        "max_source_abs_error": 1.3058184158976083e-08,
+        "max_divergence_abs": 4.163336342344337e-12,
+        "ok": true
+      }
+    },
+    {
+      "name": "acceptance_gate_rejects_finite_only",
+      "ok": true,
+      "detail": {
+        "good_all_passed": true,
+        "finite_only_all_passed": false,
+        "no_newton_all_passed": false,
+        "large_galerkin_free_all_passed": false,
+        "ok": true
+      }
+    },
+    {
+      "name": "comparison_metric_helpers",
+      "ok": true,
+      "detail": {
+        "exact": {
+          "n": 3,
+          "re": 0.0,
+          "mae": 0.0,
+          "max_err": 0.0,
+          "denominator": 3.7416573867739413
+        },
+        "scaled": {
+          "n": 3,
+          "re": 1.0,
+          "mae": 2.0,
+          "max_err": 3.0,
+          "denominator": 3.7416573867739413
+        },
+        "zero_denominator": {
+          "n": 3,
+          "re": null,
+          "mae": 0.0,
+          "max_err": 0.0,
+          "denominator": 0.0
+        },
+        "ok": true
+      }
+    },
+    {
+      "name": "protocol_snapshot_current",
+      "ok": true,
+      "detail": {
+        "ok": true,
+        "checks": {
+          "config_sha256": true,
+          "source:src/fem_reference/__init__.py": true,
+          "source:src/fem_reference/geometry.py": true,
+          "source:src/fem_reference/fenics_solver.py": true,
+          "source:scripts/exp_r2_thermal_fem.py": true,
+          "source:scripts/sbatch/r2_thermal_fem.sbatch": true,
+          "input:geometry_spec": true,
+          "input:split_config": true
+        },
+        "path": "results/round2_thermal_fem/protocol_snapshot.json"
+      }
+    },
+    {
+      "name": "pressure_gauge_declared",
+      "ok": true,
+      "detail": {
+        "meaning": "pressure enters only through its gradient",
+        "gauge": "mass-penalty zero-mean: add eps*integral(p*q); eps must be reported with true constraint div(u)=-eps*p and sensitivity; not exact gauge",
+        "gauge_alternative": "fixed reference DOF is allowed by the protocol but was replaced after an environment-specific BC issue; the mass penalty is an explicit gauge choice, not a physical force"
+      }
+    },
+    {
+      "name": "operator_bug_analytic_evidence",
+      "ok": true,
+      "detail": {
+        "field": "u=(x+2y, 3x-y), grad(u)=[[1,2],[3,-1]]",
+        "rows": [
+          {
+            "point": [
+              0.2,
+              -0.3
+            ],
+            "correct": [
+              1.4000000000000001,
+              -2.1
+            ],
+            "old": [
+              2.3,
+              -1.7
+            ],
+            "difference": [
+              -0.8999999999999997,
+              -0.40000000000000013
+            ]
+          },
+          {
+            "point": [
+              -0.4,
+              0.5
+            ],
+            "correct": [
+              -2.8000000000000003,
+              3.5
+            ],
+            "old": [
+              -4.5,
+              2.9
+            ],
+            "difference": [
+              1.6999999999999997,
+              0.6000000000000001
+            ]
+          },
+          {
+            "point": [
+              0.3,
+              0.1
+            ],
+            "correct": [
+              2.1,
+              0.7000000000000001
+            ],
+            "old": [
+              2.9,
+              0.2
+            ],
+            "difference": [
+              -0.7999999999999998,
+              0.5
+            ]
+          }
+        ],
+        "max_difference": 1.6999999999999997,
+        "ok": true
+      }
+    },
+    {
+      "name": "manufactured_stokes_convergence",
+      "ok": true,
+      "detail": {
+        "velocity_l2": [
+          3.3506356706621525,
+          3.473187583917831
+        ],
+        "velocity_h1": [
+          2.340774750150786,
+          2.544242006638028
+        ],
+        "pressure_l2": [
+          2.0887598889136263,
+          1.9208378438033435
+        ],
+        "temperature_l2": [
+          3.1104307880279425,
+          2.7945412516431465
+        ],
+        "temperature_h1": [
+          2.08863717752687,
+          1.8303932856799836
+        ]
+      }
+    },
+    {
+      "name": "manufactured_boussinesq_convergence",
+      "ok": true,
+      "detail": {
+        "velocity_l2": [
+          3.3011420714026287,
+          3.365331997351952
+        ],
+        "velocity_h1": [
+          2.133239639894745,
+          2.4652042624531654
+        ],
+        "pressure_l2": [
+          2.3309670031648086,
+          1.9294627726113305
+        ],
+        "temperature_l2": [
+          4.681514290654725,
+          3.3744684821667126
+        ],
+        "temperature_h1": [
+          2.7940443817784217,
+          2.0520311801183184
+        ]
+      }
+    },
+    {
+      "name": "pressure_gauge_regularization",
+      "ok": true,
+      "detail": {
+        "mesh": {
+          "n_cells": 240,
+          "n_vertices": 148,
+          "target_h": 0.2
+        },
+        "constant_pressure_null_residual": 18.370143498492755,
+        "constant_pressure_rel_residual": 0.4383795565759187,
+        "matrix_nnz": 67140,
+        "accepted": false,
+        "applicable": false,
+        "gauge_mode": "mass_penalty_zero_mean"
+      }
+    }
+  ],
+  "all_local_checks_passed": true,
+  "geometry": [
+    {
+      "geom": 46,
+      "n": 7,
+      "outer_count": 492,
+      "inner_count": 168,
+      "outer_hausdorff_like_max": 5.551115123125783e-17,
+      "inner_point_to_polygon_rms": 3.643984661279437e-16,
+      "inner_point_to_polygon_max": 7.264329320467944e-16,
+      "polygon_centre_norm": 3.1225336644341736e-17,
+      "polygon_radius": 0.4206195889506541,
+      "polygon_side": 0.36500000000000027,
+      "polygon_phase_deg": 13.428571428571301,
+      "independent_polygon_fit": {
+        "n": 7,
+        "rms": 3.5911549328058603e-16,
+        "radius": 0.4206195889506541,
+        "side": 0.36500000000000027,
+        "phase_deg": 13.428571428571301,
+        "centre": [
+          1.0515341042065624e-17,
+          -2.940151784043676e-17
+        ]
+      },
+      "fit_radius_abs_error": 0.0,
+      "fit_side_abs_error": 0.0,
+      "fit_phase_abs_error_deg": 0.0,
+      "vertices": [
+        [
+          0.32622180451319954,
+          0.2655186864783136
+        ],
+        [
+          -0.004194900014370728,
+          0.42059867025810554
+        ],
+        [
+          -0.3314527592707539,
+          0.2589592766842324
+        ],
+        [
+          -0.409119930392135,
+          -0.09768173403943954
+        ],
+        [
+          -0.17871144940254835,
+          -0.3807664066871678
+        ],
+        [
+          0.18627039803637116,
+          -0.3771262088802489
+        ],
+        [
+          0.4109868365302373,
+          -0.08950228381379571
+        ]
+      ],
+      "wall_velocity_max": 9.8553e-22,
+      "inner_temperature_min": 1.0,
+      "inner_temperature_max": 1.0,
+      "outer_temperature_min": 4.63589e-13,
+      "outer_temperature_max": 4.63589e-13,
+      "representative_label": "seven",
+      "in_protocol_A_test": true,
+      "is_pilot": false,
+      "mesh": {
+        "n_nodes": 429,
+        "n_triangles": 780,
+        "h_max": 0.36450719969522866,
+        "area": 3.5158720146475533,
+        "expected_area": 3.5158720146478877,
+        "area_relative_error": 9.511130485521585e-14,
+        "min_triangle_angle_deg": 2.7314839011452783,
+        "max_edge_ratio": 17.447567558589643
+      },
+      "mesh_boundary": {
+        "inner_max_distance_to_polygon": 1.3877787807814457e-16,
+        "outer_max_distance_to_square": 2.482534153247273e-16,
+        "inner_nodes": 39,
+        "outer_nodes": 39
+      }
+    },
+    {
+      "geom": 17,
+      "n": 8,
+      "outer_count": 492,
+      "inner_count": 168,
+      "outer_hausdorff_like_max": 5.551115123125783e-17,
+      "inner_point_to_polygon_rms": 1.0367725572701099e-16,
+      "inner_point_to_polygon_max": 2.482534153247273e-16,
+      "polygon_centre_norm": 4.175153192470519e-17,
+      "polygon_radius": 0.4329568801169576,
+      "polygon_side": 0.33137084989847604,
+      "polygon_phase_deg": 17.0,
+      "independent_polygon_fit": {
+        "n": 8,
+        "rms": 6.812175905300678e-17,
+        "radius": 0.4329568801169576,
+        "side": 0.33137084989847604,
+        "phase_deg": 17.0,
+        "centre": [
+          -3.5190104798386656e-17,
+          2.2468799307890073e-17
+        ]
+      },
+      "fit_radius_abs_error": 0.0,
+      "fit_side_abs_error": 0.0,
+      "fit_phase_abs_error_deg": 0.0,
+      "vertices": [
+        [
+          0.3340801722450944,
+          0.2753944417618076
+        ],
+        [
+          0.0414970779836182,
+          0.43096363252533393
+        ],
+        [
+          -0.27539444176180755,
+          0.3340801722450945
+        ],
+        [
+          -0.430963632525334,
+          0.04149707798361838
+        ],
+        [
+          -0.33408017224509456,
+          -0.27539444176180744
+        ],
+        [
+          -0.04149707798361842,
+          -0.43096363252533393
+        ],
+        [
+          0.2753944417618074,
+          -0.3340801722450945
+        ],
+        [
+          0.4309636325253339,
+          -0.041497077983618395
+        ]
+      ],
+      "wall_velocity_max": 4.51596e-22,
+      "inner_temperature_min": 1.0,
+      "inner_temperature_max": 1.0,
+      "outer_temperature_min": 1.72119e-12,
+      "outer_temperature_max": 1.72119e-12,
+      "representative_label": "eight",
+      "in_protocol_A_test": true,
+      "is_pilot": true,
+      "mesh": {
+        "n_nodes": 440,
+        "n_triangles": 800,
+        "h_max": 0.3600588790628855,
+        "area": 3.4698066401620626,
+        "expected_area": 3.4698066401624383,
+        "area_relative_error": 1.0827677461461215e-13,
+        "min_triangle_angle_deg": 2.9697887025125214,
+        "max_edge_ratio": 16.611171779843183
+      },
+      "mesh_boundary": {
+        "inner_max_distance_to_polygon": 1.7554167342883506e-16,
+        "outer_max_distance_to_square": 1.5700924586837752e-16,
+        "inner_nodes": 40,
+        "outer_nodes": 40
+      }
+    },
+    {
+      "geom": 96,
+      "n": 9,
+      "outer_count": 492,
+      "inner_count": 168,
+      "outer_hausdorff_like_max": 5.551115123125783e-17,
+      "inner_point_to_polygon_rms": 1.0281499902524463e-16,
+      "inner_point_to_polygon_max": 2.7755575615628914e-16,
+      "polygon_centre_norm": 9.118268296306215e-17,
+      "polygon_radius": 0.4206195889506538,
+      "polygon_side": 0.28772074419697297,
+      "polygon_phase_deg": 31.0,
+      "independent_polygon_fit": {
+        "n": 9,
+        "rms": 1.0758216328123338e-16,
+        "radius": 0.4206195889506538,
+        "side": 0.28772074419697297,
+        "phase_deg": 31.0,
+        "centre": [
+          -6.967805961840175e-17,
+          -5.88153864235946e-17
+        ]
+      },
+      "fit_radius_abs_error": 0.0,
+      "fit_side_abs_error": 0.0,
+      "fit_phase_abs_error_deg": 0.0,
+      "vertices": [
+        [
+          0.2647044842016473,
+          0.32688281486269166
+        ],
+        [
+          -0.007340824021849897,
+          0.4205555265499399
+        ],
+        [
+          -0.27595127910135225,
+          0.31744563341042287
+        ],
+        [
+          -0.41544106383248025,
+          0.06579940038293733
+        ],
+        [
+          -0.360541357683264,
+          -0.21663510336260308
+        ],
+        [
+          -0.1369403433031923,
+          -0.39770363461379243
+        ],
+        [
+          0.15073657963083245,
+          -0.3926822152456293
+        ],
+        [
+          0.36788218170511366,
+          -0.2039204231873372
+        ],
+        [
+          0.41289162240454447,
+          0.08025800120336915
+        ]
+      ],
+      "wall_velocity_max": 8.75822e-22,
+      "inner_temperature_min": 1.0,
+      "inner_temperature_max": 1.0,
+      "outer_temperature_min": 4.29042e-13,
+      "outer_temperature_max": 4.29042e-13,
+      "representative_label": "nine",
+      "in_protocol_A_test": true,
+      "is_pilot": false,
+      "mesh": {
+        "n_nodes": 451,
+        "n_triangles": 820,
+        "h_max": 0.3632840286682271,
+        "area": 3.4882486467101583,
+        "expected_area": 3.488248646710474,
+        "area_relative_error": 9.051746597856609e-14,
+        "min_triangle_angle_deg": 1.6330840789704895,
+        "max_edge_ratio": 34.86072664181961
+      },
+      "mesh_boundary": {
+        "inner_max_distance_to_polygon": 2.0014830212433605e-16,
+        "outer_max_distance_to_square": 1.3877787807814457e-16,
+        "inner_nodes": 41,
+        "outer_nodes": 41
+      }
+    }
+  ],
+  "representative_id_check": {
+    "test_count": 20,
+    "min_id_by_sides": {
+      "7": 46,
+      "8": 17,
+      "9": 96
+    },
+    "expected_min_id_by_sides": {
+      "7": 46,
+      "8": 17,
+      "9": 96
+    },
+    "configured_representatives": [
+      17,
+      46,
+      96
+    ],
+    "pilot": 17,
+    "ok": true
+  },
+  "manufactured_formula_check": {
+    "records": [
+      {
+        "point": [
+          0.23,
+          -0.37
+        ],
+        "divergence_abs": 0.0,
+        "fx_abs_error": 8.4656706089703e-09,
+        "fy_abs_error": 7.852066108426925e-09,
+        "fT_abs_error": 1.3058184158976083e-08
+      },
+      {
+        "point": [
+          -0.41,
+          0.22
+        ],
+        "divergence_abs": 4.163336342344337e-12,
+        "fx_abs_error": 9.142385792859642e-09,
+        "fy_abs_error": 1.2379006819607241e-08,
+        "fT_abs_error": 1.8736323742496452e-09
+      },
+      {
+        "point": [
+          0.12,
+          0.48
+        ],
+        "divergence_abs": 2.2551405187698492e-12,
+        "fx_abs_error": 6.720055623077315e-10,
+        "fy_abs_error": 2.7106174527169458e-09,
+        "fT_abs_error": 6.966819648956957e-09
+      }
+    ],
+    "max_source_abs_error": 1.3058184158976083e-08,
+    "max_divergence_abs": 4.163336342344337e-12,
+    "ok": true
+  },
+  "acceptance_logic_check": {
+    "good_all_passed": true,
+    "finite_only_all_passed": false,
+    "no_newton_all_passed": false,
+    "large_galerkin_free_all_passed": false,
+    "ok": true
+  },
+  "comparison_metric_check": {
+    "exact": {
+      "n": 3,
+      "re": 0.0,
+      "mae": 0.0,
+      "max_err": 0.0,
+      "denominator": 3.7416573867739413
+    },
+    "scaled": {
+      "n": 3,
+      "re": 1.0,
+      "mae": 2.0,
+      "max_err": 3.0,
+      "denominator": 3.7416573867739413
+    },
+    "zero_denominator": {
+      "n": 3,
+      "re": null,
+      "mae": 0.0,
+      "max_err": 0.0,
+      "denominator": 0.0
+    },
+    "ok": true
+  },
+  "protocol_snapshot_check": {
+    "ok": true,
+    "checks": {
+      "config_sha256": true,
+      "source:src/fem_reference/__init__.py": true,
+      "source:src/fem_reference/geometry.py": true,
+      "source:src/fem_reference/fenics_solver.py": true,
+      "source:scripts/exp_r2_thermal_fem.py": true,
+      "source:scripts/sbatch/r2_thermal_fem.sbatch": true,
+      "input:geometry_spec": true,
+      "input:split_config": true
+    },
+    "path": "results/round2_thermal_fem/protocol_snapshot.json"
+  },
+  "fem_environment": {
+    "dependency_status": {
+      "dolfinx": true,
+      "ufl": true,
+      "basix": true,
+      "petsc4py": true,
+      "mpi4py": true,
+      "gmsh": true,
+      "isolated_environment": "pinnap-fem",
+      "isolation_command": "conda create -n pinnap-fem -c conda-forge fenics-dolfinx=0.8.0 python-gmsh mpi4py petsc4py pyvista numpy scipy  # requires network and explicit installation authorisation",
+      "all_present": true
+    },
+    "manufactured": {
+      "levels": [
+        {
+          "target_h": 0.2,
+          "mesh": {
+            "n_cells": 240,
+            "n_vertices": 148,
+            "target_h": 0.2
+          },
+          "errors": {
+            "velocity_l2": 0.02650278023707919,
+            "velocity_h1": 0.909216071703514,
+            "pressure_l2": 0.01992592901121289,
+            "temperature_l2": 0.0020490150714790214,
+            "temperature_h1": 0.0815379389380471
+          },
+          "newton_reason": 2,
+          "newton_iterations": 3
+        },
+        {
+          "target_h": 0.1,
+          "mesh": {
+            "n_cells": 988,
+            "n_vertices": 550,
+            "target_h": 0.1
+          },
+          "errors": {
+            "velocity_l2": 0.0025980624973156612,
+            "velocity_h1": 0.17948315332512005,
+            "pressure_l2": 0.004684240648520636,
+            "temperature_l2": 0.00023725325869915895,
+            "temperature_h1": 0.01916978707042071
+          },
+          "newton_reason": 2,
+          "newton_iterations": 3
+        },
+        {
+          "target_h": 0.05,
+          "mesh": {
+            "n_cells": 3430,
+            "n_vertices": 1823,
+            "target_h": 0.05
+          },
+          "errors": {
+            "velocity_l2": 0.000233946175934664,
+            "velocity_h1": 0.030770214999498467,
+            "pressure_l2": 0.001237113057036277,
+            "temperature_l2": 3.419569582771345e-05,
+            "temperature_h1": 0.005390313272412934
+          },
+          "newton_reason": 2,
+          "newton_iterations": 3
+        }
+      ],
+      "observed_orders": {
+        "velocity_l2": [
+          3.3506356706621525,
+          3.473187583917831
+        ],
+        "velocity_h1": [
+          2.340774750150786,
+          2.544242006638028
+        ],
+        "pressure_l2": [
+          2.0887598889136263,
+          1.9208378438033435
+        ],
+        "temperature_l2": [
+          3.1104307880279425,
+          2.7945412516431465
+        ],
+        "temperature_h1": [
+          2.08863717752687,
+          1.8303932856799836
+        ]
+      },
+      "order_thresholds": {
+        "velocity_l2": 2.5,
+        "velocity_h1": 1.5,
+        "pressure_l2": 1.5,
+        "temperature_l2": 2.5,
+        "temperature_h1": 0.0
+      },
+      "errors_decrease": true,
+      "accepted": true,
+      "status": "ran"
+    },
+    "blocked": false,
+    "manufactured_boussinesq": {
+      "levels": [
+        {
+          "target_h": 0.2,
+          "mesh": {
+            "n_cells": 240,
+            "n_vertices": 148,
+            "target_h": 0.2
+          },
+          "errors": {
+            "velocity_l2": 0.02329176831932329,
+            "velocity_h1": 0.7332404732545557,
+            "pressure_l2": 0.023736414038346733,
+            "temperature_l2": 0.011450007124970322,
+            "temperature_h1": 0.16284609984971044
+          },
+          "newton_reason": 2,
+          "newton_iterations": 5
+        },
+        {
+          "target_h": 0.1,
+          "mesh": {
+            "n_cells": 988,
+            "n_vertices": 550,
+            "target_h": 0.1
+          },
+          "errors": {
+            "velocity_l2": 0.0023629779994102785,
+            "velocity_h1": 0.16713881144748033,
+            "pressure_l2": 0.004717632666597869,
+            "temperature_l2": 0.00044619996338192717,
+            "temperature_h1": 0.023479356693085384
+          },
+          "newton_reason": 2,
+          "newton_iterations": 4
+        },
+        {
+          "target_h": 0.05,
+          "mesh": {
+            "n_cells": 3430,
+            "n_vertices": 1823,
+            "target_h": 0.05
+          },
+          "errors": {
+            "velocity_l2": 0.00022929458657032,
+            "velocity_h1": 0.030267522997404695,
+            "pressure_l2": 0.0012385055352555955,
+            "temperature_l2": 4.3024248942022724e-05,
+            "temperature_h1": 0.005661913841406497
+          },
+          "newton_reason": 2,
+          "newton_iterations": 4
+        }
+      ],
+      "observed_orders": {
+        "velocity_l2": [
+          3.3011420714026287,
+          3.365331997351952
+        ],
+        "velocity_h1": [
+          2.133239639894745,
+          2.4652042624531654
+        ],
+        "pressure_l2": [
+          2.3309670031648086,
+          1.9294627726113305
+        ],
+        "temperature_l2": [
+          4.681514290654725,
+          3.3744684821667126
+        ],
+        "temperature_h1": [
+          2.7940443817784217,
+          2.0520311801183184
+        ]
+      },
+      "order_thresholds": {
+        "velocity_l2": 2.5,
+        "velocity_h1": 1.5,
+        "pressure_l2": 1.5,
+        "temperature_l2": 2.5,
+        "temperature_h1": 0.0
+      },
+      "errors_decrease": true,
+      "accepted": true,
+      "status": "ran"
+    },
+    "pressure_nullspace": {
+      "mesh": {
+        "n_cells": 240,
+        "n_vertices": 148,
+        "target_h": 0.2
+      },
+      "constant_pressure_null_residual": 18.370143498492755,
+      "constant_pressure_rel_residual": 0.4383795565759187,
+      "matrix_nnz": 67140,
+      "accepted": false,
+      "applicable": false,
+      "gauge_mode": "mass_penalty_zero_mean"
+    }
+  },
+  "not_run": [
+    "formal natural-convection FEM pilot",
+    "three-level natural-convection convergence (h=0.08/0.04/0.02)",
+    "SLURM submission (not authorised in this phase)",
+    "model prediction on new FEM support"
+  ]
+}

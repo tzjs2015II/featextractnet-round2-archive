@@ -1,0 +1,93 @@
+{
+  "analysis": "M1 corrected gate-vs-physics (symmetric)",
+  "mode": "gate",
+  "pool_context": "symmetric",
+  "checkpoint_root": "results/round2_thermal_symmetric/feat_extract",
+  "out_dir": "results/round2_mechanism",
+  "fig_dir": "results/figures/round2_mechanism",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "test_geoms": [
+    17,
+    25,
+    32,
+    46,
+    47,
+    57,
+    66,
+    73,
+    83,
+    86,
+    96,
+    97,
+    98,
+    106,
+    109,
+    111,
+    113,
+    123,
+    126,
+    127
+  ],
+  "n_test_geom": 20,
+  "n_geometry_dataset": 135,
+  "split_version": "splits_thermal_v1_protocolA",
+  "split_seed": 123,
+  "split_counts": {
+    "train": 100,
+    "val": 15,
+    "test": 20
+  },
+  "splits_snapshot": {
+    "metrics_splits_config": "results/round2_execution_20261021_v3/configs/splits_thermal.json",
+    "snapshot_found": true,
+    "snapshot_matches": true
+  },
+  "data": "HeatTransferData.npy",
+  "n_points_full_field": 5000,
+  "chunked": false,
+  "boundary_n": 660,
+  "knn_k": 24,
+  "ridge": 1e-08,
+  "gate_def": "sigmoid of the real outputs of gate_low (64 ch), gate_mid (128 ch) and gate_high (256 ch), concatenated (448 channels) and averaged over those 448 channels per point; hooks on the actual gate Conv1d modules",
+  "curl_def": "|dv/dx - du/dy| per point, estimated by the k=24 nearest-neighbour local linear fit from the reference (ground-truth) u and v fields, not from model predictions",
+  "gradT_def": "||grad T|| per point from the reference (ground-truth) T field, k=24 nearest-neighbour local linear fit",
+  "wall_dist_def": "Euclidean distance to the nearest sampled boundary point (the first 660 points of each geometry; cKDTree k=1). Boundary points themselves are 0 because they are their own nearest sampled point; the second-nearest point is not used. This is distance to sampled boundary points, not an exact continuous wall distance",
+  "tf32": {
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false
+  },
+  "device_type": "cuda",
+  "norm": {
+    "source": "per-seed metrics protocol (train-only z-score, fit on the 100 Protocol-A train geoms)",
+    "identical_across_seeds": true,
+    "reproduced_from_train_geoms": true
+  },
+  "statistics_note": "Descriptive association only; no causal interpretation and the sign of any correlation is not presupposed. Statistical unit: seed mean over the 20 test geometries; cross-seed mean/sample-std over 5 seeds.",
+  "hashes": {
+    "script_sha256": "0663f60178627bbed7c10d2775158d4461f8ebafbf22d27f3055189f894ac783",
+    "data_sha256": "e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26",
+    "checkpoint_sha256": {
+      "0": "4ca109452729bbc8c5dd435e5ff770441e98bdef3a69818a8a1546817ed2649a",
+      "1": "32ab5318d1b0529b402f2e5d575bf070b0633f70b58ae963821873829ccdea8e",
+      "2": "70110e3c6296447261188808d2d42d348e19221ea691b8ee6bfffe71e66e330a",
+      "3": "f5c8d2e3f81d6bda7ff4f0732c633770ef9b11b632dc2060fc143c7001d8802a",
+      "4": "307a577c552af993f8ade96b00f0196b4fc0a8362911f7bc39126b4d0d4f48c7"
+    },
+    "metrics_sha256": {
+      "0": "ba4d222605a3f05d96d3f7d755e3723be48c73553b54fa06c9d60e9ae6f18470",
+      "1": "f7ee8ece03d876e8c8e701dbaa4e81b623294820b2a43db11dc3648d42c4ee20",
+      "2": "2416f5c6b76bb8deae374b511ef5c55c765b3f444554671c6da27dd7ca2d41f0",
+      "3": "c1af8b4548be2f8d8786e1291c7fcf2310f406b0669e653371c0272b5088ba9f",
+      "4": "dc3a6eac3737df7e0a6f85a23824db8588917d396fcc0120900e0e4d27aeafc2"
+    }
+  },
+  "splits_config_version": "1.0",
+  "generated_local": "2026-10-21T15:48:15+08:00",
+  "partial": false
+}

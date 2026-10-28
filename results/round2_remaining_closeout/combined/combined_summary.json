@@ -1,0 +1,2554 @@
+{
+  "task": "R2-REMAINING-IMPLEMENT-01",
+  "created_local": "2026-10-27T02:49:39+08:00",
+  "note": "old 0-2 read-only; new 3/4 read from separate roots; no seed is fabricated",
+  "groups": {
+    "main_ablation_maininit_6_nonfull/fen_nocgf": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_ablation_maininit/fen_nocgf/seed0/metrics_seed0.json",
+        "results/round2_ablation_maininit/fen_nocgf/seed1/metrics_seed1.json",
+        "results/round2_ablation_maininit/fen_nocgf/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_nocgf/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_nocgf/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "split_seed": 123,
+        "epochs": 500,
+        "lr": 0.001,
+        "val_eval_every": 25,
+        "batch_geoms": 4,
+        "n_pts": null,
+        "init_mode": "main_default",
+        "pool_context": "symmetric",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "u": {
+            "mean": 0.07600874006816483,
+            "std": 0.0005196284808161617,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.0566706289796608,
+            "std": 0.0006797744497915527,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.019795322749825088,
+            "std": 0.0006445798274785887,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.01893236595898052,
+            "std": 0.0008593069767801033,
+            "n": 5
+          }
+        },
+        "mae": {
+          "u": {
+            "mean": 0.002547434203039722,
+            "std": 7.022736891591834e-05,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.0033306727932568446,
+            "std": 0.00017388008930976196,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.0022296650077785864,
+            "std": 0.0002517444621349329,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.004535621730489137,
+            "std": 0.0005548452415603025,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "u": {
+            "mean": 0.045812254557386044,
+            "std": 0.0015975975902904286,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.09141354233026505,
+            "std": 0.0019832677920585892,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.03840400036424398,
+            "std": 0.0007038713303695459,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.08847734212875366,
+            "std": 0.0027740736860885277,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "u": {
+            "mean": 0.0020288994250365127,
+            "std": 0.0002836899619181945,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.0037609655879721907,
+            "std": 0.00041142701405130246,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.0042474588522370665,
+            "std": 0.00020660377252405018,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.0056543020127425665,
+            "std": 0.0010831784588898642,
+            "n": 5
+          }
+        }
+      }
+    },
+    "main_ablation_maininit_6_nonfull/fen_nocgf_pm": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_ablation_maininit/fen_nocgf_pm/seed0/metrics_seed0.json",
+        "results/round2_ablation_maininit/fen_nocgf_pm/seed1/metrics_seed1.json",
+        "results/round2_ablation_maininit/fen_nocgf_pm/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_nocgf_pm/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_nocgf_pm/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "split_seed": 123,
+        "epochs": 500,
+        "lr": 0.001,
+        "val_eval_every": 25,
+        "batch_geoms": 4,
+        "n_pts": null,
+        "init_mode": "main_default",
+        "pool_context": "symmetric",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "u": {
+            "mean": 0.07572178108960638,
+            "std": 0.0021075313139814105,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.05644677758265608,
+            "std": 0.00132110006794304,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.019207228428579352,
+            "std": 0.0002652548766400702,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.019589168561224068,
+            "std": 0.0011551291412567383,
+            "n": 5
+          }
+        },
+        "mae": {
+          "u": {
+            "mean": 0.0025928863794256168,
+            "std": 0.00010480129003678089,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.003315777805416964,
+            "std": 0.0003668713494813636,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.0019723001970282845,
+            "std": 9.010364642212656e-05,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.004866667967196691,
+            "std": 0.0007421020398696209,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "u": {
+            "mean": 0.04570023548556491,
+            "std": 0.002491784372410456,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.08988717040047049,
+            "std": 0.0027518714271361436,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.03813661824911833,
+            "std": 0.0021310487740026822,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.08654076993465423,
+            "std": 0.0024123823139707446,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "u": {
+            "mean": 0.0020331598949786273,
+            "std": 0.00020707579150031744,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.003871817382471926,
+            "std": 0.0006454671382989574,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.003986722531664369,
+            "std": 0.00017521979227619856,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.005490098910474105,
+            "std": 0.0008553760055818589,
+            "n": 5
+          }
+        }
+      }
+    },
+    "main_ablation_maininit_6_nonfull/fen_single128": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_ablation_maininit/fen_single128/seed0/metrics_seed0.json",
+        "results/round2_ablation_maininit/fen_single128/seed1/metrics_seed1.json",
+        "results/round2_ablation_maininit/fen_single128/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_single128/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_single128/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "split_seed": 123,
+        "epochs": 500,
+        "lr": 0.001,
+        "val_eval_every": 25,
+        "batch_geoms": 4,
+        "n_pts": null,
+        "init_mode": "main_default",
+        "pool_context": "symmetric",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "u": {
+            "mean": 0.0777585826740164,
+            "std": 0.00379794562964467,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.058936217038577876,
+            "std": 0.005225260168295515,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.02105468846598319,
+            "std": 0.0023512198193359137,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.020510132685051714,
+            "std": 0.0031799435050659563,
+            "n": 5
+          }
+        },
+        "mae": {
+          "u": {
+            "mean": 0.0026303384779286457,
+            "std": 0.0002567796459141359,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.003418422009583074,
+            "std": 0.0003917506918599576,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.002552866326177441,
+            "std": 0.0007204155156578336,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.004788445534377286,
+            "std": 0.0008584815511254683,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "u": {
+            "mean": 0.04776571934344247,
+            "std": 0.0065085362037225905,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.09779345385730266,
+            "std": 0.012381061159425503,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.038894539289176466,
+            "std": 0.0011067505291830267,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.09307092726230622,
+            "std": 0.015170255951597728,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "u": {
+            "mean": 0.002253203586392629,
+            "std": 0.000556604002180526,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.0042455836767504905,
+            "std": 0.0009783136740237168,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.004486727197726534,
+            "std": 0.000692363045474754,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.005648931403663269,
+            "std": 0.0015479002894562132,
+            "n": 5
+          }
+        }
+      }
+    },
+    "main_ablation_maininit_6_nonfull/fen_cgfonly_pm": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_ablation_maininit/fen_cgfonly_pm/seed0/metrics_seed0.json",
+        "results/round2_ablation_maininit/fen_cgfonly_pm/seed1/metrics_seed1.json",
+        "results/round2_ablation_maininit/fen_cgfonly_pm/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_cgfonly_pm/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_cgfonly_pm/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "split_seed": 123,
+        "epochs": 500,
+        "lr": 0.001,
+        "val_eval_every": 25,
+        "batch_geoms": 4,
+        "n_pts": null,
+        "init_mode": "main_default",
+        "pool_context": "symmetric",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "u": {
+            "mean": 0.0778868979181485,
+            "std": 0.001294739524217597,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.05746346927882616,
+            "std": 0.0006900499849034194,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.02026471826081766,
+            "std": 0.0008277673985573591,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.01987342364165036,
+            "std": 0.0007293552463140372,
+            "n": 5
+          }
+        },
+        "mae": {
+          "u": {
+            "mean": 0.002730045006332696,
+            "std": 0.00020030909181104986,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.0033215576139447914,
+            "std": 0.00010634973740793195,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.0023139645560320936,
+            "std": 0.00024489373672704654,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.004921539112390749,
+            "std": 0.0007164770953016676,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "u": {
+            "mean": 0.0461054616747424,
+            "std": 0.0019847164591764365,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.09085151894018054,
+            "std": 0.002539145273371011,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.03797036675736308,
+            "std": 0.0023053097913290316,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.09400466740131377,
+            "std": 0.005080913843705684,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "u": {
+            "mean": 0.0020651772422664136,
+            "std": 0.00023378208783377764,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.003545893878185305,
+            "std": 0.0004626001604429335,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.004129167176989727,
+            "std": 0.00015747900071160856,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.005869064451371123,
+            "std": 0.0011083816976785853,
+            "n": 5
+          }
+        }
+      }
+    },
+    "main_ablation_maininit_6_nonfull/fen_noshortcut": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_ablation_maininit/fen_noshortcut/seed0/metrics_seed0.json",
+        "results/round2_ablation_maininit/fen_noshortcut/seed1/metrics_seed1.json",
+        "results/round2_ablation_maininit/fen_noshortcut/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_noshortcut/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_noshortcut/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "split_seed": 123,
+        "epochs": 500,
+        "lr": 0.001,
+        "val_eval_every": 25,
+        "batch_geoms": 4,
+        "n_pts": null,
+        "init_mode": "main_default",
+        "pool_context": "symmetric",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "u": {
+            "mean": 0.07596009501751355,
+            "std": 0.0007485880584532257,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.05613610061417832,
+            "std": 0.0013689607685642025,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.02006634648168918,
+            "std": 0.0006331014633255124,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.018654798046897434,
+            "std": 0.0004697452227004861,
+            "n": 5
+          }
+        },
+        "mae": {
+          "u": {
+            "mean": 0.00248129443509341,
+            "std": 0.00010494084449733469,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.0030984480475476786,
+            "std": 0.00024409829107305657,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.0022512024307546835,
+            "std": 0.0002207627982702571,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.00403445123231036,
+            "std": 0.00035036976043611713,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "u": {
+            "mean": 0.04415894407778979,
+            "std": 0.001217763150050179,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.08559184420853853,
+            "std": 0.002476283572079441,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.03809069726616145,
+            "std": 0.0021780547471368294,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.08757767379283905,
+            "std": 0.0025863684042168587,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "u": {
+            "mean": 0.0018985268736740155,
+            "std": 0.00026168750943650793,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.003306983594938629,
+            "std": 0.00034354040349334207,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.004245629719555602,
+            "std": 0.0003062153496926849,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.004186145382574762,
+            "std": 0.00031311011742522364,
+            "n": 5
+          }
+        }
+      }
+    },
+    "main_ablation_maininit_6_nonfull/fen_poolmax": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_ablation_maininit/fen_poolmax/seed0/metrics_seed0.json",
+        "results/round2_ablation_maininit/fen_poolmax/seed1/metrics_seed1.json",
+        "results/round2_ablation_maininit/fen_poolmax/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_poolmax/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_poolmax/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "split_seed": 123,
+        "epochs": 500,
+        "lr": 0.001,
+        "val_eval_every": 25,
+        "batch_geoms": 4,
+        "n_pts": null,
+        "init_mode": "main_default",
+        "pool_context": "symmetric",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "u": {
+            "mean": 0.08289066642456784,
+            "std": 0.0055070727997903485,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.06420339716058315,
+            "std": 0.00724811885884065,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.021148471491289296,
+            "std": 0.0012679053426167266,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.02435871652994976,
+            "std": 0.004579598900437941,
+            "n": 5
+          }
+        },
+        "mae": {
+          "u": {
+            "mean": 0.0030293751979225954,
+            "std": 0.0003856753436669123,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.003950071607554859,
+            "std": 0.000717622409803167,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.0026212023605832876,
+            "std": 0.00039796639056262036,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.006313421066366653,
+            "std": 0.0018586818096742374,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "u": {
+            "mean": 0.048345383445266635,
+            "std": 0.003047216876807181,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.09740939423441887,
+            "std": 0.005984381913897758,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.03947778884321451,
+            "std": 0.0013345757846748788,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.09810971081256867,
+            "std": 0.007986990260009446,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "u": {
+            "mean": 0.0023759060352782557,
+            "std": 0.00022803342715314377,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.004280419628067446,
+            "std": 0.0011539787630403904,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.0047545013102995946,
+            "std": 0.0005256282484672186,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.006900533688656832,
+            "std": 0.0009534282336764032,
+            "n": 5
+          }
+        }
+      }
+    },
+    "kaiming_si_7_all/fen_full": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_ablation_symmetric/fen_full/seed0/metrics_seed0.json",
+        "results/round2_ablation_symmetric/fen_full/seed1/metrics_seed1.json",
+        "results/round2_ablation_symmetric/fen_full/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_full/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_full/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "split_seed": 123,
+        "epochs": 500,
+        "lr": 0.001,
+        "val_eval_every": 25,
+        "batch_geoms": 4,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "symmetric",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "u": {
+            "mean": 0.0889346115449738,
+            "std": 0.006935012435862532,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.07170935694218376,
+            "std": 0.008486825769944722,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.02511661647505762,
+            "std": 0.005068048917736987,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.028197438420195592,
+            "std": 0.004300257270474962,
+            "n": 5
+          }
+        },
+        "mae": {
+          "u": {
+            "mean": 0.0035938019644635973,
+            "std": 0.0006724393849568761,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.004909367392817819,
+            "std": 0.0010050041008107422,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.0036412541206272977,
+            "std": 0.0013369480991311106,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.008281765393918648,
+            "std": 0.002338023749662349,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "u": {
+            "mean": 0.05082799105206505,
+            "std": 0.00301012130146708,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.09996746832504869,
+            "std": 0.003168626895025389,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.03803859692998231,
+            "std": 0.0018363430746149076,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.10223214089870454,
+            "std": 0.004461927427453263,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "u": {
+            "mean": 0.003251127524568608,
+            "std": 0.0008552750207898671,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.005196720917426087,
+            "std": 0.0010985055676579303,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.005445595421302793,
+            "std": 0.0010365038106808803,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.008063522680119495,
+            "std": 0.0012867227935329077,
+            "n": 5
+          }
+        }
+      }
+    },
+    "kaiming_si_7_all/fen_nocgf": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_ablation_symmetric/fen_nocgf/seed0/metrics_seed0.json",
+        "results/round2_ablation_symmetric/fen_nocgf/seed1/metrics_seed1.json",
+        "results/round2_ablation_symmetric/fen_nocgf/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_nocgf/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_nocgf/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "split_seed": 123,
+        "epochs": 500,
+        "lr": 0.001,
+        "val_eval_every": 25,
+        "batch_geoms": 4,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "symmetric",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "u": {
+            "mean": 0.08140398859269571,
+            "std": 0.0031275747290589687,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.06349013785870848,
+            "std": 0.004137455958234326,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.024987882184892063,
+            "std": 0.004571273117586842,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.023330831045238996,
+            "std": 0.00362866280484533,
+            "n": 5
+          }
+        },
+        "mae": {
+          "u": {
+            "mean": 0.002992051362957001,
+            "std": 0.0002678772186818475,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.004028692573772727,
+            "std": 0.0004542114175127561,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.0035785983970792745,
+            "std": 0.0011360734083165128,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.006613752996974078,
+            "std": 0.0017702230286151936,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "u": {
+            "mean": 0.04793798533035441,
+            "std": 0.0020931814869123975,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.09354360204190017,
+            "std": 0.004524727603212239,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.0399318884499371,
+            "std": 0.003283461496956949,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.09274415135383607,
+            "std": 0.005054265813860419,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "u": {
+            "mean": 0.002643907724307526,
+            "std": 0.0006690768885283874,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.004664199290344351,
+            "std": 0.0010228009613793734,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.005358950849267789,
+            "std": 0.0009487049215420189,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.007505308791300158,
+            "std": 0.0026575075258324023,
+            "n": 5
+          }
+        }
+      }
+    },
+    "kaiming_si_7_all/fen_poolmax": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_ablation_symmetric/fen_poolmax/seed0/metrics_seed0.json",
+        "results/round2_ablation_symmetric/fen_poolmax/seed1/metrics_seed1.json",
+        "results/round2_ablation_symmetric/fen_poolmax/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_poolmax/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_poolmax/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "split_seed": 123,
+        "epochs": 500,
+        "lr": 0.001,
+        "val_eval_every": 25,
+        "batch_geoms": 4,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "symmetric",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "u": {
+            "mean": 0.09297729582595876,
+            "std": 0.008246072876186191,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.07555830305531604,
+            "std": 0.007974382486931941,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.027537058939862757,
+            "std": 0.005800462868253474,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.030748199177081485,
+            "std": 0.003240892770219314,
+            "n": 5
+          }
+        },
+        "mae": {
+          "u": {
+            "mean": 0.003982762862140302,
+            "std": 0.0006503380156735865,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.0052064281402618455,
+            "std": 0.0007334849504607737,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.004154599004800509,
+            "std": 0.0014115638645235417,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.009499729431855373,
+            "std": 0.00185433125998429,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "u": {
+            "mean": 0.051516150492243465,
+            "std": 0.0035701387631664164,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.09877358632162211,
+            "std": 0.005737467212577181,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.042673178464174275,
+            "std": 0.0021046907983125317,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.10091083824634553,
+            "std": 0.005110289393797032,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "u": {
+            "mean": 0.003539801346594756,
+            "std": 0.0009051320310875238,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.005111951333637741,
+            "std": 0.0012861643928887613,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.0059917644867235305,
+            "std": 0.0013417781720901248,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.009845282639624201,
+            "std": 0.0017255145399806611,
+            "n": 5
+          }
+        }
+      }
+    },
+    "kaiming_si_7_all/fen_noshortcut": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_ablation_symmetric/fen_noshortcut/seed0/metrics_seed0.json",
+        "results/round2_ablation_symmetric/fen_noshortcut/seed1/metrics_seed1.json",
+        "results/round2_ablation_symmetric/fen_noshortcut/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_noshortcut/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_noshortcut/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "split_seed": 123,
+        "epochs": 500,
+        "lr": 0.001,
+        "val_eval_every": 25,
+        "batch_geoms": 4,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "symmetric",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "u": {
+            "mean": 0.0855487426594004,
+            "std": 0.005197264426297836,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.07009869133655615,
+            "std": 0.008900207083652419,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.023786302611105405,
+            "std": 0.0025460206330448713,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.02494124629522613,
+            "std": 0.003159572099477535,
+            "n": 5
+          }
+        },
+        "mae": {
+          "u": {
+            "mean": 0.003242851377414919,
+            "std": 0.0003770935699637163,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.004621975200262344,
+            "std": 0.0009182722986403415,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.003214168926449451,
+            "std": 0.00064393071856985,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.006248437958728497,
+            "std": 0.0010325670043943207,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "u": {
+            "mean": 0.04939820814644917,
+            "std": 0.0027254583785488,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.09591729670763016,
+            "std": 0.006020660597539716,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.040339170275256034,
+            "std": 0.002999113225208828,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.09659191846847534,
+            "std": 0.005399480963428318,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "u": {
+            "mean": 0.002515515723101662,
+            "std": 0.0003629581575231487,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.004770608890866586,
+            "std": 0.0007689247555254247,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.005034915288158399,
+            "std": 0.000950904788404865,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.005290323700399624,
+            "std": 0.0011257068368396535,
+            "n": 5
+          }
+        }
+      }
+    },
+    "kaiming_si_7_all/fen_single128": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_ablation_symmetric/fen_single128/seed0/metrics_seed0.json",
+        "results/round2_ablation_symmetric/fen_single128/seed1/metrics_seed1.json",
+        "results/round2_ablation_symmetric/fen_single128/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_single128/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_single128/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "split_seed": 123,
+        "epochs": 500,
+        "lr": 0.001,
+        "val_eval_every": 25,
+        "batch_geoms": 4,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "symmetric",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "u": {
+            "mean": 0.08369062170999701,
+            "std": 0.006250347989788653,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.06855580113015927,
+            "std": 0.007166535478974263,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.02179683654359572,
+            "std": 0.0024044985193688957,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.02358543968660467,
+            "std": 0.0046141323167792625,
+            "n": 5
+          }
+        },
+        "mae": {
+          "u": {
+            "mean": 0.0031672322917513595,
+            "std": 0.0004801152960378271,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.004703580254249283,
+            "std": 0.0007009331668319308,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.002713539127860067,
+            "std": 0.000672083007638833,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.006179194925206752,
+            "std": 0.001961157863659054,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "u": {
+            "mean": 0.0474160973355174,
+            "std": 0.0025193636637340575,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.09246906517073512,
+            "std": 0.0053773586306791995,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.03874203799292445,
+            "std": 0.001302854745274301,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.09672177851200103,
+            "std": 0.008513222237835592,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "u": {
+            "mean": 0.002588239986883427,
+            "std": 0.00039962761083327415,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.0052718947364955,
+            "std": 0.0015977070250774604,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.0045231177935204005,
+            "std": 0.0005517804128684428,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.006257669059730445,
+            "std": 0.0011905624290034296,
+            "n": 5
+          }
+        }
+      }
+    },
+    "kaiming_si_7_all/fen_nocgf_pm": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_ablation_symmetric/fen_nocgf_pm/seed0/metrics_seed0.json",
+        "results/round2_ablation_symmetric/fen_nocgf_pm/seed1/metrics_seed1.json",
+        "results/round2_ablation_symmetric/fen_nocgf_pm/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_nocgf_pm/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_nocgf_pm/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "split_seed": 123,
+        "epochs": 500,
+        "lr": 0.001,
+        "val_eval_every": 25,
+        "batch_geoms": 4,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "symmetric",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "u": {
+            "mean": 0.08292725976548095,
+            "std": 0.005386538258199182,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.06452695620637944,
+            "std": 0.005577894840748076,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.024238418308192206,
+            "std": 0.0036400249491913292,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.023910159002751903,
+            "std": 0.00439459510122535,
+            "n": 5
+          }
+        },
+        "mae": {
+          "u": {
+            "mean": 0.003103474391663597,
+            "std": 0.00046068884403854127,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.004330748734681139,
+            "std": 0.0009819385846776992,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.0034154063224705253,
+            "std": 0.0010557669706796977,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.006547017141951146,
+            "std": 0.0019539568714180516,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "u": {
+            "mean": 0.049091270631179205,
+            "std": 0.0039378827909605715,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.09335574574768543,
+            "std": 0.0065462001478350925,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.03905604982748627,
+            "std": 0.0015343145960349926,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.09647893965244292,
+            "std": 0.015420857213977374,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "u": {
+            "mean": 0.00271235015145627,
+            "std": 0.0010496955078261822,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.00462183626303761,
+            "std": 0.001386846720956846,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.005402133827193961,
+            "std": 0.0010441479406834695,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.006926172972054848,
+            "std": 0.002380190908127704,
+            "n": 5
+          }
+        }
+      }
+    },
+    "kaiming_si_7_all/fen_cgfonly_pm": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_ablation_symmetric/fen_cgfonly_pm/seed0/metrics_seed0.json",
+        "results/round2_ablation_symmetric/fen_cgfonly_pm/seed1/metrics_seed1.json",
+        "results/round2_ablation_symmetric/fen_cgfonly_pm/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_cgfonly_pm/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_cgfonly_pm/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "split_seed": 123,
+        "epochs": 500,
+        "lr": 0.001,
+        "val_eval_every": 25,
+        "batch_geoms": 4,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "symmetric",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "u": {
+            "mean": 0.0903623734343024,
+            "std": 0.008164730128258151,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.07114431655859002,
+            "std": 0.008424004588909706,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.028711982600032392,
+            "std": 0.004754943355526955,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.02924015702240334,
+            "std": 0.003971607708447406,
+            "n": 5
+          }
+        },
+        "mae": {
+          "u": {
+            "mean": 0.0037583044762311718,
+            "std": 0.0007281549995061319,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.004933386704826496,
+            "std": 0.0010305224170855623,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.004471357173772858,
+            "std": 0.0012590884897679306,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.00913133304621581,
+            "std": 0.002873819841436301,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "u": {
+            "mean": 0.0491730467416346,
+            "std": 0.004547883096209681,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.09320613594725728,
+            "std": 0.003058627254822189,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.040577929466962814,
+            "std": 0.0025880212848517483,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.09656223833560944,
+            "std": 0.009400633847623277,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "u": {
+            "mean": 0.0031391605641006176,
+            "std": 0.0005223073231746183,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.004915116634006299,
+            "std": 0.00124828969518673,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.00623893544342643,
+            "std": 0.001073291858772974,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.010305047479874745,
+            "std": 0.00271042014518617,
+            "n": 5
+          }
+        }
+      }
+    },
+    "acoustic_corrected_main_ablation/fourier_c": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_acoustic_pointwise/fourier_c/seed0/metrics_seed0.json",
+        "results/round2_acoustic_pointwise/fourier_c/seed1/metrics_seed1.json",
+        "results/round2_acoustic_pointwise/fourier_c/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_c/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_c/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "acoustic_protocolA_v1",
+        "split_seed": 123,
+        "epochs": 1000,
+        "lr": 0.001,
+        "val_eval_every": 50,
+        "batch_geoms": null,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "legacy_index_bins",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "p_total": {
+            "mean": 1.2005383435436474,
+            "std": 0.0197845760283455,
+            "n": 5
+          }
+        },
+        "mae": {
+          "p_total": {
+            "mean": 0.613569368847276,
+            "std": 0.0068209377601203824,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "p_total": {
+            "mean": 4.051343699991573,
+            "std": 0.10873321287292313,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "p_total": {
+            "mean": null,
+            "std": 0.0,
+            "n": 0
+          }
+        }
+      }
+    },
+    "acoustic_corrected_main_ablation/fourier_nc": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_acoustic_pointwise/fourier_nc/seed0/metrics_seed0.json",
+        "results/round2_acoustic_pointwise/fourier_nc/seed1/metrics_seed1.json",
+        "results/round2_acoustic_pointwise/fourier_nc/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_nc/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_nc/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "acoustic_protocolA_v1",
+        "split_seed": 123,
+        "epochs": 1000,
+        "lr": 0.001,
+        "val_eval_every": 50,
+        "batch_geoms": null,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "legacy_index_bins",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "p_total": {
+            "mean": 1.069533146713291,
+            "std": 0.00340680480681396,
+            "n": 5
+          }
+        },
+        "mae": {
+          "p_total": {
+            "mean": 0.5632094441041607,
+            "std": 0.0009823145530960143,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "p_total": {
+            "mean": 3.9175017884789147,
+            "std": 0.03923308964855767,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "p_total": {
+            "mean": null,
+            "std": 0.0,
+            "n": 0
+          }
+        }
+      }
+    },
+    "acoustic_corrected_main_ablation/unif_acous": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_acoustic_pointwise/unif_acous/seed0/metrics_seed0.json",
+        "results/round2_acoustic_pointwise/unif_acous/seed1/metrics_seed1.json",
+        "results/round2_acoustic_pointwise/unif_acous/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/unif_acous/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/unif_acous/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "acoustic_protocolA_v1",
+        "split_seed": 123,
+        "epochs": 1000,
+        "lr": 0.001,
+        "val_eval_every": 50,
+        "batch_geoms": null,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "legacy_index_bins",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "p_total": {
+            "mean": 1.1666324028723023,
+            "std": 0.024691253587248205,
+            "n": 5
+          }
+        },
+        "mae": {
+          "p_total": {
+            "mean": 0.5914410313709999,
+            "std": 0.011921778065492815,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "p_total": {
+            "mean": 3.980346416636108,
+            "std": 0.11632704880165895,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "p_total": {
+            "mean": null,
+            "std": 0.0,
+            "n": 0
+          }
+        }
+      }
+    },
+    "acoustic_corrected_main_ablation/ab_L8": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_acoustic_pointwise/ab_L8/seed0/metrics_seed0.json",
+        "results/round2_acoustic_pointwise/ab_L8/seed1/metrics_seed1.json",
+        "results/round2_acoustic_pointwise/ab_L8/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_L8/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_L8/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "acoustic_protocolA_v1",
+        "split_seed": 123,
+        "epochs": 1000,
+        "lr": 0.001,
+        "val_eval_every": 50,
+        "batch_geoms": null,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "legacy_index_bins",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "p_total": {
+            "mean": 1.2280062212304084,
+            "std": 0.02952674726373073,
+            "n": 5
+          }
+        },
+        "mae": {
+          "p_total": {
+            "mean": 0.623559943404546,
+            "std": 0.014665014104358977,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "p_total": {
+            "mean": 4.321013145937919,
+            "std": 0.13267460764858002,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "p_total": {
+            "mean": null,
+            "std": 0.0,
+            "n": 0
+          }
+        }
+      }
+    },
+    "acoustic_corrected_main_ablation/ab_L32": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_acoustic_pointwise/ab_L32/seed0/metrics_seed0.json",
+        "results/round2_acoustic_pointwise/ab_L32/seed1/metrics_seed1.json",
+        "results/round2_acoustic_pointwise/ab_L32/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_L32/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_L32/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "acoustic_protocolA_v1",
+        "split_seed": 123,
+        "epochs": 1000,
+        "lr": 0.001,
+        "val_eval_every": 50,
+        "batch_geoms": null,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "legacy_index_bins",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "p_total": {
+            "mean": 1.1698579220540726,
+            "std": 0.010579202292385214,
+            "n": 5
+          }
+        },
+        "mae": {
+          "p_total": {
+            "mean": 0.6003227504327258,
+            "std": 0.011652821567065898,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "p_total": {
+            "mean": 4.149718508956161,
+            "std": 0.14712565382198348,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "p_total": {
+            "mean": null,
+            "std": 0.0,
+            "n": 0
+          }
+        }
+      }
+    },
+    "acoustic_corrected_main_ablation/ab_nores": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_acoustic_pointwise/ab_nores/seed0/metrics_seed0.json",
+        "results/round2_acoustic_pointwise/ab_nores/seed1/metrics_seed1.json",
+        "results/round2_acoustic_pointwise/ab_nores/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nores/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nores/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "acoustic_protocolA_v1",
+        "split_seed": 123,
+        "epochs": 1000,
+        "lr": 0.001,
+        "val_eval_every": 50,
+        "batch_geoms": null,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "legacy_index_bins",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "p_total": {
+            "mean": 1.15151275775601,
+            "std": 0.048255453540972104,
+            "n": 5
+          }
+        },
+        "mae": {
+          "p_total": {
+            "mean": 0.5892712888238635,
+            "std": 0.01571501092766927,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "p_total": {
+            "mean": 4.10000017279436,
+            "std": 0.1290665966155303,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "p_total": {
+            "mean": null,
+            "std": 0.0,
+            "n": 0
+          }
+        }
+      }
+    },
+    "acoustic_corrected_main_ablation/ab_nonorm": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_acoustic_pointwise/ab_nonorm/seed0/metrics_seed0.json",
+        "results/round2_acoustic_pointwise/ab_nonorm/seed1/metrics_seed1.json",
+        "results/round2_acoustic_pointwise/ab_nonorm/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nonorm/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nonorm/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "acoustic_protocolA_v1",
+        "split_seed": 123,
+        "epochs": 1000,
+        "lr": 0.001,
+        "val_eval_every": 50,
+        "batch_geoms": null,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "legacy_index_bins",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "p_total": {
+            "mean": 1.1859975455483844,
+            "std": 0.022482975558652016,
+            "n": 5
+          }
+        },
+        "mae": {
+          "p_total": {
+            "mean": 0.6083335792635183,
+            "std": 0.009104985795921719,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "p_total": {
+            "mean": 4.032007257986892,
+            "std": 0.0330204952503009,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "p_total": {
+            "mean": null,
+            "std": 0.0,
+            "n": 0
+          }
+        }
+      }
+    },
+    "matched_physics/supervised": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_pinn_thermal_matched/supervised/seed0/metrics_seed0.json",
+        "results/round2_pinn_thermal_matched/supervised/seed1/metrics_seed1.json",
+        "results/round2_pinn_thermal_matched/supervised/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/supervised/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/supervised/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "split_seed": 123,
+        "epochs": null,
+        "lr": null,
+        "val_eval_every": null,
+        "batch_geoms": null,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "legacy_index_bins",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "u": {
+            "mean": 0.13625358610638238,
+            "std": 0.003661608292242857,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.12879255650316926,
+            "std": 0.006461673396736095,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.02914441211421488,
+            "std": 0.0009399795788364346,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.045393186332657744,
+            "std": 0.0017020517863717702,
+            "n": 5
+          }
+        },
+        "mae": {
+          "u": {
+            "mean": 0.005516262773245667,
+            "std": 0.0002683065329997749,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.008510320308560016,
+            "std": 0.0006822625055621726,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.00385424571446834,
+            "std": 0.00022361867609064373,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.011803780828531351,
+            "std": 0.0008023230677924873,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "u": {
+            "mean": 0.06998901086666592,
+            "std": 0.0006765881378421866,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.13354605833708771,
+            "std": 0.0017197768875167757,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.054717537071555855,
+            "std": 0.002330865325565317,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.1357761722803116,
+            "std": 0.00114809217729913,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "u": {
+            "mean": 0.005913844971626668,
+            "std": 0.0010704579410097002,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.013940961964095297,
+            "std": 0.0032689568100500647,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.006593286397226372,
+            "std": 0.00044583366081392384,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.01281872475325043,
+            "std": 0.0022845364457036053,
+            "n": 5
+          }
+        }
+      }
+    },
+    "matched_physics/bc": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_pinn_thermal_matched/bc/seed0/metrics_seed0.json",
+        "results/round2_pinn_thermal_matched/bc/seed1/metrics_seed1.json",
+        "results/round2_pinn_thermal_matched/bc/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/bc/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/bc/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "split_seed": 123,
+        "epochs": null,
+        "lr": null,
+        "val_eval_every": null,
+        "batch_geoms": null,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "legacy_index_bins",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "u": {
+            "mean": 0.1366439477853833,
+            "std": 0.005611898838971155,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.12330338851886757,
+            "std": 0.008282471427788615,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.030319918781069755,
+            "std": 0.002477773004674434,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.0476079910641443,
+            "std": 0.004456123079848722,
+            "n": 5
+          }
+        },
+        "mae": {
+          "u": {
+            "mean": 0.005394912864665509,
+            "std": 0.00038801948931917125,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.007927083695432238,
+            "std": 0.000839688311252804,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.004511620488939374,
+            "std": 0.0005147550942497147,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.01239279723789251,
+            "std": 0.00144714680218012,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "u": {
+            "mean": 0.07898962599865626,
+            "std": 0.0009695471753016791,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.1528807933110511,
+            "std": 0.001004758279206363,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.04731229713186622,
+            "std": 0.0021950903700366864,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.15986180663108826,
+            "std": 0.0050712430144870466,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "u": {
+            "mean": 0.0022532336843790962,
+            "std": 0.00035447967367139205,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.004986213457623015,
+            "std": 0.002014448088532723,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.007011427908862296,
+            "std": 0.0005430574317735078,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.005508335527597001,
+            "std": 0.0020062919699051418,
+            "n": 5
+          }
+        }
+      }
+    },
+    "matched_physics/bc_pde": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "old_seeds": [
+        0,
+        1,
+        2
+      ],
+      "new_seeds": [
+        3,
+        4
+      ],
+      "sources": [
+        "results/round2_pinn_thermal_matched/bc_pde/seed0/metrics_seed0.json",
+        "results/round2_pinn_thermal_matched/bc_pde/seed1/metrics_seed1.json",
+        "results/round2_pinn_thermal_matched/bc_pde/seed2/metrics_seed2.json",
+        "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/bc_pde/seed3/metrics_seed3.json",
+        "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/bc_pde/seed4/metrics_seed4.json"
+      ],
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "split_seed": 123,
+        "epochs": null,
+        "lr": null,
+        "val_eval_every": null,
+        "batch_geoms": null,
+        "n_pts": null,
+        "init_mode": "legacy_kaiming",
+        "pool_context": "legacy_index_bins",
+        "tf32_matmul_allow": false,
+        "tf32_cudnn_allow": false
+      },
+      "agg": {
+        "re": {
+          "u": {
+            "mean": 0.2683851230647721,
+            "std": 0.024235722527258495,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.28817461444943904,
+            "std": 0.013317580476057406,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.07228803021812454,
+            "std": 0.0033296099213878058,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.08790232152257253,
+            "std": 0.012335231670403285,
+            "n": 5
+          }
+        },
+        "mae": {
+          "u": {
+            "mean": 0.013112837518300613,
+            "std": 0.0015092940325449125,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.023200489943693656,
+            "std": 0.0009858515793738692,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.011765538726531414,
+            "std": 0.0006207846414727474,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.02977499576084409,
+            "std": 0.004203133498532008,
+            "n": 5
+          }
+        },
+        "max_err": {
+          "u": {
+            "mean": 0.08573681823909282,
+            "std": 0.001523507841485476,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.15878013920038941,
+            "std": 0.0061828735422501035,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.069100157530047,
+            "std": 0.008905732875751027,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.1470095869898382,
+            "std": 0.020041089436201153,
+            "n": 5
+          }
+        },
+        "mae_bd": {
+          "u": {
+            "mean": 0.007180810546294406,
+            "std": 0.0023220729160208864,
+            "n": 5
+          },
+          "v": {
+            "mean": 0.014198308141527161,
+            "std": 0.0031100823129507384,
+            "n": 5
+          },
+          "p": {
+            "mean": 0.015132776114362072,
+            "std": 0.000853026277728895,
+            "n": 5
+          },
+          "T": {
+            "mean": 0.024590301290765545,
+            "std": 0.007465790337402027,
+            "n": 5
+          }
+        }
+      }
+    }
+  }
+}

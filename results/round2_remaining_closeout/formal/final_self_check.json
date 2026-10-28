@@ -1,0 +1,135 @@
+{
+  "checks": {
+    "transolver": {
+      "metrics": 5,
+      "checkpoints": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "maininit": {
+      "metrics": 12,
+      "checkpoints": 12,
+      "seeds": [
+        3,
+        4
+      ]
+    },
+    "kaiming": {
+      "metrics": 14,
+      "checkpoints": 14,
+      "seeds": [
+        3,
+        4
+      ]
+    },
+    "acoustic": {
+      "metrics": 14,
+      "checkpoints": 14,
+      "seeds": [
+        3,
+        4
+      ]
+    },
+    "matched": {
+      "metrics": 6,
+      "checkpoints": 6,
+      "seeds": [
+        3,
+        4
+      ]
+    },
+    "siren": {
+      "metrics": 5,
+      "checkpoints": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "pt": {
+      "metrics": 5,
+      "checkpoints": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "mlp": {
+      "metrics": 10,
+      "checkpoints": 10,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "fresh_summaries": {
+      "siren": {
+        "n": 5,
+        "seeds": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "path": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren/summary.json"
+      },
+      "pt": {
+        "n": 5,
+        "seeds": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "path": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer/summary.json"
+      },
+      "mlp_c": {
+        "n": 5,
+        "seeds": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "path": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c/summary.json"
+      },
+      "mlp_c_matched": {
+        "n": 5,
+        "seeds": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "path": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched/summary.json"
+      }
+    },
+    "combined": {
+      "groups": 23,
+      "missing": 0
+    },
+    "registry_snapshot_entries": 5,
+    "canonical_has_transolver": false
+  },
+  "errors": [],
+  "all_pass": true,
+  "created_local": "2026-10-27T07:19:19+08:00"
+}

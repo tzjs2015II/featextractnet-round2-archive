@@ -1,0 +1,180 @@
+{
+  "feat_extract": {
+    "n_seeds": 5,
+    "statistics": {
+      "re": {
+        "u": {
+          "mean": 0.11571752597378082,
+          "std": 0.0022004046935239835
+        },
+        "v": {
+          "mean": 0.09544724536730322,
+          "std": 0.007886299039999874
+        },
+        "p": {
+          "mean": 0.02750136229218266,
+          "std": 0.0020802951563555667
+        },
+        "T": {
+          "mean": 0.03284348831288469,
+          "std": 0.004119595150758975
+        }
+      },
+      "mae": {
+        "u": {
+          "mean": 0.004184194646658803,
+          "std": 0.00031143813669036853
+        },
+        "v": {
+          "mean": 0.006501119965603942,
+          "std": 0.001580358515637094
+        },
+        "p": {
+          "mean": 0.0038607705718463475,
+          "std": 0.0005383885575942757
+        },
+        "T": {
+          "mean": 0.008481706668839472,
+          "std": 0.002180806382585296
+        }
+      },
+      "max_err": {
+        "u": {
+          "mean": 0.06798362238677563,
+          "std": 0.0023083354070490736
+        },
+        "v": {
+          "mean": 0.1455827526903401,
+          "std": 0.00618750847393747
+        },
+        "p": {
+          "mean": 0.04732098176523491,
+          "std": 0.003173852325908076
+        },
+        "T": {
+          "mean": 0.13168756873519333,
+          "std": 0.005633670556047508
+        }
+      },
+      "mae_bd": {
+        "u": {
+          "mean": 0.0033441566275525954,
+          "std": 0.0006330826078107646
+        },
+        "v": {
+          "mean": 0.0066919343268349914,
+          "std": 0.0010378057697258867
+        },
+        "p": {
+          "mean": 0.005835546809984012,
+          "std": 0.0005645528693391672
+        },
+        "T": {
+          "mean": 0.00841780071298174,
+          "std": 0.002086753119323553
+        }
+      }
+    },
+    "split_counts": {
+      "train": 53,
+      "val": 14,
+      "test": 27,
+      "unused": 41
+    },
+    "source_files": [
+      "results/round2_geometry/separated_angles/feat_extract/seed0/metrics_seed0.json",
+      "results/round2_geometry/separated_angles/feat_extract/seed1/metrics_seed1.json",
+      "results/round2_geometry/separated_angles/feat_extract/seed2/metrics_seed2.json",
+      "results/round2_geometry/separated_angles/feat_extract/seed3/metrics_seed3.json",
+      "results/round2_geometry/separated_angles/feat_extract/seed4/metrics_seed4.json"
+    ]
+  },
+  "meshgraphnet": {
+    "n_seeds": 3,
+    "statistics": {
+      "re": {
+        "u": {
+          "mean": 0.07944963681864942,
+          "std": 0.0037796725769155626
+        },
+        "v": {
+          "mean": 0.0607471443362674,
+          "std": 0.007728030054366458
+        },
+        "p": {
+          "mean": 0.022404018489154947,
+          "std": 0.0033030799836546456
+        },
+        "T": {
+          "mean": 0.0223578336605352,
+          "std": 0.0012942658554810603
+        }
+      },
+      "mae": {
+        "u": {
+          "mean": 0.0034375970878256315,
+          "std": 0.00020873171287767898
+        },
+        "v": {
+          "mean": 0.005062839925934198,
+          "std": 0.0008509679629178579
+        },
+        "p": {
+          "mean": 0.0036927340208125926,
+          "std": 0.0006375564817594347
+        },
+        "T": {
+          "mean": 0.006878934118639916,
+          "std": 0.00028124737923525777
+        }
+      },
+      "max_err": {
+        "u": {
+          "mean": 0.03992983483943663,
+          "std": 0.0061681057209258434
+        },
+        "v": {
+          "mean": 0.046337135573044246,
+          "std": 0.0025301025857199155
+        },
+        "p": {
+          "mean": 0.02808150122542923,
+          "std": 0.0021148924533246835
+        },
+        "T": {
+          "mean": 0.0570316951216003,
+          "std": 0.006869481215857651
+        }
+      },
+      "mae_bd": {
+        "u": {
+          "mean": 0.0007107961770905024,
+          "std": 0.00024185691018313368
+        },
+        "v": {
+          "mean": 0.0018538276490675778,
+          "std": 0.0003166453630218664
+        },
+        "p": {
+          "mean": 0.004404165755905528,
+          "std": 0.0009251708429009985
+        },
+        "T": {
+          "mean": 0.00262983831311364,
+          "std": 0.0008001510842906732
+        }
+      }
+    },
+    "split_counts": {
+      "train": 53,
+      "val": 14,
+      "test": 27,
+      "unused": 41
+    },
+    "source_files": [
+      "results/round2_geometry/separated_angles/meshgraphnet/seed0/metrics_seed0.json",
+      "results/round2_geometry/separated_angles/meshgraphnet/seed1/metrics_seed1.json",
+      "results/round2_geometry/separated_angles/meshgraphnet/seed2/metrics_seed2.json"
+    ]
+  }
+}

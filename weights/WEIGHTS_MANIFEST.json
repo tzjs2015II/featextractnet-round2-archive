@@ -1,0 +1,775 @@
+{
+  "note": "Complete current Table-1 direct-evaluation weights: 50 thermal (10 models x 5 seeds) + 35 acoustic (7 models x 5 seeds). No historical/old checkpoints are included.",
+  "n_files": 85,
+  "coverage": {
+    "thermal_table1": 50,
+    "acoustic_table1": 35
+  },
+  "weights": [
+    {
+      "path": "results/round2_thermal_symmetric/feat_extract/seed0/checkpoint_best.pth",
+      "model": "FeatExtractNet",
+      "seed": 0,
+      "bytes": 4609213,
+      "sha256": "4ca109452729bbc8c5dd435e5ff770441e98bdef3a69818a8a1546817ed2649a",
+      "source": "local_main",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_graph_five_seed_main/meshgraphnet/seed0/checkpoint_best.pth",
+      "model": "MeshGraphNet",
+      "seed": 0,
+      "bytes": 3942631,
+      "sha256": "41310eafd9be3126c83348cb918ddf4bc513713473554c7a89d0ab3d4aa6de90",
+      "source": "local_main",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/mlp/seed0/checkpoint_best.pth",
+      "model": "CoordMLP",
+      "seed": 0,
+      "bytes": 4221311,
+      "sha256": "de36941d8205a118d0e2fa73d2c99c87effcce61b2bf8b8b917271402f1738da",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/pointnet/seed0/checkpoint_best.pth",
+      "model": "PointNet",
+      "seed": 0,
+      "bytes": 1487353,
+      "sha256": "8a870a76175c46f9275f3ad6a64e74873eead0f130a37a954aae06e440c9af43",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/pointnetpp/seed0/checkpoint_best.pth",
+      "model": "PointNet++",
+      "seed": 0,
+      "bytes": 1673697,
+      "sha256": "ccae6a1fb423ce68761272c439f2cecd74d11e3cac13ac519241467fbe945dbc",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/dgcnn/seed0/checkpoint_best.pth",
+      "model": "DGCNN",
+      "seed": 0,
+      "bytes": 205823,
+      "sha256": "07feab1604f9aabcf71483215d3c669b14a9fcb6c7e91f06d83235994b0ff142",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/pipn/seed0/checkpoint_best.pth",
+      "model": "PIPN-style",
+      "seed": 0,
+      "bytes": 4602755,
+      "sha256": "001f5c247df9eb5cd8a3be355b313791cc11c646165a10a60faa02af1a6076c1",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_thermal_symmetric/feat_extract/seed1/checkpoint_best.pth",
+      "model": "FeatExtractNet",
+      "seed": 1,
+      "bytes": 4609213,
+      "sha256": "32ab5318d1b0529b402f2e5d575bf070b0633f70b58ae963821873829ccdea8e",
+      "source": "local_main",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_graph_five_seed_main/meshgraphnet/seed1/checkpoint_best.pth",
+      "model": "MeshGraphNet",
+      "seed": 1,
+      "bytes": 3942631,
+      "sha256": "e6b81c39387662f70a3b5a6dd3229de7d1e0aceae7957f06e29bdcf035f7a5e9",
+      "source": "local_main",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/mlp/seed1/checkpoint_best.pth",
+      "model": "CoordMLP",
+      "seed": 1,
+      "bytes": 4221311,
+      "sha256": "11da624156e9892f08c7fbeca5e3dd527c8d2b51f03c061acd9501c497d4a066",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/pointnet/seed1/checkpoint_best.pth",
+      "model": "PointNet",
+      "seed": 1,
+      "bytes": 1487353,
+      "sha256": "4e9758a44534b2544fc5c2459e4a0038fb15e5033a5758564ccc7c74f49b118c",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/pointnetpp/seed1/checkpoint_best.pth",
+      "model": "PointNet++",
+      "seed": 1,
+      "bytes": 1673697,
+      "sha256": "a2815c78c814caca638db5f4abeef1fbd8ae844069533fa00cda1d2402a0bc15",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/dgcnn/seed1/checkpoint_best.pth",
+      "model": "DGCNN",
+      "seed": 1,
+      "bytes": 205823,
+      "sha256": "4f0410b9484d456703f1dbfa9ebbe0786384313af9c621cc3cc91f5f499b6c70",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/pipn/seed1/checkpoint_best.pth",
+      "model": "PIPN-style",
+      "seed": 1,
+      "bytes": 4602755,
+      "sha256": "e7d1714960d761ddb7045c5428bf7445ba7fa65e61c59dc56bc332f2bf68ee4a",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_thermal_symmetric/feat_extract/seed2/checkpoint_best.pth",
+      "model": "FeatExtractNet",
+      "seed": 2,
+      "bytes": 4609213,
+      "sha256": "70110e3c6296447261188808d2d42d348e19221ea691b8ee6bfffe71e66e330a",
+      "source": "local_main",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_graph_five_seed_main/meshgraphnet/seed2/checkpoint_best.pth",
+      "model": "MeshGraphNet",
+      "seed": 2,
+      "bytes": 3942631,
+      "sha256": "8d2db1f2180ac4d6b10354a82903917aad5021474725240b5d5cee64ff6e4c31",
+      "source": "local_main",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/mlp/seed2/checkpoint_best.pth",
+      "model": "CoordMLP",
+      "seed": 2,
+      "bytes": 4221311,
+      "sha256": "394bcd118614f1c3614dad8f3d8a9e718211458ff7c75c31dcd7eac5e18aad02",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/pointnet/seed2/checkpoint_best.pth",
+      "model": "PointNet",
+      "seed": 2,
+      "bytes": 1487353,
+      "sha256": "bb9477edd2c0e8903cc7bc8e7e46e429086e36595a5dcbf8a35f7566f2d24957",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/pointnetpp/seed2/checkpoint_best.pth",
+      "model": "PointNet++",
+      "seed": 2,
+      "bytes": 1673697,
+      "sha256": "7e7c55f02abe333e0849be2440a3db124c8b6b8f846c1bc4757a2d624272005b",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/dgcnn/seed2/checkpoint_best.pth",
+      "model": "DGCNN",
+      "seed": 2,
+      "bytes": 205823,
+      "sha256": "8881344861e881f43fcf27dfd41b599523e0260b50a2dc993c7902a942736a9b",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/pipn/seed2/checkpoint_best.pth",
+      "model": "PIPN-style",
+      "seed": 2,
+      "bytes": 4602755,
+      "sha256": "3f1534cc472cc7277c33e117b226c94b87208b86b8dea90d00198edd96f99bfc",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_thermal_symmetric/feat_extract/seed3/checkpoint_best.pth",
+      "model": "FeatExtractNet",
+      "seed": 3,
+      "bytes": 4609213,
+      "sha256": "f5c8d2e3f81d6bda7ff4f0732c633770ef9b11b632dc2060fc143c7001d8802a",
+      "source": "local_main",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_graph_five_seed_main/meshgraphnet/seed3/checkpoint_best.pth",
+      "model": "MeshGraphNet",
+      "seed": 3,
+      "bytes": 3942631,
+      "sha256": "43a51662d16b3f04d25951bd41cc0e53d4ecf47157a6f0c39695ea147d56a619",
+      "source": "local_main",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/mlp/seed3/checkpoint_best.pth",
+      "model": "CoordMLP",
+      "seed": 3,
+      "bytes": 4221311,
+      "sha256": "f1050641f8d48bb77af3f500f2c5956c17053fb0e55aecb7aa9529b45a771022",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/pointnet/seed3/checkpoint_best.pth",
+      "model": "PointNet",
+      "seed": 3,
+      "bytes": 1487353,
+      "sha256": "6d6cd77165b89a745998581873bbeb4eb7d704db827a260d860addc24941572c",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/pointnetpp/seed3/checkpoint_best.pth",
+      "model": "PointNet++",
+      "seed": 3,
+      "bytes": 1673697,
+      "sha256": "e4fef79e88cbe97e0aeb8e89f87be779cec70a8bc779167814ebfef1c9bf3094",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/dgcnn/seed3/checkpoint_best.pth",
+      "model": "DGCNN",
+      "seed": 3,
+      "bytes": 205823,
+      "sha256": "6978a0eb9bdc62e2033be86821f012f93c939ba0fca42b70c52250e20c02fc23",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/pipn/seed3/checkpoint_best.pth",
+      "model": "PIPN-style",
+      "seed": 3,
+      "bytes": 4602755,
+      "sha256": "da717fa408e9dcebff20297b6b44b004a1e62ba6d81de43e876b387945f450b1",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_thermal_symmetric/feat_extract/seed4/checkpoint_best.pth",
+      "model": "FeatExtractNet",
+      "seed": 4,
+      "bytes": 4609213,
+      "sha256": "307a577c552af993f8ade96b00f0196b4fc0a8362911f7bc39126b4d0d4f48c7",
+      "source": "local_main",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_graph_five_seed_main/meshgraphnet/seed4/checkpoint_best.pth",
+      "model": "MeshGraphNet",
+      "seed": 4,
+      "bytes": 3942631,
+      "sha256": "05c2752bb1d7b4e216307e3ef3061d8c261c6be7468ddd06425f13548f700b75",
+      "source": "local_main",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/mlp/seed4/checkpoint_best.pth",
+      "model": "CoordMLP",
+      "seed": 4,
+      "bytes": 4221311,
+      "sha256": "71665dc4ccc181cfa87b620fbf532b5c866ccce5c25f5d10a6ab488c93e63da5",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/pointnet/seed4/checkpoint_best.pth",
+      "model": "PointNet",
+      "seed": 4,
+      "bytes": 1487353,
+      "sha256": "d43d8f669b4539693e69ea90c6134d433bbfb4be2e81395ed82553a4c64668e9",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/pointnetpp/seed4/checkpoint_best.pth",
+      "model": "PointNet++",
+      "seed": 4,
+      "bytes": 1673697,
+      "sha256": "49116122a8137d4da0443e84bdad765c8129190927302dcf4342bc30a22af74b",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/dgcnn/seed4/checkpoint_best.pth",
+      "model": "DGCNN",
+      "seed": 4,
+      "bytes": 205823,
+      "sha256": "3a6f478edee9a129ac99cbc7a7647021d5e7fd1f09d09b6cf731b0d530b4574c",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/thermal_protocolA/pipn/seed4/checkpoint_best.pth",
+      "model": "PIPN-style",
+      "seed": 4,
+      "bytes": 4602755,
+      "sha256": "c3c71911a321358a32226bf773ac99984e899c922fd579e7b55b35598d53cf92",
+      "source": "local_table1",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/formal/transolver/transolver/seed0/checkpoint_best.pth",
+      "model": "Transolver",
+      "seed": null,
+      "bytes": 7261541,
+      "sha256": "c3503d5c4a9bb7aeb4f5a6950e98bbdb50d90ff69afc0b74c62f2b203a3f37c6",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/formal/transolver/transolver/seed1/checkpoint_best.pth",
+      "model": "Transolver",
+      "seed": null,
+      "bytes": 7261541,
+      "sha256": "2f41e9857134250278cfbeb10b88815012b8224a58057a922fcbb082c7cf819e",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/formal/transolver/transolver/seed2/checkpoint_best.pth",
+      "model": "Transolver",
+      "seed": null,
+      "bytes": 7261541,
+      "sha256": "e462a3f3cbd12273f4e3db198c5d4d1b6489a5bf28cd263e1a2672c81e5a3879",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/formal/transolver/transolver/seed3/checkpoint_best.pth",
+      "model": "Transolver",
+      "seed": null,
+      "bytes": 7261541,
+      "sha256": "57c06632afa64533e0aa5a40cb4d7a013149b12250aeaf973f5a41ebf17aef61",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/formal/transolver/transolver/seed4/checkpoint_best.pth",
+      "model": "Transolver",
+      "seed": null,
+      "bytes": 7261541,
+      "sha256": "c614fe7669d178ca2454c90b7157474132cbb02f0b16d1c1c341dc4ca6f3cbdf",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren/seed0/checkpoint_best.pth",
+      "model": "SIREN",
+      "seed": null,
+      "bytes": 4221247,
+      "sha256": "4879ab3e089348dbba8a735d0ded3cf575d503f0bc2311f7f94b72d9b9a43a56",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren/seed1/checkpoint_best.pth",
+      "model": "SIREN",
+      "seed": null,
+      "bytes": 4221247,
+      "sha256": "75d4518b0b2951dd190081436a9506e40c0e1098240301320c24ad80a39c43a5",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren/seed2/checkpoint_best.pth",
+      "model": "SIREN",
+      "seed": null,
+      "bytes": 4221247,
+      "sha256": "e7944ac8ea5fab54f0a79128f4278c9dd636178e1bcb2f781c0bd6c3f43290a0",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren/seed3/checkpoint_best.pth",
+      "model": "SIREN",
+      "seed": null,
+      "bytes": 4221247,
+      "sha256": "055b69979ca3e154d6441da182ba7cbc6714d2c0a5129d7a4ee5f133d062f48b",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren/seed4/checkpoint_best.pth",
+      "model": "SIREN",
+      "seed": null,
+      "bytes": 4221247,
+      "sha256": "bb34b46a4d439ead1a5f4836191f6d462171d2739bca960e3c8f3d5903efc9a5",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer/seed0/checkpoint_best.pth",
+      "model": "PointTransformer",
+      "seed": null,
+      "bytes": 3723288,
+      "sha256": "237258fe8dd3b51f1c488d94a72b67ad790eedc4dc30ebc7cde05bdb45f165d4",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer/seed1/checkpoint_best.pth",
+      "model": "PointTransformer",
+      "seed": null,
+      "bytes": 3723288,
+      "sha256": "3d65cd4c823415a26da87e41c52ba07a1250a3c55873806707648f7b810d3824",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer/seed2/checkpoint_best.pth",
+      "model": "PointTransformer",
+      "seed": null,
+      "bytes": 3723288,
+      "sha256": "72750a862f53292a37f2b909b4f7f9f1710fe2066e0f5fa3d4dc67ac5d1bfb4f",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer/seed3/checkpoint_best.pth",
+      "model": "PointTransformer",
+      "seed": null,
+      "bytes": 3723288,
+      "sha256": "78001311e26908528dc1f090f4e51b7aca612ca74cc7327cff230c1d1bc1b9c5",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer/seed4/checkpoint_best.pth",
+      "model": "PointTransformer",
+      "seed": null,
+      "bytes": 3723288,
+      "sha256": "8685133e6d6057433d79b34356073090c43a699f681d086e4bf5b57377bf5190",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c/seed0/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 4219391,
+      "sha256": "e86f166eae8bb9093c799a1c685067bbdfdbecaa6399e4085c5f7df814952910",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c/seed1/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 4219391,
+      "sha256": "1f3e5614426d3614a5fd4060dfa2fcb994aa02d0ec3cd0b5004e191b8ef55e5a",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c/seed2/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 4219391,
+      "sha256": "bd475b40e8c29aa8a9ace98517a369eb7432be0f47a78a574966edd122c44ebc",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c/seed3/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 4219391,
+      "sha256": "2fd0445d5c0fc11984d1ff93e6ddeeeb009cdb52de70f0904954f8f758a9a9a0",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c/seed4/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 4219391,
+      "sha256": "4684a2240255cee1b948c38462a563a5752df785e5e2ed0f097b7b2715fd17ed",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched/seed0/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 3263039,
+      "sha256": "bb1c7690cb851c359e0ed67c0516584b3597b30a71aee8149297cf7e9c850df8",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched/seed1/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 3263039,
+      "sha256": "e360a6021d1e661d6171cff24116b2dd60ecaa56c3b31583d76823fd1cb48606",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched/seed2/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 3263039,
+      "sha256": "5f1a728b79beeeea52e24649d13e7c48205acf62936bbdf4cfea09ab88924bfb",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched/seed3/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 3263039,
+      "sha256": "9bbe28c0eb8ad96bb103ee54874088eb7eefd3e440c1a0dd8394c039ef1ae8db",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched/seed4/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 3263039,
+      "sha256": "3e31e8b0b52d6d70e54ce5a5b2e08eb4648e23791d983c838ee14bdabcfaadb0",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/fno_uno_strict5/fno/seed0/checkpoint_best.pth",
+      "model": "FNO",
+      "seed": null,
+      "bytes": 4215841,
+      "sha256": "deae44a6c04b7492fbe88e7e1df18cdce530186128a98b5a60359b21189e6fe7",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/fno_uno_strict5/fno/seed1/checkpoint_best.pth",
+      "model": "FNO",
+      "seed": null,
+      "bytes": 4215841,
+      "sha256": "92319f42332d8122e9d7ba9204b6e14db6572b94e1a8bed73a16077e076008f9",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/fno_uno_strict5/fno/seed2/checkpoint_best.pth",
+      "model": "FNO",
+      "seed": null,
+      "bytes": 4215841,
+      "sha256": "1fdeb4bd633b35052cb845020cf3a9b370980ec4212208ccb9b40a76a22b379c",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/fno_uno_strict5/fno/seed3/checkpoint_best.pth",
+      "model": "FNO",
+      "seed": null,
+      "bytes": 4215841,
+      "sha256": "285f33bd6931432cae9ff9db5b0f0b2c885a8b130d1db0b76e1ade41f8cf772b",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/fno_uno_strict5/fno/seed4/checkpoint_best.pth",
+      "model": "FNO",
+      "seed": null,
+      "bytes": 4215841,
+      "sha256": "e8c4a6b33c2dd37d6350f5a77f69876b77e935436d06b1c68344322b2bd7fe31",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/fno_uno_strict5/uno/seed0/checkpoint_best.pth",
+      "model": "UNO",
+      "seed": null,
+      "bytes": 9172301,
+      "sha256": "dce216a1b424fd1c6ae27b2528c5b330d0b653c06206e00f7d83eece8dd21292",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/fno_uno_strict5/uno/seed1/checkpoint_best.pth",
+      "model": "UNO",
+      "seed": null,
+      "bytes": 9172301,
+      "sha256": "e41750c27982426b9f2b9de6d2593fe647e6f5a1a6b447feba11c8465e832523",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/fno_uno_strict5/uno/seed2/checkpoint_best.pth",
+      "model": "UNO",
+      "seed": null,
+      "bytes": 9172301,
+      "sha256": "9e735552b3413c3bc23cb0fbf961f44e9590007a0addbfaf589e65ba2b8f7b9d",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/fno_uno_strict5/uno/seed3/checkpoint_best.pth",
+      "model": "UNO",
+      "seed": null,
+      "bytes": 9172301,
+      "sha256": "4dcd1d174fb87f8e5e62080c41c5d78149108d735fb282fabc4ce1b1f3914c00",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/fno_uno_strict5/uno/seed4/checkpoint_best.pth",
+      "model": "UNO",
+      "seed": null,
+      "bytes": 9172301,
+      "sha256": "a7e068c0c9ee2cbd3262ce3a2d5dbfab234f30e166154cc46746a007d1ac1dc6",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_acoustic_pointwise/unif_acous/seed0/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 7667081,
+      "sha256": "3ac91402c6010fd76088cf7314b1226bff328c19bd702e3ba518b97c4a3201f3",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_acoustic_pointwise/unif_acous/seed1/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 7667081,
+      "sha256": "5da954913c7a0968aca5affa53d0643d2db88916ea3b5f2ed3a67dab2446e431",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_acoustic_pointwise/unif_acous/seed2/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 7667081,
+      "sha256": "52a32d11685781463cf615f3a9d3b42efaf59b872a3260123bf84bd839ab93dc",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/unif_acous/seed3/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 7667081,
+      "sha256": "ecd027d68c71984ddd448569001a735708959dccf9903ed8c134cebcc4fe4794",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/unif_acous/seed4/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 7667081,
+      "sha256": "5ccab148a3aaf3833ee77d8811c83cf23defc5d6fcd256730c541fe4eb9226aa",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_acoustic_pointwise/fourier_c/seed0/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 3272199,
+      "sha256": "eb9c45db64655e156dfc07acf23e6abe12a4d3fe053e20cdd80c8038bedb2ab9",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_acoustic_pointwise/fourier_c/seed1/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 3272199,
+      "sha256": "31f67148ffc8f9b9d50d3ffa208b6cc3d1e48ff48ab3746c23d1ce0927cc2c77",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_acoustic_pointwise/fourier_c/seed2/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 3272199,
+      "sha256": "124db5b45f96533ff63de9af33ff13dfbedb0a07f87cf522205997ca7456dd39",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_c/seed3/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 3272199,
+      "sha256": "d424bf26ac49233f6fe2adace17a3aa8b68c37eba29474ade8bfba0cbc3770e3",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_c/seed4/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 3272199,
+      "sha256": "1c75a6620e180ba40f1b56bad008f3e30d82ca873462e5345dd8da067e6218db",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_acoustic_pointwise/fourier_nc/seed0/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 3270151,
+      "sha256": "2d1a5e86ddd2b795d3b214662616be7a3d9f495b5ba12c57e9feb6ba1f27c278",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_acoustic_pointwise/fourier_nc/seed1/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 3270151,
+      "sha256": "31d987ba32b7a361433477ba2bb5cff13a4c897ff47bff6297691dd0a2d166c1",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_acoustic_pointwise/fourier_nc/seed2/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 3270151,
+      "sha256": "1386b0ec7c876d1fe5febd6def0c00c0609ba193a86d6e7dc6f17da0c6d1d010",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_nc/seed3/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 3270151,
+      "sha256": "aa2b80b88e8d2cfa4b51c030c84aeb40a067fbb35845658584c653b98936b751",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    },
+    {
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_nc/seed4/checkpoint_best.pth",
+      "model": "acoustic",
+      "seed": null,
+      "bytes": 3270151,
+      "sha256": "3496e49d0904be1bb00d2b5fd65fa1f9f18be1933e7025c85abe204a5b63db03",
+      "source": "server_recovered",
+      "tier": "direct_evaluation_current_table1"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "experiment_id": "T_T1_feat_extract_R2_symmetric",
+  "model": "feat_extract",
+  "pool_context": "symmetric",
+  "implementation_version": "R2-IMPL-01B",
+  "cuda_matmul_allow_tf32": false,
+  "cudnn_allow_tf32": false,
+  "model_label": "FeatExtractNet(scale=1.0, pool_mode=symmetric)",
+  "model_params": 1149512,
+  "split_version": "splits_thermal_v1_protocolA",
+  "n_seeds": 5,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "epochs": 500,
+  "lr": 0.001,
+  "agg": {
+    "re": {
+      "mean": {
+        "u": 0.07645747752985323,
+        "v": 0.05597195709185524,
+        "p": 0.02062959211512039,
+        "T": 0.019373685371990832
+      },
+      "std": {
+        "u": 0.000539611429307975,
+        "v": 0.0005816176786324128,
+        "p": 0.0016836554813407108,
+        "T": 0.0008956344150481903
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "mae": {
+      "mean": {
+        "u": 0.002568611021136576,
+        "v": 0.0031073050818596,
+        "p": 0.002484959572299745,
+        "T": 0.004759510712146942
+      },
+      "std": {
+        "u": 0.00012278554240140234,
+        "v": 0.0001521897071022979,
+        "p": 0.0005422029650106087,
+        "T": 0.0008484452193752875
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "max_err": {
+      "mean": {
+        "u": 0.04548772471956909,
+        "v": 0.09012417528778316,
+        "p": 0.03820091698318719,
+        "T": 0.08860958933830261
+      },
+      "std": {
+        "u": 0.002143693506099691,
+        "v": 0.003254488209500979,
+        "p": 0.0008149713984140378,
+        "T": 0.0021560146694195623
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "re_bd": {
+      "mean": {
+        "u": null,
+        "v": null,
+        "p": 0.03559451371015605,
+        "T": 0.02237545290607299
+      },
+      "std": {
+        "u": null,
+        "v": null,
+        "p": 0.0017222835675093466,
+        "T": 0.0015460742136004571
+      },
+      "n_per_field": {
+        "u": 0,
+        "v": 0,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "mae_bd": {
+      "mean": {
+        "u": 0.002078526792232068,
+        "v": 0.003576255577202725,
+        "p": 0.004650468057165302,
+        "T": 0.0056477858055250674
+      },
+      "std": {
+        "u": 0.00028370465458566765,
+        "v": 0.0002579301456392694,
+        "p": 0.0009163392685273927,
+        "T": 0.0009184002337518001
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "max_bd": {
+      "mean": {
+        "u": 0.04413315506651997,
+        "v": 0.08734106574207545,
+        "p": 0.03820091698318719,
+        "T": 0.08564225435256959
+      },
+      "std": {
+        "u": 0.0032847130630396966,
+        "v": 0.0057230857668768296,
+        "p": 0.0008149713984140378,
+        "T": 0.00478276296386529
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    }
+  },
+  "seed_files": [
+    "results/round2_thermal_symmetric/feat_extract/seed0/metrics_seed0.json",
+    "results/round2_thermal_symmetric/feat_extract/seed1/metrics_seed1.json",
+    "results/round2_thermal_symmetric/feat_extract/seed2/metrics_seed2.json",
+    "results/round2_thermal_symmetric/feat_extract/seed3/metrics_seed3.json",
+    "results/round2_thermal_symmetric/feat_extract/seed4/metrics_seed4.json"
+  ],
+  "s_per_epoch_mean": 0.3196154
+}

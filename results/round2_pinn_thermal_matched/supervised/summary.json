@@ -1,0 +1,242 @@
+{
+  "experiment_id": "P1_R2_MATCH01_supervised",
+  "r2_task": "R2-P1-MATCH-01",
+  "objective": "supervised",
+  "n_seeds": 3,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "split_version": "splits_thermal_v1_protocolA",
+  "subset": {
+    "n_train_geom": 10,
+    "n_val_geom": 3,
+    "n_test_geom": 20,
+    "train_ids": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "val_ids": [
+      2,
+      36,
+      39
+    ],
+    "test_ids": [
+      17,
+      25,
+      32,
+      46,
+      47,
+      57,
+      66,
+      73,
+      83,
+      86,
+      96,
+      97,
+      98,
+      106,
+      109,
+      111,
+      113,
+      123,
+      126,
+      127
+    ],
+    "rule": "Protocol-A train first 10 / val first 3; the original test 20 is frozen and evaluated exactly once after training"
+  },
+  "physics": {
+    "rho": 1.0,
+    "mu": 0.00894427190999916,
+    "kappa": 0.00894427190999916,
+    "cp": 1.0,
+    "g_beta": 1.0,
+    "t_ref": 0.0
+  },
+  "dimensionless": {
+    "L": 2.0,
+    "delta_T": 1.0,
+    "nu": 0.00894427190999916,
+    "alpha": 0.00894427190999916,
+    "Ra": 99999.99999999999,
+    "Pr": 1.0,
+    "formula": "nu=mu/rho; alpha=kappa/(rho*cp); Ra=g_beta*delta_T*L^3/(nu*alpha); Pr=nu/alpha"
+  },
+  "whiten": {
+    "cont": 0.2,
+    "momx": 1.0,
+    "momy": 1.0,
+    "energy": 1.0
+  },
+  "whiten_note": "w=(cont=0.2, momx=1, momy=1, energy=1) is a pre-fixed scaling constant, NOT a measured RMS whitening; it is frozen and never calibrated from data or checkpoints",
+  "lambda_schedule": {
+    "warmup_epochs": 100,
+    "ramp_epochs": 100,
+    "formula": "lambda(e)=0 for e<=warmup; (e-warmup)/ramp_epochs for warmup<e<warmup+ramp_epochs; 1 afterwards"
+  },
+  "loss_terms_actual": {
+    "objective": "supervised",
+    "terms_in_update": [
+      "obs"
+    ],
+    "terms_computed": [
+      "obs",
+      "bc",
+      "pde_cont",
+      "pde_momx",
+      "pde_momy",
+      "pde_energy"
+    ],
+    "note": "all three objectives compute the same loss terms and only the selected terms enter the update; wall-clock time is therefore not a comparable training-cost measurement"
+  },
+  "epochs": 600,
+  "model": {
+    "name": "CoordMLP",
+    "hidden": 512,
+    "num_layers": 6,
+    "params": 1054212
+  },
+  "precision": {
+    "strict_fp32": true,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false
+  },
+  "test_policy": "only the val-3 subset selects the epoch; test-20 is never used for selection, tuning or routing; no early stopping beyond the fixed epoch budget",
+  "agg": {
+    "re": {
+      "mean": {
+        "u": 0.1362691384343572,
+        "v": 0.13039836921408304,
+        "p": 0.029057678565255273,
+        "T": 0.045765573784548354
+      },
+      "std": {
+        "u": 0.004665885458605105,
+        "v": 0.008319220055121219,
+        "p": 0.0004350585197720774,
+        "T": 0.002243600843269928
+      },
+      "n_per_field": {
+        "u": 3,
+        "v": 3,
+        "p": 3,
+        "T": 3
+      }
+    },
+    "mae": {
+      "mean": {
+        "u": 0.005541980837765141,
+        "v": 0.00879127563760355,
+        "p": 0.0038497871573714183,
+        "T": 0.011702809156915893
+      },
+      "std": {
+        "u": 0.0003666745850098635,
+        "v": 0.0007570541727990678,
+        "p": 0.00017799609733196576,
+        "T": 0.0010639399916744013
+      },
+      "n_per_field": {
+        "u": 3,
+        "v": 3,
+        "p": 3,
+        "T": 3
+      }
+    },
+    "max_err": {
+      "mean": {
+        "u": 0.07001915803508989,
+        "v": 0.13411961074598366,
+        "p": 0.05372248450294137,
+        "T": 0.1358168164889018
+      },
+      "std": {
+        "u": 0.000954908623829305,
+        "v": 0.0015377188876950193,
+        "p": 0.002165548563756614,
+        "T": 0.001391206942134993
+      },
+      "n_per_field": {
+        "u": 3,
+        "v": 3,
+        "p": 3,
+        "T": 3
+      }
+    },
+    "re_bd": {
+      "mean": {
+        "u": null,
+        "v": null,
+        "p": 0.045857217148982325,
+        "T": 0.0449066749407226
+      },
+      "std": {
+        "u": null,
+        "v": null,
+        "p": 0.0005014295876716941,
+        "T": 0.002753369469732893
+      },
+      "n_per_field": {
+        "u": 0,
+        "v": 0,
+        "p": 3,
+        "T": 3
+      }
+    },
+    "mae_bd": {
+      "mean": {
+        "u": 0.006546302781034733,
+        "v": 0.016025871232615067,
+        "p": 0.006582680388550849,
+        "T": 0.014246177156808487
+      },
+      "std": {
+        "u": 0.00081615986469409,
+        "v": 0.0019643435602466792,
+        "p": 0.0003558083716383182,
+        "T": 0.0016721928756032968
+      },
+      "n_per_field": {
+        "u": 3,
+        "v": 3,
+        "p": 3,
+        "T": 3
+      }
+    },
+    "max_bd": {
+      "mean": {
+        "u": 0.047558123928805186,
+        "v": 0.10303262285888194,
+        "p": 0.05366503335535525,
+        "T": 0.10037711958090463
+      },
+      "std": {
+        "u": 0.00020078961169676062,
+        "v": 0.004723066535281901,
+        "p": 0.00212499878659725,
+        "T": 0.002194530330356629
+      },
+      "n_per_field": {
+        "u": 3,
+        "v": 3,
+        "p": 3,
+        "T": 3
+      }
+    }
+  },
+  "seed_files": [
+    "results/round2_pinn_thermal_matched/supervised/seed0/metrics_seed0.json",
+    "results/round2_pinn_thermal_matched/supervised/seed1/metrics_seed1.json",
+    "results/round2_pinn_thermal_matched/supervised/seed2/metrics_seed2.json"
+  ],
+  "statistics_note": "mean and sample std (ddof=1) across the 3 seeds; per-channel independent; test scored once per seed on the frozen weights"
+}

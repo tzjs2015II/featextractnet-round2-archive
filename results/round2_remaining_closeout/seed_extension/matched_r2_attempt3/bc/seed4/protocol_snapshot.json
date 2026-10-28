@@ -1,0 +1,204 @@
+{
+  "run_id": "P1_R2_MATCH01_bc_seed4",
+  "experiment_id": "P1_R2_MATCH01_bc",
+  "r2_task": "R2-P1-MATCH-01",
+  "objective": "bc",
+  "seed": 4,
+  "task": "thermal_pinn_ns_boussinesq_matched_r2",
+  "created_local": "2026-10-27T02:44:03+08:00",
+  "intent": "minimal matched correction of the historical P1 with the correct physical coefficients; the old P1 remains a coefficient-mismatch diagnostic and 'must not be worse' is NOT an acceptance condition",
+  "split_version": "splits_thermal_v1_protocolA",
+  "split_seed": 123,
+  "n_geometries": 135,
+  "subset": {
+    "n_train_geom": 10,
+    "n_val_geom": 3,
+    "n_test_geom": 20,
+    "train_ids": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "val_ids": [
+      2,
+      36,
+      39
+    ],
+    "test_ids": [
+      17,
+      25,
+      32,
+      46,
+      47,
+      57,
+      66,
+      73,
+      83,
+      86,
+      96,
+      97,
+      98,
+      106,
+      109,
+      111,
+      113,
+      123,
+      126,
+      127
+    ],
+    "rule": "Protocol-A train first 10 / val first 3; the original test 20 is frozen and evaluated exactly once after training"
+  },
+  "selection_policy": "only the val-3 subset selects the epoch; test-20 is never used for selection, tuning or routing; no early stopping beyond the fixed epoch budget",
+  "norm": {
+    "source": "train-only z-score fit on the 10 train-subset geoms",
+    "x_mean": [
+      -0.0032184559386223555,
+      0.003448842791840434
+    ],
+    "x_std": [
+      0.624695897102356,
+      0.6252803206443787
+    ],
+    "y_mean": [
+      -5.326687642082106e-06,
+      0.0012050520163029432,
+      0.002807439537718892,
+      0.3228507936000824
+    ],
+    "y_std": [
+      0.06887034326791763,
+      0.11744168400764465,
+      0.20773378014564514,
+      0.2971595823764801
+    ]
+  },
+  "physics": {
+    "rho": 1.0,
+    "mu": 0.00894427190999916,
+    "kappa": 0.00894427190999916,
+    "cp": 1.0,
+    "g_beta": 1.0,
+    "t_ref": 0.0
+  },
+  "dimensionless": {
+    "L": 2.0,
+    "delta_T": 1.0,
+    "nu": 0.00894427190999916,
+    "alpha": 0.00894427190999916,
+    "Ra": 99999.99999999999,
+    "Pr": 1.0,
+    "formula": "nu=mu/rho; alpha=kappa/(rho*cp); Ra=g_beta*delta_T*L^3/(nu*alpha); Pr=nu/alpha"
+  },
+  "physical_residuals": {
+    "cont": "u_x + v_y",
+    "momx": "rho*(u*u_x + v*u_y) + p_x - mu*(u_xx + u_yy)",
+    "momy": "rho*(u*v_x + v*v_y) + p_y - mu*(v_xx + v_yy) - rho*g_beta*(T - t_ref)",
+    "energy": "rho*cp*(u*T_x + v*T_y) - kappa*(T_xx + T_yy)",
+    "domain": "physical/stored units; the network output is reconstructed as y_phys = y_mean + y_std*y_net and autograd derivatives w.r.t. normalized coordinates are rescaled by 1/sx (first) and 1/sx^2 (second)"
+  },
+  "whiten": {
+    "cont": 0.2,
+    "momx": 1.0,
+    "momy": 1.0,
+    "energy": 1.0
+  },
+  "whiten_note": "w=(cont=0.2, momx=1, momy=1, energy=1) is a pre-fixed scaling constant, NOT a measured RMS whitening; it is frozen and never calibrated from data or checkpoints",
+  "lambda_schedule": {
+    "warmup_epochs": 100,
+    "ramp_epochs": 100,
+    "formula": "lambda(e)=0 for e<=warmup; (e-warmup)/ramp_epochs for warmup<e<warmup+ramp_epochs; 1 afterwards"
+  },
+  "loss_terms_actual": {
+    "objective": "bc",
+    "terms_in_update": [
+      "obs",
+      "bc"
+    ],
+    "terms_computed": [
+      "obs",
+      "bc",
+      "pde_cont",
+      "pde_momx",
+      "pde_momy",
+      "pde_energy"
+    ],
+    "note": "all three objectives compute the same loss terms and only the selected terms enter the update; wall-clock time is therefore not a comparable training-cost measurement"
+  },
+  "boundary": {
+    "definition": "first 660 points of each geometry are wall points",
+    "bc_targets": "u, v targets from the stored data (they are 0 by the dataset) and T from the stored data; no pressure BC and no hard-constraint envelope",
+    "collocation": "interior indices 660..4999; compute_loss_terms draws one random permutation of the interior indices per batch step and applies the same n_colloc indices to every geometry in that batch (shared indices, not per-geometry independent draws); the input point order is not downsampled (full 5000-point provider)"
+  },
+  "pressure": "raw stored pressure is used as-is for observations/evaluation; no pressure gauge shift or post-hoc translation is applied",
+  "model": {
+    "name": "CoordMLP",
+    "hidden": 512,
+    "num_layers": 6,
+    "params": 1054212
+  },
+  "training": {
+    "epochs": 600,
+    "lr": 0.001,
+    "batch_geoms": 4,
+    "val_every": 25,
+    "monitor_every": 25,
+    "n_colloc": 2000,
+    "warmup": 100,
+    "ramp_epochs": 100,
+    "optimizer": "Adam",
+    "clip": null,
+    "patience": null
+  },
+  "precision": {
+    "strict_fp32": true,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false
+  },
+  "torch_version": "2.10.0+cu128",
+  "device": "cuda",
+  "backend": "cuda",
+  "hardware": {
+    "pytorch_version": "2.10.0+cu128",
+    "cuda_available": true,
+    "mps_available": false,
+    "cuda_device_count": 1,
+    "cuda_device_name": "NVIDIA GeForce RTX 4090 D",
+    "cuda_memory_gb": 25.262096384
+  },
+  "init_state_sha256": "f2b93159108fcb2337dfa0d1f14152134ef8889c301b3721f6a0fd357b590143",
+  "data": "HeatTransferData.npy",
+  "data_sha256": "e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26",
+  "splits_config": "configs/splits_thermal.json",
+  "splits_sha256": "6fa469f7dfa34748ccebf7903650b494c3e908033176a3d4f30ad7cecc853cfe",
+  "sources_sha256": {
+    "scripts/exp_r2_pinn_thermal.py": "15f30ad86b6121be873dc9bb4e95769390e38ecb926882f9ab71f2e7a2ce70df",
+    "scripts/exp_pinn_thermal.py": "16cb6bd80e0d8619cea1b06ddc0ca8e19c124da43eb803973f5decad59cba1b1",
+    "src/core/thermal_io.py": "e0b44c31a8f3e2ac10cd3eca39b13c29ac32704c140222651bdc4bc219201e1d",
+    "src/core/runner.py": "da6d872bb8beaf72fec4194969d092f366106b17dd2081066baa2140c80c04a4",
+    "src/core/registry.py": "37bb92b7d17e46e52eb2c2287ba93cce298df092b9fb9a8a913d5abf059c3b90",
+    "src/models/baselines/coordinate_mlp.py": "2460b17b93ba138833da3c7d1e4cf85ad32182c055b0e463abe3da18bb7b95f6",
+    "configs/splits_thermal.json": "6fa469f7dfa34748ccebf7903650b494c3e908033176a3d4f30ad7cecc853cfe"
+  },
+  "not_ported": "no checkpoint, selected weights, or normalization statistics from any earlier run are loaded; only the real residual/loss functions and core scoring are reused",
+  "formal_protocol": {
+    "epochs": 600,
+    "lr": 0.001,
+    "batch_geoms": 4,
+    "val_every": 25,
+    "monitor_every": 25,
+    "n_colloc": 2000,
+    "hidden": 512,
+    "num_layers": 6,
+    "warmup": 100,
+    "ramp_epochs": 100
+  },
+  "protocol_deviations": {},
+  "is_formal_protocol": true
+}

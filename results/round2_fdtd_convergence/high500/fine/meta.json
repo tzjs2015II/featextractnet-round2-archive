@@ -1,0 +1,495 @@
+{
+  "task_id": "R2-FDTD-CONV-01",
+  "protocol_version": "R2_FDTD_CONV_v1",
+  "case": "high500",
+  "resolution": "fine",
+  "series": "space",
+  "status": "ok",
+  "started_utc": "2026-10-22T10:32:36+00:00",
+  "finished_utc": "2026-10-22T22:29:36+00:00",
+  "wall_s": 43019.349153121,
+  "slurm": {
+    "slurm_job_id": "50910",
+    "slurm_job_nodelist": "gn1",
+    "slurm_job_partition": "compute",
+    "slurm_cpus_per_task": "4"
+  },
+  "environment": {
+    "hostname": "gn1",
+    "platform": "Linux-6.8.0-57-generic-x86_64-with-glibc2.35",
+    "python": "3.13.9",
+    "numpy": "2.4.2",
+    "cpu_count": 96,
+    "slurm": {
+      "SLURM_JOB_ID": "50910",
+      "SLURM_JOBID": "50910",
+      "SLURM_JOB_NODELIST": "gn1",
+      "SLURM_JOB_PARTITION": "compute",
+      "SLURM_CPUS_PER_TASK": "4"
+    }
+  },
+  "protocol_path": "../round2_fdtd_convergence/high500/fine/protocol.json",
+  "protocol_sha256": "5fc001687d6e9ba09a747fe63029b7d723cb485b8d42d022a76a98b60df50c0b",
+  "hashes": {
+    "script_path": "scripts/exp_r2_fdtd_convergence.py",
+    "script_sha256": "d6d66843818867773e0f7473dc35e3144168fa15ea5644b006bfda422be827dd",
+    "solver_path": "src/fdtd/python_fdtd.py",
+    "solver_sha256": "020cf4858cf8d65c27368a8bd9192df02917b7c077705a912c08ca2e4dbc7f00",
+    "config_path": "configs/acoustic_cases.json",
+    "config_sha256": "69a4b4bc047cca0b2b88e801f752001096289aee27dcd6c193f772eabafaae0b"
+  },
+  "identity": {
+    "task_id": "R2-FDTD-CONV-01",
+    "protocol_version": "R2_FDTD_CONV_v1",
+    "case": "high500",
+    "config_case_id": "500_0.7",
+    "f_hz": 500.0,
+    "Ma": 0.7,
+    "c0_m_s": 340.0,
+    "rho0_kg_m3": 1.0,
+    "L_m": 1.0,
+    "alpha": 1.256431,
+    "gamma_coef": 2.8,
+    "sigma_pml": 100.0,
+    "air_domain_x_m": [
+      -15.0,
+      15.0
+    ],
+    "air_domain_y_m": [
+      -15.0,
+      15.0
+    ],
+    "pml_thickness_m": 10.0,
+    "source_side": "left",
+    "source_x_target_m": -15.0,
+    "Ncycle": 177,
+    "t_final_target_s": 0.354,
+    "final_phase_cycles": 177,
+    "solver_path": "src/fdtd/python_fdtd.py",
+    "solver_sha256": "020cf4858cf8d65c27368a8bd9192df02917b7c077705a912c08ca2e4dbc7f00",
+    "config_path": "configs/acoustic_cases.json",
+    "config_sha256": "69a4b4bc047cca0b2b88e801f752001096289aee27dcd6c193f772eabafaae0b"
+  },
+  "plan": {
+    "task_id": "R2-FDTD-CONV-01",
+    "protocol_version": "R2_FDTD_CONV_v1",
+    "case": "high500",
+    "resolution": "fine",
+    "series": "space",
+    "f_hz": 500.0,
+    "Ma": 0.7,
+    "c0_m_s": 340.0,
+    "rho0_kg_m3": 1.0,
+    "L_m": 1.0,
+    "alpha": 1.256431,
+    "gamma_coef": 2.8,
+    "sigma_pml": 100.0,
+    "dx_m": 0.03125,
+    "dy_m": 0.03125,
+    "dx_denom": 32,
+    "dy_denom": 32,
+    "n_pml_cells": 320,
+    "n_buffer_cells": 480,
+    "nx_cells": 1600,
+    "ny_cells": 1600,
+    "nxp1": 1601,
+    "nyp1": 1601,
+    "air_nodes_x": 961,
+    "air_nodes_y": 961,
+    "air_node_range_0based": [
+      320,
+      1281,
+      320,
+      1281
+    ],
+    "grid_min_x_m": -25.0,
+    "grid_max_x_m": 25.0,
+    "air_x_min_m": -15.0,
+    "air_x_max_m": 15.0,
+    "pml_thickness_m": 10.0,
+    "air_half_width_m": 15.0,
+    "air_span_m": 30.0,
+    "Ncycle": 177,
+    "s0": 77,
+    "spp_mult": 4,
+    "spp": 308,
+    "dt_s": 6.493506493506494e-06,
+    "n_steps": 54516,
+    "t_final_target_s": 0.354,
+    "t_final_steps_s": 0.35400000000000004,
+    "final_phase_cycles": 177,
+    "final_phase_residual_cycles_target": 0.0,
+    "courant_factor": 0.09991326986116414,
+    "cfl_max": 0.1,
+    "source_side": "left",
+    "source_y_frac": [
+      0.0,
+      1.0
+    ],
+    "source_x_m": -15.0,
+    "lambda_m": 0.68,
+    "ppw": 21.76,
+    "ppw_min_reference": 10.0,
+    "under_resolved_ppw": false
+  },
+  "solver_params": {
+    "f_hz": 500.0,
+    "omega_rad_s": 3141.592653589793,
+    "Ma": 0.7,
+    "c0": 340.0,
+    "rho0": 1.0,
+    "L": 1.0,
+    "alpha": 1.256431,
+    "gamma_coef": 2.8,
+    "Gamma": 2093.5573443522376,
+    "dx": 0.03125,
+    "dy": 0.03125,
+    "courant_factor": 0.09991326986116414,
+    "dt_s": 6.493506493506495e-06,
+    "n_pml": 320,
+    "n_buffer": 480,
+    "nx_cells": 1600,
+    "ny_cells": 1600,
+    "nxp1": 1601,
+    "nyp1": 1601,
+    "n_steps": 54516,
+    "t_final_s": 0.35400000000000004,
+    "sigma_pml": 100.0,
+    "source_side": "left",
+    "source_y_frac": [
+      0.0,
+      1.0
+    ],
+    "src_col_0based": 320,
+    "src_rows_0based": [
+      320,
+      1280
+    ],
+    "pis_pie_pjs_pje_matlab": [
+      321,
+      1281,
+      321,
+      1281
+    ],
+    "air_node_range_0based": [
+      320,
+      1281,
+      320,
+      1281
+    ],
+    "crop_air": true,
+    "lambda_m": 0.68,
+    "cells_per_lambda": 21.76,
+    "grid_min_x_m": -25.0,
+    "grid_max_x_m": 25.0
+  },
+  "save_phasor": false,
+  "phasor": {
+    "saved": false,
+    "reason": "run without --save-phasor"
+  },
+  "checks": [
+    {
+      "name": "result_schema",
+      "ok": true,
+      "detail": "run_case returned the documented keys",
+      "value": null,
+      "expected": null
+    },
+    {
+      "name": "dt_matches_plan",
+      "ok": true,
+      "detail": "|dt_actual-dt_plan|/dt_plan=1.304e-16 (tol 1e-09)",
+      "value": 6.493506493506495e-06,
+      "expected": 6.493506493506494e-06
+    },
+    {
+      "name": "t_final_matches_identity",
+      "ok": true,
+      "detail": "|t_final-Ncycle/f|/(Ncycle/f)=1.568e-16 (tol 1e-09)",
+      "value": 0.35400000000000004,
+      "expected": 0.354
+    },
+    {
+      "name": "final_phase_cycles",
+      "ok": true,
+      "detail": "|f*t_final-Ncycle|=2.842e-14 cycles (tol 1e-09)",
+      "value": 177.00000000000003,
+      "expected": 177.0
+    },
+    {
+      "name": "final_source_phase_sin",
+      "ok": true,
+      "detail": "|sin(2*pi*f*t_final)|=4.902e-14",
+      "value": 4.901805895899672e-14,
+      "expected": 0.0
+    },
+    {
+      "name": "courant_factor_matches_plan",
+      "ok": true,
+      "detail": "rel diff=0.000e+00",
+      "value": 0.09991326986116414,
+      "expected": 0.09991326986116414
+    },
+    {
+      "name": "effective_cfl_within_target",
+      "ok": true,
+      "detail": "courant_factor=0.099913 <= 0.1",
+      "value": 0.09991326986116414,
+      "expected": 0.1
+    },
+    {
+      "name": "grid_cells",
+      "ok": true,
+      "detail": "actual nx,ny=1600,1600",
+      "value": [
+        1600,
+        1600
+      ],
+      "expected": [
+        1600,
+        1600
+      ]
+    },
+    {
+      "name": "grid_dx",
+      "ok": true,
+      "detail": "actual dx,dy=0.03125,0.03125",
+      "value": [
+        0.03125,
+        0.03125
+      ],
+      "expected": [
+        0.03125,
+        0.03125
+      ]
+    },
+    {
+      "name": "pml_buffer_cells",
+      "ok": true,
+      "detail": "actual n_pml,n_buffer=320,480",
+      "value": [
+        320,
+        480
+      ],
+      "expected": [
+        320,
+        480
+      ]
+    },
+    {
+      "name": "air_node_range",
+      "ok": true,
+      "detail": "actual=[320, 1281, 320, 1281]",
+      "value": [
+        320,
+        1281,
+        320,
+        1281
+      ],
+      "expected": [
+        320,
+        1281,
+        320,
+        1281
+      ]
+    },
+    {
+      "name": "n_steps_done",
+      "ok": true,
+      "detail": "actual=54516 (early stop would show here)",
+      "value": 54516,
+      "expected": 54516
+    },
+    {
+      "name": "source_side",
+      "ok": true,
+      "detail": "actual='left'",
+      "value": "left",
+      "expected": "left"
+    },
+    {
+      "name": "source_physical_position",
+      "ok": true,
+      "detail": "src_x=-15.000000000000000 m, |dev|=0.000e+00 m (tol 1e-12)",
+      "value": -15.0,
+      "expected": -15.0
+    },
+    {
+      "name": "air_coords_x_exact",
+      "ok": true,
+      "detail": "max|x-x_expected|=0.0 m (tol 1e-12)",
+      "value": 0.0,
+      "expected": 0.0
+    },
+    {
+      "name": "air_coords_y_exact",
+      "ok": true,
+      "detail": "max|y-y_expected|=0.0 m (tol 1e-12)",
+      "value": 0.0,
+      "expected": 0.0
+    },
+    {
+      "name": "field_shapes",
+      "ok": true,
+      "detail": "shapes={'p_total': [961, 961], 'p_incident': [961, 961], 'p_scattered': [961, 961]}, expected=(961, 961)",
+      "value": {
+        "p_total": [
+          961,
+          961
+        ],
+        "p_incident": [
+          961,
+          961
+        ],
+        "p_scattered": [
+          961,
+          961
+        ]
+      },
+      "expected": [
+        961,
+        961
+      ]
+    },
+    {
+      "name": "fields_finite",
+      "ok": true,
+      "detail": "finite={'p_total': True, 'p_incident': True, 'p_scattered': True}",
+      "value": {
+        "p_total": true,
+        "p_incident": true,
+        "p_scattered": true
+      },
+      "expected": true
+    },
+    {
+      "name": "diag_not_broke_nan",
+      "ok": true,
+      "detail": "broke_nan=False",
+      "value": false,
+      "expected": false
+    },
+    {
+      "name": "diag_not_diverged",
+      "ok": true,
+      "detail": "diverged=False, max|p|_seen=6.657144322398657",
+      "value": false,
+      "expected": false
+    },
+    {
+      "name": "physical_constants_match_identity",
+      "ok": true,
+      "detail": "mismatched=[]",
+      "value": {
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "sigma_pml": 100.0,
+        "f_hz": 500.0,
+        "Ma": 0.7
+      },
+      "expected": {
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "sigma_pml": 100.0,
+        "f_hz": 500.0,
+        "Ma": 0.7
+      }
+    }
+  ],
+  "checks_all_ok": true,
+  "n_checks": 21,
+  "n_failed_checks": 0,
+  "diagnostics": {
+    "n_steps_done": 54516,
+    "seconds_per_step": 0.7891121535207394,
+    "wall_s": 43019.23816133663,
+    "broke_nan": false,
+    "diverged": false,
+    "divergence_threshold": 100000000.0,
+    "max_abs_p_seen": 6.657144322398657,
+    "max_abs_p_final": 6.119435929012302,
+    "max_abs_P_final": 0.9740888368547188,
+    "rms_p_air_final": 0.6536851112265848,
+    "steady": {
+      "method": "phase-locked integer-period mean",
+      "n_samples": 1232,
+      "steps_per_period": 308,
+      "n_period": 4,
+      "steady_ok": true,
+      "rel_growth": 6.838615520091376e-05,
+      "phase_err": 1.845565547428832e-16,
+      "tol": 0.02,
+      "energy_per_period": [
+        0.42739211147809536,
+        0.4273628837748282,
+        0.4273357778284586,
+        0.4273168964598217
+      ],
+      "rel_per_period": [
+        6.838615520091376e-05,
+        6.342606575971932e-05,
+        4.418391722984702e-05
+      ],
+      "mean_energy_last": 0.4273168964598217
+    },
+    "phase_steps": [],
+    "phasor_drift_rel_max": null,
+    "finite_arrays": {
+      "p_total": true,
+      "p_incident": true,
+      "p_scattered": true
+    },
+    "note": "diagnostic only (finite/steady/blow-up); NOT convergence evidence"
+  },
+  "outputs": {
+    "fields_npz": "../round2_fdtd_convergence/high500/fine/fields.npz",
+    "sha256": "0fc4f5f4c0394c19062a12333c8ec0f1067c0adf1bf0e89fd4960e1e2c828c57",
+    "keys": [
+      "energy_samples",
+      "energy_tail",
+      "maxp_samples",
+      "p_incident",
+      "p_scattered",
+      "p_total",
+      "x",
+      "y"
+    ],
+    "shapes": {
+      "p_total": [
+        961,
+        961
+      ],
+      "p_incident": [
+        961,
+        961
+      ],
+      "p_scattered": [
+        961,
+        961
+      ],
+      "x": [
+        961
+      ],
+      "y": [
+        961
+      ],
+      "energy_tail": [
+        1232
+      ],
+      "energy_samples": [
+        177
+      ],
+      "maxp_samples": [
+        177
+      ]
+    }
+  },
+  "interpretation": "single fixed configuration; convergence requires the full 10-solve aggregate"
+}

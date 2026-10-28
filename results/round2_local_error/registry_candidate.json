@@ -1,0 +1,110 @@
+{
+  "appended": false,
+  "note": "Codex merges; this script never writes results/registry.json",
+  "entries": [
+    {
+      "id": "R2_LOCAL_ERROR",
+      "experiment_id": "R2_LOCAL_ERROR",
+      "type": "analysis",
+      "tool": "exp_r2_local_error.py",
+      "r2_task": "R2-LOCAL-ERROR-SUPPORT-01",
+      "protocol": {
+        "split_version": "splits_thermal_v1_protocolA",
+        "test_ids": [
+          17,
+          25,
+          32,
+          46,
+          47,
+          57,
+          66,
+          73,
+          83,
+          86,
+          96,
+          97,
+          98,
+          106,
+          109,
+          111,
+          113,
+          123,
+          126,
+          127
+        ],
+        "model": {
+          "token": "feat_extract",
+          "pool_context": "symmetric",
+          "label": "FeatExtractNet(scale=1.0, pool_mode=symmetric)",
+          "seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "geometry_spec_sha256": "9214c18a934dfddcf3dda09243f7fd434df24f605035e17ed361c7f93778d3d5",
+        "data_sha256": "e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26",
+        "bands": [
+          {
+            "name": "[0,0.02)",
+            "lo": 0.0,
+            "hi": 0.02
+          },
+          {
+            "name": "[0.02,0.05)",
+            "lo": 0.02,
+            "hi": 0.05
+          },
+          {
+            "name": "[0.05,0.1)",
+            "lo": 0.05,
+            "hi": 0.1
+          },
+          {
+            "name": "[0.1,inf)",
+            "lo": 0.1,
+            "hi": null
+          }
+        ],
+        "density": "h16 = distance to the 16th other support point (cKDTree k=17, all 5000 points, self excluded); density = 16/(pi*h16^2) points/m^2",
+        "aggregation": {
+          "order": "per geometry per bin -> per seed equal-weight geometry mean -> 5-seed mean/sample std (ddof=1)",
+          "empty_bin": "skipped; valid geometry count recorded",
+          "unit_note": "points/nodes within a geometry are not independent replicates; seeds are the outer replication"
+        }
+      },
+      "metrics": {
+        "file": "results/round2_local_error/summary.json"
+      },
+      "note": "REGISTRY CANDIDATE ONLY - not appended by this script"
+    },
+    {
+      "id": "R2_SUPPORT_SENSITIVITY",
+      "experiment_id": "R2_SUPPORT_SENSITIVITY",
+      "type": "analysis",
+      "tool": "exp_r2_local_error.py",
+      "r2_task": "R2-LOCAL-ERROR-SUPPORT-01",
+      "protocol": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "nested_totals": [
+          5000,
+          2500,
+          1250
+        ],
+        "rng": "np.random.default_rng(20261021+geom_id)",
+        "scoring": "real physical reference Y_geom for subset_context and full_context on the same ids; paired delta subset-full (null propagates); drift_vs_full is auxiliary only",
+        "note": "support-change vs scoring-point-change; not retraining"
+      },
+      "metrics": {
+        "file": "results/round2_local_error/summary.json"
+      },
+      "note": "REGISTRY CANDIDATE ONLY - not appended by this script"
+    }
+  ]
+}

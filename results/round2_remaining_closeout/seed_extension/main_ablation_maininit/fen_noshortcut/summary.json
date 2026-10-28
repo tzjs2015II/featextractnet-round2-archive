@@ -1,0 +1,146 @@
+{
+  "experiment_id": "T3_fen_fen_noshortcut_R2_symmetric_maininit",
+  "variant": "fen_noshortcut",
+  "pool_context": "symmetric",
+  "init_mode": "main_default",
+  "implementation_version": "R2-IMPL-01B",
+  "cuda_matmul_allow_tf32": false,
+  "cudnn_allow_tf32": false,
+  "model_label": "fen_noshortcut = 去 head residual shortcut [pool_context=symmetric] [init_mode=main_default]",
+  "model_params": 1146692,
+  "split_version": "splits_thermal_v1_protocolA",
+  "n_seeds": 2,
+  "seeds": [
+    3,
+    4
+  ],
+  "epochs": 500,
+  "lr": 0.001,
+  "agg": {
+    "re": {
+      "mean": {
+        "u": 0.07603745859902132,
+        "v": 0.05617725459868812,
+        "p": 0.01980149723144484,
+        "T": 0.018577669751595208
+      },
+      "std": {
+        "u": 0.0011170934481852933,
+        "v": 0.0024360667418720015,
+        "p": 9.014817268458135e-05,
+        "T": 0.0008159805035358932
+      },
+      "n_per_field": {
+        "u": 2,
+        "v": 2,
+        "p": 2,
+        "T": 2
+      }
+    },
+    "mae": {
+      "mean": {
+        "u": 0.0025666591213557837,
+        "v": 0.0031473356573742946,
+        "p": 0.0021437920276885913,
+        "T": 0.004106636907175242
+      },
+      "std": {
+        "u": 0.00012914513422152755,
+        "v": 0.0004066843703695764,
+        "p": 0.00011218562280484522,
+        "T": 0.0006015505311960168
+      },
+      "n_per_field": {
+        "u": 2,
+        "v": 2,
+        "p": 2,
+        "T": 2
+      }
+    },
+    "max_err": {
+      "mean": {
+        "u": 0.044949409831315276,
+        "v": 0.08384424964897334,
+        "p": 0.03689701007679105,
+        "T": 0.08907157629728317
+      },
+      "std": {
+        "u": 0.001303464388639784,
+        "v": 0.0030825868484624353,
+        "p": 0.0021999655252123588,
+        "T": 0.0013031868779841162
+      },
+      "n_per_field": {
+        "u": 2,
+        "v": 2,
+        "p": 2,
+        "T": 2
+      }
+    },
+    "re_bd": {
+      "mean": {
+        "u": null,
+        "v": null,
+        "p": 0.03445020756136931,
+        "T": 0.021636484491573384
+      },
+      "std": {
+        "u": null,
+        "v": null,
+        "p": 1.5173694640106986e-05,
+        "T": 0.0005885055825425906
+      },
+      "n_per_field": {
+        "u": 0,
+        "v": 0,
+        "p": 2,
+        "T": 2
+      }
+    },
+    "mae_bd": {
+      "mean": {
+        "u": 0.0021785636449642024,
+        "v": 0.0036470314072146962,
+        "p": 0.003983105570800324,
+        "T": 0.004486368013019446
+      },
+      "std": {
+        "u": 1.92557414612555e-05,
+        "v": 0.00027740057560601616,
+        "p": 8.2456617126246e-05,
+        "T": 5.5191502952488475e-05
+      },
+      "n_per_field": {
+        "u": 2,
+        "v": 2,
+        "p": 2,
+        "T": 2
+      }
+    },
+    "max_bd": {
+      "mean": {
+        "u": 0.04467636086046696,
+        "v": 0.08283898327499628,
+        "p": 0.03689701007679105,
+        "T": 0.08907157629728317
+      },
+      "std": {
+        "u": 0.0014788330788998603,
+        "v": 0.004247009639972628,
+        "p": 0.0021999655252123588,
+        "T": 0.0013031868779841162
+      },
+      "n_per_field": {
+        "u": 2,
+        "v": 2,
+        "p": 2,
+        "T": 2
+      }
+    }
+  },
+  "seed_files": [
+    "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_noshortcut/seed3/metrics_seed3.json",
+    "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_noshortcut/seed4/metrics_seed4.json"
+  ],
+  "s_per_epoch_mean": 0.3318995
+}

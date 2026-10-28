@@ -1,0 +1,1428 @@
+{
+  "archive": "dist\\round2\\featextractnet_acoustic_author_data.tar",
+  "bytes": 331038720,
+  "sha256": "aed5b1a85fd443f942816ac3792c54da13d3c11632e71cd291654d04692da950",
+  "members": 24,
+  "npz_files": 21,
+  "payload_hashes": "passed",
+  "thermal_data": false,
+  "publication": "not published",
+  "manifest": {
+    "status": "local_preparation_not_published",
+    "n_cases": 21,
+    "target": "original real final-time p_total; phasor arrays are distinct optional fields",
+    "thermal_data_included": false,
+    "files": [
+      {
+        "case_id": "100_0.2",
+        "path": "data/acoustic/case_100_0.2.npz",
+        "role": "unused",
+        "sha256": "a2875ff1ad8e29236bf80800037d1b54794106c8f5f5ded51ae54bd10b607818",
+        "bytes": 15771136,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": -0.015543877999299127,
+        "source_column_time_check_max_abs": 2.8296809340133677e-14,
+        "original_npz_meta": {
+          "Gamma": 598.1592412434966,
+          "L": 1.0,
+          "Ma": 0.2,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 54.4,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 100.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 3.4,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27684,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 628.3185307179587,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "unused",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.359844561220007
+        }
+      },
+      {
+        "case_id": "100_0.3",
+        "path": "data/acoustic/case_100_0.3.npz",
+        "role": "test",
+        "sha256": "1c3dc6293b0697939d7a98602d7c3af228d6c5fc4cc8d6af94b4a45755ede1c1",
+        "bytes": 15771128,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": -0.015543877999299127,
+        "source_column_time_check_max_abs": 2.8296809340133677e-14,
+        "original_npz_meta": {
+          "Gamma": 897.2388618652449,
+          "L": 1.0,
+          "Ma": 0.3,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 54.4,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 100.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 3.4,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27684,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 628.3185307179587,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "test",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.359844561220007
+        }
+      },
+      {
+        "case_id": "100_0.5",
+        "path": "data/acoustic/case_100_0.5.npz",
+        "role": "test",
+        "sha256": "240ee73d0d3107cf13266adab32bc8820dcaa94862c9ada25a1d138174165ba2",
+        "bytes": 15771132,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": -0.015543877999299127,
+        "source_column_time_check_max_abs": 2.8296809340133677e-14,
+        "original_npz_meta": {
+          "Gamma": 1495.3981031087415,
+          "L": 1.0,
+          "Ma": 0.5,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 54.4,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 100.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 3.4,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27684,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 628.3185307179587,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "test",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.359844561220007
+        }
+      },
+      {
+        "case_id": "100_0.7",
+        "path": "data/acoustic/case_100_0.7.npz",
+        "role": "test",
+        "sha256": "6912a4efa014f389ee54d86a013ef8f28e3877c409c2e6abb8e45313c06faaec",
+        "bytes": 15771132,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": -0.015543877999299127,
+        "source_column_time_check_max_abs": 2.8296809340133677e-14,
+        "original_npz_meta": {
+          "Gamma": 2093.5573443522376,
+          "L": 1.0,
+          "Ma": 0.7,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 54.4,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 100.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 3.4,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27684,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 628.3185307179587,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "test",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.359844561220007
+        }
+      },
+      {
+        "case_id": "200_0.2",
+        "path": "data/acoustic/case_200_0.2.npz",
+        "role": "unused",
+        "sha256": "1a920868bcc544e3d01b8e47c5ce2364d36f11424075572a2ef4bb9f85ca3919",
+        "bytes": 15758860,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": 0.062499906217269086,
+        "source_column_time_check_max_abs": 5.2513549064769904e-14,
+        "original_npz_meta": {
+          "Gamma": 598.1592412434966,
+          "L": 1.0,
+          "Ma": 0.2,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 27.2,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 200.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 1.7,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27720,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 1256.6370614359173,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "unused",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.36031249953108635
+        }
+      },
+      {
+        "case_id": "200_0.3",
+        "path": "data/acoustic/case_200_0.3.npz",
+        "role": "train",
+        "sha256": "6cd788ed9e921d2c7742939ea471ab862debecf633f28750608e692db62d2bdf",
+        "bytes": 15758856,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": 0.062499906217269086,
+        "source_column_time_check_max_abs": 5.2513549064769904e-14,
+        "original_npz_meta": {
+          "Gamma": 897.2388618652449,
+          "L": 1.0,
+          "Ma": 0.3,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 27.2,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 200.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 1.7,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27720,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 1256.6370614359173,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "train",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.36031249953108635
+        }
+      },
+      {
+        "case_id": "200_0.5",
+        "path": "data/acoustic/case_200_0.5.npz",
+        "role": "train",
+        "sha256": "4fd388d080ac85a509925765549288b4f576fb24c823bcb782da99533727f245",
+        "bytes": 15758860,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": 0.062499906217269086,
+        "source_column_time_check_max_abs": 5.2513549064769904e-14,
+        "original_npz_meta": {
+          "Gamma": 1495.3981031087415,
+          "L": 1.0,
+          "Ma": 0.5,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 27.2,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 200.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 1.7,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27720,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 1256.6370614359173,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "train",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.36031249953108635
+        }
+      },
+      {
+        "case_id": "200_0.7",
+        "path": "data/acoustic/case_200_0.7.npz",
+        "role": "train",
+        "sha256": "6579e53326f8e59618de0e29e8c3684218287be644d9ef18b94818a423b7affd",
+        "bytes": 15758860,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": 0.062499906217269086,
+        "source_column_time_check_max_abs": 5.2513549064769904e-14,
+        "original_npz_meta": {
+          "Gamma": 2093.5573443522376,
+          "L": 1.0,
+          "Ma": 0.7,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 27.2,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 200.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 1.7,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27720,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 1256.6370614359173,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "train",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.36031249953108635
+        }
+      },
+      {
+        "case_id": "300_0.2",
+        "path": "data/acoustic/case_300_0.2.npz",
+        "role": "unused",
+        "sha256": "ee8f1fd94500d5b030210d00ca1df30b85abf228b08a0f331cf5513e32e730cb",
+        "bytes": 15754844,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": -0.18701312732169129,
+        "source_column_time_check_max_abs": 0.0,
+        "original_npz_meta": {
+          "Gamma": 598.1592412434966,
+          "L": 1.0,
+          "Ma": 0.2,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 18.133333333333333,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 300.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 1.1333333333333333,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27648,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 1884.9555921538758,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "unused",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.3593766229089277
+        }
+      },
+      {
+        "case_id": "300_0.3",
+        "path": "data/acoustic/case_300_0.3.npz",
+        "role": "test",
+        "sha256": "93c38dd942c8298f995ccefdc1027f973f99469856a6f70ed7ce2780939da536",
+        "bytes": 15754836,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": -0.18701312732169129,
+        "source_column_time_check_max_abs": 0.0,
+        "original_npz_meta": {
+          "Gamma": 897.2388618652449,
+          "L": 1.0,
+          "Ma": 0.3,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 18.133333333333333,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 300.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 1.1333333333333333,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27648,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 1884.9555921538758,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "test",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.3593766229089277
+        }
+      },
+      {
+        "case_id": "300_0.5",
+        "path": "data/acoustic/case_300_0.5.npz",
+        "role": "train",
+        "sha256": "70c8bc35e3d022dadda57adca0be70f81a093be4bf16ced3f0cd56860fe7dec1",
+        "bytes": 15754844,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": -0.18701312732169129,
+        "source_column_time_check_max_abs": 0.0,
+        "original_npz_meta": {
+          "Gamma": 1495.3981031087415,
+          "L": 1.0,
+          "Ma": 0.5,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 18.133333333333333,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 300.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 1.1333333333333333,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27648,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 1884.9555921538758,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "train",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.3593766229089277
+        }
+      },
+      {
+        "case_id": "300_0.7",
+        "path": "data/acoustic/case_300_0.7.npz",
+        "role": "test",
+        "sha256": "bf4be15bbf8caaa420c46a24332837c48d7505ed50076ead1ad64ad82ffc815f",
+        "bytes": 15754840,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": -0.18701312732169129,
+        "source_column_time_check_max_abs": 0.0,
+        "original_npz_meta": {
+          "Gamma": 2093.5573443522376,
+          "L": 1.0,
+          "Ma": 0.7,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 18.133333333333333,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 300.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 1.1333333333333333,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27648,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 1884.9555921538758,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "test",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.3593766229089277
+        }
+      },
+      {
+        "case_id": "400_0.2",
+        "path": "data/acoustic/case_400_0.2.npz",
+        "role": "unused",
+        "sha256": "f908910b8a8f557f8a6b5cab2ca54935b871ffaf6aab0a3b2ad34ead5a99948e",
+        "bytes": 15752684,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": -0.2493508364289312,
+        "source_column_time_check_max_abs": 4.440892098500626e-16,
+        "original_npz_meta": {
+          "Gamma": 598.1592412434966,
+          "L": 1.0,
+          "Ma": 0.2,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 13.6,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 400.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 0.85,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27648,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 2513.2741228718346,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "unused",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.3593766229089277
+        }
+      },
+      {
+        "case_id": "400_0.3",
+        "path": "data/acoustic/case_400_0.3.npz",
+        "role": "train",
+        "sha256": "46400b5fb56d8afffef5232b414ffdc19d7d305d13680df2667325fc03d2f8c6",
+        "bytes": 15752680,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": -0.2493508364289312,
+        "source_column_time_check_max_abs": 4.440892098500626e-16,
+        "original_npz_meta": {
+          "Gamma": 897.2388618652449,
+          "L": 1.0,
+          "Ma": 0.3,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 13.6,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 400.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 0.85,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27648,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 2513.2741228718346,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "train",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.3593766229089277
+        }
+      },
+      {
+        "case_id": "400_0.5",
+        "path": "data/acoustic/case_400_0.5.npz",
+        "role": "train",
+        "sha256": "9095bb62406200cdf4bc0fdaff1bf62c9acb0dfbd97d52c5f5979af17127ec5e",
+        "bytes": 15752684,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": -0.2493508364289312,
+        "source_column_time_check_max_abs": 4.440892098500626e-16,
+        "original_npz_meta": {
+          "Gamma": 1495.3981031087415,
+          "L": 1.0,
+          "Ma": 0.5,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 13.6,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 400.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 0.85,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27648,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 2513.2741228718346,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "train",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.3593766229089277
+        }
+      },
+      {
+        "case_id": "400_0.7",
+        "path": "data/acoustic/case_400_0.7.npz",
+        "role": "val",
+        "sha256": "506c4627a3c2e596ff1de6c711fcb8dbe26273ec708bf3e868da73c0a1a51a25",
+        "bytes": 15752676,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": -0.2493508364289312,
+        "source_column_time_check_max_abs": 4.440892098500626e-16,
+        "original_npz_meta": {
+          "Gamma": 2093.5573443522376,
+          "L": 1.0,
+          "Ma": 0.7,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 13.6,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 400.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 0.85,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27648,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 2513.2741228718346,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "val",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.3593766229089277
+        }
+      },
+      {
+        "case_id": "500_0.2",
+        "path": "data/acoustic/case_500_0.2.npz",
+        "role": "test",
+        "sha256": "1f1993c13ad181cca5dcad8a4aa56bd0da07817be47cd642d4babe6e6663490f",
+        "bytes": 15751464,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": 0.15624976554317982,
+        "source_column_time_check_max_abs": 1.2634338020234281e-13,
+        "original_npz_meta": {
+          "Gamma": 598.1592412434966,
+          "L": 1.0,
+          "Ma": 0.2,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 10.88,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 500.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 0.68,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27720,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 3141.592653589793,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "test",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.36031249953108635
+        }
+      },
+      {
+        "case_id": "500_0.3",
+        "path": "data/acoustic/case_500_0.3.npz",
+        "role": "test",
+        "sha256": "bfd49c4ccd3d8afd081d749b2ccab2a73b6af070bdff608dda9783e46f9bed0f",
+        "bytes": 15751464,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": 0.15624976554317982,
+        "source_column_time_check_max_abs": 1.2634338020234281e-13,
+        "original_npz_meta": {
+          "Gamma": 897.2388618652449,
+          "L": 1.0,
+          "Ma": 0.3,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 10.88,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 500.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 0.68,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27720,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 3141.592653589793,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "test",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.36031249953108635
+        }
+      },
+      {
+        "case_id": "500_0.5",
+        "path": "data/acoustic/case_500_0.5.npz",
+        "role": "test",
+        "sha256": "0e8034f7b644fb10a7a430becf0d55309f85ef904301d084739435c95b467c9b",
+        "bytes": 15751468,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": 0.15624976554317982,
+        "source_column_time_check_max_abs": 1.2634338020234281e-13,
+        "original_npz_meta": {
+          "Gamma": 1495.3981031087415,
+          "L": 1.0,
+          "Ma": 0.5,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 10.88,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 500.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 0.68,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27720,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 3141.592653589793,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "test",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.36031249953108635
+        }
+      },
+      {
+        "case_id": "500_0.7",
+        "path": "data/acoustic/case_500_0.7.npz",
+        "role": "test",
+        "sha256": "e528f0de487921ae6ede2bb9a58a078ef6ebd94312637f7cadf98146afd88177",
+        "bytes": 15751468,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": 0.15624976554317982,
+        "source_column_time_check_max_abs": 1.2634338020234281e-13,
+        "original_npz_meta": {
+          "Gamma": 2093.5573443522376,
+          "L": 1.0,
+          "Ma": 0.7,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 10.88,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 500.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 0.68,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27720,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 3141.592653589793,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "test",
+          "sigma_pml": 100.0,
+          "source_side": "left",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 160,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.36031249953108635
+        }
+      },
+      {
+        "case_id": "400_0.5_srcR",
+        "path": "data/acoustic/case_400_0.5_srcR.npz",
+        "role": "test",
+        "sha256": "db24a8293b486bff5781e8ddb357662052b629dc9d071cc85ea07fe19e0a0b8a",
+        "bytes": 15752684,
+        "target": "real final-time p_total snapshot",
+        "target_shape": [
+          481,
+          481
+        ],
+        "target_dtype": "float64",
+        "final_forcing_phase_offset_cycles": -0.2493508364289312,
+        "source_column_time_check_max_abs": 4.440892098500626e-16,
+        "original_npz_meta": {
+          "Gamma": 1495.3981031087415,
+          "L": 1.0,
+          "Ma": 0.5,
+          "air_node_range_0based": [
+            160,
+            641,
+            160,
+            641
+          ],
+          "alpha": 1.256431,
+          "c0": 340.0,
+          "cells_per_lambda": 13.6,
+          "courant_factor": 0.1,
+          "crop_air": true,
+          "dt_s": 1.299828641887036e-05,
+          "dx": 0.0625,
+          "dy": 0.0625,
+          "f_hz": 400.0,
+          "gamma_coef": 2.8,
+          "grid_max_x_m": 25.0,
+          "grid_min_x_m": -25.0,
+          "lambda_m": 0.85,
+          "n_buffer": 240,
+          "n_pml": 160,
+          "n_steps": 27648,
+          "nx_cells": 800,
+          "nxp1": 801,
+          "ny_cells": 800,
+          "nyp1": 801,
+          "omega_rad_s": 2513.2741228718346,
+          "pis_pie_pjs_pje_matlab": [
+            161,
+            641,
+            161,
+            641
+          ],
+          "rho0": 1.0,
+          "role": "test",
+          "sigma_pml": 100.0,
+          "source_side": "right",
+          "source_y_frac": [
+            0.0,
+            1.0
+          ],
+          "src_col_0based": 640,
+          "src_rows_0based": [
+            160,
+            640
+          ],
+          "t_final_s": 0.3593766229089277
+        }
+      }
+    ],
+    "phase_definition": "f_hz*t_final_s - round(f_hz*t_final_s), in cycles; no phase correction applied",
+    "code_package": "paired with the round-two code preparation; source generator and configuration retained separately",
+    "license_status": "No new data-license grant is made by local preparation; public deposit and its license require author approval."
+  }
+}

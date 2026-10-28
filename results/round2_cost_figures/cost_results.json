@@ -1,0 +1,461 @@
+{
+  "task": "cost",
+  "r2_task": "R2-CLOSEOUT-COST-FIG-01",
+  "created_local": "2026-10-21T18:51:44+08:00",
+  "env": {
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 4090 D",
+    "device_capability": [
+      8,
+      9
+    ],
+    "device_total_memory_gb": 25.262,
+    "torch": "2.10.0+cu128",
+    "cuda": "12.8",
+    "default_dtype": "torch.float32",
+    "precision": {
+      "strict_fp32": true,
+      "cuda_matmul_allow_tf32": false,
+      "cudnn_allow_tf32": false
+    },
+    "hardware": {
+      "pytorch_version": "2.10.0+cu128",
+      "cuda_available": true,
+      "mps_available": false,
+      "cuda_device_count": 1,
+      "cuda_device_name": "NVIDIA GeForce RTX 4090 D",
+      "cuda_memory_gb": 25.262096384
+    }
+  },
+  "conventions": {
+    "seed": 0,
+    "warmup": 2,
+    "inference_repeats": 5,
+    "training_step_repeats": 3,
+    "rng_inputs": "uniform[-1,1]",
+    "net_optimization_note": "net optimization time per epoch = measured training-step mean x steps/epoch (thermal 25, acoustic 6); excludes data loading, val, checkpoint and metric evaluation; not an actual training wall time",
+    "no_flops": true,
+    "no_scaling_sweep": true
+  },
+  "rows": [
+    {
+      "task": "thermal",
+      "token": "feat_extract",
+      "constructor_kwargs": {
+        "pool_context": "symmetric"
+      },
+      "status": "ok",
+      "model_label": "FeatExtractNet(scale=1.0, pool_mode=symmetric)",
+      "params": 1149512,
+      "shape": {
+        "batch_geoms": 4,
+        "N": 5000,
+        "input_channels": 2,
+        "output_channels": 4
+      },
+      "inference": {
+        "mean_ms": 2.760661020874977,
+        "std_ms": 0.0015607372018256167,
+        "repeats": 5,
+        "raw_ms": [
+          2.7620261535048485,
+          2.7623320929706097,
+          2.7592037804424763,
+          2.758944872766733,
+          2.760798204690218
+        ],
+        "output_shape": [
+          4,
+          4,
+          5000
+        ],
+        "output_finite": true,
+        "peak": {
+          "allocated_bytes": 355062784,
+          "reserved_bytes": 457179136
+        },
+        "peak_gb": 0.3551
+      },
+      "training_step": {
+        "mean_ms": 11.915591079741716,
+        "std_ms": 0.37505250738591384,
+        "repeats": 3,
+        "raw_ms": [
+          12.339422013610601,
+          11.626604944467545,
+          11.780746281147003
+        ],
+        "last_loss": 0.4385467767715454,
+        "loss_finite": true,
+        "all_gradients_finite": true,
+        "peak": {
+          "allocated_bytes": 500334080,
+          "reserved_bytes": 687865856
+        },
+        "steps_per_epoch": 25,
+        "net_optimization_seconds_per_epoch": 0.2978897769935429,
+        "net_optimization_note": "only fwd+bwd+Adam steps x steps_per_epoch; excludes data loading, val, checkpoint and metric evaluation; not an actual training wall time and not measured with real training data"
+      }
+    },
+    {
+      "task": "thermal",
+      "token": "mlp",
+      "constructor_kwargs": {},
+      "status": "ok",
+      "model_label": "CoordMLP(hidden=512, layers=6) ~1.05M",
+      "params": 1054212,
+      "shape": {
+        "batch_geoms": 4,
+        "N": 5000,
+        "input_channels": 2,
+        "output_channels": 4
+      },
+      "inference": {
+        "mean_ms": 2.3083342239260674,
+        "std_ms": 0.0030047886168506678,
+        "repeats": 5,
+        "raw_ms": [
+          2.311674878001213,
+          2.3063188418745995,
+          2.307591028511524,
+          2.3048673756420612,
+          2.311218995600939
+        ],
+        "output_shape": [
+          4,
+          4,
+          5000
+        ],
+        "output_finite": true,
+        "peak": {
+          "allocated_bytes": 88583680,
+          "reserved_bytes": 90177536
+        },
+        "peak_gb": 0.0886
+      },
+      "training_step": {
+        "mean_ms": 7.400708583494027,
+        "std_ms": 0.004677744813817742,
+        "repeats": 3,
+        "raw_ms": [
+          7.402884773910046,
+          7.403901778161526,
+          7.395339198410511
+        ],
+        "last_loss": 0.3759421408176422,
+        "loss_finite": true,
+        "all_gradients_finite": true,
+        "peak": {
+          "allocated_bytes": 307702784,
+          "reserved_bytes": 316669952
+        },
+        "steps_per_epoch": 25,
+        "net_optimization_seconds_per_epoch": 0.18501771458735067,
+        "net_optimization_note": "only fwd+bwd+Adam steps x steps_per_epoch; excludes data loading, val, checkpoint and metric evaluation; not an actual training wall time and not measured with real training data"
+      }
+    },
+    {
+      "task": "thermal",
+      "token": "pointnet",
+      "constructor_kwargs": {},
+      "status": "ok",
+      "model_label": "PointNetBaseline(default)",
+      "params": 370628,
+      "shape": {
+        "batch_geoms": 4,
+        "N": 5000,
+        "input_channels": 2,
+        "output_channels": 4
+      },
+      "inference": {
+        "mean_ms": 0.9849626570940018,
+        "std_ms": 0.002209763794051499,
+        "repeats": 5,
+        "raw_ms": [
+          0.985829159617424,
+          0.9864671155810356,
+          0.9842533618211746,
+          0.9814267978072166,
+          0.986836850643158
+        ],
+        "output_shape": [
+          4,
+          4,
+          5000
+        ],
+        "output_finite": true,
+        "peak": {
+          "allocated_bytes": 147785216,
+          "reserved_bytes": 199229440
+        },
+        "peak_gb": 0.1478
+      },
+      "training_step": {
+        "mean_ms": 4.30532218888402,
+        "std_ms": 0.015402386685222093,
+        "repeats": 3,
+        "raw_ms": [
+          4.322660155594349,
+          4.293221049010754,
+          4.300085362046957
+        ],
+        "last_loss": 0.37006551027297974,
+        "loss_finite": true,
+        "all_gradients_finite": true,
+        "peak": {
+          "allocated_bytes": 194318848,
+          "reserved_bytes": 247463936
+        },
+        "steps_per_epoch": 25,
+        "net_optimization_seconds_per_epoch": 0.1076330547221005,
+        "net_optimization_note": "only fwd+bwd+Adam steps x steps_per_epoch; excludes data loading, val, checkpoint and metric evaluation; not an actual training wall time and not measured with real training data"
+      }
+    },
+    {
+      "task": "thermal",
+      "token": "meshgraphnet",
+      "constructor_kwargs": {},
+      "status": "ok",
+      "model_label": "MeshGraphNet-style encode-process-decode GNN (assembled, hidden=128, layers=8, k=16) 976,516 params",
+      "params": 976516,
+      "shape": {
+        "batch_geoms": 4,
+        "N": 5000,
+        "input_channels": 2,
+        "output_channels": 4
+      },
+      "inference": {
+        "mean_ms": 46.06010029092431,
+        "std_ms": 0.7410192982248304,
+        "repeats": 5,
+        "raw_ms": [
+          47.19700990244746,
+          46.435738913714886,
+          45.5452767200768,
+          45.56122189387679,
+          45.561254024505615
+        ],
+        "output_shape": [
+          4,
+          4,
+          5000
+        ],
+        "output_finite": true,
+        "peak": {
+          "allocated_bytes": 1516995584,
+          "reserved_bytes": 1742733312
+        },
+        "peak_gb": 1.517
+      },
+      "training_step": {
+        "mean_ms": 103.95576401303212,
+        "std_ms": 0.1630935287572272,
+        "repeats": 3,
+        "raw_ms": [
+          104.11829501390457,
+          103.95688330754638,
+          103.7921137176454
+        ],
+        "last_loss": 0.005596092436462641,
+        "loss_finite": true,
+        "all_gradients_finite": true,
+        "peak": {
+          "allocated_bytes": 8820374528,
+          "reserved_bytes": 9223274496
+        },
+        "steps_per_epoch": 25,
+        "net_optimization_seconds_per_epoch": 2.5988941003258033,
+        "net_optimization_note": "only fwd+bwd+Adam steps x steps_per_epoch; excludes data loading, val, checkpoint and metric evaluation; not an actual training wall time and not measured with real training data"
+      }
+    },
+    {
+      "task": "acoustic",
+      "token": "fourier_c",
+      "constructor_kwargs": {
+        "fourier_layout": "pointwise"
+      },
+      "status": "ok",
+      "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, cond concat, fourier_layout=pointwise)",
+      "params": 813569,
+      "shape": {
+        "batch": 1,
+        "N": 231361,
+        "cond": [
+          0.6,
+          0.5
+        ],
+        "input_channels": 2,
+        "output_channels": 1
+      },
+      "inference": {
+        "mean_ms": 32.39853652194142,
+        "std_ms": 0.02808933473880509,
+        "repeats": 5,
+        "raw_ms": [
+          32.39223640412092,
+          32.39024616777897,
+          32.40418992936611,
+          32.44157787412405,
+          32.364432234317064
+        ],
+        "output_shape": [
+          1,
+          1,
+          231361
+        ],
+        "output_finite": true,
+        "peak": {
+          "allocated_bytes": 1155976704,
+          "reserved_bytes": 1266679808
+        },
+        "peak_gb": 1.156
+      },
+      "training_step": {
+        "mean_ms": 86.08382195234299,
+        "std_ms": 0.05901325727745111,
+        "repeats": 3,
+        "raw_ms": [
+          86.14902105182409,
+          86.06837969273329,
+          86.03406511247158
+        ],
+        "last_loss": 2.4305412769317627,
+        "loss_finite": true,
+        "all_gradients_finite": true,
+        "peak": {
+          "allocated_bytes": 7792659968,
+          "reserved_bytes": 8027897856
+        },
+        "steps_per_epoch": 6,
+        "net_optimization_seconds_per_epoch": 0.5165029317140579,
+        "net_optimization_note": "only fwd+bwd+Adam steps x steps_per_epoch; excludes data loading, val, checkpoint and metric evaluation; not an actual training wall time and not measured with real training data"
+      }
+    },
+    {
+      "task": "acoustic",
+      "token": "fourier_nc",
+      "constructor_kwargs": {
+        "fourier_layout": "pointwise"
+      },
+      "status": "ok",
+      "model_label": "FourierMLP(levels=16, blocks=6, hidden=256), unconditional, fourier_layout=pointwise",
+      "params": 813057,
+      "shape": {
+        "batch": 1,
+        "N": 231361,
+        "cond": [
+          0.6,
+          0.5
+        ],
+        "input_channels": 2,
+        "output_channels": 1
+      },
+      "inference": {
+        "mean_ms": 32.248931005597115,
+        "std_ms": 0.024339484110565864,
+        "repeats": 5,
+        "raw_ms": [
+          32.26621123030782,
+          32.213246915489435,
+          32.23370388150215,
+          32.266130205243826,
+          32.26536279544234
+        ],
+        "output_shape": [
+          1,
+          1,
+          231361
+        ],
+        "output_finite": true,
+        "peak": {
+          "allocated_bytes": 1033815552,
+          "reserved_bytes": 1201668096
+        },
+        "peak_gb": 1.0338
+      },
+      "training_step": {
+        "mean_ms": 86.01631099979083,
+        "std_ms": 0.27053420729607236,
+        "repeats": 3,
+        "raw_ms": [
+          85.82712383940816,
+          85.89562587440014,
+          86.32618328556418
+        ],
+        "last_loss": 2.9434123039245605,
+        "loss_finite": true,
+        "all_gradients_finite": true,
+        "peak": {
+          "allocated_bytes": 7791147008,
+          "reserved_bytes": 7962886144
+        },
+        "steps_per_epoch": 6,
+        "net_optimization_seconds_per_epoch": 0.516097865998745,
+        "net_optimization_note": "only fwd+bwd+Adam steps x steps_per_epoch; excludes data loading, val, checkpoint and metric evaluation; not an actual training wall time and not measured with real training data"
+      }
+    },
+    {
+      "task": "acoustic",
+      "token": "unif_acous",
+      "constructor_kwargs": {
+        "fourier_layout": "pointwise"
+      },
+      "status": "ok",
+      "model_label": "UnifiedNet(cond_dim=2, branch=unified, task=acoustic, soft route, fourier_layout=pointwise)",
+      "params": 1908504,
+      "shape": {
+        "batch": 1,
+        "N": 231361,
+        "cond": [
+          0.6,
+          0.5
+        ],
+        "input_channels": 2,
+        "output_channels": 1
+      },
+      "inference": {
+        "mean_ms": 93.21680320426822,
+        "std_ms": 0.1391125613504072,
+        "repeats": 5,
+        "raw_ms": [
+          93.38603727519512,
+          93.16543210297823,
+          93.33219099789858,
+          93.04720256477594,
+          93.15315308049321
+        ],
+        "output_shape": [
+          1,
+          1,
+          231361
+        ],
+        "output_finite": true,
+        "peak": {
+          "allocated_bytes": 1865276416,
+          "reserved_bytes": 2805989376
+        },
+        "peak_gb": 1.8653
+      },
+      "training_step": {
+        "mean_ms": 235.85026850923896,
+        "std_ms": 0.1298829442275456,
+        "repeats": 3,
+        "raw_ms": [
+          235.7230824418366,
+          235.84503307938576,
+          235.98269000649452
+        ],
+        "last_loss": 0.8058556914329529,
+        "loss_finite": true,
+        "all_gradients_finite": true,
+        "peak": {
+          "allocated_bytes": 12272572416,
+          "reserved_bytes": 13514047488
+        },
+        "steps_per_epoch": 6,
+        "net_optimization_seconds_per_epoch": 1.4151016110554338,
+        "net_optimization_note": "only fwd+bwd+Adam steps x steps_per_epoch; excludes data loading, val, checkpoint and metric evaluation; not an actual training wall time and not measured with real training data"
+      }
+    }
+  ]
+}

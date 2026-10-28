@@ -1,0 +1,10 @@
+{
+  "status": "accepted_complete_comparisons_not_high_frequency_convergence",
+  "solves": 10,
+  "independent_metric_cells": 96,
+  "max_absolute_difference": 5.684341886080802e-14,
+  "slurm": "50910 FAILED7:0 after all10 successful solves and written aggregate; aggregate scientific evidence verified separately",
+  "claim": "100Hz decreasing differences;500Hz spatial convergence not established",
+  "aggregate_sha256": "ec63bccb4721171d1a3de1465b903d99e295117461a845d7ec88cce50e70198f",
+  "job_exit_root_cause": "postaggregate registry check did not locate numerical_convergence entry for out_root=../round2_fdtd_convergence; stderr verified; no numerical solve failure"
+}

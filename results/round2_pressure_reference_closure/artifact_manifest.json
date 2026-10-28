@@ -1,0 +1,28 @@
+{
+  "task": "R3.16 pressure closure artifact manifest",
+  "created_local": "2026-10-23T12:29:33+08:00",
+  "note": "protocol_snapshot.json and version_chain.json are manifests themselves and excluded to avoid circular hashes; old snapshots are historical",
+  "artifacts": {
+    "source_evidence_index.json": "ad14868d2f610c57b6a5cec1648067628d4c7ddf38adf49c3368136ccf81b8f1",
+    "all135_pressure_signatures.json": "29aa6bcd02a9548705f3939e38353d0b8b99fa007233cd64e8c2ad047013fbce",
+    "exact_gauge_comparison.json": "7b041c8a0fdde244fa8fb959e324e4e5a0bc04683ebcf26da205ebace517616d",
+    "model_metric_sensitivity.json": "93dc54ab5dfd35bafb0849d2b4675f39579780a070811f4387cb12555dc162d5",
+    "manufactured_solution.json": "01fe797c013c77ef97225f11500a74108971cac51e23d5b230702ee3452feaf9",
+    "manufactured_polynomial_solution.json": "4b6143b564c1bd7c6bfd2dafced67236150fe4e6a5c2b9480a15e2e2ff8c1dbb",
+    "manufactured_nontrivial_initial_solution.json": "29e8524b371b985e62115349997df3139ec7edf7bf0b78bd19bbd2f485d19e4a",
+    "corrected_constraint_comparison.json": "73c089bdd9d5434a680843e2ce946ccf254f43dcc55a4dc2ebc9f153d0827438",
+    "job_ledger.json": "5518fb8449ade7ac794df65ff8860619a342ad058316e8005eb60a0918ce8630",
+    "probe_report.json": "d292580ffd2fa4d332000be7b57c17ad17b0c229cada1f1f89c8ac0bdf4e268b",
+    "self_acceptance.json": "3e947a96ef66d775a29b4a518c158cac3d5a7b5ed30e75fe5aba45e60e4d85ae",
+    "FINAL_DELIVERY.md": "08c1c855aa9ecc620709c9ddd345b40fc7a6185b4754477e12dd019bfc1cc769"
+  },
+  "exact_cases": {
+    "comparison_geom17_h004.json": "9687f1c68f4fe9184af5bde471a976c443dccd850f0c05864f81df70647355e7",
+    "comparison_geom46_h004.json": "a3206e79a36704c32a891147634877eb5061a63a0de31b3de26e74be1cb759c3",
+    "comparison_geom96_h004.json": "fa36b8dec26f268d7dd00c080b62c8926e8b4c31cab27383156ddfeb9246b916",
+    "fields_geom17_h004.npz": "23dd38cc891b2cb9809af0645df4838e0ef548452a88d4a4a6579195c92242d0",
+    "fields_geom46_h004.npz": "b0606dc86921d1f0d398dce1fec919de232117caffad3ed78ae11d5ba4017744",
+    "fields_geom96_h004.npz": "56ddebcbdc806a43e1c65e22149f59d626d199d031a2dcd9e61418d829c9ef7d",
+    "pilot_geom17_h004.json": "663a1d09e0bd8db74e98ae1c729b203e8cf5388fae505b9941de35acff09db97"
+  }
+}

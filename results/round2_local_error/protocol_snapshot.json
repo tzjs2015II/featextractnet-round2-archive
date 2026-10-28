@@ -1,0 +1,389 @@
+{
+  "task": "local_error_support_sensitivity",
+  "r2_task": "R2-LOCAL-ERROR-SUPPORT-01",
+  "created_local": "2026-10-21T21:05:23+08:00",
+  "input_workspace": ".",
+  "out_dir": "results/round2_local_error",
+  "data": "HeatTransferData.npy",
+  "data_sha256": "e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26",
+  "split_config": "configs/splits_thermal.json",
+  "split_sha256": "6fa469f7dfa34748ccebf7903650b494c3e908033176a3d4f30ad7cecc853cfe",
+  "split_version": "splits_thermal_v1_protocolA",
+  "splits_config_schema_version": "1.0",
+  "split_seed": 123,
+  "test_ids": [
+    17,
+    25,
+    32,
+    46,
+    47,
+    57,
+    66,
+    73,
+    83,
+    86,
+    96,
+    97,
+    98,
+    106,
+    109,
+    111,
+    113,
+    123,
+    126,
+    127
+  ],
+  "n_test_geom": 20,
+  "geometry_spec": "results/thermal_geometry_spec.json",
+  "geometry_spec_sha256": "9214c18a934dfddcf3dda09243f7fd434df24f605035e17ed361c7f93778d3d5",
+  "geometry_reconstruction": {
+    "inner_polygon": "regular n-gon, circumradius R, phase phi=radians(phase_deg), centre, vertices at angle phi + pi/n + 2*pi*k/n",
+    "outer_boundary": "square [-1,1]^2 (four segments)",
+    "distance": "exact min Euclidean distance to clamped point-segment projection over inner polygon edges and outer square edges; boundary distance = min(inner, outer)",
+    "boundary_check": "max continuous-boundary distance of the first 660 wall nodes must be < 1e-06; checked for every test geometry",
+    "boundary_check_max_by_geom": {
+      "17": 2.482534153247273e-16,
+      "25": 2.2887833992611187e-16,
+      "32": 1.3877787807814457e-16,
+      "46": 7.264329320467944e-16,
+      "47": 1.3877787807814457e-15,
+      "57": 9.582710459383785e-16,
+      "66": 9.453208419344607e-16,
+      "73": 6.77599954797753e-16,
+      "83": 8.617648093045562e-16,
+      "86": 1.9279638981753172e-16,
+      "96": 2.7755575615628914e-16,
+      "97": 2.7755575615628914e-16,
+      "98": 2.2247786310271853e-16,
+      "106": 2.227212004505268e-16,
+      "109": 2.482534153247273e-16,
+      "111": 2.3551386880256624e-16,
+      "113": 2.3714374201337736e-16,
+      "123": 2.237726045655905e-16,
+      "126": 3.1676639673831405e-16,
+      "127": 1.8619006149354548e-16
+    }
+  },
+  "per_geometry_spec_used": {
+    "17": {
+      "n": 8,
+      "R": 0.4329568801169576,
+      "phase_deg": 17.0,
+      "centre": [
+        -3.5190104798386656e-17,
+        2.2468799307890073e-17
+      ]
+    },
+    "25": {
+      "n": 8,
+      "R": 0.4329568801169576,
+      "phase_deg": 25.0,
+      "centre": [
+        -7.269317423140906e-17,
+        4.8572257327350605e-17
+      ]
+    },
+    "32": {
+      "n": 8,
+      "R": 0.4329568801169576,
+      "phase_deg": 32.0,
+      "centre": [
+        1.7058114180438604e-17,
+        -1.32169407693471e-18
+      ]
+    },
+    "46": {
+      "n": 7,
+      "R": 0.4206195889506541,
+      "phase_deg": 13.428571428571301,
+      "centre": [
+        1.0515341042065624e-17,
+        -2.940151784043676e-17
+      ]
+    },
+    "47": {
+      "n": 7,
+      "R": 0.4206195889506532,
+      "phase_deg": 14.428571428571205,
+      "centre": [
+        4.2893365640003506e-18,
+        -1.089739419446357e-17
+      ]
+    },
+    "57": {
+      "n": 7,
+      "R": 0.4206195889506542,
+      "phase_deg": 24.428571428571296,
+      "centre": [
+        -1.3166342398504245e-18,
+        5.033245549006945e-17
+      ]
+    },
+    "66": {
+      "n": 7,
+      "R": 0.4206195889506533,
+      "phase_deg": 33.42857142857158,
+      "centre": [
+        3.738350962234762e-18,
+        -6.694611991547917e-17
+      ]
+    },
+    "73": {
+      "n": 7,
+      "R": 0.4206195889506542,
+      "phase_deg": 40.42857142857135,
+      "centre": [
+        5.16588819718478e-18,
+        2.6942961295433578e-17
+      ]
+    },
+    "83": {
+      "n": 7,
+      "R": 0.4206195889506544,
+      "phase_deg": 50.4285714285714,
+      "centre": [
+        2.065942609138793e-17,
+        6.334061785501906e-17
+      ]
+    },
+    "86": {
+      "n": 7,
+      "R": 0.4206195889506538,
+      "phase_deg": 2.0,
+      "centre": [
+        2.3129646346357427e-18,
+        0.0
+      ]
+    },
+    "96": {
+      "n": 9,
+      "R": 0.4206195889506538,
+      "phase_deg": 31.0,
+      "centre": [
+        -6.967805961840175e-17,
+        -5.88153864235946e-17
+      ]
+    },
+    "97": {
+      "n": 9,
+      "R": 0.4206195889506538,
+      "phase_deg": 32.0,
+      "centre": [
+        1.4889709835467595e-17,
+        -5.0224374923518987e-17
+      ]
+    },
+    "98": {
+      "n": 9,
+      "R": 0.4206195889506537,
+      "phase_deg": 33.0,
+      "centre": [
+        -1.4600589256138125e-17,
+        7.599740942374584e-18
+      ]
+    },
+    "106": {
+      "n": 9,
+      "R": 0.4206195889506538,
+      "phase_deg": 1.0,
+      "centre": [
+        5.4685092433173636e-17,
+        -8.029291517378364e-17
+      ]
+    },
+    "109": {
+      "n": 9,
+      "R": 0.4206195889506538,
+      "phase_deg": 4.0,
+      "centre": [
+        -1.5695117163599683e-17,
+        -6.626643678231404e-17
+      ]
+    },
+    "111": {
+      "n": 9,
+      "R": 0.4206195889506537,
+      "phase_deg": 6.000000000000001,
+      "centre": [
+        -1.0755285551056204e-17,
+        -6.575428032750183e-17
+      ]
+    },
+    "113": {
+      "n": 9,
+      "R": 0.42061958895065366,
+      "phase_deg": 8.0,
+      "centre": [
+        7.170190367370803e-17,
+        -8.161460925071836e-17
+      ]
+    },
+    "123": {
+      "n": 9,
+      "R": 0.4206195889506538,
+      "phase_deg": 18.0,
+      "centre": [
+        -8.756223259692455e-18,
+        -7.355227538141662e-17
+      ]
+    },
+    "126": {
+      "n": 9,
+      "R": 0.4206195889506537,
+      "phase_deg": 21.0,
+      "centre": [
+        -1.3712576048197619e-17,
+        -1.1531780821255347e-16
+      ]
+    },
+    "127": {
+      "n": 9,
+      "R": 0.4206195889506537,
+      "phase_deg": 22.0,
+      "centre": [
+        2.3625281625207944e-17,
+        -5.828670879282072e-17
+      ]
+    }
+  },
+  "model": {
+    "token": "feat_extract",
+    "pool_context": "symmetric",
+    "label": "FeatExtractNet(scale=1.0, pool_mode=symmetric)",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "normalization": {
+    "source": "training stats saved in each metrics protocol (train-only)",
+    "identical_across_seeds": true,
+    "x_mean": [
+      -0.001275875372812152,
+      0.001011964282952249
+    ],
+    "x_std": [
+      0.6221894025802612,
+      0.6231079697608948
+    ],
+    "y_mean": [
+      -5.0651073252083734e-05,
+      0.0022186769638210535,
+      0.0021551542449742556,
+      0.32145607471466064
+    ],
+    "y_std": [
+      0.06935255229473114,
+      0.11812172830104828,
+      0.20552854239940643,
+      0.2966328561306
+    ]
+  },
+  "checkpoint_sha256": {
+    "0": "4ca109452729bbc8c5dd435e5ff770441e98bdef3a69818a8a1546817ed2649a",
+    "1": "32ab5318d1b0529b402f2e5d575bf070b0633f70b58ae963821873829ccdea8e",
+    "2": "70110e3c6296447261188808d2d42d348e19221ea691b8ee6bfffe71e66e330a",
+    "3": "f5c8d2e3f81d6bda7ff4f0732c633770ef9b11b632dc2060fc143c7001d8802a",
+    "4": "307a577c552af993f8ade96b00f0196b4fc0a8362911f7bc39126b4d0d4f48c7"
+  },
+  "metrics_sha256": {
+    "0": "ba4d222605a3f05d96d3f7d755e3723be48c73553b54fa06c9d60e9ae6f18470",
+    "1": "f7ee8ece03d876e8c8e701dbaa4e81b623294820b2a43db11dc3648d42c4ee20",
+    "2": "2416f5c6b76bb8deae374b511ef5c55c765b3f444554671c6da27dd7ca2d41f0",
+    "3": "c1af8b4548be2f8d8786e1291c7fcf2310f406b0669e653371c0272b5088ba9f",
+    "4": "dc3a6eac3737df7e0a6f85a23824db8588917d396fcc0120900e0e4d27aeafc2"
+  },
+  "source_sha256": {
+    "scripts/exp_r2_local_error.py": "e4ad5284b2c6f301d5f43e13fc557bc1e4cdf34066af0054cbfe8fbb4a679a26",
+    "src/core/thermal_io.py": "e0b44c31a8f3e2ac10cd3eca39b13c29ac32704c140222651bdc4bc219201e1d",
+    "scripts/exp_thermal.py": "efb0419310b7b038ef12668d8d877440a69a81be9a966275daa4cce7d8632f22",
+    "src/models/featextractnet.py": "9f8d2acbd5a6441dbed2102f6d7a6d27d37669fe5ff1a4884f946a6ea44c02c7"
+  },
+  "analysis": {
+    "coordinate_dtype": {
+      "geometry_distance_and_density": "float64 (original .npy coordinates)",
+      "model_input": "arrays from src.core.thermal_io.load_thermal"
+    },
+    "full_field": "5000 points; CPU, no chunking; no training",
+    "wall_group": "point ids 0..659 (independent group)",
+    "bands": [
+      {
+        "name": "[0,0.02)",
+        "lo": 0.0,
+        "hi": 0.02
+      },
+      {
+        "name": "[0.02,0.05)",
+        "lo": 0.02,
+        "hi": 0.05
+      },
+      {
+        "name": "[0.05,0.1)",
+        "lo": 0.05,
+        "hi": 0.1
+      },
+      {
+        "name": "[0.1,inf)",
+        "lo": 0.1,
+        "hi": null
+      }
+    ],
+    "band_rule": "interior point ids 660..4999; lo <= d < hi for finite hi, last band d >= 0.1",
+    "density": "h16 = distance to the 16th other support point (cKDTree k=17, all 5000 points, self excluded); density = 16/(pi*h16^2) points/m^2",
+    "density_quartiles": "interior points sorted by h16 ascending, ties by original point id; fixed np.array_split(...,4)",
+    "zero_denominator": "RE is null when the truth L2 norm <= 1e-12 (numerical zero, e.g. no-slip wall u/v ~1e-20); the denominator norm is recorded; MAE/max kept",
+    "support_sensitivity": {
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "test_geoms": [
+        17,
+        25,
+        32,
+        46,
+        47,
+        57,
+        66,
+        73,
+        83,
+        86,
+        96,
+        97,
+        98,
+        106,
+        109,
+        111,
+        113,
+        123,
+        126,
+        127
+      ],
+      "rng": "np.random.default_rng(20261021 + geom_id)",
+      "interior_shuffle": "permutation of interior ids 660..4999",
+      "wall_retained": "all 660 wall nodes 0..659",
+      "nested_totals": [
+        5000,
+        2500,
+        1250
+      ],
+      "subset_rule": "subset = wall ids + first (N-660) shuffled interior ids; each subset recomputes the symmetric context",
+      "comparison": "for each subset and the same ids: subset_context_vs_reference = field_metrics(subset_pred, Y_geom[ids]); full_context_vs_reference = field_metrics(full_pred_on_subset, Y_geom[ids]); paired delta_subset_minus_full = subset - full (null propagates)",
+      "primary_real_reference": "both context scores use the physical reference Y_geom; these are the main support tables",
+      "auxiliary_support_drift": "drift_vs_full_same_subset keeps the old comparison against the full model output; it is a support-drift diagnostic only and cannot answer the true-reference error",
+      "not_independent": "support change vs scoring-point change are separated; this is not an independent re-mesh, new-coordinate ground truth, or retraining",
+      "n5000_consistency_tol": 0.0001
+    },
+    "aggregation": {
+      "order": "per geometry per bin -> per seed equal-weight geometry mean -> 5-seed mean/sample std (ddof=1)",
+      "empty_bin": "skipped; valid geometry count recorded",
+      "unit_note": "points/nodes within a geometry are not independent replicates; seeds are the outer replication"
+    }
+  },
+  "re_metrics_tolerance": 1e-06,
+  "cuda_or_training": "none (CPU analysis only; no weight updates)"
+}

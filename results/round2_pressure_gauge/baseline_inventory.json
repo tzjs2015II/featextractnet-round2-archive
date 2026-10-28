@@ -1,0 +1,826 @@
+{
+  "checked_at": "2026-10-23T00:05:33+08:00",
+  "input_workspace": ".",
+  "roots_checked": [
+    "results/baselines_ext/thermal_protocolA",
+    "results/thermal_protocolA",
+    "results/thermal",
+    "results/round2_thermal_symmetric",
+    "results/round2_graph_five_seed_main"
+  ],
+  "tokens": {
+    "unif_therm": {
+      "roots": {
+        "results/thermal_protocolA/unif_therm": {
+          "0": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "UnifiedThermalHead",
+            "model_label": "UnifiedNet(branch=unified, soft, task=thermal, compute_both_heads=False)",
+            "model_params": 1908052,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "1": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "UnifiedThermalHead",
+            "model_label": "UnifiedNet(branch=unified, soft, task=thermal, compute_both_heads=False)",
+            "model_params": 1908052,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "2": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "UnifiedThermalHead",
+            "model_label": "UnifiedNet(branch=unified, soft, task=thermal, compute_both_heads=False)",
+            "model_params": 1908052,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "3": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "UnifiedThermalHead",
+            "model_label": "UnifiedNet(branch=unified, soft, task=thermal, compute_both_heads=False)",
+            "model_params": 1908052,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "4": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "UnifiedThermalHead",
+            "model_label": "UnifiedNet(branch=unified, soft, task=thermal, compute_both_heads=False)",
+            "model_params": 1908052,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          }
+        }
+      },
+      "complete_five_seed": true,
+      "strict_fp32_all_found": false,
+      "included": false,
+      "seed_ids_found": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "mlp": {
+      "roots": {
+        "results/thermal_protocolA/mlp": {
+          "0": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "CoordMLP",
+            "model_label": "CoordMLP(hidden=512, layers=6) ~1.05M",
+            "model_params": 1054212,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "1": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "CoordMLP",
+            "model_label": "CoordMLP(hidden=512, layers=6) ~1.05M",
+            "model_params": 1054212,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "2": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "CoordMLP",
+            "model_label": "CoordMLP(hidden=512, layers=6) ~1.05M",
+            "model_params": 1054212,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "3": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "CoordMLP",
+            "model_label": "CoordMLP(hidden=512, layers=6) ~1.05M",
+            "model_params": 1054212,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "4": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "CoordMLP",
+            "model_label": "CoordMLP(hidden=512, layers=6) ~1.05M",
+            "model_params": 1054212,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          }
+        }
+      },
+      "complete_five_seed": true,
+      "strict_fp32_all_found": false,
+      "included": false,
+      "seed_ids_found": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "pointnet": {
+      "roots": {
+        "results/thermal_protocolA/pointnet": {
+          "0": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PointNetBaseline",
+            "model_label": "PointNetBaseline(default)",
+            "model_params": 370628,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "1": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PointNetBaseline",
+            "model_label": "PointNetBaseline(default)",
+            "model_params": 370628,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "2": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PointNetBaseline",
+            "model_label": "PointNetBaseline(default)",
+            "model_params": 370628,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "3": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PointNetBaseline",
+            "model_label": "PointNetBaseline(default)",
+            "model_params": 370628,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "4": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PointNetBaseline",
+            "model_label": "PointNetBaseline(default)",
+            "model_params": 370628,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          }
+        }
+      },
+      "complete_five_seed": true,
+      "strict_fp32_all_found": false,
+      "included": false,
+      "seed_ids_found": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "pointnetpp": {
+      "roots": {
+        "results/thermal_protocolA/pointnetpp": {
+          "0": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PointNetPlusPlusBaseline",
+            "model_label": "PointNetPlusPlusBaseline(default n_points=(512,128), k=16)",
+            "model_params": 416580,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "1": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PointNetPlusPlusBaseline",
+            "model_label": "PointNetPlusPlusBaseline(default n_points=(512,128), k=16)",
+            "model_params": 416580,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "2": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PointNetPlusPlusBaseline",
+            "model_label": "PointNetPlusPlusBaseline(default n_points=(512,128), k=16)",
+            "model_params": 416580,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "3": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PointNetPlusPlusBaseline",
+            "model_label": "PointNetPlusPlusBaseline(default n_points=(512,128), k=16)",
+            "model_params": 416580,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "4": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PointNetPlusPlusBaseline",
+            "model_label": "PointNetPlusPlusBaseline(default n_points=(512,128), k=16)",
+            "model_params": 416580,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          }
+        }
+      },
+      "complete_five_seed": true,
+      "strict_fp32_all_found": false,
+      "included": false,
+      "seed_ids_found": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "dgcnn": {
+      "roots": {
+        "results/thermal_protocolA/dgcnn": {
+          "0": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "DGCNN",
+            "model_label": "DGCNN(default k=16, width=64, n_blocks=2)",
+            "model_params": 50308,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "1": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "DGCNN",
+            "model_label": "DGCNN(default k=16, width=64, n_blocks=2)",
+            "model_params": 50308,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "2": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "DGCNN",
+            "model_label": "DGCNN(default k=16, width=64, n_blocks=2)",
+            "model_params": 50308,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "3": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "DGCNN",
+            "model_label": "DGCNN(default k=16, width=64, n_blocks=2)",
+            "model_params": 50308,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "4": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "DGCNN",
+            "model_label": "DGCNN(default k=16, width=64, n_blocks=2)",
+            "model_params": 50308,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          }
+        }
+      },
+      "complete_five_seed": true,
+      "strict_fp32_all_found": false,
+      "included": false,
+      "seed_ids_found": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "pipn": {
+      "roots": {
+        "results/thermal_protocolA/pipn": {
+          "0": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PipnStyleBaseline",
+            "model_label": "PipnStyleBaseline(scale=1.0)",
+            "model_params": 1148104,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "1": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PipnStyleBaseline",
+            "model_label": "PipnStyleBaseline(scale=1.0)",
+            "model_params": 1148104,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "2": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PipnStyleBaseline",
+            "model_label": "PipnStyleBaseline(scale=1.0)",
+            "model_params": 1148104,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "3": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PipnStyleBaseline",
+            "model_label": "PipnStyleBaseline(scale=1.0)",
+            "model_params": 1148104,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "4": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PipnStyleBaseline",
+            "model_label": "PipnStyleBaseline(scale=1.0)",
+            "model_params": 1148104,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          }
+        }
+      },
+      "complete_five_seed": true,
+      "strict_fp32_all_found": false,
+      "included": false,
+      "seed_ids_found": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "siren": {
+      "roots": {
+        "results/baselines_ext/thermal_protocolA/siren": {
+          "0": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "SIRENNet",
+            "model_label": "SIRENNet(hidden=512, layers=6, omega_0=30) 1,054,212 params (= CoordMLP capacity)",
+            "model_params": 1054212,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "1": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "SIRENNet",
+            "model_label": "SIRENNet(hidden=512, layers=6, omega_0=30) 1,054,212 params (= CoordMLP capacity)",
+            "model_params": 1054212,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "2": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "SIRENNet",
+            "model_label": "SIRENNet(hidden=512, layers=6, omega_0=30) 1,054,212 params (= CoordMLP capacity)",
+            "model_params": 1054212,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          }
+        }
+      },
+      "complete_five_seed": false,
+      "strict_fp32_all_found": false,
+      "included": false,
+      "seed_ids_found": [
+        0,
+        1,
+        2
+      ]
+    },
+    "pointtransformer": {
+      "roots": {
+        "results/baselines_ext/thermal_protocolA/pointtransformer": {
+          "0": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PointTransformerBaseline",
+            "model_label": "PointTransformerBaseline(official PointTransformerConv, hidden=320, layers=3, k=16) 928,644 params",
+            "model_params": 928644,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "1": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PointTransformerBaseline",
+            "model_label": "PointTransformerBaseline(official PointTransformerConv, hidden=320, layers=3, k=16) 928,644 params",
+            "model_params": 928644,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "2": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "PointTransformerBaseline",
+            "model_label": "PointTransformerBaseline(official PointTransformerConv, hidden=320, layers=3, k=16) 928,644 params",
+            "model_params": 928644,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          }
+        }
+      },
+      "complete_five_seed": false,
+      "strict_fp32_all_found": false,
+      "included": false,
+      "seed_ids_found": [
+        0,
+        1,
+        2
+      ]
+    },
+    "meshgraphnet": {
+      "roots": {
+        "results/baselines_ext/thermal_protocolA/meshgraphnet": {
+          "0": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "MeshGraphNetStyleBaseline",
+            "model_label": "MeshGraphNet-style encode-process-decode GNN (assembled, hidden=128, layers=8, k=16) 976,516 params",
+            "model_params": 976516,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "1": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "MeshGraphNetStyleBaseline",
+            "model_label": "MeshGraphNet-style encode-process-decode GNN (assembled, hidden=128, layers=8, k=16) 976,516 params",
+            "model_params": 976516,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "2": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "MeshGraphNetStyleBaseline",
+            "model_label": "MeshGraphNet-style encode-process-decode GNN (assembled, hidden=128, layers=8, k=16) 976,516 params",
+            "model_params": 976516,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          }
+        },
+        "results/round2_graph_five_seed_main/meshgraphnet": {
+          "0": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "MeshGraphNetStyleBaseline",
+            "model_label": "MeshGraphNet-style encode-process-decode GNN (assembled, hidden=128, layers=8, k=16) 976,516 params",
+            "model_params": 976516,
+            "epochs": 500,
+            "pool_context": "legacy_index_bins",
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": false,
+            "cudnn_allow_tf32": false
+          },
+          "1": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "MeshGraphNetStyleBaseline",
+            "model_label": "MeshGraphNet-style encode-process-decode GNN (assembled, hidden=128, layers=8, k=16) 976,516 params",
+            "model_params": 976516,
+            "epochs": 500,
+            "pool_context": "legacy_index_bins",
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": false,
+            "cudnn_allow_tf32": false
+          },
+          "2": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "MeshGraphNetStyleBaseline",
+            "model_label": "MeshGraphNet-style encode-process-decode GNN (assembled, hidden=128, layers=8, k=16) 976,516 params",
+            "model_params": 976516,
+            "epochs": 500,
+            "pool_context": "legacy_index_bins",
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": false,
+            "cudnn_allow_tf32": false
+          },
+          "3": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "MeshGraphNetStyleBaseline",
+            "model_label": "MeshGraphNet-style encode-process-decode GNN (assembled, hidden=128, layers=8, k=16) 976,516 params",
+            "model_params": 976516,
+            "epochs": 500,
+            "pool_context": "legacy_index_bins",
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": false,
+            "cudnn_allow_tf32": false
+          },
+          "4": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "MeshGraphNetStyleBaseline",
+            "model_label": "MeshGraphNet-style encode-process-decode GNN (assembled, hidden=128, layers=8, k=16) 976,516 params",
+            "model_params": 976516,
+            "epochs": 500,
+            "pool_context": "legacy_index_bins",
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": false,
+            "cudnn_allow_tf32": false
+          }
+        }
+      },
+      "complete_five_seed": true,
+      "strict_fp32_all_found": false,
+      "included": true,
+      "seed_ids_found": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "feat_extract": {
+      "roots": {
+        "results/thermal_protocolA/feat_extract": {
+          "0": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "FeatExtractNet",
+            "model_label": "FeatExtractNet(scale=1.0)",
+            "model_params": 1149512,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "1": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "FeatExtractNet",
+            "model_label": "FeatExtractNet(scale=1.0)",
+            "model_params": 1149512,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "2": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "FeatExtractNet",
+            "model_label": "FeatExtractNet(scale=1.0)",
+            "model_params": 1149512,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "3": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "FeatExtractNet",
+            "model_label": "FeatExtractNet(scale=1.0)",
+            "model_params": 1149512,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          },
+          "4": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "FeatExtractNet",
+            "model_label": "FeatExtractNet(scale=1.0)",
+            "model_params": 1149512,
+            "epochs": 500,
+            "pool_context": null,
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": null,
+            "cudnn_allow_tf32": null
+          }
+        },
+        "results/round2_thermal_symmetric/feat_extract": {
+          "0": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "FeatExtractNet",
+            "model_label": "FeatExtractNet(scale=1.0, pool_mode=symmetric)",
+            "model_params": 1149512,
+            "epochs": 500,
+            "pool_context": "symmetric",
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": false,
+            "cudnn_allow_tf32": false
+          },
+          "1": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "FeatExtractNet",
+            "model_label": "FeatExtractNet(scale=1.0, pool_mode=symmetric)",
+            "model_params": 1149512,
+            "epochs": 500,
+            "pool_context": "symmetric",
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": false,
+            "cudnn_allow_tf32": false
+          },
+          "2": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "FeatExtractNet",
+            "model_label": "FeatExtractNet(scale=1.0, pool_mode=symmetric)",
+            "model_params": 1149512,
+            "epochs": 500,
+            "pool_context": "symmetric",
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": false,
+            "cudnn_allow_tf32": false
+          },
+          "3": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "FeatExtractNet",
+            "model_label": "FeatExtractNet(scale=1.0, pool_mode=symmetric)",
+            "model_params": 1149512,
+            "epochs": 500,
+            "pool_context": "symmetric",
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": false,
+            "cudnn_allow_tf32": false
+          },
+          "4": {
+            "metrics": true,
+            "checkpoint": true,
+            "model": "FeatExtractNet",
+            "model_label": "FeatExtractNet(scale=1.0, pool_mode=symmetric)",
+            "model_params": 1149512,
+            "epochs": 500,
+            "pool_context": "symmetric",
+            "split_version": "splits_thermal_v1_protocolA",
+            "cuda_matmul_allow_tf32": false,
+            "cudnn_allow_tf32": false
+          }
+        }
+      },
+      "complete_five_seed": true,
+      "strict_fp32_all_found": false,
+      "included": true,
+      "seed_ids_found": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "included": [
+    "fen",
+    "graph"
+  ],
+  "rule": "complete_five_seed requires seed0..4 current metrics+checkpoint; strict_fp32 requires every found current metrics flag false; not-found means not found under these checked roots, not a global absence claim"
+}

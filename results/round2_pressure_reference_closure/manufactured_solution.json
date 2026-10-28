@@ -1,0 +1,428 @@
+{
+  "task": "R3.16 nonlinear manufactured solution through production integral-gauge path",
+  "created_local": "2026-10-23T11:17:27+08:00",
+  "geometry": 17,
+  "levels_h": [
+    0.2,
+    0.14,
+    0.1
+  ],
+  "fields": "psi=sin(pi x)sin(pi y)+0.2 sin(2pi x)sin(pi y); u=(psi_y,-psi_x); T=sin(pi x)sin(pi y)+0.2 cos(pi x)sin(2pi y); p=cos(pi x)sin(pi y)+0.3 sin(pi x)cos(2pi y)",
+  "method": "same solve_integral_gauge: PETSc augmented Newton, nonhomogeneous u/T Dirichlet BC, eps=0, integral(p)=0",
+  "rows": [
+    {
+      "h": 0.2,
+      "newton_iterations": 4,
+      "final_linear_residual_rel": 3.7581505227106986e-14,
+      "integral_constraint": -5.1553813301685736e-17,
+      "initial_integral": 7.560277274012983e-17,
+      "relaxation": 1.0,
+      "pin_value": 0.7100186342949447,
+      "manufactured": {
+        "velocity_l2": 0.03647279858111343,
+        "velocity_rel_l2": 0.008672117453567456,
+        "temperature_l2": 0.00650378916011,
+        "temperature_rel_l2": 0.0065328807549825015,
+        "pressure_centered_l2": 0.0555088219976014,
+        "pressure_centered_rel_l2": 0.05678633083316232,
+        "free_residual_vector_norm": 1.5952340004177972e-06,
+        "full_residual_vector_norm": 0.5783601894288293,
+        "n_dirichlet": 336,
+        "boundary_wall_velocity_max": 4.227678836797116,
+        "boundary_inner_temperature_max_dev": 1.7721373819385913,
+        "boundary_outer_temperature_max_dev": 0.19021130325903107,
+        "u_nonzero": 2.5396404859994646,
+        "p_nonzero": 0.4204915028125263,
+        "boundary_values_finite": true
+      },
+      "weak_residual": {
+        "n_dirichlet_dofs": 336,
+        "blocks": {
+          "full": {
+            "full": 3.2778777155607397,
+            "free": 3.1852380227667374
+          },
+          "continuity": {
+            "full": 1.5952340004271717e-06,
+            "free": 1.5952340004271717e-06,
+            "relative_free": 3.8039235259335154e-07
+          },
+          "momentum": {
+            "full": 3.220322786993805,
+            "free": 3.177217740818494,
+            "relative_free": 0.757625107543874
+          },
+          "energy": {
+            "full": 0.27986457471741555,
+            "free": 0.27535025808772645,
+            "relative_free": 0.2768827259019751
+          }
+        },
+        "dirichlet_zeroed": 3.1852380227667374,
+        "galerkin": {
+          "free_absolute": 3.1852380227667374,
+          "free_relative_to_raw": 0.9717379045733697,
+          "definition": "assembled nonlinear Galerkin residual after zeroing all velocity/temperature Dirichlet rows"
+        },
+        "cell_strong_against_test_projection": {
+          "continuity": {
+            "full": 1.5952340004271717e-06,
+            "free": 1.5952340004271717e-06,
+            "relative_free": 3.8039235259335154e-07
+          },
+          "momentum": {
+            "full": 3.220322786993805,
+            "free": 3.177217740818494,
+            "relative_free": 0.757625107543874
+          },
+          "energy": {
+            "full": 0.27986457471741555,
+            "free": 0.27535025808772645,
+            "relative_free": 0.2768827259019751
+          }
+        }
+      }
+    },
+    {
+      "h": 0.14,
+      "newton_iterations": 3,
+      "final_linear_residual_rel": 2.446273919008508e-14,
+      "integral_constraint": 8.326672684688674e-17,
+      "initial_integral": -2.7755575615628914e-17,
+      "relaxation": 1.0,
+      "pin_value": 0.5390362208740379,
+      "manufactured": {
+        "velocity_l2": 0.011744369528905405,
+        "velocity_rel_l2": 0.002792452346267337,
+        "temperature_l2": 0.0018134490239511765,
+        "temperature_rel_l2": 0.0018215606221330975,
+        "pressure_centered_l2": 0.020758650653115666,
+        "pressure_centered_rel_l2": 0.021236401011875333,
+        "free_residual_vector_norm": 2.0562178755513632e-07,
+        "full_residual_vector_norm": 0.4721967707740495,
+        "n_dirichlet": 504,
+        "boundary_wall_velocity_max": 4.236696708269679,
+        "boundary_inner_temperature_max_dev": 1.7721373819385913,
+        "boundary_outer_temperature_max_dev": 0.19890437907365507,
+        "u_nonzero": 2.5396404859994646,
+        "p_nonzero": 0.4204915028125263,
+        "boundary_values_finite": true
+      },
+      "weak_residual": {
+        "n_dirichlet_dofs": 504,
+        "blocks": {
+          "full": {
+            "full": 2.2353220359273087,
+            "free": 2.166411972527972
+          },
+          "continuity": {
+            "full": 2.0562178753539577e-07,
+            "free": 2.0562178753539577e-07,
+            "relative_free": 4.894141052192464e-08
+          },
+          "momentum": {
+            "full": 2.179861182212708,
+            "free": 2.160734221415855,
+            "relative_free": 0.5142907365343319
+          },
+          "energy": {
+            "full": 0.19215058655496153,
+            "free": 0.19007541822336327,
+            "relative_free": 0.1909199920286453
+          }
+        },
+        "dirichlet_zeroed": 2.166411972527972,
+        "galerkin": {
+          "free_absolute": 2.166411972527972,
+          "free_relative_to_raw": 0.9691721987741467,
+          "definition": "assembled nonlinear Galerkin residual after zeroing all velocity/temperature Dirichlet rows"
+        },
+        "cell_strong_against_test_projection": {
+          "continuity": {
+            "full": 2.0562178753539577e-07,
+            "free": 2.0562178753539577e-07,
+            "relative_free": 4.894141052192464e-08
+          },
+          "momentum": {
+            "full": 2.179861182212708,
+            "free": 2.160734221415855,
+            "relative_free": 0.5142907365343319
+          },
+          "energy": {
+            "full": 0.19215058655496153,
+            "free": 0.19007541822336327,
+            "relative_free": 0.1909199920286453
+          }
+        }
+      }
+    },
+    {
+      "h": 0.1,
+      "newton_iterations": 3,
+      "final_linear_residual_rel": 1.546980342203795e-14,
+      "integral_constraint": -6.426735432349916e-17,
+      "initial_integral": -2.0979787831882851e-16,
+      "relaxation": 1.0,
+      "pin_value": 0.10012139665992947,
+      "manufactured": {
+        "velocity_l2": 0.004352732975045651,
+        "velocity_rel_l2": 0.0010349469487421982,
+        "temperature_l2": 0.0009387210756877972,
+        "temperature_rel_l2": 0.0009429199961263162,
+        "pressure_centered_l2": 0.008039771525780476,
+        "pressure_centered_rel_l2": 0.008224802999885952,
+        "free_residual_vector_norm": 4.774872833620311e-08,
+        "full_residual_vector_norm": 0.4091265287616409,
+        "n_dirichlet": 672,
+        "boundary_wall_velocity_max": 4.255944211771086,
+        "boundary_inner_temperature_max_dev": 1.7721373819385913,
+        "boundary_outer_temperature_max_dev": 0.2000000000000001,
+        "u_nonzero": 2.5396404859994646,
+        "p_nonzero": 0.4204915028125263,
+        "boundary_values_finite": true
+      },
+      "weak_residual": {
+        "n_dirichlet_dofs": 672,
+        "blocks": {
+          "full": {
+            "full": 1.6544765543653395,
+            "free": 1.5934343270089448
+          },
+          "continuity": {
+            "full": 4.774872832900866e-08,
+            "free": 4.774872832900866e-08,
+            "relative_free": 1.1357335125775963e-08
+          },
+          "momentum": {
+            "full": 1.5987465482260146,
+            "free": 1.588729362055895,
+            "relative_free": 0.37788926366164594
+          },
+          "energy": {
+            "full": 0.14275125346098466,
+            "free": 0.14166576086216423,
+            "relative_free": 0.14229159364329266
+          }
+        },
+        "dirichlet_zeroed": 1.5934343270089448,
+        "galerkin": {
+          "free_absolute": 1.5934343270089448,
+          "free_relative_to_raw": 0.9631048096781217,
+          "definition": "assembled nonlinear Galerkin residual after zeroing all velocity/temperature Dirichlet rows"
+        },
+        "cell_strong_against_test_projection": {
+          "continuity": {
+            "full": 4.774872832900866e-08,
+            "free": 4.774872832900866e-08,
+            "relative_free": 1.1357335125775963e-08
+          },
+          "momentum": {
+            "full": 1.5987465482260146,
+            "free": 1.588729362055895,
+            "relative_free": 0.37788926366164594
+          },
+          "energy": {
+            "full": 0.14275125346098466,
+            "free": 0.14166576086216423,
+            "relative_free": 0.14229159364329266
+          }
+        }
+      }
+    }
+  ],
+  "counterexample": {
+    "h": 0.14,
+    "initial_p_offset": 1.0,
+    "relaxation": 0.6,
+    "initial_integral": 3.469806640162439,
+    "initial_integral_expected": 3.469806640162436,
+    "iterations": 16,
+    "history": [
+      {
+        "iteration": 1,
+        "update_rel": 0.21449067225586477,
+        "linear_residual_rel": 5.053920866035796e-16,
+        "pre_projection_integral": 1.3879226560649753,
+        "projection_constant_shift": 0.40000000000000024,
+        "constraint": -1.2906342661267445e-15,
+        "c": -2.056217875640089e-07
+      },
+      {
+        "iteration": 2,
+        "update_rel": 0.0018615705694223327,
+        "linear_residual_rel": 6.157178832841887e-15,
+        "pre_projection_integral": -5.134781488891349e-16,
+        "projection_constant_shift": -1.4798465797653117e-16,
+        "constraint": 0.0,
+        "c": -2.056217875404335e-07
+      },
+      {
+        "iteration": 3,
+        "update_rel": 0.0007443879249608233,
+        "linear_residual_rel": 7.167970872161886e-15,
+        "pre_projection_integral": 1.3877787807814457e-17,
+        "projection_constant_shift": 3.9995853507170586e-18,
+        "constraint": 1.3877787807814457e-17,
+        "c": -2.0562178754506722e-07
+      },
+      {
+        "iteration": 4,
+        "update_rel": 0.0002977170121303184,
+        "linear_residual_rel": 7.983366663758451e-15,
+        "pre_projection_integral": 2.7755575615628914e-17,
+        "projection_constant_shift": 7.999170701434117e-18,
+        "constraint": 2.7755575615628914e-17,
+        "c": -2.0562178754663743e-07
+      },
+      {
+        "iteration": 5,
+        "update_rel": 0.00011908071828840069,
+        "linear_residual_rel": 7.19995798655258e-15,
+        "pre_projection_integral": -9.71445146547012e-17,
+        "projection_constant_shift": -2.7997097455019414e-17,
+        "constraint": -1.3877787807814457e-17,
+        "c": -2.056217875414399e-07
+      },
+      {
+        "iteration": 6,
+        "update_rel": 4.7631314663850306e-05,
+        "linear_residual_rel": 6.727303778252436e-15,
+        "pre_projection_integral": -1.1102230246251565e-16,
+        "projection_constant_shift": -3.199668280573647e-17,
+        "constraint": -2.7755575615628914e-17,
+        "c": -2.056217875427898e-07
+      },
+      {
+        "iteration": 7,
+        "update_rel": 1.9052370318102328e-05,
+        "linear_residual_rel": 5.387129361297291e-15,
+        "pre_projection_integral": -2.7755575615628914e-17,
+        "projection_constant_shift": -7.999170701434117e-18,
+        "constraint": -1.3877787807814457e-17,
+        "c": -2.0562178755390474e-07
+      },
+      {
+        "iteration": 8,
+        "update_rel": 7.620923244606502e-06,
+        "linear_residual_rel": 4.724220459617762e-15,
+        "pre_projection_integral": -2.7755575615628914e-17,
+        "projection_constant_shift": -7.999170701434117e-18,
+        "constraint": -2.7755575615628914e-17,
+        "c": -2.0562178754744825e-07
+      },
+      {
+        "iteration": 9,
+        "update_rel": 3.048365316889141e-06,
+        "linear_residual_rel": 8.45843275903363e-15,
+        "pre_projection_integral": 9.71445146547012e-17,
+        "projection_constant_shift": 2.7997097455019414e-17,
+        "constraint": 5.551115123125783e-17,
+        "c": -2.056217875272591e-07
+      },
+      {
+        "iteration": 10,
+        "update_rel": 1.2193454898353745e-06,
+        "linear_residual_rel": 6.602951359855199e-15,
+        "pre_projection_integral": -1.3877787807814457e-17,
+        "projection_constant_shift": -3.9995853507170586e-18,
+        "constraint": -1.3877787807814457e-17,
+        "c": -2.0562178753141786e-07
+      },
+      {
+        "iteration": 11,
+        "update_rel": 4.877380940177864e-07,
+        "linear_residual_rel": 1.306442246250553e-14,
+        "pre_projection_integral": -5.551115123125783e-17,
+        "projection_constant_shift": -1.5998341402868234e-17,
+        "constraint": -1.3877787807814457e-17,
+        "c": -2.0562178754333189e-07
+      },
+      {
+        "iteration": 12,
+        "update_rel": 1.950952213073161e-07,
+        "linear_residual_rel": 5.2188895116539545e-14,
+        "pre_projection_integral": 2.7755575615628914e-17,
+        "projection_constant_shift": 7.999170701434117e-18,
+        "constraint": 2.7755575615628914e-17,
+        "c": -2.0562178754479686e-07
+      },
+      {
+        "iteration": 13,
+        "update_rel": 7.803808593763932e-08,
+        "linear_residual_rel": 1.6010003702685972e-13,
+        "pre_projection_integral": 4.163336342344337e-17,
+        "projection_constant_shift": 1.1998756052151176e-17,
+        "constraint": 4.163336342344337e-17,
+        "c": -2.056217875505617e-07
+      },
+      {
+        "iteration": 14,
+        "update_rel": 3.121523395632829e-08,
+        "linear_residual_rel": 2.6659905019697278e-14,
+        "pre_projection_integral": -4.163336342344337e-17,
+        "projection_constant_shift": -1.1998756052151176e-17,
+        "constraint": -4.163336342344337e-17,
+        "c": -2.0562178754147413e-07
+      },
+      {
+        "iteration": 15,
+        "update_rel": 1.2486093494798372e-08,
+        "linear_residual_rel": 6.069900225914521e-14,
+        "pre_projection_integral": -1.1102230246251565e-16,
+        "projection_constant_shift": -3.199668280573647e-17,
+        "constraint": 0.0,
+        "c": -2.0562178754469429e-07
+      },
+      {
+        "iteration": 16,
+        "update_rel": 4.9944374403288594e-09,
+        "linear_residual_rel": 9.491736342049448e-14,
+        "pre_projection_integral": 9.71445146547012e-17,
+        "projection_constant_shift": 2.7997097455019414e-17,
+        "constraint": 2.7755575615628914e-17,
+        "c": -2.0562178753892636e-07
+      }
+    ],
+    "final_integral": 2.7755575615628914e-17,
+    "final_constraint": 2.7755575615628914e-17,
+    "final_linear_residual_rel": 9.491736342049448e-14,
+    "free_residual_vector_norm": 2.05752677643438e-07,
+    "manufactured": {
+      "velocity_l2": 0.011744364895342944,
+      "velocity_rel_l2": 0.002792451244547714,
+      "temperature_l2": 0.001813448344898566,
+      "temperature_rel_l2": 0.0018215599400430694,
+      "pressure_centered_l2": 0.020758645175303583,
+      "pressure_centered_rel_l2": 0.02123639540799404,
+      "free_residual_vector_norm": 2.05752677643438e-07,
+      "full_residual_vector_norm": 0.47219676610609723,
+      "n_dirichlet": 504,
+      "boundary_wall_velocity_max": 4.236696708269679,
+      "boundary_inner_temperature_max_dev": 1.7721373819385913,
+      "boundary_outer_temperature_max_dev": 0.19890437907365507,
+      "u_nonzero": 2.5396404859994646,
+      "p_nonzero": 0.4204915028125263,
+      "boundary_values_finite": true
+    }
+  },
+  "checks": {
+    "all_levels_converged": true,
+    "all_linear_residuals_small": true,
+    "free_residual_finest_small": true,
+    "free_residual_decreases": true,
+    "all_integral_constraints_small": true,
+    "boundary_values_finite": true,
+    "velocity_error_decreases": true,
+    "temperature_error_decreases": true,
+    "pressure_error_decreases": true,
+    "asymmetric_nonzero_fields": true,
+    "counterexample_initial_p_plus1": true,
+    "counterexample_integral_converged": true,
+    "counterexample_free_residual_small": true,
+    "counterexample_linear_residual_small": true
+  },
+  "all_pass": true,
+  "compatibility_only": true,
+  "weak_residual_status": "not_applicable_for_MMS_default_diagnostics_no_source",
+  "warning": "Old trigonometric MMS: default weak_residual has no manufactured sources; not used as exact-F gate. Use manufactured_polynomial_solution.json for strict compatibility."
+}

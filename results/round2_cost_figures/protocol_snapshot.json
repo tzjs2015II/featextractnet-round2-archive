@@ -1,0 +1,110 @@
+{
+  "task": "cost",
+  "r2_task": "R2-CLOSEOUT-COST-FIG-01",
+  "created_local": "2026-10-21T18:51:34+08:00",
+  "cost_only": true,
+  "trains_to_convergence": false,
+  "loads_training_checkpoints": false,
+  "modifies_weights_or_results": false,
+  "seed": 0,
+  "random_input": "uniform[-1,1], float32, torch.manual_seed(0) per model",
+  "warmup": 2,
+  "inference_repeats": 5,
+  "training_step_repeats": 3,
+  "timing_note": "CUDA events via perf_counter with torch.cuda.synchronize before/after each repeat; warmup discarded; peak via reset_peak_memory_stats with previous model references deleted and cache emptied",
+  "net_optimization_note": "net optimization time per epoch = measured training-step mean x steps/epoch (thermal 25, acoustic 6); excludes data loading, val, checkpoint and metric evaluation; not an actual training wall time",
+  "shapes": {
+    "thermal": {
+      "batch_geoms": 4,
+      "N": 5000,
+      "steps_per_epoch": 25
+    },
+    "acoustic": {
+      "batch": 1,
+      "N": 231361,
+      "cond": [
+        0.6,
+        0.5
+      ],
+      "steps_per_epoch": 6
+    }
+  },
+  "models": {
+    "thermal": [
+      {
+        "token": "feat_extract",
+        "kwargs": {
+          "pool_context": "symmetric"
+        }
+      },
+      {
+        "token": "mlp",
+        "kwargs": {}
+      },
+      {
+        "token": "pointnet",
+        "kwargs": {}
+      },
+      {
+        "token": "meshgraphnet",
+        "kwargs": {}
+      }
+    ],
+    "acoustic": [
+      {
+        "token": "fourier_c",
+        "kwargs": {
+          "fourier_layout": "pointwise"
+        }
+      },
+      {
+        "token": "fourier_nc",
+        "kwargs": {
+          "fourier_layout": "pointwise"
+        }
+      },
+      {
+        "token": "unif_acous",
+        "kwargs": {
+          "fourier_layout": "pointwise"
+        }
+      }
+    ]
+  },
+  "precision_policy": "strict FP32 (TF32 disabled for matmul and cuDNN)",
+  "env": {
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 4090 D",
+    "device_capability": [
+      8,
+      9
+    ],
+    "device_total_memory_gb": 25.262,
+    "torch": "2.10.0+cu128",
+    "cuda": "12.8",
+    "default_dtype": "torch.float32",
+    "precision": {
+      "strict_fp32": true,
+      "cuda_matmul_allow_tf32": false,
+      "cudnn_allow_tf32": false
+    },
+    "hardware": {
+      "pytorch_version": "2.10.0+cu128",
+      "cuda_available": true,
+      "mps_available": false,
+      "cuda_device_count": 1,
+      "cuda_device_name": "NVIDIA GeForce RTX 4090 D",
+      "cuda_memory_gb": 25.262096384
+    }
+  },
+  "source_sha256": {
+    "scripts/exp_r2_cost_figures.py": "6bdc3a69bc70c305c7d1f85d3fd556963811548bb17dfaf75fa34f3f41340963",
+    "scripts/exp_thermal.py": "efb0419310b7b038ef12668d8d877440a69a81be9a966275daa4cce7d8632f22",
+    "scripts/exp_acoustic.py": "478ef64f12f63763e5ee0d6378412d03bf3db1987e3f01494dba9cb25f1de41c",
+    "src/core/thermal_io.py": "e0b44c31a8f3e2ac10cd3eca39b13c29ac32704c140222651bdc4bc219201e1d",
+    "src/models/featextractnet.py": "9f8d2acbd5a6441dbed2102f6d7a6d27d37669fe5ff1a4884f946a6ea44c02c7",
+    "src/models/baselines/coordinate_mlp.py": "2460b17b93ba138833da3c7d1e4cf85ad32182c055b0e463abe3da18bb7b95f6",
+    "src/models/baselines/pointnet.py": "7b9faf1664af030a8ceaeb8d8b0acb88d223e25c6a263943ca2e8a556d72b7c4",
+    "src/models/baselines/meshgraphnet_style.py": "2a624cbf947e06c3aeb5b3df72d37dd74eccdac15ae67ea3ead3308256635637"
+  }
+}

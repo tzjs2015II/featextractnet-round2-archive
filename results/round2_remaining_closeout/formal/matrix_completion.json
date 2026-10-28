@@ -1,0 +1,68 @@
+{
+  "task": "R2-REMAINING-EXECUTE-02",
+  "created_local": "2026-10-27T07:19:19+08:00",
+  "counts": {
+    "transolver": 5,
+    "maininit": 12,
+    "kaiming": 14,
+    "acoustic": 14,
+    "matched": 6,
+    "siren": 5,
+    "pt": 5,
+    "mlp": 10
+  },
+  "total_training_metrics": 66,
+  "combined": {
+    "groups": 23,
+    "missing": 0
+  },
+  "fresh_summaries": {
+    "siren": {
+      "n": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "path": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren/summary.json"
+    },
+    "pt": {
+      "n": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "path": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer/summary.json"
+    },
+    "mlp_c": {
+      "n": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c/summary.json"
+    },
+    "mlp_c_matched": {
+      "n": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched/summary.json"
+    }
+  },
+  "all_pass": true,
+  "transolver_metrics": 5,
+  "note": "total_training_metrics excludes Transolver; 66 residual matrix + 5 Transolver separate"
+}

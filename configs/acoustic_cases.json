@@ -1,0 +1,2017 @@
+{
+  "generator": "generate_acoustic_cases.py",
+  "created_utc": "2026-09-12T09:57:04+00:00",
+  "protocol": {
+    "solver": "src/fdtd/python_fdtd.py",
+    "grid": "801x801 nodes (PML 160 + air buffer 240 cells/side)",
+    "crop": "[pis:pie] x [pjs:pje] = 481x481 nodes, x/y in [-15,15] m",
+    "dx_dy_m": 0.0625,
+    "courant_factor": 0.1,
+    "c0": 340.0,
+    "rho0": 1.0,
+    "L": 1.0,
+    "alpha": 1.256431,
+    "gamma_coef": 2.8,
+    "sigma_pml": 100.0,
+    "n_pml": 160,
+    "n_buffer": 240,
+    "n_steps": "per-case, derived from n_transit and rounded to whole periods",
+    "n_transit": 4.0,
+    "steady_criterion": "phase-locked integer-period mean over 4 periods, tol 2%",
+    "ppw_min": 10.0,
+    "phase_snapshots": 8,
+    "source": "hard plane-wave line source sin(2*pi*f*t) on p and P",
+    "legacy_matlab": "codematlab/ (read-only; discretisation port, not pointwise-validated)",
+    "seed": null
+  },
+  "roles": {
+    "train": [
+      "200_0.3",
+      "200_0.5",
+      "200_0.7",
+      "300_0.5",
+      "400_0.3",
+      "400_0.5"
+    ],
+    "val": [
+      "400_0.7"
+    ],
+    "test": [
+      "100_0.3",
+      "100_0.5",
+      "100_0.7",
+      "300_0.3",
+      "300_0.7",
+      "500_0.2",
+      "500_0.3",
+      "500_0.5",
+      "500_0.7",
+      "400_0.5_srcR"
+    ],
+    "unused": [
+      "100_0.2",
+      "200_0.2",
+      "300_0.2",
+      "400_0.2"
+    ]
+  },
+  "n_cases": 21,
+  "n_ok": 21,
+  "n_error": 0,
+  "batch_wall_s": 8042.2,
+  "cases": {
+    "100_0.2": {
+      "case_id": "100_0.2",
+      "role": "unused",
+      "file": "data/acoustic/case_100_0.2.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7835.38,
+      "n_steps_done": 27684,
+      "seconds_per_step": 0.2830214706930971,
+      "broke_nan": false,
+      "max_abs_p_final": 1.5325810817054764,
+      "rms_p_air_final": 0.6156239775553319,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 3076,
+        "steps_per_period": 769,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 0.0016037770232670825,
+        "phase_err": 0.00043177438886934856,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.37633636250909697,
+          0.37693992212030897,
+          0.3769734043977738,
+          0.37696832642408784
+        ],
+        "rel_per_period": [
+          0.0016037770232670825,
+          8.882656227156368e-05,
+          1.3470376495385356e-05
+        ],
+        "mean_energy_last": 0.37696832642408784
+      },
+      "cells_per_lambda": 54.4,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.04286975020473655,
+      "params": {
+        "f_hz": 100.0,
+        "omega_rad_s": 628.3185307179587,
+        "Ma": 0.2,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 598.1592412434966,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27684,
+        "t_final_s": 0.359844561220007,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 3.4,
+        "cells_per_lambda": 54.4,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "unused"
+      }
+    },
+    "100_0.3": {
+      "case_id": "100_0.3",
+      "role": "test",
+      "file": "data/acoustic/case_100_0.3.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7920.72,
+      "n_steps_done": 27684,
+      "seconds_per_step": 0.2861063585301363,
+      "broke_nan": false,
+      "max_abs_p_final": 1.734741534527611,
+      "rms_p_air_final": 0.6149111541679727,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 3076,
+        "steps_per_period": 769,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 0.0025102299973882897,
+        "phase_err": 0.00043177438886934856,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.3773171190870032,
+          0.37826427183786354,
+          0.37838775726966745,
+          0.37841003604934675
+        ],
+        "rel_per_period": [
+          0.0025102299973882897,
+          0.0003264528029674307,
+          5.887817259222337e-05
+        ],
+        "mean_energy_last": 0.37841003604934675
+      },
+      "cells_per_lambda": 54.4,
+      "res_ok": true,
+      "phasor_drift_rel_max": 1.5704400574130035,
+      "params": {
+        "f_hz": 100.0,
+        "omega_rad_s": 628.3185307179587,
+        "Ma": 0.3,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 897.2388618652449,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27684,
+        "t_final_s": 0.359844561220007,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 3.4,
+        "cells_per_lambda": 54.4,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "test"
+      }
+    },
+    "100_0.5": {
+      "case_id": "100_0.5",
+      "role": "test",
+      "file": "data/acoustic/case_100_0.5.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7924.22,
+      "n_steps_done": 27684,
+      "seconds_per_step": 0.28623302416860347,
+      "broke_nan": false,
+      "max_abs_p_final": 2.8136423947799423,
+      "rms_p_air_final": 0.6170487860927583,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 3076,
+        "steps_per_period": 769,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 0.0002796713905673759,
+        "phase_err": 0.00043177438886934856,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.37999210882693046,
+          0.3800939039733726,
+          0.3799876025827022,
+          0.37995224216715784
+        ],
+        "rel_per_period": [
+          0.00026788752733945587,
+          0.0002796713905673759,
+          9.305676107331681e-05
+        ],
+        "mean_energy_last": 0.37995224216715784
+      },
+      "cells_per_lambda": 54.4,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.4428810387771247,
+      "params": {
+        "f_hz": 100.0,
+        "omega_rad_s": 628.3185307179587,
+        "Ma": 0.5,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 1495.3981031087415,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27684,
+        "t_final_s": 0.359844561220007,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 3.4,
+        "cells_per_lambda": 54.4,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "test"
+      }
+    },
+    "100_0.7": {
+      "case_id": "100_0.7",
+      "role": "test",
+      "file": "data/acoustic/case_100_0.7.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7857.56,
+      "n_steps_done": 27684,
+      "seconds_per_step": 0.283822974761276,
+      "broke_nan": false,
+      "max_abs_p_final": 4.400698486238108,
+      "rms_p_air_final": 0.681297917113648,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 3076,
+        "steps_per_period": 769,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 0.0017033072916801614,
+        "phase_err": 0.00043177438886934856,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.4464886189661022,
+          0.44724912628643937,
+          0.447477768776713,
+          0.44765800971193037
+        ],
+        "rel_per_period": [
+          0.0017033072916801614,
+          0.0005112195347861288,
+          0.0004027930498314535
+        ],
+        "mean_energy_last": 0.44765800971193037
+      },
+      "cells_per_lambda": 54.4,
+      "res_ok": true,
+      "phasor_drift_rel_max": 5.126136236768433,
+      "params": {
+        "f_hz": 100.0,
+        "omega_rad_s": 628.3185307179587,
+        "Ma": 0.7,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 2093.5573443522376,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27684,
+        "t_final_s": 0.359844561220007,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 3.4,
+        "cells_per_lambda": 54.4,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "test"
+      }
+    },
+    "200_0.2": {
+      "case_id": "200_0.2",
+      "role": "unused",
+      "file": "data/acoustic/case_200_0.2.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7852.81,
+      "n_steps_done": 27720,
+      "seconds_per_step": 0.2832834040717871,
+      "broke_nan": false,
+      "max_abs_p_final": 1.7552749441141107,
+      "rms_p_air_final": 0.5973259471411542,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 1540,
+        "steps_per_period": 385,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 1.4142783062013521e-05,
+        "phase_err": 0.0008680542530176874,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.3597314696384872,
+          0.3597300394574255,
+          0.35972495187351655,
+          0.3597224480752756
+        ],
+        "rel_per_period": [
+          3.975690709315454e-06,
+          1.4142783062013521e-05,
+          6.960312949991661e-06
+        ],
+        "mean_energy_last": 0.3597224480752756
+      },
+      "cells_per_lambda": 27.2,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.066677905489256,
+      "params": {
+        "f_hz": 200.0,
+        "omega_rad_s": 1256.6370614359173,
+        "Ma": 0.2,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 598.1592412434966,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27720,
+        "t_final_s": 0.36031249953108635,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 1.7,
+        "cells_per_lambda": 27.2,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "unused"
+      }
+    },
+    "200_0.3": {
+      "case_id": "200_0.3",
+      "role": "train",
+      "file": "data/acoustic/case_200_0.3.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7942.61,
+      "n_steps_done": 27720,
+      "seconds_per_step": 0.28652493293251985,
+      "broke_nan": false,
+      "max_abs_p_final": 2.1141321402096542,
+      "rms_p_air_final": 0.593965313938013,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 1540,
+        "steps_per_period": 385,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 2.2405970669338405e-05,
+        "phase_err": 0.0008680542530176874,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.3598215907899858,
+          0.3598172366150818,
+          0.3598091745606319,
+          0.3598034897436672
+        ],
+        "rel_per_period": [
+          1.2100927280267819e-05,
+          2.2405970669338405e-05,
+          1.5799533104207787e-05
+        ],
+        "mean_energy_last": 0.3598034897436672
+      },
+      "cells_per_lambda": 27.2,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.04276320082076027,
+      "params": {
+        "f_hz": 200.0,
+        "omega_rad_s": 1256.6370614359173,
+        "Ma": 0.3,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 897.2388618652449,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27720,
+        "t_final_s": 0.36031249953108635,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 1.7,
+        "cells_per_lambda": 27.2,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "train"
+      }
+    },
+    "200_0.5": {
+      "case_id": "200_0.5",
+      "role": "train",
+      "file": "data/acoustic/case_200_0.5.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7888.08,
+      "n_steps_done": 27720,
+      "seconds_per_step": 0.28455677489074105,
+      "broke_nan": false,
+      "max_abs_p_final": 3.3217067320552967,
+      "rms_p_air_final": 0.6224454233601192,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 1540,
+        "steps_per_period": 385,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 0.00010619774705592239,
+        "phase_err": 0.0008680542530176874,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.38624519361918086,
+          0.3862862119885544,
+          0.3863195786793131,
+          0.3863552298283328
+        ],
+        "rel_per_period": [
+          0.00010619774705592239,
+          8.637815620428042e-05,
+          9.228408547552592e-05
+        ],
+        "mean_energy_last": 0.3863552298283328
+      },
+      "cells_per_lambda": 27.2,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.24861515791556502,
+      "params": {
+        "f_hz": 200.0,
+        "omega_rad_s": 1256.6370614359173,
+        "Ma": 0.5,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 1495.3981031087415,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27720,
+        "t_final_s": 0.36031249953108635,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 1.7,
+        "cells_per_lambda": 27.2,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "train"
+      }
+    },
+    "200_0.7": {
+      "case_id": "200_0.7",
+      "role": "train",
+      "file": "data/acoustic/case_200_0.7.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7877.04,
+      "n_steps_done": 27720,
+      "seconds_per_step": 0.28415809626150795,
+      "broke_nan": false,
+      "max_abs_p_final": 5.691039060749204,
+      "rms_p_air_final": 0.6795040704850804,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 1540,
+        "steps_per_period": 385,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 0.00047657774831542465,
+        "phase_err": 0.0008680542530176874,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.4454155744746674,
+          0.44562784962621516,
+          0.44577614043673414,
+          0.4459001765765996
+        ],
+        "rel_per_period": [
+          0.00047657774831542465,
+          0.0003327682743422889,
+          0.00027824759697530325
+        ],
+        "mean_energy_last": 0.4459001765765996
+      },
+      "cells_per_lambda": 27.2,
+      "res_ok": true,
+      "phasor_drift_rel_max": 1.5660879947525417,
+      "params": {
+        "f_hz": 200.0,
+        "omega_rad_s": 1256.6370614359173,
+        "Ma": 0.7,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 2093.5573443522376,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27720,
+        "t_final_s": 0.36031249953108635,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 1.7,
+        "cells_per_lambda": 27.2,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "train"
+      }
+    },
+    "300_0.2": {
+      "case_id": "300_0.2",
+      "role": "unused",
+      "file": "data/acoustic/case_300_0.2.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7920.52,
+      "n_steps_done": 27648,
+      "seconds_per_step": 0.2864714860868305,
+      "broke_nan": false,
+      "max_abs_p_final": 1.9255082092032039,
+      "rms_p_air_final": 0.6020560361810797,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 1024,
+        "steps_per_period": 256,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 1.6718379672085443e-05,
+        "phase_err": 0.0017316030307563846,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.3594052905875348,
+          0.3594100665045938,
+          0.3594160752585436,
+          0.35942176888301314
+        ],
+        "rel_per_period": [
+          1.3288388301656117e-05,
+          1.6718379672085443e-05,
+          1.584131835356775e-05
+        ],
+        "mean_energy_last": 0.35942176888301314
+      },
+      "cells_per_lambda": 18.133333333333333,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.0532375832445114,
+      "params": {
+        "f_hz": 300.0,
+        "omega_rad_s": 1884.9555921538758,
+        "Ma": 0.2,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 598.1592412434966,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27648,
+        "t_final_s": 0.3593766229089277,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 1.1333333333333333,
+        "cells_per_lambda": 18.133333333333333,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "unused"
+      }
+    },
+    "300_0.3": {
+      "case_id": "300_0.3",
+      "role": "test",
+      "file": "data/acoustic/case_300_0.3.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7923.83,
+      "n_steps_done": 27648,
+      "seconds_per_step": 0.2865915069614857,
+      "broke_nan": false,
+      "max_abs_p_final": 2.4695799696382097,
+      "rms_p_air_final": 0.6010660852712251,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 1024,
+        "steps_per_period": 256,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 1.3662460488368417e-05,
+        "phase_err": 0.0017316030307563846,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.35910011338473147,
+          0.35910501957584195,
+          0.35910831468087995,
+          0.35911179840767027
+        ],
+        "rel_per_period": [
+          1.3662460488368417e-05,
+          9.175881311502127e-06,
+          9.701047421908732e-06
+        ],
+        "mean_energy_last": 0.35911179840767027
+      },
+      "cells_per_lambda": 18.133333333333333,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.05645669920003487,
+      "params": {
+        "f_hz": 300.0,
+        "omega_rad_s": 1884.9555921538758,
+        "Ma": 0.3,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 897.2388618652449,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27648,
+        "t_final_s": 0.3593766229089277,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 1.1333333333333333,
+        "cells_per_lambda": 18.133333333333333,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "test"
+      }
+    },
+    "300_0.5": {
+      "case_id": "300_0.5",
+      "role": "train",
+      "file": "data/acoustic/case_300_0.5.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7981.01,
+      "n_steps_done": 27648,
+      "seconds_per_step": 0.28866038247973913,
+      "broke_nan": false,
+      "max_abs_p_final": 3.7840405361233707,
+      "rms_p_air_final": 0.6136285668408562,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 1024,
+        "steps_per_period": 256,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 4.4744990878597744e-05,
+        "phase_err": 0.0017316030307563846,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.37665242681682276,
+          0.37663557350742044,
+          0.3766255440076902,
+          0.3766180687127737
+        ],
+        "rel_per_period": [
+          4.4744990878597744e-05,
+          2.6629188626088597e-05,
+          1.9848082625967683e-05
+        ],
+        "mean_energy_last": 0.3766180687127737
+      },
+      "cells_per_lambda": 18.133333333333333,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.3583341776875422,
+      "params": {
+        "f_hz": 300.0,
+        "omega_rad_s": 1884.9555921538758,
+        "Ma": 0.5,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 1495.3981031087415,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27648,
+        "t_final_s": 0.3593766229089277,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 1.1333333333333333,
+        "cells_per_lambda": 18.133333333333333,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "train"
+      }
+    },
+    "300_0.7": {
+      "case_id": "300_0.7",
+      "role": "test",
+      "file": "data/acoustic/case_300_0.7.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 8029.24,
+      "n_steps_done": 27648,
+      "seconds_per_step": 0.2904046060192303,
+      "broke_nan": false,
+      "max_abs_p_final": 6.468375687125366,
+      "rms_p_air_final": 0.6550798644862812,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 1024,
+        "steps_per_period": 256,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 0.0003087789948456252,
+        "phase_err": 0.0017316030307563846,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.4453575521554657,
+          0.44549506921276716,
+          0.4456158527757422,
+          0.4457241593623615
+        ],
+        "rel_per_period": [
+          0.0003087789948456252,
+          0.0002711221095858701,
+          0.0002430492226535785
+        ],
+        "mean_energy_last": 0.4457241593623615
+      },
+      "cells_per_lambda": 18.133333333333333,
+      "res_ok": true,
+      "phasor_drift_rel_max": 3.4073412151559257,
+      "params": {
+        "f_hz": 300.0,
+        "omega_rad_s": 1884.9555921538758,
+        "Ma": 0.7,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 2093.5573443522376,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27648,
+        "t_final_s": 0.3593766229089277,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 1.1333333333333333,
+        "cells_per_lambda": 18.133333333333333,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "test"
+      }
+    },
+    "400_0.2": {
+      "case_id": "400_0.2",
+      "role": "unused",
+      "file": "data/acoustic/case_400_0.2.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7866.3,
+      "n_steps_done": 27648,
+      "seconds_per_step": 0.2845091506780456,
+      "broke_nan": false,
+      "max_abs_p_final": 2.10109694111828,
+      "rms_p_air_final": 0.6015585475069052,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 768,
+        "steps_per_period": 192,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 9.887159589764439e-06,
+        "phase_err": 0.0017316030307563846,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.35896717558358376,
+          0.35896933922918534,
+          0.3589728884163301,
+          0.3589753568424909
+        ],
+        "rel_per_period": [
+          6.027419075446576e-06,
+          9.887159589764439e-06,
+          6.876358188611202e-06
+        ],
+        "mean_energy_last": 0.3589753568424909
+      },
+      "cells_per_lambda": 13.6,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.22757242780506998,
+      "params": {
+        "f_hz": 400.0,
+        "omega_rad_s": 2513.2741228718346,
+        "Ma": 0.2,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 598.1592412434966,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27648,
+        "t_final_s": 0.3593766229089277,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 0.85,
+        "cells_per_lambda": 13.6,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "unused"
+      }
+    },
+    "400_0.3": {
+      "case_id": "400_0.3",
+      "role": "train",
+      "file": "data/acoustic/case_400_0.3.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7965.57,
+      "n_steps_done": 27648,
+      "seconds_per_step": 0.2881013636422183,
+      "broke_nan": false,
+      "max_abs_p_final": 2.7552990784792293,
+      "rms_p_air_final": 0.6023358073416045,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 768,
+        "steps_per_period": 192,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 1.058671570432114e-05,
+        "phase_err": 0.0017316030307563846,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.3614576483901799,
+          0.36146147503954257,
+          0.3614642269306736,
+          0.36146698787358433
+        ],
+        "rel_per_period": [
+          1.058671570432114e-05,
+          7.613234939420077e-06,
+          7.638218957887519e-06
+        ],
+        "mean_energy_last": 0.36146698787358433
+      },
+      "cells_per_lambda": 13.6,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.21582720910996792,
+      "params": {
+        "f_hz": 400.0,
+        "omega_rad_s": 2513.2741228718346,
+        "Ma": 0.3,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 897.2388618652449,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27648,
+        "t_final_s": 0.3593766229089277,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 0.85,
+        "cells_per_lambda": 13.6,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "train"
+      }
+    },
+    "400_0.5": {
+      "case_id": "400_0.5",
+      "role": "train",
+      "file": "data/acoustic/case_400_0.5.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7944.47,
+      "n_steps_done": 27648,
+      "seconds_per_step": 0.28733827855184146,
+      "broke_nan": false,
+      "max_abs_p_final": 3.958681817242441,
+      "rms_p_air_final": 0.616238337198381,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 768,
+        "steps_per_period": 192,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 3.0411782806522963e-05,
+        "phase_err": 0.0017316030307563846,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.38139122612389925,
+          0.38140282491103245,
+          0.38141014148846786,
+          0.3814165674788566
+        ],
+        "rel_per_period": [
+          3.0411782806522963e-05,
+          1.918333309964064e-05,
+          1.6847979877173444e-05
+        ],
+        "mean_energy_last": 0.3814165674788566
+      },
+      "cells_per_lambda": 13.6,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.20736479576857708,
+      "params": {
+        "f_hz": 400.0,
+        "omega_rad_s": 2513.2741228718346,
+        "Ma": 0.5,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 1495.3981031087415,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27648,
+        "t_final_s": 0.3593766229089277,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 0.85,
+        "cells_per_lambda": 13.6,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "train"
+      }
+    },
+    "400_0.7": {
+      "case_id": "400_0.7",
+      "role": "val",
+      "file": "data/acoustic/case_400_0.7.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7913.96,
+      "n_steps_done": 27648,
+      "seconds_per_step": 0.28623394962946974,
+      "broke_nan": false,
+      "max_abs_p_final": 6.476341748989688,
+      "rms_p_air_final": 0.6423649074697304,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 768,
+        "steps_per_period": 192,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 8.113618269521374e-05,
+        "phase_err": 0.0017316030307563846,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.4228045225695085,
+          0.42282915416516603,
+          0.42285449676147097,
+          0.4228888055611737
+        ],
+        "rel_per_period": [
+          5.825764470972774e-05,
+          5.993578270393879e-05,
+          8.113618269521374e-05
+        ],
+        "mean_energy_last": 0.4228888055611737
+      },
+      "cells_per_lambda": 13.6,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.47322912237323667,
+      "params": {
+        "f_hz": 400.0,
+        "omega_rad_s": 2513.2741228718346,
+        "Ma": 0.7,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 2093.5573443522376,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27648,
+        "t_final_s": 0.3593766229089277,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 0.85,
+        "cells_per_lambda": 13.6,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "val"
+      }
+    },
+    "500_0.2": {
+      "case_id": "500_0.2",
+      "role": "test",
+      "file": "data/acoustic/case_500_0.2.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7863.48,
+      "n_steps_done": 27720,
+      "seconds_per_step": 0.2836683257375434,
+      "broke_nan": false,
+      "max_abs_p_final": 2.377192089994033,
+      "rms_p_air_final": 0.6172281661202567,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 616,
+        "steps_per_period": 154,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 2.6906921559400886e-05,
+        "phase_err": 0.0008680542530177613,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.38396702816087663,
+          0.3839616551017889,
+          0.38396777191121484,
+          0.3839574405204947
+        ],
+        "rel_per_period": [
+          1.3993542918113984e-05,
+          1.5930782005547037e-05,
+          2.6906921559400886e-05
+        ],
+        "mean_energy_last": 0.3839574405204947
+      },
+      "cells_per_lambda": 10.88,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.34249070914548346,
+      "params": {
+        "f_hz": 500.0,
+        "omega_rad_s": 3141.592653589793,
+        "Ma": 0.2,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 598.1592412434966,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27720,
+        "t_final_s": 0.36031249953108635,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 0.68,
+        "cells_per_lambda": 10.88,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "test"
+      }
+    },
+    "500_0.3": {
+      "case_id": "500_0.3",
+      "role": "test",
+      "file": "data/acoustic/case_500_0.3.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7970.02,
+      "n_steps_done": 27720,
+      "seconds_per_step": 0.2875137444783787,
+      "broke_nan": false,
+      "max_abs_p_final": 3.035111668642558,
+      "rms_p_air_final": 0.6235393220718068,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 616,
+        "steps_per_period": 154,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 2.708977861504944e-05,
+        "phase_err": 0.0008680542530177613,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.39066404556740597,
+          0.3906534625648987,
+          0.39065712556651805,
+          0.3906493298152841
+        ],
+        "rel_per_period": [
+          2.708977861504944e-05,
+          9.376600927349691e-06,
+          1.995548199110898e-05
+        ],
+        "mean_energy_last": 0.3906493298152841
+      },
+      "cells_per_lambda": 10.88,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.22391800510181653,
+      "params": {
+        "f_hz": 500.0,
+        "omega_rad_s": 3141.592653589793,
+        "Ma": 0.3,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 897.2388618652449,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27720,
+        "t_final_s": 0.36031249953108635,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 0.68,
+        "cells_per_lambda": 10.88,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "test"
+      }
+    },
+    "500_0.5": {
+      "case_id": "500_0.5",
+      "role": "test",
+      "file": "data/acoustic/case_500_0.5.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7946.39,
+      "n_steps_done": 27720,
+      "seconds_per_step": 0.2866613101018633,
+      "broke_nan": false,
+      "max_abs_p_final": 4.168055865764035,
+      "rms_p_air_final": 0.6357613520922094,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 616,
+        "steps_per_period": 154,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 2.086530798835663e-05,
+        "phase_err": 0.0008680542530177613,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.402906418574145,
+          0.40291482534065903,
+          0.4029154671437134,
+          0.40291838959105764
+        ],
+        "rel_per_period": [
+          2.086530798835663e-05,
+          1.592900072182841e-06,
+          7.253251817188581e-06
+        ],
+        "mean_energy_last": 0.40291838959105764
+      },
+      "cells_per_lambda": 10.88,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.21943096790394767,
+      "params": {
+        "f_hz": 500.0,
+        "omega_rad_s": 3141.592653589793,
+        "Ma": 0.5,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 1495.3981031087415,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27720,
+        "t_final_s": 0.36031249953108635,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 0.68,
+        "cells_per_lambda": 10.88,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "test"
+      }
+    },
+    "500_0.7": {
+      "case_id": "500_0.7",
+      "role": "test",
+      "file": "data/acoustic/case_500_0.7.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 8042.15,
+      "n_steps_done": 27720,
+      "seconds_per_step": 0.2901138684179494,
+      "broke_nan": false,
+      "max_abs_p_final": 5.638293648172924,
+      "rms_p_air_final": 0.6422315522894522,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 616,
+        "steps_per_period": 154,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 1.9957394398676406e-05,
+        "phase_err": 0.0008680542530177613,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.4030096214365874,
+          0.4030134435153331,
+          0.4030168566564441,
+          0.4030248998228017
+        ],
+        "rel_per_period": [
+          9.483839944165477e-06,
+          8.469050266035523e-06,
+          1.9957394398676406e-05
+        ],
+        "mean_energy_last": 0.4030248998228017
+      },
+      "cells_per_lambda": 10.88,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.6447478656976122,
+      "params": {
+        "f_hz": 500.0,
+        "omega_rad_s": 3141.592653589793,
+        "Ma": 0.7,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 2093.5573443522376,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27720,
+        "t_final_s": 0.36031249953108635,
+        "sigma_pml": 100.0,
+        "source_side": "left",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 160,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 0.68,
+        "cells_per_lambda": 10.88,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "test"
+      }
+    },
+    "400_0.5_srcR": {
+      "case_id": "400_0.5_srcR",
+      "role": "test",
+      "file": "data/acoustic/case_400_0.5_srcR.npz",
+      "status": "ok",
+      "shape": [
+        481,
+        481
+      ],
+      "wall_s": 7883.72,
+      "n_steps_done": 27648,
+      "seconds_per_step": 0.2851290098163493,
+      "broke_nan": false,
+      "max_abs_p_final": 4.112927763887393,
+      "rms_p_air_final": 0.6180050405841518,
+      "steady": {
+        "method": "phase-locked integer-period mean",
+        "n_samples": 768,
+        "steps_per_period": 192,
+        "n_period": 4,
+        "steady_ok": true,
+        "rel_growth": 2.9000413489215686e-05,
+        "phase_err": 0.0017316030307563846,
+        "tol": 0.02,
+        "energy_per_period": [
+          0.3836370692018283,
+          0.3836481948354649,
+          0.3836550755473221,
+          0.3836606374075697
+        ],
+        "rel_per_period": [
+          2.9000413489215686e-05,
+          1.7934951733898124e-05,
+          1.4497032887427894e-05
+        ],
+        "mean_energy_last": 0.3836606374075697
+      },
+      "cells_per_lambda": 13.6,
+      "res_ok": true,
+      "phasor_drift_rel_max": 0.31951968108777457,
+      "params": {
+        "f_hz": 400.0,
+        "omega_rad_s": 2513.2741228718346,
+        "Ma": 0.5,
+        "c0": 340.0,
+        "rho0": 1.0,
+        "L": 1.0,
+        "alpha": 1.256431,
+        "gamma_coef": 2.8,
+        "Gamma": 1495.3981031087415,
+        "dx": 0.0625,
+        "dy": 0.0625,
+        "courant_factor": 0.1,
+        "dt_s": 1.299828641887036e-05,
+        "n_pml": 160,
+        "n_buffer": 240,
+        "nx_cells": 800,
+        "ny_cells": 800,
+        "nxp1": 801,
+        "nyp1": 801,
+        "n_steps": 27648,
+        "t_final_s": 0.3593766229089277,
+        "sigma_pml": 100.0,
+        "source_side": "right",
+        "source_y_frac": [
+          0.0,
+          1.0
+        ],
+        "src_col_0based": 640,
+        "src_rows_0based": [
+          160,
+          640
+        ],
+        "pis_pie_pjs_pje_matlab": [
+          161,
+          641,
+          161,
+          641
+        ],
+        "air_node_range_0based": [
+          160,
+          641,
+          160,
+          641
+        ],
+        "crop_air": true,
+        "lambda_m": 0.85,
+        "cells_per_lambda": 13.6,
+        "grid_min_x_m": -25.0,
+        "grid_max_x_m": 25.0,
+        "role": "test"
+      }
+    }
+  }
+}

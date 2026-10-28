@@ -1,0 +1,47 @@
+{
+  "generated_by": "scripts/package_round2.py",
+  "note": "Status only. Pending items have NO results in this package and no scientific/complete claim is made; completed items retain their scope notes. Do not cite pending items as completed.",
+  "pending_items": [
+    {
+      "id": "R2-FDTD-CONV-01",
+      "topic": "pressure space/time convergence (Python-FDTD)",
+      "status": "pending",
+      "results_included": false
+    }
+  ],
+  "completed_items_scope_notes": [
+    {
+      "id": "R2-PRESSURE-GAUGE",
+      "topic": "raw vs node-mean-centered pressure sensitivity",
+      "status": "completed sensitivity; full FDTD pressure-space/time convergence remains pending",
+      "results_included": true,
+      "scope_note": "Supplemental two-model sensitivity and selected arrays; does not recover the historical FEM gauge."
+    },
+    {
+      "id": "R2-THERMAL-FEM-02",
+      "topic": "independent thermal FEM reference + v3 Galerkin re-acceptance",
+      "status": "accepted bounded representative FEM study (v2/v3); v1 excluded",
+      "results_included": true,
+      "scope_note": "Three representative geometries only; three-grid differences are discretization diagnostics, not true-error bounds; does not validate all historical labels."
+    },
+    {
+      "id": "new_queries",
+      "topic": "additional thermal query experiments (SoBol / input-geometry variants)",
+      "status": "completed (results JSON included)",
+      "results_included": true,
+      "scope_note": "completed-result JSON is included, but its reference is an interpolated-reference diagnostic (k-nearest inverse-distance reference), NOT an independent FEM solution; do not present it as independent FEM evidence. Per-geometry metrics are supplementary to the seed/geometry primary statistics."
+    }
+  ],
+  "excluded_from_this_package": [
+    "raw data (HeatTransferData.npy, data/acoustic/*.npz; see DATA_SOURCES.md)",
+    "model weights (*.pth, *.pt)",
+    "logs/ and install logs (selected scientific arrays are included only via the explicit R2-PACK-REFERENCE-03 whitelist)",
+    "results/ (only whitelisted JSON records and selected reference/prediction arrays)",
+    "results/round2_audit/ except the four manuscript table-source manifests; results/registry.json (DSH/registry records); results/round2_new_queries/registry_candidate.json (internal registry candidate)",
+    "removed/old baselines and architectures (thermal feat_extract/unif_therm; acoustic fourier_c/fourier_nc/unif_acous; joint results; legacy results/baselines 3-seed graph main comparison, historical only and superseded by results/round2_graph_five_seed_main + completed_comparison_graph_five_seed.json) -- only the manuscript-retained historical baseline list is included",
+    "internal docs/, paper/, review/reply materials, ccfa-review-reports/",
+    "scripts/sbatch/ (server-private hardcoded submissions)",
+    "src/pipeline/ (old pipeline assets)",
+    "zenodo/LICENSE-DATA (no third-party thermal data is redistributed here)"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "src/fem_reference/__init__.py": "32affee2eda9846f578235d127ba82135ac629db0469332d668bdaff578f0fc7",
+  "src/fem_reference/geometry.py": "5c694a0aac1cd4c50be88d8c7f4f73a1a0f214afa9f1f9a7440ac14653d0ab96",
+  "src/fem_reference/fenics_solver.py": "02d54782aa52b7aecc41f06d7bf2b82cd15d23f9fcc24add6fe5aa85f3bbb194",
+  "src/fem_reference/featextractnet_symmetric.py": "9f8d2acbd5a6441dbed2102f6d7a6d27d37669fe5ff1a4884f946a6ea44c02c7",
+  "scripts/exp_r2_thermal_fem.py": "5e82f85e86608f854f692a598ac35d77ec1bc2cfa30f21fa98aeb32c5bc40c64",
+  "scripts/probe_r2_thermal_fem.py": "2798c5fcad5343a151d12bc96d84a783af964fab0c44c322a34bac7de1c64b95",
+  "scripts/exp_r2_fem_model_eval.py": "2973caffdd5bea29806ffad700026a6609b134a43e69b322077ea4a263e50ddc",
+  "scripts/probe_r2_fem_model_eval.py": "f84fa42894b125a50ad85ec0b641fb07f133e83aeccfbc334568b94fbe1ca340",
+  "scripts/postprocess_r2_thermal_fem_acceptance.py": "27d4c4e4f1b42b953c1c951219ed674708fa80d31b97f272353d920270ccce81",
+  "scripts/sbatch/r2_thermal_fem.sbatch": "802aa5f0d82231f1eb488b117f345e14591f8bdafade0a5b15406cfb04d238ef",
+  "configs/r2_thermal_fem.json": "536329883ff523e1c0e66c6c7d4b06d2dd4350fbea1cdb7182bcc43f439e4978"
+}

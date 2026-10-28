@@ -1,0 +1,96 @@
+{
+  "config": "configs/acoustic_cases.json",
+  "cases": {
+    "train": [
+      "200_0.3",
+      "200_0.5",
+      "200_0.7",
+      "300_0.5",
+      "400_0.3",
+      "400_0.5"
+    ],
+    "val": [
+      "400_0.7"
+    ],
+    "test": [
+      "100_0.3",
+      "100_0.5",
+      "100_0.7",
+      "300_0.3",
+      "300_0.7",
+      "400_0.5_srcR",
+      "500_0.2",
+      "500_0.3",
+      "500_0.5",
+      "500_0.7"
+    ]
+  },
+  "n_train": 6,
+  "n_val": 1,
+  "n_test": 10,
+  "p_stats": {
+    "n_points": 1388166,
+    "p_mean": -0.006129235494881868,
+    "p_std": 0.6219366788864136
+  },
+  "amp_used": false,
+  "models": {
+    "fno": {
+      "label": "FNO2d(modes=16, width=16, n_layers=4, in=2coord+2cond)",
+      "params": 1052049,
+      "steps_per_epoch": 6,
+      "x_shape": [
+        1,
+        4,
+        481,
+        481
+      ],
+      "y_shape": [
+        1,
+        1,
+        481,
+        481
+      ],
+      "out_shape": [
+        1,
+        1,
+        481,
+        481
+      ],
+      "loss": 0.9710350632667542,
+      "grad_finite": true,
+      "grad_nonzero": true
+    },
+    "uno": {
+      "label": "UNO2d(official neuralop.models.UNO, in=2coord+2cond, out=1)",
+      "params": 1181601,
+      "steps_per_epoch": 6,
+      "x_shape": [
+        1,
+        4,
+        481,
+        481
+      ],
+      "y_shape": [
+        1,
+        1,
+        481,
+        481
+      ],
+      "out_shape": [
+        1,
+        1,
+        481,
+        481
+      ],
+      "loss": 0.9122333526611328,
+      "grad_finite": true,
+      "grad_nonzero": true
+    }
+  },
+  "strict_fp32": {
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false
+  },
+  "all_pass": true
+}

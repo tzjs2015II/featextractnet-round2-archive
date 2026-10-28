@@ -1,0 +1,10 @@
+环境文件来源说明
+================
+
+- `requirements.txt`、`requirements-extended.txt`、`environment.yml` 均**原样复制**自
+  上一版 Zenodo 发布包（`zenodo/` 目录，featextractnet v1.1.0），属于历史环境快照。
+- 历史记录版本（numpy/torch 等）与实际复现时实测版本可能不同；以 `README.md` 中
+  Codex 写明的“历史版本 vs 实测版本”说明为准。
+- 本准备包不安装依赖、不改共享环境；复现时请自行核对方括号内记录的实测版本。
+
+说明由 `scripts/package_round2.py` 自动生成；不构成新的科学声明。

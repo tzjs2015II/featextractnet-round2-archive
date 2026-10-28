@@ -1,0 +1,1298 @@
+{
+  "protocol_version": "R2_geometry_v1",
+  "designed_date": "2026-10-21",
+  "purpose": "review-requested new-family and separated-angle evaluation, distinct from original random135split",
+  "selection": "input geometry only; no field label or test score used for partition design",
+  "geometry_spec_sha256": "9214c18a934dfddcf3dda09243f7fd434df24f605035e17ed361c7f93778d3d5",
+  "n_geometry": 135,
+  "metadata": [
+    {
+      "geom_id": 0,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.0
+    },
+    {
+      "geom_id": 1,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.022222222222
+    },
+    {
+      "geom_id": 2,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.044444444444
+    },
+    {
+      "geom_id": 3,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.066666666667
+    },
+    {
+      "geom_id": 4,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.088888888889
+    },
+    {
+      "geom_id": 5,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.111111111111
+    },
+    {
+      "geom_id": 6,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.133333333333
+    },
+    {
+      "geom_id": 7,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.155555555556
+    },
+    {
+      "geom_id": 8,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.177777777778
+    },
+    {
+      "geom_id": 9,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.2
+    },
+    {
+      "geom_id": 10,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.222222222222
+    },
+    {
+      "geom_id": 11,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.244444444444
+    },
+    {
+      "geom_id": 12,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.266666666667
+    },
+    {
+      "geom_id": 13,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.288888888889
+    },
+    {
+      "geom_id": 14,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.311111111111
+    },
+    {
+      "geom_id": 15,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.333333333333
+    },
+    {
+      "geom_id": 16,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.355555555556
+    },
+    {
+      "geom_id": 17,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.377777777778
+    },
+    {
+      "geom_id": 18,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.4
+    },
+    {
+      "geom_id": 19,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.422222222222
+    },
+    {
+      "geom_id": 20,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.444444444444
+    },
+    {
+      "geom_id": 21,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.466666666667
+    },
+    {
+      "geom_id": 22,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.488888888889
+    },
+    {
+      "geom_id": 23,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.511111111111
+    },
+    {
+      "geom_id": 24,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.533333333333
+    },
+    {
+      "geom_id": 25,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.555555555556
+    },
+    {
+      "geom_id": 26,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.577777777778
+    },
+    {
+      "geom_id": 27,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.6
+    },
+    {
+      "geom_id": 28,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.622222222222
+    },
+    {
+      "geom_id": 29,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.644444444444
+    },
+    {
+      "geom_id": 30,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.666666666667
+    },
+    {
+      "geom_id": 31,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.688888888889
+    },
+    {
+      "geom_id": 32,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.711111111111
+    },
+    {
+      "geom_id": 33,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.733333333333
+    },
+    {
+      "geom_id": 34,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.755555555556
+    },
+    {
+      "geom_id": 35,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.777777777778
+    },
+    {
+      "geom_id": 36,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.8
+    },
+    {
+      "geom_id": 37,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.822222222222
+    },
+    {
+      "geom_id": 38,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.844444444444
+    },
+    {
+      "geom_id": 39,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.866666666667
+    },
+    {
+      "geom_id": 40,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.888888888889
+    },
+    {
+      "geom_id": 41,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.911111111111
+    },
+    {
+      "geom_id": 42,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.933333333333
+    },
+    {
+      "geom_id": 43,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.955555555556
+    },
+    {
+      "geom_id": 44,
+      "polygon_sides": 8,
+      "canonical_phase_fraction": 0.977777777778
+    },
+    {
+      "geom_id": 45,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.241666666667
+    },
+    {
+      "geom_id": 46,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.261111111111
+    },
+    {
+      "geom_id": 47,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.280555555556
+    },
+    {
+      "geom_id": 48,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.3
+    },
+    {
+      "geom_id": 49,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.319444444444
+    },
+    {
+      "geom_id": 50,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.338888888889
+    },
+    {
+      "geom_id": 51,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.358333333333
+    },
+    {
+      "geom_id": 52,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.377777777778
+    },
+    {
+      "geom_id": 53,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.397222222222
+    },
+    {
+      "geom_id": 54,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.416666666667
+    },
+    {
+      "geom_id": 55,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.436111111111
+    },
+    {
+      "geom_id": 56,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.455555555556
+    },
+    {
+      "geom_id": 57,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.475
+    },
+    {
+      "geom_id": 58,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.494444444444
+    },
+    {
+      "geom_id": 59,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.513888888889
+    },
+    {
+      "geom_id": 60,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.533333333333
+    },
+    {
+      "geom_id": 61,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.552777777778
+    },
+    {
+      "geom_id": 62,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.572222222222
+    },
+    {
+      "geom_id": 63,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.591666666667
+    },
+    {
+      "geom_id": 64,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.611111111111
+    },
+    {
+      "geom_id": 65,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.630555555556
+    },
+    {
+      "geom_id": 66,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.65
+    },
+    {
+      "geom_id": 67,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.669444444444
+    },
+    {
+      "geom_id": 68,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.688888888889
+    },
+    {
+      "geom_id": 69,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.708333333333
+    },
+    {
+      "geom_id": 70,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.727777777778
+    },
+    {
+      "geom_id": 71,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.747222222222
+    },
+    {
+      "geom_id": 72,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.766666666667
+    },
+    {
+      "geom_id": 73,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.786111111111
+    },
+    {
+      "geom_id": 74,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.805555555556
+    },
+    {
+      "geom_id": 75,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.825
+    },
+    {
+      "geom_id": 76,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.844444444444
+    },
+    {
+      "geom_id": 77,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.863888888889
+    },
+    {
+      "geom_id": 78,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.883333333333
+    },
+    {
+      "geom_id": 79,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.902777777778
+    },
+    {
+      "geom_id": 80,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.922222222222
+    },
+    {
+      "geom_id": 81,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.941666666667
+    },
+    {
+      "geom_id": 82,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.961111111111
+    },
+    {
+      "geom_id": 83,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.980555555556
+    },
+    {
+      "geom_id": 84,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.0
+    },
+    {
+      "geom_id": 85,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.019444444444
+    },
+    {
+      "geom_id": 86,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.038888888889
+    },
+    {
+      "geom_id": 87,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.058333333333
+    },
+    {
+      "geom_id": 88,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.077777777778
+    },
+    {
+      "geom_id": 89,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.097222222222
+    },
+    {
+      "geom_id": 90,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.116666666667
+    },
+    {
+      "geom_id": 91,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.136111111111
+    },
+    {
+      "geom_id": 92,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.155555555556
+    },
+    {
+      "geom_id": 93,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.175
+    },
+    {
+      "geom_id": 94,
+      "polygon_sides": 7,
+      "canonical_phase_fraction": 0.194444444444
+    },
+    {
+      "geom_id": 95,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.75
+    },
+    {
+      "geom_id": 96,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.775
+    },
+    {
+      "geom_id": 97,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.8
+    },
+    {
+      "geom_id": 98,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.825
+    },
+    {
+      "geom_id": 99,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.85
+    },
+    {
+      "geom_id": 100,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.875
+    },
+    {
+      "geom_id": 101,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.9
+    },
+    {
+      "geom_id": 102,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.925
+    },
+    {
+      "geom_id": 103,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.95
+    },
+    {
+      "geom_id": 104,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.975
+    },
+    {
+      "geom_id": 105,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.0
+    },
+    {
+      "geom_id": 106,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.025
+    },
+    {
+      "geom_id": 107,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.05
+    },
+    {
+      "geom_id": 108,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.075
+    },
+    {
+      "geom_id": 109,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.1
+    },
+    {
+      "geom_id": 110,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.125
+    },
+    {
+      "geom_id": 111,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.15
+    },
+    {
+      "geom_id": 112,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.175
+    },
+    {
+      "geom_id": 113,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.2
+    },
+    {
+      "geom_id": 114,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.225
+    },
+    {
+      "geom_id": 115,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.25
+    },
+    {
+      "geom_id": 116,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.275
+    },
+    {
+      "geom_id": 117,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.3
+    },
+    {
+      "geom_id": 118,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.325
+    },
+    {
+      "geom_id": 119,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.35
+    },
+    {
+      "geom_id": 120,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.375
+    },
+    {
+      "geom_id": 121,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.4
+    },
+    {
+      "geom_id": 122,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.425
+    },
+    {
+      "geom_id": 123,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.45
+    },
+    {
+      "geom_id": 124,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.475
+    },
+    {
+      "geom_id": 125,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.5
+    },
+    {
+      "geom_id": 126,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.525
+    },
+    {
+      "geom_id": 127,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.55
+    },
+    {
+      "geom_id": 128,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.575
+    },
+    {
+      "geom_id": 129,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.6
+    },
+    {
+      "geom_id": 130,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.625
+    },
+    {
+      "geom_id": 131,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.65
+    },
+    {
+      "geom_id": 132,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.675
+    },
+    {
+      "geom_id": 133,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.7
+    },
+    {
+      "geom_id": 134,
+      "polygon_sides": 9,
+      "canonical_phase_fraction": 0.725
+    }
+  ],
+  "protocols": {
+    "leave_family_7": {
+      "kind": "held_out_polygon_family",
+      "held_out_sides": 7,
+      "train": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        24,
+        25,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        123,
+        125,
+        127,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      "val": [
+        0,
+        2,
+        8,
+        9,
+        11,
+        23,
+        26,
+        38,
+        95,
+        104,
+        115,
+        122,
+        124,
+        126,
+        128
+      ],
+      "test": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94
+      ],
+      "unused": [],
+      "split_seed": 123,
+      "validation_rule": "8 random geometries from smaller retained side-count family and7 from other retained family; input metadata only"
+    },
+    "leave_family_8": {
+      "kind": "held_out_polygon_family",
+      "held_out_sides": 8,
+      "train": [
+        46,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        72,
+        73,
+        74,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        123,
+        125,
+        127,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      "val": [
+        45,
+        47,
+        54,
+        55,
+        57,
+        71,
+        75,
+        87,
+        95,
+        104,
+        115,
+        122,
+        124,
+        126,
+        128
+      ],
+      "test": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "unused": [],
+      "split_seed": 123,
+      "validation_rule": "8 random geometries from smaller retained side-count family and7 from other retained family; input metadata only"
+    },
+    "leave_family_9": {
+      "kind": "held_out_polygon_family",
+      "held_out_sides": 9,
+      "train": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        32,
+        34,
+        35,
+        37,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        46,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        72,
+        73,
+        74,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94
+      ],
+      "val": [
+        1,
+        10,
+        23,
+        31,
+        33,
+        36,
+        38,
+        45,
+        47,
+        54,
+        55,
+        57,
+        71,
+        75,
+        87
+      ],
+      "test": [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134
+      ],
+      "unused": [],
+      "split_seed": 123,
+      "validation_rule": "8 random geometries from smaller retained side-count family and7 from other retained family; input metadata only"
+    },
+    "separated_angles": {
+      "kind": "disjoint_canonical_rotation_ranges",
+      "train": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        92,
+        93,
+        94,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126
+      ],
+      "val": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        64,
+        65,
+        66,
+        67,
+        68,
+        129,
+        130,
+        131,
+        132
+      ],
+      "test": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102
+      ],
+      "unused": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        25,
+        26,
+        32,
+        33,
+        43,
+        44,
+        61,
+        62,
+        63,
+        69,
+        70,
+        71,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        127,
+        128,
+        133,
+        134
+      ],
+      "phase_fraction_intervals": {
+        "train": [
+          0.15,
+          0.55
+        ],
+        "val": [
+          0.6,
+          0.7
+        ],
+        "test": [
+          0.75,
+          0.95
+        ]
+      },
+      "interval_convention": "left inclusive, right exclusive; all other fractions unused",
+      "canonical_phase": "fitted boundary phase modulo360/n, normalized by polygon period; round12decimals then modulo1",
+      "minimum_train_test_circular_gap_degrees_by_family": {
+        "7": 11.000000000005711,
+        "8": 10.000000000034996,
+        "9": 9.0
+      }
+    }
+  }
+}

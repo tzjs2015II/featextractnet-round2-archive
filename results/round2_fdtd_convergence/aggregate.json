@@ -1,0 +1,1097 @@
+{
+  "task_id": "R2-FDTD-CONV-01",
+  "protocol_version": "R2_FDTD_CONV_v1",
+  "created_utc": "2026-10-23T06:52:24+00:00",
+  "complete": true,
+  "n_solves": 10,
+  "out_root": "../round2_fdtd_convergence",
+  "solver_path": "src/fdtd/python_fdtd.py",
+  "config_path": "configs/acoustic_cases.json",
+  "hashes": {
+    "script_sha256": "d6d66843818867773e0f7473dc35e3144168fa15ea5644b006bfda422be827dd",
+    "solver_sha256": "020cf4858cf8d65c27368a8bd9192df02917b7c077705a912c08ca2e4dbc7f00",
+    "config_sha256": "69a4b4bc047cca0b2b88e801f752001096289aee27dcd6c193f772eabafaae0b"
+  },
+  "fixed_protocol": {
+    "task_id": "R2-FDTD-CONV-01",
+    "protocol_version": "R2_FDTD_CONV_v1",
+    "purpose": "reviewer-requested pressure space/time convergence of the real Python-FDTD production solver; not a retraining or data change",
+    "cases": {
+      "low100": {
+        "f_hz": 100.0,
+        "Ma": 0.3,
+        "config_case_id": "100_0.3"
+      },
+      "high500": {
+        "f_hz": 500.0,
+        "Ma": 0.7,
+        "config_case_id": "500_0.7"
+      }
+    },
+    "physical": {
+      "c0_m_s": 340.0,
+      "rho0_kg_m3": 1.0,
+      "L_m": 1.0,
+      "alpha": 1.256431,
+      "gamma_coef": 2.8,
+      "sigma_pml": 100.0,
+      "air_domain_m": [
+        -15.0,
+        15.0
+      ],
+      "pml_thickness_m_per_side": 10.0
+    },
+    "grid": {
+      "dx_denoms": {
+        "coarse": 8,
+        "mid": 16,
+        "fine": 32,
+        "mid_dt2": 16,
+        "mid_dt4": 16
+      },
+      "n_pml_formula": "round(10 m / dx)",
+      "n_buffer_formula": "round(15 m / dx)",
+      "total_nodes_space_series": {
+        "coarse": 401,
+        "mid": 801,
+        "fine": 1601
+      },
+      "air_nodes_space_series": {
+        "coarse": 241,
+        "mid": 481,
+        "fine": 961
+      }
+    },
+    "time": {
+      "Ncycle_formula": "ceil(f * 4 * 30 / c0)",
+      "Ncycle_by_case": {
+        "low100": 36,
+        "high500": 177
+      },
+      "t_final_formula": "Ncycle / f",
+      "s0_formula": "ceil(c0*sqrt(2) / (f * (1/8) * 0.1))",
+      "spp_by_resolution": {
+        "coarse": "s0*1",
+        "mid": "s0*2",
+        "fine": "s0*4",
+        "mid_dt2": "s0*4",
+        "mid_dt4": "s0*8"
+      },
+      "dt_formula": "1 / (f * spp)",
+      "n_steps_formula": "Ncycle * spp",
+      "final_phase": "whole number of source cycles (sin(2*pi*f*t_final)=0)",
+      "courant_factor": "back-solved from the required dt; realized value verified"
+    },
+    "source": {
+      "side": "left",
+      "physical_x_m": -15.0,
+      "temporal": "hard line source sin(2*pi*f*t) injected on p and P",
+      "y_fraction": [
+        0.0,
+        1.0
+      ]
+    },
+    "comparison_contract": {
+      "primary_field": "p_total",
+      "secondary_fields": [
+        "p_scattered"
+      ],
+      "spatial_domain": "coarse air nodes (241x241), direct node extraction",
+      "temporal_domain": "mid air nodes (481x481), fixed grid",
+      "interpolation": false,
+      "phase_shift": false,
+      "metrics": "RE=||num-ref||_2/||ref||_2, MAE=|num-ref| mean, max=|num-ref| max",
+      "observed_order": "log2(||p_coarse-p_mid||_2 / ||p_mid-p_fine||_2)/log2(2), i.e. the same-node ABSOLUTE L2 difference-norm ratio (not the RE ratio: the two pairs have different reference norms); reported only for a strictly decreasing difference sequence with a non-zero denominator, else undefined",
+      "reference": "next finer grid is a numerical reference, not an analytic solution",
+      "fine_grid_is_analytic_truth": false,
+      "phasor": "supplementary only; fitted on actual phase-locked snapshot times and cropped to the air region with air_node_range",
+      "convergence_acceptance_threshold": null,
+      "single_final_time_snapshot": true,
+      "steady_state_measurement": false,
+      "under_resolved_note": "coarse 500 Hz ppw=5.44 is an under-resolved diagnostic and is retained, not excluded"
+    },
+    "inputs": {
+      "solver_path": "src/fdtd/python_fdtd.py",
+      "solver_sha256": "020cf4858cf8d65c27368a8bd9192df02917b7c077705a912c08ca2e4dbc7f00",
+      "config_path": "configs/acoustic_cases.json",
+      "config_sha256": "69a4b4bc047cca0b2b88e801f752001096289aee27dcd6c193f772eabafaae0b"
+    }
+  },
+  "contract": {
+    "primary_field": "p_total",
+    "secondary_fields": [
+      "p_scattered"
+    ],
+    "spatial_domain": "coarse air nodes (241x241), direct node extraction",
+    "temporal_domain": "mid air nodes (481x481), fixed grid",
+    "interpolation": false,
+    "phase_shift": false,
+    "metrics": "RE=||num-ref||_2/||ref||_2, MAE=|num-ref| mean, max=|num-ref| max",
+    "observed_order": "log2(||p_coarse-p_mid||_2 / ||p_mid-p_fine||_2)/log2(2), i.e. the same-node ABSOLUTE L2 difference-norm ratio (not the RE ratio: the two pairs have different reference norms); reported only for a strictly decreasing difference sequence with a non-zero denominator, else undefined",
+    "reference": "next finer grid is a numerical reference, not an analytic solution",
+    "fine_grid_is_analytic_truth": false,
+    "phasor": "supplementary only; fitted on actual phase-locked snapshot times and cropped to the air region with air_node_range",
+    "convergence_acceptance_threshold": null,
+    "single_final_time_snapshot": true,
+    "steady_state_measurement": false,
+    "under_resolved_note": "coarse 500 Hz ppw=5.44 is an under-resolved diagnostic and is retained, not excluded"
+  },
+  "identity_checks": {
+    "low100": {
+      "n_runs": 5,
+      "all_equal": true,
+      "identity_sha256": "133ca0cb799bd7f55302252743e4ab11c20e30bcfa36a4fc31610b6f12172f54",
+      "keys": [
+        "L_m",
+        "Ma",
+        "Ncycle",
+        "air_domain_x_m",
+        "air_domain_y_m",
+        "alpha",
+        "c0_m_s",
+        "case",
+        "config_case_id",
+        "config_path",
+        "config_sha256",
+        "f_hz",
+        "final_phase_cycles",
+        "gamma_coef",
+        "pml_thickness_m",
+        "protocol_version",
+        "rho0_kg_m3",
+        "sigma_pml",
+        "solver_path",
+        "solver_sha256",
+        "source_side",
+        "source_x_target_m",
+        "t_final_target_s",
+        "task_id"
+      ],
+      "t_final_all_equal": true,
+      "space_coords_nested_exact": true,
+      "time_coords_equal": true
+    },
+    "high500": {
+      "n_runs": 5,
+      "all_equal": true,
+      "identity_sha256": "4da5727e1e1d4c166e96b813ce7df892c931e5cffaa94083685000ad7425eaf8",
+      "keys": [
+        "L_m",
+        "Ma",
+        "Ncycle",
+        "air_domain_x_m",
+        "air_domain_y_m",
+        "alpha",
+        "c0_m_s",
+        "case",
+        "config_case_id",
+        "config_path",
+        "config_sha256",
+        "f_hz",
+        "final_phase_cycles",
+        "gamma_coef",
+        "pml_thickness_m",
+        "protocol_version",
+        "rho0_kg_m3",
+        "sigma_pml",
+        "solver_path",
+        "solver_sha256",
+        "source_side",
+        "source_x_target_m",
+        "t_final_target_s",
+        "task_id"
+      ],
+      "t_final_all_equal": true,
+      "space_coords_nested_exact": true,
+      "time_coords_equal": true
+    }
+  },
+  "protocol_identity": {
+    "low100": {
+      "task_id": "R2-FDTD-CONV-01",
+      "protocol_version": "R2_FDTD_CONV_v1",
+      "case": "low100",
+      "config_case_id": "100_0.3",
+      "f_hz": 100.0,
+      "Ma": 0.3,
+      "c0_m_s": 340.0,
+      "rho0_kg_m3": 1.0,
+      "L_m": 1.0,
+      "alpha": 1.256431,
+      "gamma_coef": 2.8,
+      "sigma_pml": 100.0,
+      "air_domain_x_m": [
+        -15.0,
+        15.0
+      ],
+      "air_domain_y_m": [
+        -15.0,
+        15.0
+      ],
+      "pml_thickness_m": 10.0,
+      "source_side": "left",
+      "source_x_target_m": -15.0,
+      "Ncycle": 36,
+      "t_final_target_s": 0.36,
+      "final_phase_cycles": 36,
+      "solver_path": "src/fdtd/python_fdtd.py",
+      "solver_sha256": "020cf4858cf8d65c27368a8bd9192df02917b7c077705a912c08ca2e4dbc7f00",
+      "config_path": "configs/acoustic_cases.json",
+      "config_sha256": "69a4b4bc047cca0b2b88e801f752001096289aee27dcd6c193f772eabafaae0b"
+    },
+    "high500": {
+      "task_id": "R2-FDTD-CONV-01",
+      "protocol_version": "R2_FDTD_CONV_v1",
+      "case": "high500",
+      "config_case_id": "500_0.7",
+      "f_hz": 500.0,
+      "Ma": 0.7,
+      "c0_m_s": 340.0,
+      "rho0_kg_m3": 1.0,
+      "L_m": 1.0,
+      "alpha": 1.256431,
+      "gamma_coef": 2.8,
+      "sigma_pml": 100.0,
+      "air_domain_x_m": [
+        -15.0,
+        15.0
+      ],
+      "air_domain_y_m": [
+        -15.0,
+        15.0
+      ],
+      "pml_thickness_m": 10.0,
+      "source_side": "left",
+      "source_x_target_m": -15.0,
+      "Ncycle": 177,
+      "t_final_target_s": 0.354,
+      "final_phase_cycles": 177,
+      "solver_path": "src/fdtd/python_fdtd.py",
+      "solver_sha256": "020cf4858cf8d65c27368a8bd9192df02917b7c077705a912c08ca2e4dbc7f00",
+      "config_path": "configs/acoustic_cases.json",
+      "config_sha256": "69a4b4bc047cca0b2b88e801f752001096289aee27dcd6c193f772eabafaae0b"
+    }
+  },
+  "t_final_checks": {
+    "low100": {
+      "target_s": 0.36,
+      "values": [
+        0.36000000000000004,
+        0.36000000000000004,
+        0.36000000000000004,
+        0.36000000000000004,
+        0.36000000000000004
+      ],
+      "max_abs_dev_s": 5.551115123125783e-17
+    },
+    "high500": {
+      "target_s": 0.354,
+      "values": [
+        0.35400000000000004,
+        0.35400000000000004,
+        0.35400000000000004,
+        0.35400000000000004,
+        0.35400000000000004
+      ],
+      "max_abs_dev_s": 5.551115123125783e-17
+    }
+  },
+  "run_meta": {
+    "low100/coarse": {
+      "case": "low100",
+      "resolution": "coarse",
+      "t_final_s": 0.36000000000000004,
+      "dt_s": 2.597402597402598e-05,
+      "n_steps": 13860,
+      "checks_ok": true
+    },
+    "low100/mid": {
+      "case": "low100",
+      "resolution": "mid",
+      "t_final_s": 0.36000000000000004,
+      "dt_s": 1.298701298701299e-05,
+      "n_steps": 27720,
+      "checks_ok": true
+    },
+    "low100/fine": {
+      "case": "low100",
+      "resolution": "fine",
+      "t_final_s": 0.36000000000000004,
+      "dt_s": 6.493506493506495e-06,
+      "n_steps": 55440,
+      "checks_ok": true
+    },
+    "low100/mid_dt2": {
+      "case": "low100",
+      "resolution": "mid_dt2",
+      "t_final_s": 0.36000000000000004,
+      "dt_s": 6.493506493506495e-06,
+      "n_steps": 55440,
+      "checks_ok": true
+    },
+    "low100/mid_dt4": {
+      "case": "low100",
+      "resolution": "mid_dt4",
+      "t_final_s": 0.36000000000000004,
+      "dt_s": 3.2467532467532473e-06,
+      "n_steps": 110880,
+      "checks_ok": true
+    },
+    "high500/coarse": {
+      "case": "high500",
+      "resolution": "coarse",
+      "t_final_s": 0.35400000000000004,
+      "dt_s": 2.597402597402598e-05,
+      "n_steps": 13629,
+      "checks_ok": true
+    },
+    "high500/mid": {
+      "case": "high500",
+      "resolution": "mid",
+      "t_final_s": 0.35400000000000004,
+      "dt_s": 1.298701298701299e-05,
+      "n_steps": 27258,
+      "checks_ok": true
+    },
+    "high500/fine": {
+      "case": "high500",
+      "resolution": "fine",
+      "t_final_s": 0.35400000000000004,
+      "dt_s": 6.493506493506495e-06,
+      "n_steps": 54516,
+      "checks_ok": true
+    },
+    "high500/mid_dt2": {
+      "case": "high500",
+      "resolution": "mid_dt2",
+      "t_final_s": 0.35400000000000004,
+      "dt_s": 6.493506493506495e-06,
+      "n_steps": 54516,
+      "checks_ok": true
+    },
+    "high500/mid_dt4": {
+      "case": "high500",
+      "resolution": "mid_dt4",
+      "t_final_s": 0.35400000000000004,
+      "dt_s": 3.2467532467532473e-06,
+      "n_steps": 109032,
+      "checks_ok": true
+    }
+  },
+  "space": {
+    "low100": {
+      "series": [
+        "coarse",
+        "mid",
+        "fine"
+      ],
+      "target_nodes": {
+        "description": "coarse air nodes (direct node extraction, no interpolation)",
+        "n_x": 241,
+        "n_y": 241,
+        "x_min_m": -15.0,
+        "x_max_m": 15.0
+      },
+      "fields": {
+        "p_total": {
+          "pairs": {
+            "coarse_vs_mid": {
+              "num": "coarse",
+              "ref": "mid on coarse nodes",
+              "metrics": {
+                "n_points": 58081,
+                "norm_diff": 6.787702045696906,
+                "norm_ref": 147.8341201248512,
+                "mae": 0.021587405900250163,
+                "max": 0.11690547038595074,
+                "re": 0.04591431287962785,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            },
+            "mid_vs_fine": {
+              "num": "mid on coarse nodes",
+              "ref": "fine on coarse nodes",
+              "metrics": {
+                "n_points": 58081,
+                "norm_diff": 1.5831806300308164,
+                "norm_ref": 148.13600617949996,
+                "mae": 0.005219589486802642,
+                "max": 0.02366877581850372,
+                "re": 0.010687345169225357,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            },
+            "coarse_vs_fine": {
+              "num": "coarse",
+              "ref": "fine on coarse nodes",
+              "metrics": {
+                "n_points": 58081,
+                "norm_diff": 8.278761271970291,
+                "norm_ref": 148.13600617949996,
+                "mae": 0.026615738409738025,
+                "max": 0.14048093987495683,
+                "re": 0.05588621892464629,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            }
+          },
+          "observed_order": {
+            "l2_diff_coarser": 6.787702045696906,
+            "l2_diff_finer": 1.5831806300308164,
+            "refinement_ratio": 2.0,
+            "log2_diff_ratio": 2.1000973709891846,
+            "observed_order": 2.1000973709891846,
+            "status": "defined",
+            "reason": null
+          },
+          "coarse_to_fine_error": 0.05588621892464629
+        },
+        "p_scattered": {
+          "pairs": {
+            "coarse_vs_mid": {
+              "num": "coarse",
+              "ref": "mid on coarse nodes",
+              "metrics": {
+                "n_points": 58081,
+                "norm_diff": 9.680575506442757,
+                "norm_ref": 144.07889551237864,
+                "mae": 0.025099721666621472,
+                "max": 0.17569040862065355,
+                "re": 0.06718940669288406,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            },
+            "mid_vs_fine": {
+              "num": "mid on coarse nodes",
+              "ref": "fine on coarse nodes",
+              "metrics": {
+                "n_points": 58081,
+                "norm_diff": 2.384627354170532,
+                "norm_ref": 144.47477224348944,
+                "mae": 0.006276842434848858,
+                "max": 0.041352679116733015,
+                "re": 0.016505493084644694,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            },
+            "coarse_vs_fine": {
+              "num": "coarse",
+              "ref": "fine on coarse nodes",
+              "metrics": {
+                "n_points": 58081,
+                "norm_diff": 12.015943905407354,
+                "norm_ref": 144.47477224348944,
+                "mae": 0.03116964887270375,
+                "max": 0.21704308773738656,
+                "re": 0.08316984148039615,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            }
+          },
+          "observed_order": {
+            "l2_diff_coarser": 9.680575506442757,
+            "l2_diff_finer": 2.384627354170532,
+            "refinement_ratio": 2.0,
+            "log2_diff_ratio": 2.02132898388538,
+            "observed_order": 2.02132898388538,
+            "status": "defined",
+            "reason": null
+          },
+          "coarse_to_fine_error": 0.08316984148039615
+        }
+      },
+      "alignment": {
+        "mid_to_coarse": {
+          "ix_stride": 2,
+          "iy_stride": 2,
+          "coords_equal_max_dev_m": 0.0
+        },
+        "fine_to_coarse": {
+          "ix_stride": 4,
+          "iy_stride": 4,
+          "coords_equal_max_dev_m": 0.0
+        }
+      }
+    },
+    "high500": {
+      "series": [
+        "coarse",
+        "mid",
+        "fine"
+      ],
+      "target_nodes": {
+        "description": "coarse air nodes (direct node extraction, no interpolation)",
+        "n_x": 241,
+        "n_y": 241,
+        "x_min_m": -15.0,
+        "x_max_m": 15.0
+      },
+      "fields": {
+        "p_total": {
+          "pairs": {
+            "coarse_vs_mid": {
+              "num": "coarse",
+              "ref": "mid on coarse nodes",
+              "metrics": {
+                "n_points": 58081,
+                "norm_diff": 207.65505848232107,
+                "norm_ref": 152.03689120579352,
+                "mae": 0.6833291358558303,
+                "max": 8.498013890979072,
+                "re": 1.3658202087363396,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            },
+            "mid_vs_fine": {
+              "num": "mid on coarse nodes",
+              "ref": "fine on coarse nodes",
+              "metrics": {
+                "n_points": 58081,
+                "norm_diff": 203.70707086130702,
+                "norm_ref": 156.89670603884016,
+                "mae": 0.6735813443136114,
+                "max": 6.594232757057037,
+                "re": 1.2983514823496602,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            },
+            "coarse_vs_fine": {
+              "num": "coarse",
+              "ref": "fine on coarse nodes",
+              "metrics": {
+                "n_points": 58081,
+                "norm_diff": 219.81905077081097,
+                "norm_ref": 156.89670603884016,
+                "mae": 0.7290795455199595,
+                "max": 7.348063760999633,
+                "re": 1.401043121430441,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            }
+          },
+          "observed_order": {
+            "l2_diff_coarser": 207.65505848232107,
+            "l2_diff_finer": 203.70707086130702,
+            "refinement_ratio": 2.0,
+            "log2_diff_ratio": 0.027692957821900892,
+            "observed_order": 0.027692957821900895,
+            "status": "defined",
+            "reason": null
+          },
+          "coarse_to_fine_error": 1.401043121430441
+        },
+        "p_scattered": {
+          "pairs": {
+            "coarse_vs_mid": {
+              "num": "coarse",
+              "ref": "mid on coarse nodes",
+              "metrics": {
+                "n_points": 58081,
+                "norm_diff": 294.02458241986056,
+                "norm_ref": 200.0598511296064,
+                "mae": 0.8928587360484822,
+                "max": 8.477123614774179,
+                "re": 1.4696831011304725,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            },
+            "mid_vs_fine": {
+              "num": "mid on coarse nodes",
+              "ref": "fine on coarse nodes",
+              "metrics": {
+                "n_points": 58081,
+                "norm_diff": 276.45429495362606,
+                "norm_ref": 194.88523014389972,
+                "mae": 0.8608527618926873,
+                "max": 7.107442168683317,
+                "re": 1.4185492392086216,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            },
+            "coarse_vs_fine": {
+              "num": "coarse",
+              "ref": "fine on coarse nodes",
+              "metrics": {
+                "n_points": 58081,
+                "norm_diff": 301.7614021060744,
+                "norm_ref": 194.88523014389972,
+                "mae": 0.9361108733337358,
+                "max": 7.764477797537014,
+                "re": 1.5484057046460589,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            }
+          },
+          "observed_order": {
+            "l2_diff_coarser": 294.02458241986056,
+            "l2_diff_finer": 276.45429495362606,
+            "refinement_ratio": 2.0,
+            "log2_diff_ratio": 0.08889579368644747,
+            "observed_order": 0.08889579368644747,
+            "status": "defined",
+            "reason": null
+          },
+          "coarse_to_fine_error": 1.5484057046460589
+        }
+      },
+      "alignment": {
+        "mid_to_coarse": {
+          "ix_stride": 2,
+          "iy_stride": 2,
+          "coords_equal_max_dev_m": 0.0
+        },
+        "fine_to_coarse": {
+          "ix_stride": 4,
+          "iy_stride": 4,
+          "coords_equal_max_dev_m": 0.0
+        }
+      }
+    }
+  },
+  "time": {
+    "low100": {
+      "series": [
+        "mid",
+        "mid_dt2",
+        "mid_dt4"
+      ],
+      "target_nodes": {
+        "description": "fixed mid air nodes (no interpolation, no phase shift)",
+        "n_x": 481,
+        "n_y": 481,
+        "x_min_m": -15.0,
+        "x_max_m": 15.0
+      },
+      "coords_equal": {
+        "mid_dt2": {
+          "x_max_dev_m": 0.0,
+          "y_max_dev_m": 0.0
+        },
+        "mid_dt4": {
+          "x_max_dev_m": 0.0,
+          "y_max_dev_m": 0.0
+        }
+      },
+      "fields": {
+        "p_total": {
+          "pairs": {
+            "mid_vs_mid_dt2": {
+              "num": "mid (dt)",
+              "ref": "mid_dt2 (dt/2)",
+              "metrics": {
+                "n_points": 231361,
+                "norm_diff": 19.0030682548055,
+                "norm_ref": 314.5098238104061,
+                "mae": 0.0340280103124896,
+                "max": 0.10850678959186388,
+                "re": 0.0604212231738141,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            },
+            "mid_dt2_vs_mid_dt4": {
+              "num": "mid_dt2 (dt/2)",
+              "ref": "mid_dt4 (dt/4)",
+              "metrics": {
+                "n_points": 231361,
+                "norm_diff": 10.434993143855154,
+                "norm_ref": 324.92508013591083,
+                "mae": 0.018697098845325163,
+                "max": 0.05920693261540655,
+                "re": 0.032115074464213,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            },
+            "mid_vs_mid_dt4": {
+              "num": "mid (dt)",
+              "ref": "mid_dt4 (dt/4)",
+              "metrics": {
+                "n_points": 231361,
+                "norm_diff": 29.43743340060331,
+                "norm_ref": 324.92508013591083,
+                "mae": 0.052724363010118964,
+                "max": 0.16771372220727043,
+                "re": 0.09059760295601102,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            }
+          },
+          "observed_order": {
+            "l2_diff_coarser": 19.0030682548055,
+            "l2_diff_finer": 10.434993143855154,
+            "refinement_ratio": 2.0,
+            "log2_diff_ratio": 0.8648027237796236,
+            "observed_order": 0.8648027237796236,
+            "status": "defined",
+            "reason": null
+          }
+        },
+        "p_scattered": {
+          "pairs": {
+            "mid_vs_mid_dt2": {
+              "num": "mid (dt)",
+              "ref": "mid_dt2 (dt/2)",
+              "metrics": {
+                "n_points": 231361,
+                "norm_diff": 18.33583014663961,
+                "norm_ref": 306.055594423878,
+                "mae": 0.02637058293620437,
+                "max": 0.13862235129776446,
+                "re": 0.05991012901154495,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            },
+            "mid_dt2_vs_mid_dt4": {
+              "num": "mid_dt2 (dt/2)",
+              "ref": "mid_dt4 (dt/4)",
+              "metrics": {
+                "n_points": 231361,
+                "norm_diff": 10.053390912226083,
+                "norm_ref": 316.0915781710099,
+                "mae": 0.014475514813025937,
+                "max": 0.07555877091919205,
+                "re": 0.03180531088616053,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            },
+            "mid_vs_mid_dt4": {
+              "num": "mid (dt)",
+              "ref": "mid_dt4 (dt/4)",
+              "metrics": {
+                "n_points": 231361,
+                "norm_diff": 28.388640897178178,
+                "norm_ref": 316.0915781710099,
+                "mae": 0.04084525721301392,
+                "max": 0.21409730460752696,
+                "re": 0.08981144344763127,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            }
+          },
+          "observed_order": {
+            "l2_diff_coarser": 18.33583014663961,
+            "l2_diff_finer": 10.053390912226083,
+            "refinement_ratio": 2.0,
+            "log2_diff_ratio": 0.8669833942394817,
+            "observed_order": 0.8669833942394816,
+            "status": "defined",
+            "reason": null
+          }
+        }
+      }
+    },
+    "high500": {
+      "series": [
+        "mid",
+        "mid_dt2",
+        "mid_dt4"
+      ],
+      "target_nodes": {
+        "description": "fixed mid air nodes (no interpolation, no phase shift)",
+        "n_x": 481,
+        "n_y": 481,
+        "x_min_m": -15.0,
+        "x_max_m": 15.0
+      },
+      "coords_equal": {
+        "mid_dt2": {
+          "x_max_dev_m": 0.0,
+          "y_max_dev_m": 0.0
+        },
+        "mid_dt4": {
+          "x_max_dev_m": 0.0,
+          "y_max_dev_m": 0.0
+        }
+      },
+      "fields": {
+        "p_total": {
+          "pairs": {
+            "mid_vs_mid_dt2": {
+              "num": "mid (dt)",
+              "ref": "mid_dt2 (dt/2)",
+              "metrics": {
+                "n_points": 231361,
+                "norm_diff": 19.906250355926712,
+                "norm_ref": 323.0842322103349,
+                "mae": 0.03505793763870118,
+                "max": 0.3139418091124675,
+                "re": 0.06161319052849137,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            },
+            "mid_dt2_vs_mid_dt4": {
+              "num": "mid_dt2 (dt/2)",
+              "ref": "mid_dt4 (dt/4)",
+              "metrics": {
+                "n_points": 231361,
+                "norm_diff": 10.820545639833398,
+                "norm_ref": 333.6591864930194,
+                "mae": 0.019058272518035876,
+                "max": 0.1751551000730327,
+                "re": 0.032429934729400235,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            },
+            "mid_vs_mid_dt4": {
+              "num": "mid (dt)",
+              "ref": "mid_dt4 (dt/4)",
+              "metrics": {
+                "n_points": 231361,
+                "norm_diff": 30.701343398217425,
+                "norm_ref": 333.6591864930194,
+                "mae": 0.05407881968341685,
+                "max": 0.4890969091855002,
+                "re": 0.09201408095760534,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            }
+          },
+          "observed_order": {
+            "l2_diff_coarser": 19.906250355926712,
+            "l2_diff_finer": 10.820545639833398,
+            "refinement_ratio": 2.0,
+            "log2_diff_ratio": 0.8794482424255193,
+            "observed_order": 0.8794482424255193,
+            "status": "defined",
+            "reason": null
+          }
+        },
+        "p_scattered": {
+          "pairs": {
+            "mid_vs_mid_dt2": {
+              "num": "mid (dt)",
+              "ref": "mid_dt2 (dt/2)",
+              "metrics": {
+                "n_points": 231361,
+                "norm_diff": 26.585898775924917,
+                "norm_ref": 425.7127435395592,
+                "mae": 0.043728528639249906,
+                "max": 0.33284351409476454,
+                "re": 0.062450324025722835,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            },
+            "mid_dt2_vs_mid_dt4": {
+              "num": "mid_dt2 (dt/2)",
+              "ref": "mid_dt4 (dt/4)",
+              "metrics": {
+                "n_points": 231361,
+                "norm_diff": 14.299092495928958,
+                "norm_ref": 439.8138416097763,
+                "mae": 0.023524712156448503,
+                "max": 0.18451170874206646,
+                "re": 0.032511692773452526,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            },
+            "mid_vs_mid_dt4": {
+              "num": "mid (dt)",
+              "ref": "mid_dt4 (dt/4)",
+              "metrics": {
+                "n_points": 231361,
+                "norm_diff": 40.857332344767,
+                "norm_ref": 439.8138416097763,
+                "mae": 0.06720284874645775,
+                "max": 0.5170428461974916,
+                "re": 0.09289687699510277,
+                "re_status": "defined",
+                "re_reason": null
+              }
+            }
+          },
+          "observed_order": {
+            "l2_diff_coarser": 26.585898775924917,
+            "l2_diff_finer": 14.299092495928958,
+            "refinement_ratio": 2.0,
+            "log2_diff_ratio": 0.8947376516600242,
+            "observed_order": 0.8947376516600241,
+            "status": "defined",
+            "reason": null
+          }
+        }
+      }
+    }
+  },
+  "phasor_supplementary": {
+    "status": "omitted",
+    "reason": "all runs were saved without --save-phasor; supplementary phasor comparison skipped"
+  },
+  "run_diagnostics": {
+    "low100": {
+      "coarse": {
+        "status": "ok",
+        "n_steps_done": 13860,
+        "broke_nan": false,
+        "diverged": false,
+        "max_abs_p_seen": 1.7566763629516706,
+        "rms_p_air_final": 0.6115804361717376,
+        "steady_ok": true,
+        "rel_growth": 0.0030315544829827823,
+        "ppw": 27.2,
+        "under_resolved_ppw": false,
+        "phasor_saved": false,
+        "note": "diagnostic only; not convergence evidence"
+      },
+      "mid": {
+        "status": "ok",
+        "n_steps_done": 27720,
+        "broke_nan": false,
+        "diverged": false,
+        "max_abs_p_seen": 1.7635984051174616,
+        "rms_p_air_final": 0.6144130435464157,
+        "steady_ok": true,
+        "rel_growth": 0.0024610602237799635,
+        "ppw": 54.4,
+        "under_resolved_ppw": false,
+        "phasor_saved": false,
+        "note": "diagnostic only; not convergence evidence"
+      },
+      "fine": {
+        "status": "ok",
+        "n_steps_done": 55440,
+        "broke_nan": false,
+        "diverged": false,
+        "max_abs_p_seen": 1.7717377054163113,
+        "rms_p_air_final": 0.6161826107501716,
+        "steady_ok": true,
+        "rel_growth": 0.0023206051767070274,
+        "ppw": 108.8,
+        "under_resolved_ppw": false,
+        "phasor_saved": false,
+        "note": "diagnostic only; not convergence evidence"
+      },
+      "mid_dt2": {
+        "status": "ok",
+        "n_steps_done": 55440,
+        "broke_nan": false,
+        "diverged": false,
+        "max_abs_p_seen": 1.8737907058684744,
+        "rms_p_air_final": 0.6538665775684118,
+        "steady_ok": true,
+        "rel_growth": 0.0026165961660150187,
+        "ppw": 54.4,
+        "under_resolved_ppw": false,
+        "phasor_saved": false,
+        "note": "diagnostic only; not convergence evidence"
+      },
+      "mid_dt4": {
+        "status": "ok",
+        "n_steps_done": 110880,
+        "broke_nan": false,
+        "diverged": false,
+        "max_abs_p_seen": 1.9339417574471525,
+        "rms_p_air_final": 0.6755199171224758,
+        "steady_ok": true,
+        "rel_growth": 0.002700667366200154,
+        "ppw": 54.4,
+        "under_resolved_ppw": false,
+        "phasor_saved": false,
+        "note": "diagnostic only; not convergence evidence"
+      }
+    },
+    "high500": {
+      "coarse": {
+        "status": "ok",
+        "n_steps_done": 13629,
+        "broke_nan": false,
+        "diverged": false,
+        "max_abs_p_seen": 5.847807077772926,
+        "rms_p_air_final": 0.6375408871273704,
+        "steady_ok": true,
+        "rel_growth": 0.00038038558641608503,
+        "ppw": 5.44,
+        "under_resolved_ppw": true,
+        "phasor_saved": false,
+        "note": "diagnostic only; not convergence evidence"
+      },
+      "mid": {
+        "status": "ok",
+        "n_steps_done": 27258,
+        "broke_nan": false,
+        "diverged": false,
+        "max_abs_p_seen": 6.0696181403231355,
+        "rms_p_air_final": 0.6317716063699639,
+        "steady_ok": true,
+        "rel_growth": 3.198136222045135e-05,
+        "ppw": 10.88,
+        "under_resolved_ppw": false,
+        "phasor_saved": false,
+        "note": "diagnostic only; not convergence evidence"
+      },
+      "fine": {
+        "status": "ok",
+        "n_steps_done": 54516,
+        "broke_nan": false,
+        "diverged": false,
+        "max_abs_p_seen": 6.657144322398657,
+        "rms_p_air_final": 0.6536851112265848,
+        "steady_ok": true,
+        "rel_growth": 6.838615520091376e-05,
+        "ppw": 21.76,
+        "under_resolved_ppw": false,
+        "phasor_saved": false,
+        "note": "diagnostic only; not convergence evidence"
+      },
+      "mid_dt2": {
+        "status": "ok",
+        "n_steps_done": 54516,
+        "broke_nan": false,
+        "diverged": false,
+        "max_abs_p_seen": 6.451418134896154,
+        "rms_p_air_final": 0.6716927904580767,
+        "steady_ok": true,
+        "rel_growth": 3.322848665504818e-05,
+        "ppw": 10.88,
+        "under_resolved_ppw": false,
+        "phasor_saved": false,
+        "note": "diagnostic only; not convergence evidence"
+      },
+      "mid_dt4": {
+        "status": "ok",
+        "n_steps_done": 109032,
+        "broke_nan": false,
+        "diverged": false,
+        "max_abs_p_seen": 6.660111835838661,
+        "rms_p_air_final": 0.6936781423971297,
+        "steady_ok": true,
+        "rel_growth": 3.31021551557609e-05,
+        "ppw": 10.88,
+        "under_resolved_ppw": false,
+        "phasor_saved": false,
+        "note": "diagnostic only; not convergence evidence"
+      }
+    }
+  },
+  "observations": [
+    "完整 10/10 次真实求解均 status=ok，协议身份、代码/配置哈希、coords 嵌套与终时相位均已核验后才聚合。",
+    "细网格（fine）只是数值参考，不是解析真解；本实验只比较同一物理终时快照。",
+    "稳态/有限值/blow-up 诊断按原样记录，不作为压力收敛的证据；single final-time snapshot at >=4 air crossings 不等同稳态测量。",
+    "observed order 由同节点绝对 L2 差范数之比计算（log₂(‖p_coarse−p_mid‖₂/‖p_mid−p_fine‖₂)/log₂(2)），不使用 RE 之比；仅对差范数严格单调下降且分母非零报告，非单调/零分母显式 undefined。",
+    "未使用插值或任意相位平移；空间抽取为整数节点索引，时间三点固定同一 mid 网格。",
+    "不设收敛通过阈值：不因出现正收敛或负收敛改变协议或挑选参数。",
+    "ppw<10 的欠分辨诊断点仍保留在比较中，不剔除：high500/coarse"
+  ],
+  "interpretation": "convergence metrics computed from real p_total final-time snapshots; fine grid is a numerical reference only; per-pair metrics and undefined observed orders are reported as computed, no pass/fail threshold"
+}

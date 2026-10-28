@@ -1,0 +1,74 @@
+{
+  "task": "R3.16 pressure reference closure self-acceptance",
+  "protocol": "R2-PRESSURE-REFERENCE-CLOSURE-03",
+  "version": "v1-final-bounded-nontrivial",
+  "created_local": "2026-10-23T12:28:57+08:00",
+  "r3_16_answers": {
+    "units": "Stored dataset scale; paper states SI units. No independent unit conversion or rescaling applied.",
+    "pressure_zero": "Historical generator gauge/reference node/zero-mean rule not identified. Public data distribution is byte-identical to canonical array. A data-compatible outer-wall candidate (node p~1e-3) is NOT called a common zero anchor.",
+    "original_score_meaning": "Original p RE/MAE/max remain on stored labels; centered p is a separate operator with different denominator; no test-set recentering of original labels.",
+    "unified_gauge": "Exact eps=0 integral-zero pressure obtained via PETSc global Lagrange multiplier for geom17/46/96 h=.04. The Newton constraint RHS is -bscale*C (unknown delta), followed by exact pressure-constant projection; corrected final integral constraints are ~1e-17. Point gauge is an exact constant shift; free Galerkin residual ~2e-16; exact-vs-eps centered RE ~1.0e-8.",
+    "original_data_unchanged": "HeatTransferData.npy SHA256 e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26; no writes to original data/weights/solver/registry.",
+    "extrapolation": "Three representative geometries and frozen 30 predictions only; no claim of historical gauge, all-135 exact gauge, or manuscript-wide inference."
+  },
+  "status_grades": {
+    "historical_reference_identified": false,
+    "compatible_only": true,
+    "current_gauge_invariant_evaluation_closed": true,
+    "exact_gauge_comparison_completed": true,
+    "unavailable_provenance": true,
+    "original_135_forensics_completed": true,
+    "public_dataset_provenance_matched": true,
+    "model_sensitivity_exact_gauge_completed": true,
+    "manufactured_solution_nonlinear_path_completed": true,
+    "constraint_rhs_bug_fixed": true,
+    "old_results_pressure_constant_only": true,
+    "manufactured_trig_compatibility_only": true,
+    "manufactured_polynomial_exact_compatibility_completed": true,
+    "nontrivial_initial_multistep_convergence_completed": true
+  },
+  "evidence": {
+    "protocol": "protocol_snapshot.json",
+    "source_evidence_index": "source_evidence_index.json",
+    "all135_pressure_signatures": "all135_pressure_signatures.json",
+    "exact_gauge_comparison": "exact_gauge_comparison.json",
+    "model_metric_sensitivity": "model_metric_sensitivity.json",
+    "job_ledger": "job_ledger.json",
+    "pilot": "exact/pilot_geom17_h004.json",
+    "exact_case_sha256": {
+      "comparison_geom17_h004.json": "9687f1c68f4fe9184af5bde471a976c443dccd850f0c05864f81df70647355e7",
+      "comparison_geom46_h004.json": "a3206e79a36704c32a891147634877eb5061a63a0de31b3de26e74be1cb759c3",
+      "comparison_geom96_h004.json": "fa36b8dec26f268d7dd00c080b62c8926e8b4c31cab27383156ddfeb9246b916",
+      "fields_geom17_h004.npz": "23dd38cc891b2cb9809af0645df4838e0ef548452a88d4a4a6579195c92242d0",
+      "fields_geom46_h004.npz": "b0606dc86921d1f0d398dce1fec919de232117caffad3ed78ae11d5ba4017744",
+      "fields_geom96_h004.npz": "56ddebcbdc806a43e1c65e22149f59d626d199d031a2dcd9e61418d829c9ef7d",
+      "pilot_geom17_h004.json": "663a1d09e0bd8db74e98ae1c729b203e8cf5388fae505b9941de35acff09db97"
+    },
+    "manufactured_solution": "manufactured_solution.json",
+    "old_uncorrected_snapshot": "audit_snapshots/uncorrected_production_51065/",
+    "corrected_constraint": "corrected_constraint_comparison.json",
+    "manufactured_counterexample": "manufactured_solution.json#counterexample",
+    "manufactured_polynomial_solution": "manufactured_polynomial_solution.json",
+    "manufactured_nontrivial_initial_solution": "manufactured_nontrivial_initial_solution.json"
+  },
+  "checks_actually_run": [
+    "135x5000x6 audit; 492 common outer coords; tau and 1e-10/1e-8; train100/val15/test20 candidate freeze",
+    "public dataset URL SHA matched canonical e9bb20c5...",
+    "PIPN §4.2 no pressure BC; separate from §4.1.2 manufactured pressure BC",
+    "constraint RHS corrected: bottom augmented RHS -bscale*C; exact pressure constant projection; final integral and free residual checked",
+    "corrected pilot geom17 h=.04: integral -2.78e-17, free residual 2.0e-16, support 5000/5000",
+    "corrected full 46/17/96 h=.04: all integral constraints -2.8e-17/-2.8e-17/-8.3e-17; free residual 1.92-1.97e-16; exact-vs-eps centered RE ~1.04e-8",
+    "old-vs-new: u/v/T max diff 0; p integral difference pure constant; p_point diff ~1e-16; model centered RE max diff 3.47e-17; raw RE max diff 1.76e-9",
+    "30 frozen predictions recomputed under corrected exact integral gauge; no training/GPU rerun",
+    "strict polynomial MMS on same production path: free 1.24e-15/1.31e-15/1.22e-15; free relative 4.06e-17/4.26e-17/3.99e-17; per-Dirichlet DOF BC max error 0.0 (224/336/448 velocity DOFs, 112/168/224 T DOFs); boundary flux 1e-15; q=1 continuity 1e-15; integral constraints ~1e-17; linear residual ~1e-15; block L2 1e-13",
+    "polynomial MMS p+1/relax=0.6 counterexample: initial integral 3.469806640162439, final 1.39e-17, free 1.68e-15, linear 4.07e-15",
+    "old trigonometric MMS retained as compatibility diagnostic only; default weak_residual without source marked not applicable",
+    "nontrivial initial test h=.14: deterministic interior u/T perturbation=0.05, p+1, relax=0.6; 31 Newton steps, initial free 1.982826, final free 9.410e-13 (<1e-12), relative 3.07e-14, final integral 1.39e-17, BC DOF error 0, flux -5.55e-16, continuity 3.62e-16, field errors ~1e-13; actual updates nonzero"
+  ],
+  "known_gaps": [
+    "Historical generator/gauge version, reference node, zero-mean rule and output rescaling remain unavailable.",
+    "Only three representative geometries, not all 135, have exact-gauge FEM comparison.",
+    "R3.16 must not be marked pass before Codex independent review."
+  ],
+  "module_status": "DSH implementation/self-check/real exact-gauge evidence delivered; Codex final review NOT done."
+}

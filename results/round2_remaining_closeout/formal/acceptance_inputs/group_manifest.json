@@ -1,0 +1,3623 @@
+{
+  "task": "R2-REMAINING-FINALIZE-03",
+  "created_local": "2026-10-27T09:45:09+08:00",
+  "groups": {
+    "main_ablation_maininit_6_nonfull/fen_nocgf": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_ablation_maininit/fen_nocgf/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.04485075873017141
+          },
+          "model_params": 833224,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf = 去 CGF（门控+compress），局部特征直接 concat global [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "d1e6ae43bd4227206a391139b508f2011b3919671c559054f4efe65c0028572e",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_maininit/fen_nocgf/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 350,
+            "score": 0.04522505959928839
+          },
+          "model_params": 833224,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf = 去 CGF（门控+compress），局部特征直接 concat global [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "573f9e0adbab8bf765ab473de6f6cbfcd56702209e4f8311d9fa443705690725",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_maininit/fen_nocgf/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 450,
+            "score": 0.04544453636718454
+          },
+          "model_params": 833224,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf = 去 CGF（门控+compress），局部特征直接 concat global [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "d57f8ee50ec9bcf8fe357f0e79c1446740f4847c0f5f0299ab161382fe754465",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_nocgf/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 450,
+            "score": 0.045015279884216476
+          },
+          "model_params": 833224,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf = 去 CGF（门控+compress），局部特征直接 concat global [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "c8b987ef4b48ac3ed102e1022953f88e50ccd45e4f7e3bf2aad70c5c2bf8b082",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_nocgf/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "423e81e06ef11c3a07d2e8e24f15320999812eca4702c1f44a56ac2447c20cda",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_nocgf/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.04532982374696252
+          },
+          "model_params": 833224,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf = 去 CGF（门控+compress），局部特征直接 concat global [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "3b1b30fba77948b869ddcbc38ec30473a47e3694e2b6a2505a5254be4b38f198",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_nocgf/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "85fe878799bb1840f5c8e3d13f5fac7b0cc2ebb3a8ddb3d88143df58fb6fa899",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "main_ablation_maininit_6_nonfull/fen_nocgf_pm": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_ablation_maininit/fen_nocgf_pm/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.04571217319330373
+          },
+          "model_params": 1144209,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf_pm = MLFE-only 参数匹配（scaling=1.175，1,144,209 参数 vs Full 1,149,512） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "fa78fff812138589de78d144608ff531a6ed93274494939a722f1906b3f84ba5",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_maininit/fen_nocgf_pm/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.04300362006394595
+          },
+          "model_params": 1144209,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf_pm = MLFE-only 参数匹配（scaling=1.175，1,144,209 参数 vs Full 1,149,512） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "8df0122015fd6366d1e9d3d7c61ae5ec6dbf24f73e34a866db52a7429900d1cc",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_maininit/fen_nocgf_pm/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.045223412191788125
+          },
+          "model_params": 1144209,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf_pm = MLFE-only 参数匹配（scaling=1.175，1,144,209 参数 vs Full 1,149,512） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "940b006a0e7601132abdda3cc126980a9cbf7f32fb87d0a72470e2b1c7508ad5",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_nocgf_pm/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 400,
+            "score": 0.046923167344534375
+          },
+          "model_params": 1144209,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf_pm = MLFE-only 参数匹配（scaling=1.175，1,144,209 参数 vs Full 1,149,512） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "a9b9df4b508101b184cdb29d8f5a36640cc08c88cd547d6c02a8d957c9a123c6",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_nocgf_pm/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "157b5993163e5d27e82389d81ee57484559653af5177e465256dbf43b9ee0e6c",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_nocgf_pm/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 400,
+            "score": 0.04498972933906973
+          },
+          "model_params": 1144209,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf_pm = MLFE-only 参数匹配（scaling=1.175，1,144,209 参数 vs Full 1,149,512） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "ea9b11e8f97dbede3b44c8be8d8961cdf00f647936bbb34eaf551102faba5020",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_nocgf_pm/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "50466aa2b1da673fc70ff6051e7228364bd7d19407bdb6596fd434b0c48189a9",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "main_ablation_maininit_6_nonfull/fen_single128": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_ablation_maininit/fen_single128/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.0454914242648792
+          },
+          "model_params": 421960,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_single128 = CGF-only 单尺度 128x3（历史 CGF† 421,960 参数移植） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "75683cf73014e3e53fbf70c5b8cdfbaecdae21028b14db42e7f77965cb2ab3c0",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_maininit/fen_single128/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.044358663589139466
+          },
+          "model_params": 421960,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_single128 = CGF-only 单尺度 128x3（历史 CGF† 421,960 参数移植） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "230da2568eec69257a3895b992245b54d57454fbc9963173fcd25716b76b4786",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_maininit/fen_single128/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.0468068671795188
+          },
+          "model_params": 421960,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_single128 = CGF-only 单尺度 128x3（历史 CGF† 421,960 参数移植） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "f1af65404dc53082bfaf72721af6671e94cde2d809a5872d5645c5bbfd2a4baa",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_single128/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.04965749214616466
+          },
+          "model_params": 421960,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_single128 = CGF-only 单尺度 128x3（历史 CGF† 421,960 参数移植） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "f579a8490cefd14aaf894f5ce646db8111a13c187fd62a79b6b964dd0cf9c64d",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_single128/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "822ba422df1518273b6f3688d0b51087d362f76e7028c2b3afdf2a161fa92439",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_single128/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 300,
+            "score": 0.04566750139858042
+          },
+          "model_params": 421960,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_single128 = CGF-only 单尺度 128x3（历史 CGF† 421,960 参数移植） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "665dbe405f89ada48174a88e1e192cd106f670511e8ed6135d3d1f1d9699e1dc",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_single128/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "54b50a1d105c7e5f05fa104f7a94397790355a6b7999528d34b9a1fb8f11bdd4",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "main_ablation_maininit_6_nonfull/fen_cgfonly_pm": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_ablation_maininit/fen_cgfonly_pm/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 400,
+            "score": 0.04545630989904658
+          },
+          "model_params": 1152970,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_cgfonly_pm = CGF-only 参数匹配（scaling=1.660，1,152,970 参数 vs Full 1,149,512） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "ad58ef04c8a882b651dfb2fb0b0a8872d0127bd1fdd25d1cf09a87170cdaa27e",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_maininit/fen_cgfonly_pm/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 325,
+            "score": 0.04712818398657888
+          },
+          "model_params": 1152970,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_cgfonly_pm = CGF-only 参数匹配（scaling=1.660，1,152,970 参数 vs Full 1,149,512） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "27def7bfd6b3dd40bb32a02b08dbd5985d75437904dcc3925f30daa25cb459e0",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_maininit/fen_cgfonly_pm/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 450,
+            "score": 0.04589376744329734
+          },
+          "model_params": 1152970,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_cgfonly_pm = CGF-only 参数匹配（scaling=1.660，1,152,970 参数 vs Full 1,149,512） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "14e1e93118ce1833f89203b14dd4aa99d1089f5391c817b312048b6e6a5fda31",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_cgfonly_pm/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 425,
+            "score": 0.04641573844535203
+          },
+          "model_params": 1152970,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_cgfonly_pm = CGF-only 参数匹配（scaling=1.660，1,152,970 参数 vs Full 1,149,512） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "eeb0234c9392f8e161f3197aa26eecb52cfd14f4b9972b5e6196ffe979c5a813",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_cgfonly_pm/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "9a62c3ae52f6d76898966daa62828dfdc395e07b17f9a38fcac066fa59d7ca8f",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_cgfonly_pm/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.04628062752993999
+          },
+          "model_params": 1152970,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_cgfonly_pm = CGF-only 参数匹配（scaling=1.660，1,152,970 参数 vs Full 1,149,512） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "50e8154ee37408e60bc72f230461ee6a0b4603de8d2d6c59b5a6c7e3c63c9cff",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_cgfonly_pm/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "ae9b38873757d6422b02806703c51081d652d52bc442dd4b2ae74e723550f18f",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "main_ablation_maininit_6_nonfull/fen_noshortcut": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_ablation_maininit/fen_noshortcut/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.045171496411276706
+          },
+          "model_params": 1146692,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_noshortcut = 去 head residual shortcut [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "6afff041f89d218f31cd3852f64fecc5275eabca7bca06b72bbcb7b7b1172280",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_maininit/fen_noshortcut/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 400,
+            "score": 0.04470711228694106
+          },
+          "model_params": 1146692,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_noshortcut = 去 head residual shortcut [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "dd05eafb24ced503f0cce40743c4bd424ae18aade85664aaf8393dba4287c885",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_maininit/fen_noshortcut/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 450,
+            "score": 0.04617900060525425
+          },
+          "model_params": 1146692,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_noshortcut = 去 head residual shortcut [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "2430ada447a2023b51fbaadd10bbcac63eab64a0068d634b4e7f9792fcafb557",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_noshortcut/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 425,
+            "score": 0.045913209762455526
+          },
+          "model_params": 1146692,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_noshortcut = 去 head residual shortcut [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "fbafbc2a7a59f349541a417f1aa6155440aae5408b26523a75586688c88e18c8",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_noshortcut/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "c444623682358ca5e9e8ffb0be1af4fced420c8ef88709c86756d4cf090592e2",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_noshortcut/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 275,
+            "score": 0.04447045719578491
+          },
+          "model_params": 1146692,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_noshortcut = 去 head residual shortcut [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "14ea8330707f82478a2d0ec0b3a73e448519eafca497599c7b363e9772d62537",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_noshortcut/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "da29a24465fb2c6eaad73ac3b9be2034ef21aa8c24a46c8b4c38730e4a45da91",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "main_ablation_maininit_6_nonfull/fen_poolmax": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_ablation_maininit/fen_poolmax/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.04615757802894843
+          },
+          "model_params": 1018440,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_poolmax = 三统计池化 -> 仅 max（去 avg/var 通道） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "e9ed4fff65a6cfb712b2d5ed4534c56e353082c4af848425feb62eecf7c84a93",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_maininit/fen_poolmax/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.055313159617155765
+          },
+          "model_params": 1018440,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_poolmax = 三统计池化 -> 仅 max（去 avg/var 通道） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "179a6c345e69d156ae4f49cad535ed4267194989570f06b0a2bdd467101c2a5c",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_maininit/fen_poolmax/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.054672497245067946
+          },
+          "model_params": 1018440,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_poolmax = 三统计池化 -> 仅 max（去 avg/var 通道） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "4753ff2f8ec8d20bfe0edee867f61187faa52656fe9301a4d1220af11e574455",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_poolmax/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 425,
+            "score": 0.05623630431571909
+          },
+          "model_params": 1018440,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_poolmax = 三统计池化 -> 仅 max（去 avg/var 通道） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "f386f2e1a642e42e6c96a54b25b1c048785c2470e7c227814d8b632806ce952c",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_poolmax/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "e0a65de60317c1fed1ae018f6fc60a7c92f953d184e98759d3ecf91c4f2edf7d",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_poolmax/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.04482925381442454
+          },
+          "model_params": 1018440,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_poolmax = 三统计池化 -> 仅 max（去 avg/var 通道） [pool_context=symmetric] [init_mode=main_default]",
+            "init_mode": "main_default",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "dc9df61551d5a86f707f520a3ab22902af6f09db2289d50cffe937a23f1b379a",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit/fen_poolmax/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "b9641a4550209b2fe8366540529d2448adfb5229295ab89f6b21cea46db658d9",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "kaiming_si_7_all/fen_full": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_ablation_symmetric/fen_full/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.05804080501782224
+          },
+          "model_params": 1149512,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_full = FeatExtractNet 结构（tri+CGF+shortcut，参数量对照 1,149,512） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "5dadc55db353e4008d2fd42792f9be18d5182576b2367a41f9e14c82b6331e37",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_symmetric/fen_full/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 350,
+            "score": 0.05846270282225158
+          },
+          "model_params": 1149512,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_full = FeatExtractNet 结构（tri+CGF+shortcut，参数量对照 1,149,512） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "c6a301f8c33ea75ef164a9a12d285039d7403df7d66314916add50b392ddc965",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_symmetric/fen_full/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.04856925522192321
+          },
+          "model_params": 1149512,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_full = FeatExtractNet 结构（tri+CGF+shortcut，参数量对照 1,149,512） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "f10da44639f4eb544381a28c08b265081a25cc8232038cc9c7db0809b3b08f6c",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_full/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 450,
+            "score": 0.05737499653500612
+          },
+          "model_params": 1149512,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_full = FeatExtractNet 结构（tri+CGF+shortcut，参数量对照 1,149,512） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "e7e251acd1e18fe6560b5b25148c05e599985952299bf90cd8025589b4c3bddb",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_full/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "26c26a319070c11c7e312bbd08e50dd61ee64bf54b158ece986e6fe715565238",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_full/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 150,
+            "score": 0.06075136976664087
+          },
+          "model_params": 1149512,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_full = FeatExtractNet 结构（tri+CGF+shortcut，参数量对照 1,149,512） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "c361411352432c650e03c265a8a690a7566ac80d88d4946da8728c07f3821361",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_full/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "bdb2ab930ac983fbbc6ceb14c3cbaa6b30460dacb6c5aadb420252b30677e4f5",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "kaiming_si_7_all/fen_nocgf": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_ablation_symmetric/fen_nocgf/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.050016416109253885
+          },
+          "model_params": 833224,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf = 去 CGF（门控+compress），局部特征直接 concat global [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "83f996d9dcc08c7364c46b03637f199414c416ffe3d2fe7917f2ab74adb9d64b",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_symmetric/fen_nocgf/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 350,
+            "score": 0.05707192651620759
+          },
+          "model_params": 833224,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf = 去 CGF（门控+compress），局部特征直接 concat global [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "727ff8c334ad7a15e3acfd995e13b8892ce21b67088bf6bbbe8dd26e250c8369",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_symmetric/fen_nocgf/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.04824647162254502
+          },
+          "model_params": 833224,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf = 去 CGF（门控+compress），局部特征直接 concat global [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "4874e127d0a7448e0a8898a00c0af1f760f32d8384eecfd3dd109d679c1fdc6c",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_nocgf/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 375,
+            "score": 0.04847196228332279
+          },
+          "model_params": 833224,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf = 去 CGF（门控+compress），局部特征直接 concat global [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "c5fd46dc1c9c3b3158f84ef41eeed52e1e685a11aeef4dacfaac060cf48368ef",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_nocgf/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "06170c97c5c0bddfec73a573b934ed31b3990a11a0e38e80fbc2bef906ee1e65",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_nocgf/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.05127239695728251
+          },
+          "model_params": 833224,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf = 去 CGF（门控+compress），局部特征直接 concat global [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "3cdfb388ece54b633143cfb1533f92a8988cb8fb0ce52bf4f28ea2ed43208b6e",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_nocgf/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "89c3063795026facdb680a0c9fba8f16b59f1a22b755d68d3bf45a7c3cf490c6",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "kaiming_si_7_all/fen_poolmax": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_ablation_symmetric/fen_poolmax/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 225,
+            "score": 0.06460598470226483
+          },
+          "model_params": 1018440,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_poolmax = 三统计池化 -> 仅 max（去 avg/var 通道） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "6d92959a992b60725db0771e711bc20d5cd4cf216eb30dc909a541ad652a7d50",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_symmetric/fen_poolmax/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.05438583102845075
+          },
+          "model_params": 1018440,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_poolmax = 三统计池化 -> 仅 max（去 avg/var 通道） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "b192f39dbce626129587d70803e14acc7a4607e45dfb4764128c90d923d56a06",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_symmetric/fen_poolmax/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.0583607599984764
+          },
+          "model_params": 1018440,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_poolmax = 三统计池化 -> 仅 max（去 avg/var 通道） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "710301d755490890799cd4771fea524b86a3bfb88c2c4ab0aad19f5b9dfe6609",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_poolmax/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 450,
+            "score": 0.05942095351141348
+          },
+          "model_params": 1018440,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_poolmax = 三统计池化 -> 仅 max（去 avg/var 通道） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "fa15ac9b90f6079f9ac44172035a796117eb2442f1385c7c2a01da39c6a319f9",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_poolmax/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "7cc647e149d41d987694bc50ce376fae92afe385e8d86024b32dfb7c83cce088",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_poolmax/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.06189420449385581
+          },
+          "model_params": 1018440,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_poolmax = 三统计池化 -> 仅 max（去 avg/var 通道） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "46a2dbb526a3a043b101558b2d1ca7b9d52d1b190fc6103b782bce873574c502",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_poolmax/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "e5d41ab2dd173bc3a15588fb00fce233caae7a0bf3c29fd022f86925d8d41991",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "kaiming_si_7_all/fen_noshortcut": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_ablation_symmetric/fen_noshortcut/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 250,
+            "score": 0.060397729715924
+          },
+          "model_params": 1146692,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_noshortcut = 去 head residual shortcut [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "f3042ca1e5906a73a8d97ae07d251c0dd19d62d17c377096605b9df7da52ddb6",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_symmetric/fen_noshortcut/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 350,
+            "score": 0.054518974816753975
+          },
+          "model_params": 1146692,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_noshortcut = 去 head residual shortcut [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "96ce528c83349f9297de4cabee834c23b3d0221dada5a31e7e08582430ff4725",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_symmetric/fen_noshortcut/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.056611491327977215
+          },
+          "model_params": 1146692,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_noshortcut = 去 head residual shortcut [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "c1a3e955a668c38b7edb12bc531ce9792a60761a9e73ec752cf8f92918ad4da2",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_noshortcut/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.04589825255142164
+          },
+          "model_params": 1146692,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_noshortcut = 去 head residual shortcut [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "828654af4fe984c9d9047634c74ba22422e257b9843f6ead00d163166a1b6429",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_noshortcut/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "0e832ecd379f9f9320f5f012a8c046a536fb5109513ef619e06864294463c310",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_noshortcut/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.056034162072266205
+          },
+          "model_params": 1146692,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_noshortcut = 去 head residual shortcut [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "2ac0de2fc885207cf00435dd27850164ab7de9f69969c01e65c5df834c3aaf95",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_noshortcut/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "3f01726a6bf734e1a2793d97e1b9b8f5593fb8ff3b67fda12ee72ae2cb8c0411",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "kaiming_si_7_all/fen_single128": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_ablation_symmetric/fen_single128/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 325,
+            "score": 0.0569356328755933
+          },
+          "model_params": 421960,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_single128 = CGF-only 单尺度 128x3（历史 CGF† 421,960 参数移植） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "ea5bac495be2696c87dc7fbcddb9a34612da77ca2238824fd732c0ecfe820258",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_symmetric/fen_single128/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.04834228575829744
+          },
+          "model_params": 421960,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_single128 = CGF-only 单尺度 128x3（历史 CGF† 421,960 参数移植） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "eab9d23d21fbac353e581faa42285410631ab0bae2c800d08f6bc7bf097d8a97",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_symmetric/fen_single128/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 450,
+            "score": 0.05054610164533241
+          },
+          "model_params": 421960,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_single128 = CGF-only 单尺度 128x3（历史 CGF† 421,960 参数移植） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "94bfb1b7c4fd189bb2544f174e9ca53444bda528c6deef98221f1b994a0d3b82",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_single128/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 450,
+            "score": 0.0590748994356699
+          },
+          "model_params": 421960,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_single128 = CGF-only 单尺度 128x3（历史 CGF† 421,960 参数移植） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "0acaa9c88f51a9b2d3dfeb258e7fbf74d7305315e047a1bb8b42890fb1046584",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_single128/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "6fbddc81f66453fc6ba0a9515a23913f56c67b6d481df08a790df7c3a307a694",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_single128/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.046359342366344834
+          },
+          "model_params": 421960,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_single128 = CGF-only 单尺度 128x3（历史 CGF† 421,960 参数移植） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "e6ad932bc35df4040858cb544439052b18a98bc50b89e365da29b81971043983",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_single128/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "6dec834a65d00262aaf34a755c2d00efff87c481855078787173987a277186b1",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "kaiming_si_7_all/fen_nocgf_pm": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_ablation_symmetric/fen_nocgf_pm/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.05478312046214674
+          },
+          "model_params": 1144209,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf_pm = MLFE-only 参数匹配（scaling=1.175，1,144,209 参数 vs Full 1,149,512） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "3457aa71e11da9ae7de91252e0c6996b56d45d4d96071b9ef57c3433886edf4c",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_symmetric/fen_nocgf_pm/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 400,
+            "score": 0.055864036522089135
+          },
+          "model_params": 1144209,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf_pm = MLFE-only 参数匹配（scaling=1.175，1,144,209 参数 vs Full 1,149,512） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "66c77a262d2eff1e8f00f9426448ffec78ea3930b1157701d5ce182f9a45df75",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_symmetric/fen_nocgf_pm/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.05085952247918797
+          },
+          "model_params": 1144209,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf_pm = MLFE-only 参数匹配（scaling=1.175，1,144,209 参数 vs Full 1,149,512） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "40844e587fa8c7142a29e16da083f8075578a6386fe4c81977c0e8b55f042342",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_nocgf_pm/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 450,
+            "score": 0.04835735888765166
+          },
+          "model_params": 1144209,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf_pm = MLFE-only 参数匹配（scaling=1.175，1,144,209 参数 vs Full 1,149,512） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "b651b03855232378979d42e9f436951b5cb75899b824200a2a0f0ff30fc85ec1",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_nocgf_pm/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "430d46b98a8d3d5981227b8f550e740249c2fb218bff85537461d590561ef8f0",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_nocgf_pm/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.048475335534269984
+          },
+          "model_params": 1144209,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_nocgf_pm = MLFE-only 参数匹配（scaling=1.175，1,144,209 参数 vs Full 1,149,512） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "77e982d5922ef0d24fc712052b3bf70a9c60a029586d07fba5d05be2fe00ae05",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_nocgf_pm/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "383f9a92e86c303fe7a1d36ea4b36db965fb5d62510282949c50f2a8e2c9287c",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "kaiming_si_7_all/fen_cgfonly_pm": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_ablation_symmetric/fen_cgfonly_pm/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.05512184343496799
+          },
+          "model_params": 1152970,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_cgfonly_pm = CGF-only 参数匹配（scaling=1.660，1,152,970 参数 vs Full 1,149,512） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "9bafe6e58939e73d4ebcc1cbd6d5d9c70a8bfa014aa68274bc1450ca7aa38d65",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_symmetric/fen_cgfonly_pm/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.05777132298952308
+          },
+          "model_params": 1152970,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_cgfonly_pm = CGF-only 参数匹配（scaling=1.660，1,152,970 参数 vs Full 1,149,512） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "8b493978999400d0735ef3a07232f91f22194b40a4e36641d4e07a2a1de719d3",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_ablation_symmetric/fen_cgfonly_pm/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.06102975619835533
+          },
+          "model_params": 1152970,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_cgfonly_pm = CGF-only 参数匹配（scaling=1.660，1,152,970 参数 vs Full 1,149,512） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "c4ac1fd2f60f3ef739db1cd5f007d4235ad081ece0055ce8360c2987cf67bc62",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_cgfonly_pm/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 125,
+            "score": 0.05992048507196824
+          },
+          "model_params": 1152970,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_cgfonly_pm = CGF-only 参数匹配（scaling=1.660，1,152,970 参数 vs Full 1,149,512） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "575c277d8d7b94038ef7f957a2f868e367469ebd91b8fb940383d923eb0059ca",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_cgfonly_pm/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "9da2a3b037e335ce55be389e97da3fe4417b9926b26f48a6899697c4d027d2c8",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_cgfonly_pm/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.05464381401111905
+          },
+          "model_params": 1152970,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 500,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-01B",
+            "model_label": "fen_cgfonly_pm = CGF-only 参数匹配（scaling=1.660，1,152,970 参数 vs Full 1,149,512） [pool_context=symmetric]",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "symmetric"
+          },
+          "metrics_sha256": "d68dad01206be18871d3a6d46e22b2a19bf8e66711279fae4c4864242ffea6dd",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2/fen_cgfonly_pm/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "a51695c432d0b5eaec6d50befd2b3f77808c8f281e4273b65feda27194827ba4",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "acoustic_corrected_main_ablation/fourier_c": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_acoustic_pointwise/fourier_c/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 450,
+            "score": 0.9817414634441513
+          },
+          "model_params": 813569,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, cond concat, fourier_layout=pointwise)",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "f0c13536ea1acdb8868e1740dbc8e159cbdc6a4a321bd17aa960905edaadea6b",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_acoustic_pointwise/fourier_c/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 600,
+            "score": 0.9748682264221723
+          },
+          "model_params": 813569,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, cond concat, fourier_layout=pointwise)",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "e3ac72ba054e808e77a553e25eaef8e289b099e9f45d33388668ec18fca16c0a",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_acoustic_pointwise/fourier_c/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 600,
+            "score": 0.9780077086870026
+          },
+          "model_params": 813569,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, cond concat, fourier_layout=pointwise)",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "9dd7642b889377cbb47ead505ff7458b81e99ee214a47c57b3351282766eb257",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_c/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 750,
+            "score": 0.9797376469224431
+          },
+          "model_params": 813569,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, cond concat, fourier_layout=pointwise)",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "b5653c43d5e11f9e133ee42e00090812e2808d9cd48cced2d98724996cd28a19",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_c/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "d424bf26ac49233f6fe2adace17a3aa8b68c37eba29474ade8bfba0cbc3770e3",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_c/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 1000,
+            "score": 0.9796483810494246
+          },
+          "model_params": 813569,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, cond concat, fourier_layout=pointwise)",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "a71d09a192571507b80d29e5d0980168f942b9bfd1731b65e211b7e3abb6c414",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_c/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "1c75a6620e180ba40f1b56bad008f3e30d82ca873462e5345dd8da067e6218db",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "acoustic_corrected_main_ablation/fourier_nc": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_acoustic_pointwise/fourier_nc/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 100,
+            "score": 1.0365472384992613
+          },
+          "model_params": 813057,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "FourierMLP(levels=16, blocks=6, hidden=256), unconditional, fourier_layout=pointwise",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "e84242c62a212bb4f96702ee7e4b82ca3b25ba6415a78ba87127d6a2f2edf728",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_acoustic_pointwise/fourier_nc/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 100,
+            "score": 1.0323692650446161
+          },
+          "model_params": 813057,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "FourierMLP(levels=16, blocks=6, hidden=256), unconditional, fourier_layout=pointwise",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "61a24b4edca31210d5c8a9702b2bf2ebb3920801a08e82aeb9dab513deb99817",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_acoustic_pointwise/fourier_nc/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 100,
+            "score": 1.0399588036446517
+          },
+          "model_params": 813057,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "FourierMLP(levels=16, blocks=6, hidden=256), unconditional, fourier_layout=pointwise",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "be14eec030262fa88017e09e2fc119b76c551eb05eac8720a40fb28dcd885166",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_nc/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 50,
+            "score": 1.0361395848019126
+          },
+          "model_params": 813057,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "FourierMLP(levels=16, blocks=6, hidden=256), unconditional, fourier_layout=pointwise",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "0de5984c164b613df50920675305d8283a79f1d07d11effc16bd9e6ff03fd80d",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_nc/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "aa2b80b88e8d2cfa4b51c030c84aeb40a067fbb35845658584c653b98936b751",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_nc/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 100,
+            "score": 1.037132670621728
+          },
+          "model_params": 813057,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "FourierMLP(levels=16, blocks=6, hidden=256), unconditional, fourier_layout=pointwise",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "658c84f83a22b35168aa561c5edaf0831c80648f5415058cac4b709c5a56c8cb",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_nc/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "3496e49d0904be1bb00d2b5fd65fa1f9f18be1933e7025c85abe204a5b63db03",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "acoustic_corrected_main_ablation/unif_acous": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_acoustic_pointwise/unif_acous/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 250,
+            "score": 0.8984881100778476
+          },
+          "model_params": 1908504,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "UnifiedNet(cond_dim=2, branch=unified, task=acoustic, soft route, fourier_layout=pointwise)",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "7b894f9089f6bfd3a4d152bd7cd3bc334a3f3ff68094367ab5e569722538b563",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_acoustic_pointwise/unif_acous/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 200,
+            "score": 0.8976398358478366
+          },
+          "model_params": 1908504,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "UnifiedNet(cond_dim=2, branch=unified, task=acoustic, soft route, fourier_layout=pointwise)",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "28dc843769c77eb64f41911358d6e6515346dc0d1f1b27a25b23efd101d2a215",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_acoustic_pointwise/unif_acous/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 250,
+            "score": 0.830790812061276
+          },
+          "model_params": 1908504,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "UnifiedNet(cond_dim=2, branch=unified, task=acoustic, soft route, fourier_layout=pointwise)",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "176baca4f1d71f9496de59ffcfc21e9c1df4457665ad384579ffa85a41a2ea96",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/unif_acous/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 150,
+            "score": 0.8471652919921823
+          },
+          "model_params": 1908504,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "UnifiedNet(cond_dim=2, branch=unified, task=acoustic, soft route, fourier_layout=pointwise)",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "db7ffbb101c7f7f8ea1cbf1eee08e2d3a275c717bccb7460ab6bb340bce65429",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/unif_acous/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "ecd027d68c71984ddd448569001a735708959dccf9903ed8c134cebcc4fe4794",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/unif_acous/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 200,
+            "score": 0.8592750599797637
+          },
+          "model_params": 1908504,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "UnifiedNet(cond_dim=2, branch=unified, task=acoustic, soft route, fourier_layout=pointwise)",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "748af063b8326282ab8b8a1a66da3042984cc35b413076db44a420d449ff9f55",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/unif_acous/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "5ccab148a3aaf3833ee77d8811c83cf23defc5d6fcd256730c541fe4eb9226aa",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "acoustic_corrected_main_ablation/ab_L8": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_acoustic_pointwise/ab_L8/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 900,
+            "score": 1.0063776434371343
+          },
+          "model_params": 805377,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=8, blocks=6, hidden=256) == fourier_c with reduced Fourier bandwidth",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "f40d00815493c73bc155d77d83ce2496d864c70db110859a84b6dd61e72ee8eb",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_acoustic_pointwise/ab_L8/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 550,
+            "score": 1.0395918851163213
+          },
+          "model_params": 805377,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=8, blocks=6, hidden=256) == fourier_c with reduced Fourier bandwidth",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "3b9b739fb43a121aadf49960fd43e816fa56dce445234e3c2edc0c061bbf39df",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_acoustic_pointwise/ab_L8/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 650,
+            "score": 1.0049680148025624
+          },
+          "model_params": 805377,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=8, blocks=6, hidden=256) == fourier_c with reduced Fourier bandwidth",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "75168ed43b2b3e778ab0e148732dc2c4c176167da7e873aabaf32c4b01c32cfb",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_L8/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 800,
+            "score": 1.0315515530688828
+          },
+          "model_params": 805377,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=8, blocks=6, hidden=256) == fourier_c with reduced Fourier bandwidth",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "a79ebee677eb45853a9121d66d91efeb9a9f1d9e28c62d17f8c0094139aa1e8a",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_L8/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "5385138994523a4a2b7755d44b4dc9e141fbf061dbee9467f99fde1593a03a1f",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_L8/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 900,
+            "score": 1.0223347412634787
+          },
+          "model_params": 805377,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=8, blocks=6, hidden=256) == fourier_c with reduced Fourier bandwidth",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "d909c57ef36cf9793501dd90eb2decd009275d63921ee562f744ad4703f12122",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_L8/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "6095ec8ef5f00ee853ab51b153975ca31151b0d7fc7d404566863df89204aebf",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "acoustic_corrected_main_ablation/ab_L32": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_acoustic_pointwise/ab_L32/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 550,
+            "score": 0.9812916352621817
+          },
+          "model_params": 829953,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=32, blocks=6, hidden=256) == fourier_c with doubled Fourier bandwidth",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "e437ae69e63bcb0905b8ff51825f343cf27d31ac3617e0792d8fdddf0c27f388",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_acoustic_pointwise/ab_L32/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 550,
+            "score": 0.9728003686896997
+          },
+          "model_params": 829953,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=32, blocks=6, hidden=256) == fourier_c with doubled Fourier bandwidth",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "85e03d07ee72c5458855d1f128437058597dc9deda431034b59a105a0523aa40",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_acoustic_pointwise/ab_L32/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 500,
+            "score": 1.0137137470554372
+          },
+          "model_params": 829953,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=32, blocks=6, hidden=256) == fourier_c with doubled Fourier bandwidth",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "4b0508a467cbe7dc03c94eef4311e3f806d14954c7ffa89422680dc3f6207001",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_L32/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 550,
+            "score": 0.9736510910744329
+          },
+          "model_params": 829953,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=32, blocks=6, hidden=256) == fourier_c with doubled Fourier bandwidth",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "fe9cde76c61d0a20b0303b5b2e322164406deaa344793a8324e00407c21933e9",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_L32/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "a75151032529698be8df065d95a256c2b46489dc3f201077f002121fe5046266",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_L32/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 550,
+            "score": 0.988078100322848
+          },
+          "model_params": 829953,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=32, blocks=6, hidden=256) == fourier_c with doubled Fourier bandwidth",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "62d1c2abdc4fa01f0caae74cb676a4195c677166925ce895dce8adb7b9b0891a",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_L32/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "7748b0759aac3ba37a1cb3c08217c0afe0d7b9daadd438bf2c0afab2e41fde10",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "acoustic_corrected_main_ablation/ab_nores": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_acoustic_pointwise/ab_nores/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 50,
+            "score": 1.0171475393761842
+          },
+          "model_params": 813569,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, no residual) == fourier_c minus residual skip",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "84b90e81fd42917d4d30774b9ecb36a98e9f55693985deaced5202238f180beb",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_acoustic_pointwise/ab_nores/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 200,
+            "score": 0.9483157945847669
+          },
+          "model_params": 813569,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, no residual) == fourier_c minus residual skip",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "4ffc90841651077ceaf735e824fdc97f52750bce2f37aea216add96020cbbe77",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_acoustic_pointwise/ab_nores/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 150,
+            "score": 0.9079312940608848
+          },
+          "model_params": 813569,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, no residual) == fourier_c minus residual skip",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "ec2208b92220da8e25c6bf317d3f843da24c8afcd60a590783474745a800a7ce",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nores/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 150,
+            "score": 0.9447800297821433
+          },
+          "model_params": 813569,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, no residual) == fourier_c minus residual skip",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "08bb3c4bc7ff8cd32eb04a59bf1385d397afbe3a38621805a9c58e62f39111ed",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nores/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "4701b3863aa7477186e94062d5d003d25930d71704638d013458f6a5a04e4b37",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nores/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 150,
+            "score": 0.9382956401130801
+          },
+          "model_params": 813569,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, no residual) == fourier_c minus residual skip",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "a397cba1a959c5ba899ab0a4aab2388dbcddf2092a4f93aca52afd583748e3be",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nores/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "1fa240abce1b9158c4dcc661f24dda5b337f237fd9ec3df33ceb47037dc772ee",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "acoustic_corrected_main_ablation/ab_nonorm": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_acoustic_pointwise/ab_nonorm/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 850,
+            "score": 0.9687612623649771
+          },
+          "model_params": 807425,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, no LayerNorm) == fourier_c minus LayerNorm",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "c682ae848fb406b81b5713ef1f18bb9ca0e45fa1c935f48902143b937597e89a",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_acoustic_pointwise/ab_nonorm/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 1000,
+            "score": 0.9724507544261408
+          },
+          "model_params": 807425,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, no LayerNorm) == fourier_c minus LayerNorm",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "e4253cdda51023c8a89ede483603141886e10213f43b11f50ed7c1152389314e",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_acoustic_pointwise/ab_nonorm/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 900,
+            "score": 0.9801668274165287
+          },
+          "model_params": 807425,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, no LayerNorm) == fourier_c minus LayerNorm",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "ef2d1aed127dc4c24d18b8abb915fee4eb4aeca80ab722a90063d0f7d99d46ff",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nonorm/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 850,
+            "score": 0.9913294319785722
+          },
+          "model_params": 807425,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, no LayerNorm) == fourier_c minus LayerNorm",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "52621ea910c757e845e05336095940a0ae0bac6f690c8c73eb1822b710d0f06e",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nonorm/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "574a585ad3281a92e6fdc808882d9dac4b5a1636d2a8816aef46fbda97ef17b6",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nonorm/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 950,
+            "score": 0.989593336642473
+          },
+          "model_params": 807425,
+          "version_signature": {
+            "split_version": "acoustic_protocolA_v1",
+            "epochs": 1000,
+            "lr": 0.001,
+            "val_eval_every": 50,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": "R2-IMPL-04B",
+            "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, no LayerNorm) == fourier_c minus LayerNorm",
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "2bfc3de8b28cc83069b8b26e93a421e06602dc59291452f1b9c01fd92f1b3212",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nonorm/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "b3a2b65752a9975760e93581bb7f38c59ac22dcf600d52eeff07a8f4e80bcf9b",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "matched_physics/supervised": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_pinn_thermal_matched/supervised/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 425,
+            "score": 0.05599943642021109
+          },
+          "model_params": 1054212,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 600,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": null,
+            "model_label": {
+              "name": "CoordMLP",
+              "hidden": 512,
+              "num_layers": 6,
+              "params": 1054212
+            },
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "c073c440979a97564fd537c6f3a2425fad2c286b06e84461666aa78e64bbfc17",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_pinn_thermal_matched/supervised/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 425,
+            "score": 0.06122140126322671
+          },
+          "model_params": 1054212,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 600,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": null,
+            "model_label": {
+              "name": "CoordMLP",
+              "hidden": 512,
+              "num_layers": 6,
+              "params": 1054212
+            },
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "067dbae630a7b340ce480be9f8576106fd30cdbe379379326cedf2cfd5d6a032",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_pinn_thermal_matched/supervised/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.05713971945173046
+          },
+          "model_params": 1054212,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 600,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": null,
+            "model_label": {
+              "name": "CoordMLP",
+              "hidden": 512,
+              "num_layers": 6,
+              "params": 1054212
+            },
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "089c8e275dc37d009cb2315dd63b0b2f72d4057ff448b729770013997f593967",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/supervised/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 600,
+            "score": 0.05958171237733878
+          },
+          "model_params": 1054212,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 600,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": null,
+            "model_label": {
+              "name": "CoordMLP",
+              "hidden": 512,
+              "num_layers": 6,
+              "params": 1054212
+            },
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "e7ef14d72e7f3a8f991878b6c49512123cec51aed0778a19cbac3d000964d6b2",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/supervised/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "52986c9ab2c768812b7bc787d51f8447550e6ab6d122191ca0566f89d2566f45",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/supervised/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.06325528214444408
+          },
+          "model_params": 1054212,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 600,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": null,
+            "model_label": {
+              "name": "CoordMLP",
+              "hidden": 512,
+              "num_layers": 6,
+              "params": 1054212
+            },
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "c813d5ccb2fdd882df43dbc52629c46d84d2d781901a92aa2bd7702dd117beba",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/supervised/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "8ba52b6cefa863c63172832de10a5a7ef05a94e389ad89634d3e84c0284cff7b",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "matched_physics/bc": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_pinn_thermal_matched/bc/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 600,
+            "score": 0.053829780322692686
+          },
+          "model_params": 1054212,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 600,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": null,
+            "model_label": {
+              "name": "CoordMLP",
+              "hidden": 512,
+              "num_layers": 6,
+              "params": 1054212
+            },
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "c89bf4717746f78cd7b60ab24fc8c3bb8109134ddc148a0a5ffd5558f7e45239",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_pinn_thermal_matched/bc/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 600,
+            "score": 0.058861621037734416
+          },
+          "model_params": 1054212,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 600,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": null,
+            "model_label": {
+              "name": "CoordMLP",
+              "hidden": 512,
+              "num_layers": 6,
+              "params": 1054212
+            },
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "7d7220ab28c6f19198f8098c1f9142262123fc5f5bc82523879641056c350788",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_pinn_thermal_matched/bc/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 575,
+            "score": 0.05808162868236372
+          },
+          "model_params": 1054212,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 600,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": null,
+            "model_label": {
+              "name": "CoordMLP",
+              "hidden": 512,
+              "num_layers": 6,
+              "params": 1054212
+            },
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "a777465651436d015c9dbdbb5fcb7f92f732c8375c31f66c2a651a55d77538a1",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/bc/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 575,
+            "score": 0.06090933693942837
+          },
+          "model_params": 1054212,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 600,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": null,
+            "model_label": {
+              "name": "CoordMLP",
+              "hidden": 512,
+              "num_layers": 6,
+              "params": 1054212
+            },
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "fe2d934479fd7c7c517325f87a515be959f7a94cf1099a49596ca744b5e6e1f3",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/bc/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "1733a5d588ec021eb05e012570a560e98d00d1e1eaab7190b74c5919bebc5658",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/bc/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 600,
+            "score": 0.057715413877438976
+          },
+          "model_params": 1054212,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 600,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": null,
+            "model_label": {
+              "name": "CoordMLP",
+              "hidden": 512,
+              "num_layers": 6,
+              "params": 1054212
+            },
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "77c114ee384e907245c5cd83febca2e07b7d388e440b563c30866ea29c6c534d",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/bc/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "9d7bb1fc0e5b81ac3c3a9d39564d022a5f41dd20c4418126f84ba378976a9a1f",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    },
+    "matched_physics/bc_pde": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sources": [
+        {
+          "path": "results/round2_pinn_thermal_matched/bc_pde/seed0/metrics_seed0.json",
+          "exists": true,
+          "seed": 0,
+          "val_best": {
+            "epoch": 600,
+            "score": 0.15265080194009625
+          },
+          "model_params": 1054212,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 600,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": null,
+            "model_label": {
+              "name": "CoordMLP",
+              "hidden": 512,
+              "num_layers": 6,
+              "params": 1054212
+            },
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "e09da57684858c73605cfa29d6ac99a60e05b523e195ea2319c8b4e131423771",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_pinn_thermal_matched/bc_pde/seed1/metrics_seed1.json",
+          "exists": true,
+          "seed": 1,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.17356033001828072
+          },
+          "model_params": 1054212,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 600,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": null,
+            "model_label": {
+              "name": "CoordMLP",
+              "hidden": 512,
+              "num_layers": 6,
+              "params": 1054212
+            },
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "38c1986500cfde6461490b7ee0baaf1f445857945e27e6754db35f4c62a19fc5",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_pinn_thermal_matched/bc_pde/seed2/metrics_seed2.json",
+          "exists": true,
+          "seed": 2,
+          "val_best": {
+            "epoch": 550,
+            "score": 0.1574215841686349
+          },
+          "model_params": 1054212,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 600,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": null,
+            "model_label": {
+              "name": "CoordMLP",
+              "hidden": 512,
+              "num_layers": 6,
+              "params": 1054212
+            },
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "064d77e7f86621992c8ec973860384b5c9c794ef488d2776e812c8eba784017e",
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/bc_pde/seed3/metrics_seed3.json",
+          "exists": true,
+          "seed": 3,
+          "val_best": {
+            "epoch": 550,
+            "score": 0.16913485173856274
+          },
+          "model_params": 1054212,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 600,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": null,
+            "model_label": {
+              "name": "CoordMLP",
+              "hidden": 512,
+              "num_layers": 6,
+              "params": 1054212
+            },
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "e14140f6ea6070f3c5e2a0e5af690d394abb3784a12467d27ee8cfa883d80c0a",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/bc_pde/seed3/checkpoint_best.pth",
+          "checkpoint_sha256": "f68e7b1627a14b2a085f2fcdab3268aa0ddc6c26547f4451585b79e51f05391a",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        },
+        {
+          "path": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/bc_pde/seed4/metrics_seed4.json",
+          "exists": true,
+          "seed": 4,
+          "val_best": {
+            "epoch": 575,
+            "score": 0.17398706170628642
+          },
+          "model_params": 1054212,
+          "version_signature": {
+            "split_version": "splits_thermal_v1_protocolA",
+            "epochs": 600,
+            "lr": 0.001,
+            "val_eval_every": 25,
+            "tf32_matmul_allow": false,
+            "tf32_cudnn_allow": false,
+            "implementation_version": null,
+            "model_label": {
+              "name": "CoordMLP",
+              "hidden": 512,
+              "num_layers": 6,
+              "params": 1054212
+            },
+            "init_mode": "legacy_kaiming",
+            "pool_context": "legacy_index_bins"
+          },
+          "metrics_sha256": "7e3a2ac899c084a04b5c9f8daa961f47ccd7b5b28c3f420d43ff73131c2cc0da",
+          "checkpoint": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3/bc_pde/seed4/checkpoint_best.pth",
+          "checkpoint_sha256": "53736b9acbef8b80f77ce1abdc8177d1216cfd04bdbde5320a9cca76ade02844",
+          "checkpoint_loaded": true,
+          "checkpoint_epoch_match": true,
+          "checkpoint_val_match": true
+        }
+      ],
+      "version_match": true,
+      "param_match": true
+    }
+  }
+}

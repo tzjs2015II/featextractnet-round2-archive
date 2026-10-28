@@ -1,0 +1,101 @@
+{
+  "protocol": "R2-PRESSURE-REFERENCE-CLOSURE-03",
+  "version": "v1",
+  "created_local": "2026-10-23T01:40:00+08:00",
+  "task": "R3.16 pressure reference closure",
+  "module": "A pressure reference audit + exact gauge",
+  "data": "HeatTransferData.npy",
+  "splits": "configs/splits_thermal.json",
+  "pressure_column": 4,
+  "n_geometries": 135,
+  "n_points": 5000,
+  "public_outer_boundary_count": 492,
+  "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+  "sensitivity_thresholds": [
+    1e-10,
+    1e-08
+  ],
+  "candidate_selection": {
+    "pool": "492 common public outer coordinates present in all 135 geometries",
+    "stage": "train100 only; select coordinate minimizing abs(mean_train_p)+std_train_p",
+    "confirm": "val15 after freeze; test20 only after freeze",
+    "not_historical_proof": true
+  },
+  "gauge": {
+    "target_h": 0.04,
+    "geometries": [
+      17,
+      46,
+      96
+    ],
+    "gauges": [
+      "point_reference",
+      "integral_zero_mean"
+    ],
+    "primary_metric": "relative L2 over actual Function.eval on frozen 5000 supports",
+    "equivalence_threshold_relative_l2": 1e-06,
+    "max_new_medium_solves": 6
+  },
+  "supports": {
+    "17": "results/round2_thermal_fem/v2_model_eval/support_geom17.npz",
+    "46": "results/round2_thermal_fem/v2_model_eval/support_geom46.npz",
+    "96": "results/round2_thermal_fem/v2_model_eval/support_geom96.npz"
+  },
+  "model_eval": {
+    "root": "results/round2_thermal_fem/v2_model_eval",
+    "models": [
+      "FEN",
+      "graph"
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "owned_files": [
+    "scripts/exp_r2_pressure_reference_audit.py",
+    "scripts/probe_r2_pressure_reference_audit.py",
+    "scripts/exp_r2_exact_pressure_reference.py",
+    "scripts/sbatch/r2_pressure_reference_closure.sbatch",
+    "src/fem_reference/pressure_reference_audit.py",
+    "configs/r2_pressure_reference_closure.json",
+    "results/round2_pressure_reference_closure/"
+  ],
+  "read_only": [
+    "src/fem_reference/fenics_solver.py",
+    "data",
+    "weights",
+    "paper",
+    "registry",
+    "package files"
+  ],
+  "resource": {
+    "server_alias": "实验室8卡服务器",
+    "fem_env": "tools/envs/pinnap-fem",
+    "partition": "compute",
+    "qos_cpu": "normal",
+    "cpus": 8,
+    "mem": "32G",
+    "max_project_concurrent": 3,
+    "preserve_job": 50910
+  },
+  "exact_solver": {
+    "continuation_gbeta": [
+      1.0
+    ],
+    "max_iterations": 5,
+    "relaxation": 1.0,
+    "convergence": {
+      "update_rel_tolerance": 1e-08
+    },
+    "report": false
+  },
+  "initial_guess": {
+    "17": "results/round2_thermal_fem/v2/levels/fields_geom17_h004.npz",
+    "46": "results/round2_thermal_fem/v2/representatives/fields_geom46_h0.04.npz",
+    "96": "results/round2_thermal_fem/v2/representatives/fields_geom96_h0.04.npz"
+  }
+}

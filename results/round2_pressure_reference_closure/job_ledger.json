@@ -1,0 +1,399 @@
+{
+  "task": "R3.16 pressure reference closure",
+  "preserved_job": {
+    "job_id": "50910",
+    "name": "pinnap_r2fdtdconv",
+    "qos": "normal",
+    "state": "RUNNING",
+    "touched": false
+  },
+  "account_concurrency_rule": "max 3 project jobs; 50910 preserved; normal QOS max 1 user job was occupied, so exact-gauge pilots used legal small_qos",
+  "jobs": [
+    {
+      "job_id": "51031",
+      "mode": "pilot",
+      "qos": "normal",
+      "state": "CANCELLED",
+      "reason": "normal QOS max jobs per user; duplicate removed before small_qos retry"
+    },
+    {
+      "job_id": "51032",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "exit": "1:0",
+      "elapsed": "00:00:05",
+      "reason": "geometry entry missing vertices"
+    },
+    {
+      "job_id": "51033",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "exit": "1:0",
+      "elapsed": "00:00:06",
+      "reason": "polygon distance argument orientation"
+    },
+    {
+      "job_id": "51034",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "exit": "1:0",
+      "elapsed": "00:01:34",
+      "reason": "Newton non-convergence; fallback key missing LinearProblem"
+    },
+    {
+      "job_id": "51035",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "exit": "1:0",
+      "elapsed": "00:01:49",
+      "reason": "exact solve produced NaN; diagnostics FFCX nan"
+    },
+    {
+      "job_id": "51036",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "exit": "1:0",
+      "elapsed": "00:02:41",
+      "reason": "Newton 300 iterations non-converged at h=.04"
+    },
+    {
+      "job_id": "51037",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "CANCELLED",
+      "elapsed": "00:05:35",
+      "reason": "superseded by initial-guess implementation"
+    },
+    {
+      "job_id": "51038",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "exit": "1:0",
+      "elapsed": "00:00:05",
+      "reason": "initial field mixed-vector size mismatch"
+    },
+    {
+      "job_id": "51039",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "CANCELLED",
+      "elapsed": "00:04:11",
+      "reason": "initial-guess interpolation still in Newton-long path; superseded"
+    },
+    {
+      "job_id": "51040",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "CANCELLED",
+      "elapsed": "00:12:05",
+      "reason": "multi-stage Picard too slow; superseded by single-stage"
+    },
+    {
+      "job_id": "51041",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "CANCELLED",
+      "elapsed": "00:12:46",
+      "reason": "single-stage 100 Picard too slow; superseded"
+    },
+    {
+      "job_id": "51042",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "exit": "1:0",
+      "elapsed": "00:06:35",
+      "reason": "Picard 10 iterations not converged; Newton NaN"
+    },
+    {
+      "job_id": "51043",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "CANCELLED",
+      "elapsed": "00:01:26",
+      "reason": "Newton-first with initial guess immediate NaN; superseded"
+    },
+    {
+      "job_id": "51044",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "CANCELLED",
+      "elapsed": "00:00:40",
+      "reason": "Picard60 pre-initial-pressure-shift; superseded"
+    },
+    {
+      "job_id": "51046",
+      "mode": "none",
+      "state": "CANCELLED",
+      "reason": "damped Newton did not converge; cancelled",
+      "elapsed": "00:09:xx"
+    },
+    {
+      "job_id": "51047",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "exit": "1:0",
+      "reason": "augmented Newton h=.04 failed convergence; linear residual ~1e17"
+    },
+    {
+      "job_id": "51048",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "exit": "1:0",
+      "reason": "augmented Newton scaled/MUMPS attempt failed convergence; linear residual ~1e16"
+    },
+    {
+      "job_id": "51049",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "exit": "1:0",
+      "reason": "augmented Newton comm fix; KSP converged flag but linear residual inconsistent; no convergence"
+    },
+    {
+      "job_id": "51052",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "exit": "1:0",
+      "reason": "x0/scale residual fix; RHS norm zero / independent linear residual 3.7e6; diagnostic stop"
+    },
+    {
+      "job_id": "51054",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "reason": "exact h=.04 solve converged (R~1e-10) but pilot checks wrongly required integral-gauge pin=0; archived"
+    },
+    {
+      "job_id": "51055",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "reason": "same as 51054; script check upload lag; archived"
+    },
+    {
+      "job_id": "51056",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "COMPLETED",
+      "reason": "exact h=.04 pilot passed: constraint -3.9e-9, free residual 2e-16, 5000/5000 support"
+    },
+    {
+      "job_id": "51057",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "reason": "full exact 17 solved; geom46/96 missing h0.04 initial path; archived partial"
+    },
+    {
+      "job_id": "51058",
+      "mode": "full",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "reason": "full exact 17/46/96 all converged; writing comparison refused because old comparison existed; cases preserved"
+    },
+    {
+      "job_id": "51050",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "exit": "1:0",
+      "reason": "zero-increment BC fix; augmented linear residual 3.7e6; diagnostic stop"
+    },
+    {
+      "job_id": "51051",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "exit": "1:0",
+      "reason": "same diagnostic; A_check missing; stop"
+    },
+    {
+      "job_id": "51053",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "exit": "1:0",
+      "reason": "independent A copy diagnostic; RHS/BC assembly issue"
+    },
+    {
+      "job_id": "51061",
+      "mode": "manufactured",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "reason": "manufactured mode initial: diagnostics variable NameError; fixed"
+    },
+    {
+      "job_id": "51062",
+      "mode": "manufactured",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "reason": "manufactured solves converged but boundary checks treated nonhomogeneous exact values as zero; fixed"
+    },
+    {
+      "job_id": "51063",
+      "mode": "manufactured",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "reason": "manufactured boundary dof mapping error; fixed"
+    },
+    {
+      "job_id": "51064",
+      "mode": "manufactured",
+      "qos": "small_qos",
+      "state": "COMPLETED",
+      "reason": "manufactured 3 levels passed after boundary metric fix"
+    },
+    {
+      "job_id": "51065",
+      "mode": "manufactured",
+      "qos": "small_qos",
+      "state": "COMPLETED",
+      "reason": "manufactured rerun with corrected checks; all_pass=true"
+    },
+    {
+      "job_id": "51066",
+      "mode": "pilot",
+      "qos": "small_qos",
+      "state": "COMPLETED",
+      "reason": "corrected constraint pilot: integral -2.8e-17, free 2e-16"
+    },
+    {
+      "job_id": "51067",
+      "mode": "full",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "reason": "corrected full solved 17/46/96 then write refused by old comparison; cases reused"
+    },
+    {
+      "job_id": "51068",
+      "mode": "manufactured",
+      "qos": "small_qos",
+      "state": "COMPLETED",
+      "reason": "corrected manufactured 3 levels + p+1 relax=0.6 counterexample all_pass=true"
+    },
+    {
+      "job_id": "51070",
+      "mode": "manufactured_polynomial",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "reason": "polynomial MMS first attempt: source/block expression arity error; fixed"
+    },
+    {
+      "job_id": "51071",
+      "mode": "manufactured_polynomial",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "reason": "polynomial MMS metric FFCX block error; fixed"
+    },
+    {
+      "job_id": "51072",
+      "mode": "manufactured_polynomial",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "reason": "polynomial MMS block residual UFL arity error; fixed"
+    },
+    {
+      "job_id": "51073",
+      "mode": "manufactured_polynomial",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "reason": "polynomial MMS solved to machine precision but block/key checks stale; fixed"
+    },
+    {
+      "job_id": "51074",
+      "mode": "manufactured_polynomial",
+      "qos": "small_qos",
+      "state": "COMPLETED",
+      "reason": "polynomial MMS 3 levels + p+1 relax=0.6 counterexample all_pass=true"
+    },
+    {
+      "job_id": "51075",
+      "mode": "manufactured_polynomial",
+      "qos": "small_qos",
+      "state": "COMPLETED",
+      "reason": "per-Dirichlet-DOF boundary metrics; 3 levels + p+1 relax0.6 counterexample all_pass=true"
+    },
+    {
+      "job_id": "51076",
+      "mode": "manufactured_nontrivial",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "reason": "nontrivial initial test stopped at update_rel with free 2.24e-8; diagnosed insufficient stopping criterion"
+    },
+    {
+      "job_id": "51077",
+      "mode": "manufactured_nontrivial",
+      "qos": "small_qos",
+      "state": "FAILED",
+      "reason": "20-iteration cap insufficient for relax0.6; still update_rel stop"
+    },
+    {
+      "job_id": "51078",
+      "mode": "manufactured_nontrivial",
+      "qos": "small_qos",
+      "state": "COMPLETED",
+      "reason": "nontrivial initial test h=.14: 31 steps, final free 9.41e-13, relative 3.07e-14, all checks pass"
+    }
+  ],
+  "python": "tools/envs/pinnap-fem/bin/python",
+  "data_sha256": "e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26",
+  "logs_dir": "logs/r2_pressure_reference_closure_<jobid>.{out,err}",
+  "note": "all failures retained in logs; no physical threshold or test-set criterion was relaxed",
+  "final_exact_status": "completed_corrected_constraint_gauge",
+  "exact_completed": {
+    "geoms": [
+      17,
+      46,
+      96
+    ],
+    "h": 0.04,
+    "all_pass": true,
+    "evidence": "exact_gauge_comparison.json",
+    "model_sensitivity": "model_metric_sensitivity.json",
+    "constraints": [
+      -2.7755575615628914e-17,
+      -2.7755575615628914e-17,
+      -8.326672684688674e-17
+    ]
+  },
+  "manufactured_completed": {
+    "status": "compatibility_only",
+    "evidence": "manufactured_solution.json",
+    "note": "old trigonometric MMS; default weak_residual without source is not an exact-F gate",
+    "all_pass_reported": true
+  },
+  "constraint_rhs_corrected": true,
+  "polynomial_mms_completed": {
+    "job": "51075",
+    "all_pass": true,
+    "evidence": "manufactured_polynomial_solution.json"
+  },
+  "historical_final_exact_status": "not_completed_exact_gauge_numerical_convergence_issue",
+  "manufactured_historical_compatibility": {
+    "levels_h": [
+      0.2,
+      0.14,
+      0.1
+    ],
+    "all_pass": true,
+    "evidence": "manufactured_solution.json"
+  },
+  "nontrivial_initial_completed": {
+    "job": "51078",
+    "all_pass": true,
+    "h": 0.14,
+    "iterations": 31,
+    "final_free": 9.41020326626858e-13,
+    "evidence": "manufactured_nontrivial_initial_solution.json"
+  }
+}

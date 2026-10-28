@@ -1,0 +1,378 @@
+{
+  "experiment_id": "A3_ab_nonorm_R2_pointwise",
+  "model": "ab_nonorm",
+  "fourier_layout": "pointwise",
+  "implementation_version": "R2-IMPL-04B",
+  "tf32_matmul_allow": false,
+  "tf32_cudnn_allow": false,
+  "primary_case_ids": [
+    "100_0.3",
+    "100_0.5",
+    "100_0.7",
+    "300_0.3",
+    "300_0.7",
+    "500_0.2",
+    "500_0.3",
+    "500_0.5",
+    "500_0.7"
+  ],
+  "model_label": "CondFourierMLP(levels=16, blocks=6, hidden=256, no LayerNorm) == fourier_c minus LayerNorm",
+  "model_params": 807425,
+  "split_version": "acoustic_protocolA_v1",
+  "case_set": {
+    "train": [
+      {
+        "case_id": "200_0.3",
+        "f": 200.0,
+        "Ma": 0.3,
+        "source_side": "left",
+        "file": "data/acoustic/case_200_0.3.npz"
+      },
+      {
+        "case_id": "200_0.5",
+        "f": 200.0,
+        "Ma": 0.5,
+        "source_side": "left",
+        "file": "data/acoustic/case_200_0.5.npz"
+      },
+      {
+        "case_id": "200_0.7",
+        "f": 200.0,
+        "Ma": 0.7,
+        "source_side": "left",
+        "file": "data/acoustic/case_200_0.7.npz"
+      },
+      {
+        "case_id": "300_0.5",
+        "f": 300.0,
+        "Ma": 0.5,
+        "source_side": "left",
+        "file": "data/acoustic/case_300_0.5.npz"
+      },
+      {
+        "case_id": "400_0.3",
+        "f": 400.0,
+        "Ma": 0.3,
+        "source_side": "left",
+        "file": "data/acoustic/case_400_0.3.npz"
+      },
+      {
+        "case_id": "400_0.5",
+        "f": 400.0,
+        "Ma": 0.5,
+        "source_side": "left",
+        "file": "data/acoustic/case_400_0.5.npz"
+      }
+    ],
+    "val": [
+      {
+        "case_id": "400_0.7",
+        "f": 400.0,
+        "Ma": 0.7,
+        "source_side": "left",
+        "file": "data/acoustic/case_400_0.7.npz"
+      }
+    ],
+    "test": [
+      {
+        "case_id": "100_0.3",
+        "f": 100.0,
+        "Ma": 0.3,
+        "source_side": "left",
+        "file": "data/acoustic/case_100_0.3.npz"
+      },
+      {
+        "case_id": "100_0.5",
+        "f": 100.0,
+        "Ma": 0.5,
+        "source_side": "left",
+        "file": "data/acoustic/case_100_0.5.npz"
+      },
+      {
+        "case_id": "100_0.7",
+        "f": 100.0,
+        "Ma": 0.7,
+        "source_side": "left",
+        "file": "data/acoustic/case_100_0.7.npz"
+      },
+      {
+        "case_id": "300_0.3",
+        "f": 300.0,
+        "Ma": 0.3,
+        "source_side": "left",
+        "file": "data/acoustic/case_300_0.3.npz"
+      },
+      {
+        "case_id": "300_0.7",
+        "f": 300.0,
+        "Ma": 0.7,
+        "source_side": "left",
+        "file": "data/acoustic/case_300_0.7.npz"
+      },
+      {
+        "case_id": "400_0.5_srcR",
+        "f": 400.0,
+        "Ma": 0.5,
+        "source_side": "right",
+        "file": "data/acoustic/case_400_0.5_srcR.npz"
+      },
+      {
+        "case_id": "500_0.2",
+        "f": 500.0,
+        "Ma": 0.2,
+        "source_side": "left",
+        "file": "data/acoustic/case_500_0.2.npz"
+      },
+      {
+        "case_id": "500_0.3",
+        "f": 500.0,
+        "Ma": 0.3,
+        "source_side": "left",
+        "file": "data/acoustic/case_500_0.3.npz"
+      },
+      {
+        "case_id": "500_0.5",
+        "f": 500.0,
+        "Ma": 0.5,
+        "source_side": "left",
+        "file": "data/acoustic/case_500_0.5.npz"
+      },
+      {
+        "case_id": "500_0.7",
+        "f": 500.0,
+        "Ma": 0.7,
+        "source_side": "left",
+        "file": "data/acoustic/case_500_0.7.npz"
+      }
+    ]
+  },
+  "cond_norm": {
+    "spec": "cond=[f_hz/500, Ma]",
+    "f_denom": 500.0,
+    "ma_scale": 1.0
+  },
+  "n_seeds": 2,
+  "seeds": [
+    3,
+    4
+  ],
+  "epochs": 1000,
+  "lr": 0.001,
+  "val_eval_every": 50,
+  "n_cases": {
+    "train": 6,
+    "val": 1,
+    "test": 10
+  },
+  "agg_over_cases": {
+    "re": {
+      "mean": 1.1627492271635291,
+      "std": 0.014385885531224859,
+      "n": 2,
+      "field": "p_total",
+      "values": [
+        1.1729215843760317,
+        1.1525768699510266
+      ]
+    },
+    "mae": {
+      "mean": 0.5987028627435567,
+      "std": 0.0031845081505031433,
+      "n": 2,
+      "field": "p_total",
+      "values": [
+        0.6009546500515213,
+        0.5964510754355921
+      ]
+    },
+    "max_err": {
+      "mean": 4.017507469692093,
+      "std": 0.0007597435061532576,
+      "n": 2,
+      "field": "p_total",
+      "values": [
+        4.018044689477256,
+        4.0169702499069295
+      ]
+    }
+  },
+  "per_case": {
+    "100_0.3": {
+      "re": {
+        "mean": 1.2454263017186737,
+        "std": 0.027070560504214896,
+        "n": 2
+      },
+      "mae": {
+        "mean": 0.6131051451606621,
+        "std": 0.0046562810070797074,
+        "n": 2
+      },
+      "max_err": {
+        "mean": 2.6730295589972517,
+        "std": 0.17004213400979368,
+        "n": 2
+      }
+    },
+    "100_0.5": {
+      "re": {
+        "mean": 1.266016702732436,
+        "std": 0.018863260569836716,
+        "n": 2
+      },
+      "mae": {
+        "mean": 0.6264045813387135,
+        "std": 0.003030655809704909,
+        "n": 2
+      },
+      "max_err": {
+        "mean": 3.26142487196382,
+        "std": 0.2505981010116632,
+        "n": 2
+      }
+    },
+    "100_0.7": {
+      "re": {
+        "mean": 1.243098149390032,
+        "std": 0.013600639681838517,
+        "n": 2
+      },
+      "mae": {
+        "mean": 0.6691829585572054,
+        "std": 0.004769839257493019,
+        "n": 2
+      },
+      "max_err": {
+        "mean": 5.114367971179202,
+        "std": 0.15825121956472327,
+        "n": 2
+      }
+    },
+    "300_0.3": {
+      "re": {
+        "mean": 1.0362378738132354,
+        "std": 0.021694744817637036,
+        "n": 2
+      },
+      "mae": {
+        "mean": 0.5171849548500005,
+        "std": 0.01131608343172095,
+        "n": 2
+      },
+      "max_err": {
+        "mean": 2.4561866023744967,
+        "std": 0.12636874242419222,
+        "n": 2
+      }
+    },
+    "300_0.7": {
+      "re": {
+        "mean": 1.021718608819313,
+        "std": 0.043551485135058084,
+        "n": 2
+      },
+      "mae": {
+        "mean": 0.5428565383622593,
+        "std": 0.026158106898512345,
+        "n": 2
+      },
+      "max_err": {
+        "mean": 6.529380288999395,
+        "std": 0.09035042742447831,
+        "n": 2
+      }
+    },
+    "400_0.5_srcR": {
+      "re": {
+        "mean": 1.1231867227613512,
+        "std": 0.025459974361451348,
+        "n": 2
+      },
+      "mae": {
+        "mean": 0.5804503130521408,
+        "std": 0.011077990880625877,
+        "n": 2
+      },
+      "max_err": {
+        "mean": 4.178100136780589,
+        "std": 0.09817384546794032,
+        "n": 2
+      }
+    },
+    "500_0.2": {
+      "re": {
+        "mean": 1.1779572795792421,
+        "std": 0.03952305564827201,
+        "n": 2
+      },
+      "mae": {
+        "mean": 0.6033482114070515,
+        "std": 0.016051107992191647,
+        "n": 2
+      },
+      "max_err": {
+        "mean": 2.707016480638467,
+        "std": 0.0752782562865872,
+        "n": 2
+      }
+    },
+    "500_0.3": {
+      "re": {
+        "mean": 1.1717394921599866,
+        "std": 0.03382912158005092,
+        "n": 2
+      },
+      "mae": {
+        "mean": 0.6051834468365449,
+        "std": 0.013340700090776219,
+        "n": 2
+      },
+      "max_err": {
+        "mean": 3.1964746732234337,
+        "std": 0.047040795325434,
+        "n": 2
+      }
+    },
+    "500_0.5": {
+      "re": {
+        "mean": 1.1587530159512194,
+        "std": 0.032015799753068785,
+        "n": 2
+      },
+      "mae": {
+        "mean": 0.6083219320287221,
+        "std": 0.01228028375146567,
+        "n": 2
+      },
+      "max_err": {
+        "mean": 4.511026985962441,
+        "std": 0.013571348277531222,
+        "n": 2
+      }
+    },
+    "500_0.7": {
+      "re": {
+        "mean": 1.143795620307623,
+        "std": 0.029816761996434807,
+        "n": 2
+      },
+      "mae": {
+        "mean": 0.6027379961508506,
+        "std": 0.0120058957760512,
+        "n": 2
+      },
+      "max_err": {
+        "mean": 5.708659793890337,
+        "std": 0.060060780121948064,
+        "n": 2
+      }
+    }
+  },
+  "val_best_re_mean": 0.9904613843105226,
+  "val_best_re_std": 0.0012276047849420805,
+  "s_per_epoch_mean": 0.4099825,
+  "seed_files": [
+    "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nonorm/seed3/metrics_seed3.json",
+    "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nonorm/seed4/metrics_seed4.json"
+  ]
+}

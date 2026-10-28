@@ -1,0 +1,7263 @@
+{
+  "task": "R3.16 route A original pressure forensics",
+  "protocol": "R2-PRESSURE-REFERENCE-CLOSURE-03",
+  "version": "v1",
+  "created_local": "2026-10-23T01:38:38+08:00",
+  "data": "HeatTransferData.npy",
+  "data_sha256": "e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26",
+  "shape": [
+    135,
+    5000,
+    6
+  ],
+  "dtype": "float64",
+  "columns": [
+    "x",
+    "y",
+    "u",
+    "v",
+    "p",
+    "T"
+  ],
+  "split": {
+    "train": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      33,
+      34,
+      35,
+      37,
+      38,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      48,
+      50,
+      51,
+      52,
+      53,
+      54,
+      56,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      69,
+      70,
+      71,
+      72,
+      74,
+      75,
+      76,
+      77,
+      79,
+      81,
+      82,
+      85,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      99,
+      100,
+      101,
+      102,
+      103,
+      105,
+      107,
+      108,
+      110,
+      112,
+      114,
+      115,
+      116,
+      118,
+      119,
+      120,
+      122,
+      124,
+      125,
+      128,
+      130,
+      131,
+      133,
+      134
+    ],
+    "val": [
+      2,
+      36,
+      39,
+      49,
+      55,
+      67,
+      68,
+      78,
+      80,
+      84,
+      104,
+      117,
+      121,
+      129,
+      132
+    ],
+    "test": [
+      17,
+      25,
+      32,
+      46,
+      47,
+      57,
+      66,
+      73,
+      83,
+      86,
+      96,
+      97,
+      98,
+      106,
+      109,
+      111,
+      113,
+      123,
+      126,
+      127
+    ],
+    "n_train": 100,
+    "n_val": 15,
+    "n_test": 20
+  },
+  "public_outer_boundary_count": 492,
+  "common_outer_coordinates": 492,
+  "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+  "sensitivity_thresholds": [
+    1e-10,
+    1e-08
+  ],
+  "selected_reference": {
+    "coord": [
+      -1.0,
+      0.1869918699
+    ],
+    "selection_rule": {
+      "pool": "492 common public outer coordinates present in all 135 geometries",
+      "stage": "train100 only; select coordinate minimizing abs(mean_train_p)+std_train_p",
+      "confirm": "val15 after freeze; test20 only after freeze",
+      "not_historical_proof": true
+    },
+    "train": {
+      "mean": 0.0014258615739999995,
+      "std_sample": 0.0015423111689440085,
+      "max_abs": 0.00328479,
+      "near_zero_fraction": 0.0,
+      "score": 0.0029681727429440082
+    },
+    "val_after_freeze": {
+      "mean": 0.0010778504000000001,
+      "std_sample": 0.0013827819108200893,
+      "max_abs": 0.00331345,
+      "near_zero_fraction": 0.0
+    },
+    "test_after_freeze": {
+      "mean": 0.00099212875,
+      "std_sample": 0.001410798618441972,
+      "max_abs": 0.00325888,
+      "near_zero_fraction": 0.0
+    },
+    "descriptive_all135": {
+      "mean": 0.0013229369511111111,
+      "std_sample": 0.0015067722601712506,
+      "max_abs": 0.00331345
+    }
+  },
+  "top_train_candidates": [
+    {
+      "rank": 1,
+      "coord": [
+        -1.0,
+        0.1869918699
+      ],
+      "train_mean": 0.0014258615739999995,
+      "train_std": 0.0015423111689440085,
+      "train_max_abs": 0.00328479,
+      "train_near_zero_fraction": 0.0,
+      "val_mean": 0.0010778504000000001,
+      "val_max_abs": 0.00331345,
+      "test_mean": 0.00099212875,
+      "test_max_abs": 0.00325888
+    },
+    {
+      "rank": 2,
+      "coord": [
+        1.0,
+        0.1869918699
+      ],
+      "train_mean": 0.0014484363529999995,
+      "train_std": 0.001531777505206974,
+      "train_max_abs": 0.00331508,
+      "train_near_zero_fraction": 0.0,
+      "val_mean": 0.0010168916666666666,
+      "val_max_abs": 0.00317715,
+      "test_mean": 0.0009427477299999998,
+      "test_max_abs": 0.0030889
+    },
+    {
+      "rank": 3,
+      "coord": [
+        1.0,
+        0.1707317073
+      ],
+      "train_mean": -0.0038057292999999996,
+      "train_std": 0.0015415370084040482,
+      "train_max_abs": 0.00709189,
+      "train_near_zero_fraction": 0.0,
+      "val_mean": -0.004251466666666666,
+      "val_max_abs": 0.0064442,
+      "test_mean": -0.004306958999999999,
+      "test_max_abs": 0.00641259
+    },
+    {
+      "rank": 4,
+      "coord": [
+        -1.0,
+        0.1707317073
+      ],
+      "train_mean": -0.0038295064,
+      "train_std": 0.001553594755707764,
+      "train_max_abs": 0.00731046,
+      "train_near_zero_fraction": 0.0,
+      "val_mean": -0.004164897999999999,
+      "val_max_abs": 0.00671125,
+      "test_mean": -0.00429077,
+      "test_max_abs": 0.00740288
+    },
+    {
+      "rank": 5,
+      "coord": [
+        -1.0,
+        0.2032520325
+      ],
+      "train_mean": 0.006736430800000001,
+      "train_std": 0.0015345634135727729,
+      "train_max_abs": 0.00861853,
+      "train_near_zero_fraction": 0.0,
+      "val_mean": 0.006405379333333333,
+      "val_max_abs": 0.00858332,
+      "test_mean": 0.0063094054999999994,
+      "test_max_abs": 0.00840817
+    },
+    {
+      "rank": 6,
+      "coord": [
+        1.0,
+        0.2032520325
+      ],
+      "train_mean": 0.006753563200000003,
+      "train_std": 0.0015184390605865318,
+      "train_max_abs": 0.00858941,
+      "train_near_zero_fraction": 0.0,
+      "val_mean": 0.0063602960000000005,
+      "val_max_abs": 0.00861244,
+      "test_mean": 0.006273543500000001,
+      "test_max_abs": 0.00836948
+    },
+    {
+      "rank": 7,
+      "coord": [
+        1.0,
+        0.1544715447
+      ],
+      "train_mean": -0.008867953100000003,
+      "train_std": 0.001549677157084431,
+      "train_max_abs": 0.0122406,
+      "train_near_zero_fraction": 0.0,
+      "val_mean": -0.009300855333333333,
+      "val_max_abs": 0.0114664,
+      "test_mean": -0.009359751500000003,
+      "test_max_abs": 0.0115359
+    },
+    {
+      "rank": 8,
+      "coord": [
+        -1.0,
+        0.1544715447
+      ],
+      "train_mean": -0.0088898103,
+      "train_std": 0.001566291906303686,
+      "train_max_abs": 0.0123238,
+      "train_near_zero_fraction": 0.0,
+      "val_mean": -0.00926227,
+      "val_max_abs": 0.0116782,
+      "test_mean": -0.009327366,
+      "test_max_abs": 0.01252
+    },
+    {
+      "rank": 9,
+      "coord": [
+        1.0,
+        0.2195121951
+      ],
+      "train_mean": 0.012211431799999995,
+      "train_std": 0.0014984240935402026,
+      "train_max_abs": 0.0139947,
+      "train_near_zero_fraction": 0.0,
+      "val_mean": 0.011847365333333332,
+      "val_max_abs": 0.0140035,
+      "test_mean": 0.011747682999999998,
+      "test_max_abs": 0.0139803
+    },
+    {
+      "rank": 10,
+      "coord": [
+        -1.0,
+        0.2195121951
+      ],
+      "train_mean": 0.012201901099999999,
+      "train_std": 0.0015166376024460567,
+      "train_max_abs": 0.0140096,
+      "train_near_zero_fraction": 0.0,
+      "val_mean": 0.011871158666666668,
+      "val_max_abs": 0.0138603,
+      "test_mean": 0.0117672595,
+      "test_max_abs": 0.0138895
+    }
+  ],
+  "per_geometry": [
+    {
+      "n": 5000,
+      "min": -0.233906,
+      "max": 0.439709,
+      "mean": 0.0011547766048000006,
+      "std": 0.20572772631792116,
+      "median": -0.05724155,
+      "mean_abs": 0.178038508048,
+      "max_abs": 0.439709,
+      "p05": -0.22457654999999999,
+      "p95": 0.3732519,
+      "geom_id": 0,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2174945,
+          "max_abs": 0.439709
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2174945,
+          "max_abs": 0.439709
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2174945,
+          "max_abs": 0.439709
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233906,
+        "max": 0.439709,
+        "mean": 0.03728672422764228,
+        "std": 0.2557928843402299,
+        "median": -0.0539435,
+        "mean_abs": 0.23172082601626018,
+        "max_abs": 0.439709,
+        "p05": -0.2319839,
+        "p95": 0.43323639999999997
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233865,
+      "max": 0.439791,
+      "mean": 0.00317324772404,
+      "std": 0.20905470436384424,
+      "median": -0.058041800000000005,
+      "mean_abs": 0.18059139740483998,
+      "max_abs": 0.439791,
+      "p05": -0.2241083,
+      "p95": 0.3854658,
+      "geom_id": 1,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21753,
+          "max_abs": 0.439791
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21753,
+          "max_abs": 0.439791
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21753,
+          "max_abs": 0.439791
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233865,
+        "max": 0.439791,
+        "mean": 0.037350402195121965,
+        "std": 0.25580831755466965,
+        "median": -0.053875450000000005,
+        "mean_abs": 0.23173017703252033,
+        "max_abs": 0.439791,
+        "p05": -0.2319398,
+        "p95": 0.43329615
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233577,
+      "max": 0.440037,
+      "mean": -0.0028508937714999995,
+      "std": 0.20578984224531158,
+      "median": -0.06280215,
+      "mean_abs": 0.17815058746890003,
+      "max_abs": 0.440037,
+      "p05": -0.2243593,
+      "p95": 0.37471870000000007,
+      "geom_id": 2,
+      "stage": "val",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217256,
+          "max_abs": 0.440037
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217256,
+          "max_abs": 0.440037
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217256,
+          "max_abs": 0.440037
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233577,
+        "max": 0.440037,
+        "mean": 0.03761101985772357,
+        "std": 0.2557897926002938,
+        "median": -0.0536085,
+        "mean_abs": 0.23168971477642278,
+        "max_abs": 0.440037,
+        "p05": -0.23165645,
+        "p95": 0.43354195
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.2339,
+      "max": 0.439712,
+      "mean": 0.0035222150764999995,
+      "std": 0.2073750992038212,
+      "median": -0.05560105,
+      "mean_abs": 0.1797690819485,
+      "max_abs": 0.439712,
+      "p05": -0.22397395,
+      "p95": 0.3731678000000001,
+      "geom_id": 3,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2175485,
+          "max_abs": 0.439712
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2175485,
+          "max_abs": 0.439712
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2175485,
+          "max_abs": 0.439712
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.2339,
+        "max": 0.439712,
+        "mean": 0.0372850026219512,
+        "std": 0.25579060232094863,
+        "median": -0.0539141,
+        "mean_abs": 0.23172070782520324,
+        "max_abs": 0.439712,
+        "p05": -0.23198145,
+        "p95": 0.4331957
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233881,
+      "max": 0.439678,
+      "mean": 0.0008935587368600008,
+      "std": 0.20895352017763258,
+      "median": -0.0634487,
+      "mean_abs": 0.18132267954154002,
+      "max_abs": 0.439678,
+      "p05": -0.22371705,
+      "p95": 0.38327750000000005,
+      "geom_id": 4,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217549,
+          "max_abs": 0.439678
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217549,
+          "max_abs": 0.439678
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217549,
+          "max_abs": 0.439678
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233881,
+        "max": 0.439678,
+        "mean": 0.037294637723577245,
+        "std": 0.25578559062171374,
+        "median": -0.053895,
+        "mean_abs": 0.23171762471544716,
+        "max_abs": 0.439678,
+        "p05": -0.23195295,
+        "p95": 0.43314885
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233852,
+      "max": 0.439696,
+      "mean": 0.006230310338640001,
+      "std": 0.21049570174579213,
+      "median": -0.05431855,
+      "mean_abs": 0.18225427339744002,
+      "max_abs": 0.439696,
+      "p05": -0.2239135,
+      "p95": 0.38271510000000003,
+      "geom_id": 5,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217536,
+          "max_abs": 0.439696
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217536,
+          "max_abs": 0.439696
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217536,
+          "max_abs": 0.439696
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233852,
+        "max": 0.439696,
+        "mean": 0.03732008243902438,
+        "std": 0.25579051500773775,
+        "median": -0.05385975,
+        "mean_abs": 0.23172102520325202,
+        "max_abs": 0.439696,
+        "p05": -0.23193345,
+        "p95": 0.4331589
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233695,
+      "max": 0.439841,
+      "mean": 0.0007945887642399991,
+      "std": 0.20728917982046102,
+      "median": -0.06072785,
+      "mean_abs": 0.17947096638056,
+      "max_abs": 0.439841,
+      "p05": -0.22400185,
+      "p95": 0.37640390000000024,
+      "geom_id": 6,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2173695,
+          "max_abs": 0.439841
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2173695,
+          "max_abs": 0.439841
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2173695,
+          "max_abs": 0.439841
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233695,
+        "max": 0.439841,
+        "mean": 0.037472014268292685,
+        "std": 0.2557918385830526,
+        "median": -0.0536942,
+        "mean_abs": 0.2317110720325203,
+        "max_abs": 0.439841,
+        "p05": -0.2317737,
+        "p95": 0.43325600000000003
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233733,
+      "max": 0.439772,
+      "mean": 0.003914595093600001,
+      "std": 0.2081715834214989,
+      "median": -0.0529305,
+      "mean_abs": 0.18024037370440002,
+      "max_abs": 0.439772,
+      "p05": -0.22475230000000002,
+      "p95": 0.37884225,
+      "geom_id": 7,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217416,
+          "max_abs": 0.439772
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217416,
+          "max_abs": 0.439772
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217416,
+          "max_abs": 0.439772
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233733,
+        "max": 0.439772,
+        "mean": 0.037434074451219525,
+        "std": 0.2557907887037756,
+        "median": -0.05368045,
+        "mean_abs": 0.2317158592886179,
+        "max_abs": 0.439772,
+        "p05": -0.23181300000000002,
+        "p95": 0.43315865000000003
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233891,
+      "max": 0.439568,
+      "mean": 0.004228027299914,
+      "std": 0.20772368823789927,
+      "median": -0.0540375,
+      "mean_abs": 0.179013463524874,
+      "max_abs": 0.439568,
+      "p05": -0.22367525000000002,
+      "p95": 0.382523,
+      "geom_id": 8,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217506,
+          "max_abs": 0.439568
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217506,
+          "max_abs": 0.439568
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217506,
+          "max_abs": 0.439568
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233891,
+        "max": 0.439568,
+        "mean": 0.03725370542682925,
+        "std": 0.2557772973043939,
+        "median": -0.05384385,
+        "mean_abs": 0.23172070737804876,
+        "max_abs": 0.439568,
+        "p05": -0.23196724999999999,
+        "p95": 0.4328957
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.234268,
+      "max": 0.439197,
+      "mean": 0.00355812507598,
+      "std": 0.20712605944489226,
+      "median": -0.05297185,
+      "mean_abs": 0.17877945971278,
+      "max_abs": 0.439197,
+      "p05": -0.22368905,
+      "p95": 0.3808145,
+      "geom_id": 9,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21755249999999998,
+          "max_abs": 0.439197
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21755249999999998,
+          "max_abs": 0.439197
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21755249999999998,
+          "max_abs": 0.439197
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.234268,
+        "max": 0.439197,
+        "mean": 0.036909277662601624,
+        "std": 0.25581834995775393,
+        "median": -0.0541849,
+        "mean_abs": 0.2317937955487805,
+        "max_abs": 0.439197,
+        "p05": -0.23234435,
+        "p95": 0.4324747
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233881,
+      "max": 0.439541,
+      "mean": 0.0006049497710800009,
+      "std": 0.20550266825081723,
+      "median": -0.0580355,
+      "mean_abs": 0.17748009713732,
+      "max_abs": 0.439541,
+      "p05": -0.22407434999999998,
+      "p95": 0.3746036000000001,
+      "geom_id": 10,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21755750000000001,
+          "max_abs": 0.439541
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21755750000000001,
+          "max_abs": 0.439541
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21755750000000001,
+          "max_abs": 0.439541
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233881,
+        "max": 0.439541,
+        "mean": 0.03726647861788618,
+        "std": 0.2558051143550199,
+        "median": -0.05380965,
+        "mean_abs": 0.23175148792682926,
+        "max_abs": 0.439541,
+        "p05": -0.2319676,
+        "p95": 0.43285335
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.234008,
+      "max": 0.439319,
+      "mean": 0.0048209643862,
+      "std": 0.20865546182725173,
+      "median": -0.05402025,
+      "mean_abs": 0.180797494353,
+      "max_abs": 0.439319,
+      "p05": -0.22348615,
+      "p95": 0.3793356500000001,
+      "geom_id": 11,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2175415,
+          "max_abs": 0.439319
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2175415,
+          "max_abs": 0.439319
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2175415,
+          "max_abs": 0.439319
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.234008,
+        "max": 0.439319,
+        "mean": 0.037102810060975606,
+        "std": 0.255769414273595,
+        "median": -0.053904350000000004,
+        "mean_abs": 0.23173468335365852,
+        "max_abs": 0.439319,
+        "p05": -0.23209705,
+        "p95": 0.4325908
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233926,
+      "max": 0.439433,
+      "mean": 0.002091909958000002,
+      "std": 0.20726749281268392,
+      "median": -0.05673125,
+      "mean_abs": 0.17844720227560001,
+      "max_abs": 0.439433,
+      "p05": -0.2241901,
+      "p95": 0.3812126,
+      "geom_id": 12,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217579,
+          "max_abs": 0.439433
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217579,
+          "max_abs": 0.439433
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217579,
+          "max_abs": 0.439433
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233926,
+        "max": 0.439433,
+        "mean": 0.037233423333333335,
+        "std": 0.2558213608327139,
+        "median": -0.0537716,
+        "mean_abs": 0.23177689398373985,
+        "max_abs": 0.439433,
+        "p05": -0.2320193,
+        "p95": 0.4326373
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233788,
+      "max": 0.439494,
+      "mean": 0.0028518072905400005,
+      "std": 0.20801004533479978,
+      "median": -0.05812755,
+      "mean_abs": 0.17965141074826002,
+      "max_abs": 0.439494,
+      "p05": -0.22444925000000002,
+      "p95": 0.38055880000000014,
+      "geom_id": 13,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217459,
+          "max_abs": 0.439494
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217459,
+          "max_abs": 0.439494
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217459,
+          "max_abs": 0.439494
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233788,
+        "max": 0.439494,
+        "mean": 0.03732058063008131,
+        "std": 0.25577962633820645,
+        "median": -0.0536234,
+        "mean_abs": 0.23173058871951221,
+        "max_abs": 0.439494,
+        "p05": -0.2318815,
+        "p95": 0.4326668
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.234128,
+      "max": 0.43918,
+      "mean": 0.0019410523383599995,
+      "std": 0.2070761763236949,
+      "median": -0.05773355,
+      "mean_abs": 0.17920239034635999,
+      "max_abs": 0.43918,
+      "p05": -0.22435214999999997,
+      "p95": 0.37786590000000003,
+      "geom_id": 14,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21753050000000002,
+          "max_abs": 0.43918
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21753050000000002,
+          "max_abs": 0.43918
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21753050000000002,
+          "max_abs": 0.43918
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.234128,
+        "max": 0.43918,
+        "mean": 0.03703415032520326,
+        "std": 0.2558355118634852,
+        "median": -0.053904499999999994,
+        "mean_abs": 0.2318135906910569,
+        "max_abs": 0.43918,
+        "p05": -0.23222815,
+        "p95": 0.43234745
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.23378,
+      "max": 0.439442,
+      "mean": 0.0015873916721999993,
+      "std": 0.2075041910595162,
+      "median": -0.0613597,
+      "mean_abs": 0.17964238850420003,
+      "max_abs": 0.439442,
+      "p05": -0.22430375,
+      "p95": 0.37921035000000014,
+      "geom_id": 15,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2174505,
+          "max_abs": 0.439442
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2174505,
+          "max_abs": 0.439442
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2174505,
+          "max_abs": 0.439442
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.23378,
+        "max": 0.439442,
+        "mean": 0.03730872737804878,
+        "std": 0.25578587827186194,
+        "median": -0.053618799999999994,
+        "mean_abs": 0.23174351656504066,
+        "max_abs": 0.439442,
+        "p05": -0.2318818,
+        "p95": 0.432528
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233733,
+      "max": 0.439413,
+      "mean": -0.0005451599923900032,
+      "std": 0.2063253522314679,
+      "median": -0.06212595,
+      "mean_abs": 0.17845395629373,
+      "max_abs": 0.439413,
+      "p05": -0.2238041,
+      "p95": 0.3749948000000001,
+      "geom_id": 16,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21740700000000002,
+          "max_abs": 0.439413
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21740700000000002,
+          "max_abs": 0.439413
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21740700000000002,
+          "max_abs": 0.439413
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233733,
+        "max": 0.439413,
+        "mean": 0.0373240919105691,
+        "std": 0.25577283059670486,
+        "median": -0.05358575,
+        "mean_abs": 0.23173086658536585,
+        "max_abs": 0.439413,
+        "p05": -0.23183985000000001,
+        "p95": 0.4324924
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.234102,
+      "max": 0.439071,
+      "mean": 0.00233362245198,
+      "std": 0.20874745301397915,
+      "median": -0.05967715,
+      "mean_abs": 0.18059897474718,
+      "max_abs": 0.439071,
+      "p05": -0.22406964999999998,
+      "p95": 0.37785465000000007,
+      "geom_id": 17,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217588,
+          "max_abs": 0.439071
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217588,
+          "max_abs": 0.439071
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217588,
+          "max_abs": 0.439071
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.234102,
+        "max": 0.439071,
+        "mean": 0.037039172093495935,
+        "std": 0.25585118399136997,
+        "median": -0.0538487,
+        "mean_abs": 0.23183630851626016,
+        "max_abs": 0.439071,
+        "p05": -0.23221885,
+        "p95": 0.4321845
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.234128,
+      "max": 0.439042,
+      "mean": -0.0005653540243779987,
+      "std": 0.20899339782282864,
+      "median": -0.064607,
+      "mean_abs": 0.180980880786262,
+      "max_abs": 0.439042,
+      "p05": -0.2239941,
+      "p95": 0.38379865,
+      "geom_id": 18,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217565,
+          "max_abs": 0.439042
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217565,
+          "max_abs": 0.439042
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217565,
+          "max_abs": 0.439042
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.234128,
+        "max": 0.439042,
+        "mean": 0.03698706934959349,
+        "std": 0.2558406907536886,
+        "median": -0.0539004,
+        "mean_abs": 0.23183127788617885,
+        "max_abs": 0.439042,
+        "p05": -0.232243,
+        "p95": 0.4320966
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233896,
+      "max": 0.439284,
+      "mean": 0.0029927893083548,
+      "std": 0.2094280355674317,
+      "median": -0.06176825,
+      "mean_abs": 0.1814925514872452,
+      "max_abs": 0.439284,
+      "p05": -0.22438185,
+      "p95": 0.38030715000000004,
+      "geom_id": 19,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21748499999999998,
+          "max_abs": 0.439284
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21748499999999998,
+          "max_abs": 0.439284
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21748499999999998,
+          "max_abs": 0.439284
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233896,
+        "max": 0.439284,
+        "mean": 0.03721007682926829,
+        "std": 0.25580936586326314,
+        "median": -0.0536426,
+        "mean_abs": 0.2317823548780488,
+        "max_abs": 0.439284,
+        "p05": -0.2319909,
+        "p95": 0.43225035
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.234029,
+      "max": 0.439027,
+      "mean": 0.004508111509399999,
+      "std": 0.20860757760752288,
+      "median": -0.0556548,
+      "mean_abs": 0.18061090073288,
+      "max_abs": 0.439027,
+      "p05": -0.22427995,
+      "p95": 0.38035520000000006,
+      "geom_id": 20,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217499,
+          "max_abs": 0.439027
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217499,
+          "max_abs": 0.439027
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217499,
+          "max_abs": 0.439027
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.234029,
+        "max": 0.439027,
+        "mean": 0.0370306831707317,
+        "std": 0.2557818251035766,
+        "median": -0.05383195,
+        "mean_abs": 0.23177333800813008,
+        "max_abs": 0.439027,
+        "p05": -0.23213535000000002,
+        "p95": 0.43202825
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233978,
+      "max": 0.439013,
+      "mean": 0.0019315982470419994,
+      "std": 0.20712177802876316,
+      "median": -0.0568281,
+      "mean_abs": 0.179221225692042,
+      "max_abs": 0.439013,
+      "p05": -0.22406120000000002,
+      "p95": 0.37552545000000004,
+      "geom_id": 21,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217482,
+          "max_abs": 0.439013
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217482,
+          "max_abs": 0.439013
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217482,
+          "max_abs": 0.439013
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233978,
+        "max": 0.439013,
+        "mean": 0.037042742337398384,
+        "std": 0.2557670857180709,
+        "median": -0.0538206,
+        "mean_abs": 0.2317594492479675,
+        "max_abs": 0.439013,
+        "p05": -0.2320994,
+        "p95": 0.43201495
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233735,
+      "max": 0.439224,
+      "mean": -0.001571068978720001,
+      "std": 0.2075549627697987,
+      "median": -0.06674920000000001,
+      "mean_abs": 0.17984600211687998,
+      "max_abs": 0.439224,
+      "p05": -0.2239845,
+      "p95": 0.37634345,
+      "geom_id": 22,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217399,
+          "max_abs": 0.439224
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217399,
+          "max_abs": 0.439224
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217399,
+          "max_abs": 0.439224
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233735,
+        "max": 0.439224,
+        "mean": 0.03729745997967481,
+        "std": 0.25577770938698796,
+        "median": -0.053553699999999996,
+        "mean_abs": 0.23174740030487803,
+        "max_abs": 0.439224,
+        "p05": -0.2318494,
+        "p95": 0.43221555
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233737,
+      "max": 0.439222,
+      "mean": 0.0016456283723800002,
+      "std": 0.20711889169795764,
+      "median": -0.05595845,
+      "mean_abs": 0.17867373317186,
+      "max_abs": 0.439222,
+      "p05": -0.22371045,
+      "p95": 0.37597345000000004,
+      "geom_id": 23,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217401,
+          "max_abs": 0.439222
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217401,
+          "max_abs": 0.439222
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217401,
+          "max_abs": 0.439222
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233737,
+        "max": 0.439222,
+        "mean": 0.03729534396341464,
+        "std": 0.2557777042909683,
+        "median": -0.05355585,
+        "mean_abs": 0.23174758404471543,
+        "max_abs": 0.439222,
+        "p05": -0.2318514,
+        "p95": 0.43221355
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233986,
+      "max": 0.439006,
+      "mean": 0.002494409237380001,
+      "std": 0.20755493753001017,
+      "median": -0.05455425,
+      "mean_abs": 0.17928662806613999,
+      "max_abs": 0.439006,
+      "p05": -0.2241475,
+      "p95": 0.37575485000000025,
+      "geom_id": 24,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217482,
+          "max_abs": 0.439006
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217482,
+          "max_abs": 0.439006
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217482,
+          "max_abs": 0.439006
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233986,
+        "max": 0.439006,
+        "mean": 0.03703561493902438,
+        "std": 0.25576706457531395,
+        "median": -0.05382775,
+        "mean_abs": 0.2317600693699187,
+        "max_abs": 0.439006,
+        "p05": -0.23210640000000002,
+        "p95": 0.4320075
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.234035,
+      "max": 0.439022,
+      "mean": 0.00672600243928,
+      "std": 0.20918413481599263,
+      "median": -0.05172095,
+      "mean_abs": 0.18080177140632,
+      "max_abs": 0.439022,
+      "p05": -0.22415569999999999,
+      "p95": 0.380585,
+      "geom_id": 25,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217499,
+          "max_abs": 0.439022
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217499,
+          "max_abs": 0.439022
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217499,
+          "max_abs": 0.439022
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.234035,
+        "max": 0.439022,
+        "mean": 0.037025064654471536,
+        "std": 0.2557818070881812,
+        "median": -0.05383755,
+        "mean_abs": 0.2317738201422764,
+        "max_abs": 0.439022,
+        "p05": -0.2321409,
+        "p95": 0.43202270000000004
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233902,
+      "max": 0.439278,
+      "mean": -0.002331345712879999,
+      "std": 0.20827684413470304,
+      "median": -0.06855695,
+      "mean_abs": 0.18086989993328,
+      "max_abs": 0.439278,
+      "p05": -0.224432,
+      "p95": 0.3799804,
+      "geom_id": 26,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217485,
+          "max_abs": 0.439278
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217485,
+          "max_abs": 0.439278
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217485,
+          "max_abs": 0.439278
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233902,
+        "max": 0.439278,
+        "mean": 0.03720377973577236,
+        "std": 0.25580938949122456,
+        "median": -0.0536489,
+        "mean_abs": 0.23178294774390248,
+        "max_abs": 0.439278,
+        "p05": -0.23199745000000002,
+        "p95": 0.4322438
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.234122,
+      "max": 0.439048,
+      "mean": 0.0011407121638,
+      "std": 0.20619355176150578,
+      "median": -0.057528800000000005,
+      "mean_abs": 0.17813798374415998,
+      "max_abs": 0.439048,
+      "p05": -0.22461740000000002,
+      "p95": 0.3766392000000001,
+      "geom_id": 27,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217565,
+          "max_abs": 0.439048
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217565,
+          "max_abs": 0.439048
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217565,
+          "max_abs": 0.439048
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.234122,
+        "max": 0.439048,
+        "mean": 0.03699303016260162,
+        "std": 0.255840704336667,
+        "median": -0.053894449999999997,
+        "mean_abs": 0.2318307567479675,
+        "max_abs": 0.439048,
+        "p05": -0.232237,
+        "p95": 0.4321026
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.234106,
+      "max": 0.439067,
+      "mean": 0.004024323028,
+      "std": 0.20855815544777973,
+      "median": -0.05345564999999999,
+      "mean_abs": 0.18029834771199998,
+      "max_abs": 0.439067,
+      "p05": -0.22469705,
+      "p95": 0.3757811000000001,
+      "geom_id": 28,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217588,
+          "max_abs": 0.439067
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217588,
+          "max_abs": 0.439067
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217588,
+          "max_abs": 0.439067
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.234106,
+        "max": 0.439067,
+        "mean": 0.03703594672764227,
+        "std": 0.25585117148423253,
+        "median": -0.053851899999999994,
+        "mean_abs": 0.2318365812804878,
+        "max_abs": 0.439067,
+        "p05": -0.2322223,
+        "p95": 0.43218095
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233743,
+      "max": 0.439404,
+      "mean": 0.0025136098088260005,
+      "std": 0.20769286071732776,
+      "median": -0.0551851,
+      "mean_abs": 0.179501595775374,
+      "max_abs": 0.439404,
+      "p05": -0.22408055,
+      "p95": 0.38008175000000005,
+      "geom_id": 29,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2174165,
+          "max_abs": 0.439404
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2174165,
+          "max_abs": 0.439404
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2174165,
+          "max_abs": 0.439404
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233743,
+        "max": 0.439404,
+        "mean": 0.03731435656504064,
+        "std": 0.25577284602802386,
+        "median": -0.05359545,
+        "mean_abs": 0.23173175030487808,
+        "max_abs": 0.439404,
+        "p05": -0.23184985,
+        "p95": 0.4324824
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233781,
+      "max": 0.439441,
+      "mean": 0.006115344451526001,
+      "std": 0.20916269304505658,
+      "median": -0.0528767,
+      "mean_abs": 0.181204775212726,
+      "max_abs": 0.439441,
+      "p05": -0.2242172,
+      "p95": 0.38060495,
+      "geom_id": 30,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2174525,
+          "max_abs": 0.439441
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2174525,
+          "max_abs": 0.439441
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2174525,
+          "max_abs": 0.439441
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233781,
+        "max": 0.439441,
+        "mean": 0.0373071844105691,
+        "std": 0.2557859299546671,
+        "median": -0.05362035,
+        "mean_abs": 0.23174370050813006,
+        "max_abs": 0.439441,
+        "p05": -0.23188325,
+        "p95": 0.43252645
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.234135,
+      "max": 0.439173,
+      "mean": 0.0012814274017800007,
+      "std": 0.20660174697822686,
+      "median": -0.05732015,
+      "mean_abs": 0.17879595262178,
+      "max_abs": 0.439173,
+      "p05": -0.22438355,
+      "p95": 0.376248,
+      "geom_id": 31,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21753050000000002,
+          "max_abs": 0.439173
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21753050000000002,
+          "max_abs": 0.439173
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21753050000000002,
+          "max_abs": 0.439173
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.234135,
+        "max": 0.439173,
+        "mean": 0.03702720526422765,
+        "std": 0.2558355085502468,
+        "median": -0.05391145,
+        "mean_abs": 0.23181420774390246,
+        "max_abs": 0.439173,
+        "p05": -0.23223515,
+        "p95": 0.43234045000000004
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.23379,
+      "max": 0.439492,
+      "mean": -0.00025594312934000064,
+      "std": 0.20625703752070984,
+      "median": -0.058067350000000004,
+      "mean_abs": 0.17825725512218,
+      "max_abs": 0.439492,
+      "p05": -0.2245791,
+      "p95": 0.37674825,
+      "geom_id": 32,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21746100000000002,
+          "max_abs": 0.439492
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21746100000000002,
+          "max_abs": 0.439492
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21746100000000002,
+          "max_abs": 0.439492
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.23379,
+        "max": 0.439492,
+        "mean": 0.03731876101626016,
+        "std": 0.25577964026833083,
+        "median": -0.0536252,
+        "mean_abs": 0.23173076065040651,
+        "max_abs": 0.439492,
+        "p05": -0.2318825,
+        "p95": 0.4326648
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233925,
+      "max": 0.439433,
+      "mean": 0.00015459206072000135,
+      "std": 0.20758690583060974,
+      "median": -0.06192835,
+      "mean_abs": 0.18022204570248,
+      "max_abs": 0.439433,
+      "p05": -0.224451,
+      "p95": 0.375491,
+      "geom_id": 33,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217579,
+          "max_abs": 0.439433
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217579,
+          "max_abs": 0.439433
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217579,
+          "max_abs": 0.439433
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233925,
+        "max": 0.439433,
+        "mean": 0.03723396497967478,
+        "std": 0.2558213407276799,
+        "median": -0.053771,
+        "mean_abs": 0.23177681896341462,
+        "max_abs": 0.439433,
+        "p05": -0.23201885,
+        "p95": 0.4326383
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.234004,
+      "max": 0.439323,
+      "mean": 0.00340558251759,
+      "std": 0.20902974371878497,
+      "median": -0.05958,
+      "mean_abs": 0.18114197447025,
+      "max_abs": 0.439323,
+      "p05": -0.2238493,
+      "p95": 0.38227849999999997,
+      "geom_id": 34,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2175415,
+          "max_abs": 0.439323
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2175415,
+          "max_abs": 0.439323
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2175415,
+          "max_abs": 0.439323
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.234004,
+        "max": 0.439323,
+        "mean": 0.037107291260162614,
+        "std": 0.2557694411022211,
+        "median": -0.0538999,
+        "mean_abs": 0.23173431402439024,
+        "max_abs": 0.439323,
+        "p05": -0.23209259999999998,
+        "p95": 0.43259580000000003
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233887,
+      "max": 0.439534,
+      "mean": 0.0005400861308399996,
+      "std": 0.2057571654643839,
+      "median": -0.05651505,
+      "mean_abs": 0.17770668666676,
+      "max_abs": 0.439534,
+      "p05": -0.22383125,
+      "p95": 0.37746825,
+      "geom_id": 35,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21756399999999998,
+          "max_abs": 0.439534
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21756399999999998,
+          "max_abs": 0.439534
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21756399999999998,
+          "max_abs": 0.439534
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233887,
+        "max": 0.439534,
+        "mean": 0.037260117337398355,
+        "std": 0.255805099351235,
+        "median": -0.053816,
+        "mean_abs": 0.23175204623983736,
+        "max_abs": 0.439534,
+        "p05": -0.2319736,
+        "p95": 0.43284735
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.234265,
+      "max": 0.4392,
+      "mean": 0.004089218390420001,
+      "std": 0.2090260956715746,
+      "median": -0.05160295,
+      "mean_abs": 0.18081710456841998,
+      "max_abs": 0.4392,
+      "p05": -0.22444395,
+      "p95": 0.38063864999999997,
+      "geom_id": 36,
+      "stage": "val",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217553,
+          "max_abs": 0.4392
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217553,
+          "max_abs": 0.4392
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217553,
+          "max_abs": 0.4392
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.234265,
+        "max": 0.4392,
+        "mean": 0.03691237926829268,
+        "std": 0.25581835923565943,
+        "median": -0.0541818,
+        "mean_abs": 0.2317935223577236,
+        "max_abs": 0.4392,
+        "p05": -0.23234135,
+        "p95": 0.4324777
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233889,
+      "max": 0.43957,
+      "mean": 0.0043035195184000005,
+      "std": 0.20842071665059697,
+      "median": -0.052201700000000004,
+      "mean_abs": 0.17991727746532002,
+      "max_abs": 0.43957,
+      "p05": -0.22462154999999998,
+      "p95": 0.3775033,
+      "geom_id": 37,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21750599999999998,
+          "max_abs": 0.43957
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21750599999999998,
+          "max_abs": 0.43957
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21750599999999998,
+          "max_abs": 0.43957
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233889,
+        "max": 0.43957,
+        "mean": 0.03725589193089431,
+        "std": 0.25577732823038474,
+        "median": -0.05384165,
+        "mean_abs": 0.23172053705284557,
+        "max_abs": 0.43957,
+        "p05": -0.2319648,
+        "p95": 0.4328977
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233744,
+      "max": 0.43976,
+      "mean": 0.0018315154784400009,
+      "std": 0.20813733357111572,
+      "median": -0.05960245,
+      "mean_abs": 0.18054044261644,
+      "max_abs": 0.43976,
+      "p05": -0.22352525,
+      "p95": 0.37821135000000006,
+      "geom_id": 38,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217428,
+          "max_abs": 0.43976
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217428,
+          "max_abs": 0.43976
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.217428,
+          "max_abs": 0.43976
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233744,
+        "max": 0.43976,
+        "mean": 0.03742236977642275,
+        "std": 0.25579076065108497,
+        "median": -0.05369215,
+        "mean_abs": 0.2317168857520325,
+        "max_abs": 0.43976,
+        "p05": -0.231825,
+        "p95": 0.43314719999999995
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233697,
+      "max": 0.43984,
+      "mean": 0.0008483758407599992,
+      "std": 0.2067264981038804,
+      "median": -0.060832899999999995,
+      "mean_abs": 0.17919756386076002,
+      "max_abs": 0.43984,
+      "p05": -0.22405015,
+      "p95": 0.37244200000000016,
+      "geom_id": 39,
+      "stage": "val",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21737099999999998,
+          "max_abs": 0.43984
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21737099999999998,
+          "max_abs": 0.43984
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21737099999999998,
+          "max_abs": 0.43984
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233697,
+        "max": 0.43984,
+        "mean": 0.03747036156504066,
+        "std": 0.25579183944893086,
+        "median": -0.0536958,
+        "mean_abs": 0.23171121571138212,
+        "max_abs": 0.43984,
+        "p05": -0.23177525,
+        "p95": 0.43325400000000003
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233851,
+      "max": 0.439697,
+      "mean": 0.0015406622228000004,
+      "std": 0.20685685290033995,
+      "median": -0.061276,
+      "mean_abs": 0.1790145254648,
+      "max_abs": 0.439697,
+      "p05": -0.2238872,
+      "p95": 0.38017045000000016,
+      "geom_id": 40,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21753499999999998,
+          "max_abs": 0.439697
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21753499999999998,
+          "max_abs": 0.439697
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21753499999999998,
+          "max_abs": 0.439697
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233851,
+        "max": 0.439697,
+        "mean": 0.03732109859756097,
+        "std": 0.25579051746484804,
+        "median": -0.053858699999999995,
+        "mean_abs": 0.23172093371951222,
+        "max_abs": 0.439697,
+        "p05": -0.23193245,
+        "p95": 0.4331599
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233864,
+      "max": 0.439695,
+      "mean": 0.00516382826938,
+      "std": 0.20952740657836572,
+      "median": -0.05271965,
+      "mean_abs": 0.18126455727257998,
+      "max_abs": 0.439695,
+      "p05": -0.22405740000000002,
+      "p95": 0.3804425,
+      "geom_id": 41,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21754649999999998,
+          "max_abs": 0.439695
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21754649999999998,
+          "max_abs": 0.439695
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21754649999999998,
+          "max_abs": 0.439695
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233864,
+        "max": 0.439695,
+        "mean": 0.037311328678861784,
+        "std": 0.2557855307380949,
+        "median": -0.053878350000000005,
+        "mean_abs": 0.23171607876016262,
+        "max_abs": 0.439695,
+        "p05": -0.23193595,
+        "p95": 0.4331654
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233895,
+      "max": 0.439717,
+      "mean": 0.003470440805799999,
+      "std": 0.2076647312772418,
+      "median": -0.05485425,
+      "mean_abs": 0.1795398326662,
+      "max_abs": 0.439717,
+      "p05": -0.2243842,
+      "p95": 0.3808321000000001,
+      "geom_id": 42,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21754849999999998,
+          "max_abs": 0.439717
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21754849999999998,
+          "max_abs": 0.439717
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21754849999999998,
+          "max_abs": 0.439717
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233895,
+        "max": 0.439717,
+        "mean": 0.03728971725609755,
+        "std": 0.2557906473763971,
+        "median": -0.053909399999999996,
+        "mean_abs": 0.23172032554878047,
+        "max_abs": 0.439717,
+        "p05": -0.23197645,
+        "p95": 0.4332007
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233571,
+      "max": 0.440043,
+      "mean": 0.0013547958491800002,
+      "std": 0.207469292881026,
+      "median": -0.0577966,
+      "mean_abs": 0.17942245543878,
+      "max_abs": 0.440043,
+      "p05": -0.22318985,
+      "p95": 0.37645885,
+      "geom_id": 43,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21725,
+          "max_abs": 0.440043
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21725,
+          "max_abs": 0.440043
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21725,
+          "max_abs": 0.440043
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233571,
+        "max": 0.440043,
+        "mean": 0.03761712371951221,
+        "std": 0.25578976667753184,
+        "median": -0.0536024,
+        "mean_abs": 0.23168914441056912,
+        "max_abs": 0.440043,
+        "p05": -0.23165,
+        "p95": 0.4335484
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.233862,
+      "max": 0.439795,
+      "mean": -0.0011920949161999988,
+      "std": 0.2062196847868203,
+      "median": -0.0612988,
+      "mean_abs": 0.178622270109,
+      "max_abs": 0.439795,
+      "p05": -0.2245394,
+      "p95": 0.37432035,
+      "geom_id": 44,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2175295,
+          "max_abs": 0.439795
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2175295,
+          "max_abs": 0.439795
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2175295,
+          "max_abs": 0.439795
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.233862,
+        "max": 0.439795,
+        "mean": 0.03735379705284553,
+        "std": 0.2558082895562477,
+        "median": -0.053872050000000005,
+        "mean_abs": 0.23172984721544715,
+        "max_abs": 0.439795,
+        "p05": -0.23193635,
+        "p95": 0.4332996
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.225775,
+      "max": 0.444721,
+      "mean": 0.00126004465062,
+      "std": 0.2033344481042868,
+      "median": -0.0585953,
+      "mean_abs": 0.17501991468394001,
+      "max_abs": 0.444721,
+      "p05": -0.2177722,
+      "p95": 0.37207895,
+      "geom_id": 45,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210763,
+          "max_abs": 0.444721
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210763,
+          "max_abs": 0.444721
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210763,
+          "max_abs": 0.444721
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.225775,
+        "max": 0.444721,
+        "mean": 0.038412015243902434,
+        "std": 0.25202771217580816,
+        "median": -0.056719649999999996,
+        "mean_abs": 0.22795505430894308,
+        "max_abs": 0.444721,
+        "p05": -0.2240965,
+        "p95": 0.4331925
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.225566,
+      "max": 0.444864,
+      "mean": -0.00258158853754,
+      "std": 0.202726141903403,
+      "median": -0.07016825,
+      "mean_abs": 0.17537083164474,
+      "max_abs": 0.444864,
+      "p05": -0.21676615,
+      "p95": 0.36903769999999997,
+      "geom_id": 46,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210555,
+          "max_abs": 0.444864
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210555,
+          "max_abs": 0.444864
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210555,
+          "max_abs": 0.444864
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.225566,
+        "max": 0.444864,
+        "mean": 0.038624746260162594,
+        "std": 0.2520300104026016,
+        "median": -0.05649005,
+        "mean_abs": 0.22793795317073173,
+        "max_abs": 0.444864,
+        "p05": -0.2238966,
+        "p95": 0.4333996
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.225394,
+      "max": 0.444956,
+      "mean": 0.003202520730260001,
+      "std": 0.20423585343282,
+      "median": -0.061643100000000006,
+      "mean_abs": 0.17609002353853997,
+      "max_abs": 0.444956,
+      "p05": -0.21645435000000002,
+      "p95": 0.37700995,
+      "geom_id": 47,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21038099999999998,
+          "max_abs": 0.444956
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21038099999999998,
+          "max_abs": 0.444956
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21038099999999998,
+          "max_abs": 0.444956
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.225394,
+        "max": 0.444956,
+        "mean": 0.038756273392276434,
+        "std": 0.2520004393519211,
+        "median": -0.05636025,
+        "mean_abs": 0.22789687128252034,
+        "max_abs": 0.444956,
+        "p05": -0.2237168,
+        "p95": 0.4334876
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.225995,
+      "max": 0.444341,
+      "mean": -0.0016704634822559982,
+      "std": 0.20171525974916701,
+      "median": -0.06635685,
+      "mean_abs": 0.17371399651209601,
+      "max_abs": 0.444341,
+      "p05": -0.2164298,
+      "p95": 0.3687824,
+      "geom_id": 48,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210983,
+          "max_abs": 0.444341
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210983,
+          "max_abs": 0.444341
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210983,
+          "max_abs": 0.444341
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.225995,
+        "max": 0.444341,
+        "mean": 0.038167149004065024,
+        "std": 0.25201136415010356,
+        "median": -0.05693735,
+        "mean_abs": 0.2279644737195122,
+        "max_abs": 0.444341,
+        "p05": -0.22431985000000002,
+        "p95": 0.43291465
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.225459,
+      "max": 0.444879,
+      "mean": 0.0057923517919,
+      "std": 0.2038772279787654,
+      "median": -0.054282750000000005,
+      "mean_abs": 0.1754023976469,
+      "max_abs": 0.444879,
+      "p05": -0.2164463,
+      "p95": 0.37596385000000004,
+      "geom_id": 49,
+      "stage": "val",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210414,
+          "max_abs": 0.444879
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210414,
+          "max_abs": 0.444879
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210414,
+          "max_abs": 0.444879
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.225459,
+        "max": 0.444879,
+        "mean": 0.03873807485772357,
+        "std": 0.2520240271383638,
+        "median": -0.05640695,
+        "mean_abs": 0.22792291351626018,
+        "max_abs": 0.444879,
+        "p05": -0.2237723,
+        "p95": 0.43344355
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.225683,
+      "max": 0.444678,
+      "mean": -0.0009600000437600007,
+      "std": 0.20220394718689186,
+      "median": -0.0650739,
+      "mean_abs": 0.17397599855076,
+      "max_abs": 0.444678,
+      "p05": -0.21632445,
+      "p95": 0.37288830000000006,
+      "geom_id": 50,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2106525,
+          "max_abs": 0.444678
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2106525,
+          "max_abs": 0.444678
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2106525,
+          "max_abs": 0.444678
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.225683,
+        "max": 0.444678,
+        "mean": 0.038516565817073155,
+        "std": 0.2520489331219058,
+        "median": -0.0566605,
+        "mean_abs": 0.22796896641869918,
+        "max_abs": 0.444678,
+        "p05": -0.22399724999999998,
+        "p95": 0.4332577
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224759,
+      "max": 0.445514,
+      "mean": 0.00667362409074,
+      "std": 0.20340090788652215,
+      "median": -0.052555199999999996,
+      "mean_abs": 0.17471568242590002,
+      "max_abs": 0.445514,
+      "p05": -0.2147365,
+      "p95": 0.3765471,
+      "geom_id": 51,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.209732,
+          "max_abs": 0.445514
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.209732,
+          "max_abs": 0.445514
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.209732,
+          "max_abs": 0.445514
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224759,
+        "max": 0.445514,
+        "mean": 0.03941676308861787,
+        "std": 0.2520537734790094,
+        "median": -0.0558812,
+        "mean_abs": 0.22788711180406504,
+        "max_abs": 0.445514,
+        "p05": -0.2231058,
+        "p95": 0.43417249999999996
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.225197,
+      "max": 0.444887,
+      "mean": -0.0011858259580000007,
+      "std": 0.20125037536571638,
+      "median": -0.06410825,
+      "mean_abs": 0.1725109880036,
+      "max_abs": 0.444887,
+      "p05": -0.21525044999999998,
+      "p95": 0.3729042,
+      "geom_id": 52,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210163,
+          "max_abs": 0.444887
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210163,
+          "max_abs": 0.444887
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210163,
+          "max_abs": 0.444887
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.225197,
+        "max": 0.444887,
+        "mean": 0.03897797699593496,
+        "std": 0.25205873747895197,
+        "median": -0.0563882,
+        "mean_abs": 0.2279391702398374,
+        "max_abs": 0.444887,
+        "p05": -0.2235355,
+        "p95": 0.43369705
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224879,
+      "max": 0.445208,
+      "mean": 0.00525319422532,
+      "std": 0.20392820658914898,
+      "median": -0.0546881,
+      "mean_abs": 0.17549807726452,
+      "max_abs": 0.445208,
+      "p05": -0.2161881,
+      "p95": 0.37764139999999996,
+      "geom_id": 53,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20983249999999998,
+          "max_abs": 0.445208
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20983249999999998,
+          "max_abs": 0.445208
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20983249999999998,
+          "max_abs": 0.445208
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224879,
+        "max": 0.445208,
+        "mean": 0.03928370761544714,
+        "std": 0.25206359434607156,
+        "median": -0.0561502,
+        "mean_abs": 0.2279139510300813,
+        "max_abs": 0.445208,
+        "p05": -0.22321045,
+        "p95": 0.43397735
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.225663,
+      "max": 0.444229,
+      "mean": 0.0047186583677,
+      "std": 0.20416203617164033,
+      "median": -0.0572593,
+      "mean_abs": 0.17611605498570002,
+      "max_abs": 0.444229,
+      "p05": -0.21719815,
+      "p95": 0.37779965000000004,
+      "geom_id": 54,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2106175,
+          "max_abs": 0.444229
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2106175,
+          "max_abs": 0.444229
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2106175,
+          "max_abs": 0.444229
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.225663,
+        "max": 0.444229,
+        "mean": 0.03852368128658536,
+        "std": 0.25209645708413375,
+        "median": -0.056973300000000004,
+        "mean_abs": 0.2280249611930894,
+        "max_abs": 0.444229,
+        "p05": -0.22400230000000002,
+        "p95": 0.4331827
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224764,
+      "max": 0.445024,
+      "mean": 0.008112745450180002,
+      "std": 0.20480591322355152,
+      "median": -0.05400305,
+      "mean_abs": 0.17624036645778002,
+      "max_abs": 0.445024,
+      "p05": -0.21518215000000002,
+      "p95": 0.37944490000000003,
+      "geom_id": 55,
+      "stage": "val",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2097155,
+          "max_abs": 0.445024
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2097155,
+          "max_abs": 0.445024
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2097155,
+          "max_abs": 0.445024
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224764,
+        "max": 0.445024,
+        "mean": 0.03940477341666665,
+        "std": 0.2520891837478911,
+        "median": -0.056111549999999996,
+        "mean_abs": 0.2279356455711382,
+        "max_abs": 0.445024,
+        "p05": -0.22311255000000002,
+        "p95": 0.43398095
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224535,
+      "max": 0.445168,
+      "mean": 0.000807369843879999,
+      "std": 0.2029737174228413,
+      "median": -0.0642615,
+      "mean_abs": 0.17475206977952001,
+      "max_abs": 0.445168,
+      "p05": -0.21602615,
+      "p95": 0.37687135,
+      "geom_id": 56,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.209479,
+          "max_abs": 0.445168
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.209479,
+          "max_abs": 0.445168
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.209479,
+          "max_abs": 0.445168
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224535,
+        "max": 0.445168,
+        "mean": 0.03963250437195124,
+        "std": 0.2521210731862663,
+        "median": -0.0559615,
+        "mean_abs": 0.22794812941260165,
+        "max_abs": 0.445168,
+        "p05": -0.22288605,
+        "p95": 0.4343296
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.225636,
+      "max": 0.44388,
+      "mean": -0.0006518461924799988,
+      "std": 0.20223988580319635,
+      "median": -0.0641342,
+      "mean_abs": 0.17369514481752,
+      "max_abs": 0.44388,
+      "p05": -0.2162617,
+      "p95": 0.37605990000000006,
+      "geom_id": 57,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210568,
+          "max_abs": 0.44388
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210568,
+          "max_abs": 0.44388
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210568,
+          "max_abs": 0.44388
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.225636,
+        "max": 0.44388,
+        "mean": 0.038513040991869925,
+        "std": 0.25211627813904797,
+        "median": -0.05715775,
+        "mean_abs": 0.22805576494308946,
+        "max_abs": 0.44388,
+        "p05": -0.2239816,
+        "p95": 0.43318365
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.225532,
+      "max": 0.443929,
+      "mean": 0.0014528530273999998,
+      "std": 0.20440437421252,
+      "median": -0.0648642,
+      "mean_abs": 0.176424099491,
+      "max_abs": 0.443929,
+      "p05": -0.21620995,
+      "p95": 0.3773268000000001,
+      "geom_id": 58,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2104725,
+          "max_abs": 0.443929
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2104725,
+          "max_abs": 0.443929
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2104725,
+          "max_abs": 0.443929
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.225532,
+        "max": 0.443929,
+        "mean": 0.03866507073577237,
+        "std": 0.25216834617644934,
+        "median": -0.05710045,
+        "mean_abs": 0.22809274747560976,
+        "max_abs": 0.443929,
+        "p05": -0.22388265000000002,
+        "p95": 0.43336555
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224166,
+      "max": 0.445087,
+      "mean": 0.0036919112242999996,
+      "std": 0.2040636683400845,
+      "median": -0.062381149999999996,
+      "mean_abs": 0.1757916894031,
+      "max_abs": 0.445087,
+      "p05": -0.21473925000000002,
+      "p95": 0.3744715500000001,
+      "geom_id": 59,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2090985,
+          "max_abs": 0.445087
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2090985,
+          "max_abs": 0.445087
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2090985,
+          "max_abs": 0.445087
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224166,
+        "max": 0.445087,
+        "mean": 0.04001758798373983,
+        "std": 0.25218843869640906,
+        "median": -0.05591105,
+        "mean_abs": 0.22798877943902437,
+        "max_abs": 0.445087,
+        "p05": -0.22252675,
+        "p95": 0.4347142
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.22453,
+      "max": 0.444552,
+      "mean": 0.0014074450982199992,
+      "std": 0.2020076460816948,
+      "median": -0.0643367,
+      "mean_abs": 0.17414755057002002,
+      "max_abs": 0.444552,
+      "p05": -0.21531365,
+      "p95": 0.36911200000000005,
+      "geom_id": 60,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.209448,
+          "max_abs": 0.444552
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.209448,
+          "max_abs": 0.444552
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.209448,
+          "max_abs": 0.444552
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.22453,
+        "max": 0.444552,
+        "mean": 0.039614146977642276,
+        "std": 0.2521612193876136,
+        "median": -0.056322899999999995,
+        "mean_abs": 0.2280036877012195,
+        "max_abs": 0.444552,
+        "p05": -0.22289645,
+        "p95": 0.4343664
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224727,
+      "max": 0.444194,
+      "mean": 0.0049434049064999985,
+      "std": 0.20163011181587764,
+      "median": -0.055102250000000005,
+      "mean_abs": 0.17313695790770003,
+      "max_abs": 0.444194,
+      "p05": -0.21498195,
+      "p95": 0.37165440000000005,
+      "geom_id": 61,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2096295,
+          "max_abs": 0.444194
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2096295,
+          "max_abs": 0.444194
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2096295,
+          "max_abs": 0.444194
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224727,
+        "max": 0.444194,
+        "mean": 0.03945260750203252,
+        "std": 0.2522030843554394,
+        "median": -0.05648865,
+        "mean_abs": 0.22806213864024388,
+        "max_abs": 0.444194,
+        "p05": -0.2230865,
+        "p95": 0.43420395
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.223611,
+      "max": 0.445218,
+      "mean": 0.0006044608263999989,
+      "std": 0.2029088513313355,
+      "median": -0.0650766,
+      "mean_abs": 0.17448205911480003,
+      "max_abs": 0.445218,
+      "p05": -0.21416915,
+      "p95": 0.3766944500000001,
+      "geom_id": 62,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.208558,
+          "max_abs": 0.445218
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.208558,
+          "max_abs": 0.445218
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.208558,
+          "max_abs": 0.445218
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.223611,
+        "max": 0.445218,
+        "mean": 0.04056401375203252,
+        "std": 0.25222201326865307,
+        "median": -0.0554607,
+        "mean_abs": 0.22798022956504063,
+        "max_abs": 0.445218,
+        "p05": -0.22199145,
+        "p95": 0.4352437
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.223872,
+      "max": 0.444831,
+      "mean": 0.0006549367045999992,
+      "std": 0.20165880063383476,
+      "median": -0.06161575,
+      "mean_abs": 0.1733606282986,
+      "max_abs": 0.444831,
+      "p05": -0.2143909,
+      "p95": 0.3728144500000001,
+      "geom_id": 63,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2087745,
+          "max_abs": 0.444831
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2087745,
+          "max_abs": 0.444831
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2087745,
+          "max_abs": 0.444831
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.223872,
+        "max": 0.444831,
+        "mean": 0.04027483405284552,
+        "std": 0.25221292308839804,
+        "median": -0.0558247,
+        "mean_abs": 0.2279993986300813,
+        "max_abs": 0.444831,
+        "p05": -0.2222511,
+        "p95": 0.43500445
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224188,
+      "max": 0.444383,
+      "mean": 0.0017895742166400001,
+      "std": 0.20225735885070018,
+      "median": -0.06257684999999999,
+      "mean_abs": 0.17419146675544003,
+      "max_abs": 0.444383,
+      "p05": -0.215843,
+      "p95": 0.37243415,
+      "geom_id": 64,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20909250000000001,
+          "max_abs": 0.444383
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20909250000000001,
+          "max_abs": 0.444383
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20909250000000001,
+          "max_abs": 0.444383
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224188,
+        "max": 0.444383,
+        "mean": 0.04000187822560973,
+        "std": 0.2522683591607773,
+        "median": -0.05619275,
+        "mean_abs": 0.22808183595731704,
+        "max_abs": 0.444383,
+        "p05": -0.22256875,
+        "p95": 0.43478859999999997
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.223659,
+      "max": 0.444854,
+      "mean": 0.0051127313654,
+      "std": 0.20513405045259497,
+      "median": -0.06123565,
+      "mean_abs": 0.1766712090174,
+      "max_abs": 0.444854,
+      "p05": -0.2137428,
+      "p95": 0.37865455000000003,
+      "geom_id": 65,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20854250000000002,
+          "max_abs": 0.444854
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20854250000000002,
+          "max_abs": 0.444854
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20854250000000002,
+          "max_abs": 0.444854
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.223659,
+        "max": 0.444854,
+        "mean": 0.0405492514390244,
+        "std": 0.2522863948336401,
+        "median": -0.05565245,
+        "mean_abs": 0.2280518028211382,
+        "max_abs": 0.444854,
+        "p05": -0.22203685,
+        "p95": 0.4354491
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.223601,
+      "max": 0.444867,
+      "mean": 0.00438525845518,
+      "std": 0.20176186633989554,
+      "median": -0.0567853,
+      "mean_abs": 0.17342916615918003,
+      "max_abs": 0.444867,
+      "p05": -0.2136253,
+      "p95": 0.37526325,
+      "geom_id": 66,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2085175,
+          "max_abs": 0.444867
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2085175,
+          "max_abs": 0.444867
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2085175,
+          "max_abs": 0.444867
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.223601,
+        "max": 0.444867,
+        "mean": 0.04059679629268293,
+        "std": 0.25230066963257025,
+        "median": -0.055671,
+        "mean_abs": 0.22806260121138214,
+        "max_abs": 0.444867,
+        "p05": -0.2219829,
+        "p95": 0.43555655
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.22379,
+      "max": 0.444581,
+      "mean": 0.0006321311053999996,
+      "std": 0.20246841375379823,
+      "median": -0.06442210000000001,
+      "mean_abs": 0.1744191087702,
+      "max_abs": 0.444581,
+      "p05": -0.2145705,
+      "p95": 0.3730160000000002,
+      "geom_id": 67,
+      "stage": "val",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20867999999999998,
+          "max_abs": 0.444581
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20867999999999998,
+          "max_abs": 0.444581
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20867999999999998,
+          "max_abs": 0.444581
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.22379,
+        "max": 0.444581,
+        "mean": 0.04040397295121953,
+        "std": 0.2522960657498249,
+        "median": -0.055922,
+        "mean_abs": 0.2280779852276423,
+        "max_abs": 0.444581,
+        "p05": -0.22217735,
+        "p95": 0.4353312
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224101,
+      "max": 0.444173,
+      "mean": 0.003929214889579999,
+      "std": 0.20412686914269457,
+      "median": -0.058761999999999995,
+      "mean_abs": 0.17583614473602002,
+      "max_abs": 0.444173,
+      "p05": -0.2147885,
+      "p95": 0.3760687,
+      "geom_id": 68,
+      "stage": "val",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2089855,
+          "max_abs": 0.444173
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2089855,
+          "max_abs": 0.444173
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2089855,
+          "max_abs": 0.444173
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224101,
+        "max": 0.444173,
+        "mean": 0.040123557512195124,
+        "std": 0.2523343800033111,
+        "median": -0.056225,
+        "mean_abs": 0.22814237141463417,
+        "max_abs": 0.444173,
+        "p05": -0.22249555,
+        "p95": 0.43504755
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224074,
+      "max": 0.444069,
+      "mean": 0.004641622827219999,
+      "std": 0.20541450674958434,
+      "median": -0.05982385,
+      "mean_abs": 0.17687676142345998,
+      "max_abs": 0.444069,
+      "p05": -0.21530015,
+      "p95": 0.3823992,
+      "geom_id": 69,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2089515,
+          "max_abs": 0.444069
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2089515,
+          "max_abs": 0.444069
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2089515,
+          "max_abs": 0.444069
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224074,
+        "max": 0.444069,
+        "mean": 0.040090567237804874,
+        "std": 0.2522858748880199,
+        "median": -0.0563018,
+        "mean_abs": 0.22809713642479676,
+        "max_abs": 0.444069,
+        "p05": -0.22246325,
+        "p95": 0.43499275
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.222728,
+      "max": 0.445403,
+      "mean": 0.0050034444798399995,
+      "std": 0.20399943904871293,
+      "median": -0.058206549999999996,
+      "mean_abs": 0.17520720047864,
+      "max_abs": 0.445403,
+      "p05": -0.21400149999999998,
+      "p95": 0.37559865000000003,
+      "geom_id": 70,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20832299999999998,
+          "max_abs": 0.445403
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20832299999999998,
+          "max_abs": 0.445403
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20832299999999998,
+          "max_abs": 0.445403
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.222728,
+        "max": 0.445403,
+        "mean": 0.04145236479674798,
+        "std": 0.2523108265772935,
+        "median": -0.0549307,
+        "mean_abs": 0.22800068528455286,
+        "max_abs": 0.445403,
+        "p05": -0.22112779999999999,
+        "p95": 0.43639835
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.223567,
+      "max": 0.444585,
+      "mean": 0.004086264921819998,
+      "std": 0.20487490942759926,
+      "median": -0.06176315,
+      "mean_abs": 0.17708941840665998,
+      "max_abs": 0.444585,
+      "p05": -0.2146681,
+      "p95": 0.37218115,
+      "geom_id": 71,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20845550000000002,
+          "max_abs": 0.444585
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20845550000000002,
+          "max_abs": 0.444585
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20845550000000002,
+          "max_abs": 0.444585
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.223567,
+        "max": 0.444585,
+        "mean": 0.0406212252886179,
+        "std": 0.25231772901016214,
+        "median": -0.055785150000000006,
+        "mean_abs": 0.2280827104105691,
+        "max_abs": 0.444585,
+        "p05": -0.22196955,
+        "p95": 0.43557725
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.223664,
+      "max": 0.444495,
+      "mean": 0.0066431599693999996,
+      "std": 0.20608186161366676,
+      "median": -0.0594604,
+      "mean_abs": 0.17789328580859998,
+      "max_abs": 0.444495,
+      "p05": -0.2147527,
+      "p95": 0.37717555,
+      "geom_id": 72,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.208536,
+          "max_abs": 0.444495
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.208536,
+          "max_abs": 0.444495
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.208536,
+          "max_abs": 0.444495
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.223664,
+        "max": 0.444495,
+        "mean": 0.04052801649593495,
+        "std": 0.25230835411819447,
+        "median": -0.0559082,
+        "mean_abs": 0.2280815242195122,
+        "max_abs": 0.444495,
+        "p05": -0.22204905,
+        "p95": 0.43547265
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.223339,
+      "max": 0.444817,
+      "mean": 0.0038409599950200005,
+      "std": 0.20390819493700402,
+      "median": -0.0576324,
+      "mean_abs": 0.17529790641222,
+      "max_abs": 0.444817,
+      "p05": -0.21475715,
+      "p95": 0.38358065,
+      "geom_id": 73,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2083575,
+          "max_abs": 0.444817
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2083575,
+          "max_abs": 0.444817
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2083575,
+          "max_abs": 0.444817
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.223339,
+        "max": 0.444817,
+        "mean": 0.0408399967520325,
+        "std": 0.25230668339282725,
+        "median": -0.0555034,
+        "mean_abs": 0.2280512847195122,
+        "max_abs": 0.444817,
+        "p05": -0.22173975,
+        "p95": 0.43576735
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.223805,
+      "max": 0.444466,
+      "mean": 0.003541113601400001,
+      "std": 0.2028810909286662,
+      "median": -0.058844099999999996,
+      "mean_abs": 0.1742973654574,
+      "max_abs": 0.444466,
+      "p05": -0.21506835000000002,
+      "p95": 0.3745413,
+      "geom_id": 74,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20869100000000002,
+          "max_abs": 0.444466
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20869100000000002,
+          "max_abs": 0.444466
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20869100000000002,
+          "max_abs": 0.444466
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.223805,
+        "max": 0.444466,
+        "mean": 0.04044412784756097,
+        "std": 0.25235103069339626,
+        "median": -0.0558829,
+        "mean_abs": 0.22812995142479675,
+        "max_abs": 0.444466,
+        "p05": -0.22219704999999998,
+        "p95": 0.4353927
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.223809,
+      "max": 0.444481,
+      "mean": 0.0019964509826460005,
+      "std": 0.20206753972886246,
+      "median": -0.05914815,
+      "mean_abs": 0.173783643886554,
+      "max_abs": 0.444481,
+      "p05": -0.2150846,
+      "p95": 0.37261455000000004,
+      "geom_id": 75,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2087055,
+          "max_abs": 0.444481
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2087055,
+          "max_abs": 0.444481
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2087055,
+          "max_abs": 0.444481
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.223809,
+        "max": 0.444481,
+        "mean": 0.040378566182926824,
+        "std": 0.25230267439859544,
+        "median": -0.055900450000000004,
+        "mean_abs": 0.2280854790691057,
+        "max_abs": 0.444481,
+        "p05": -0.2221959,
+        "p95": 0.43533985
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.223967,
+      "max": 0.444448,
+      "mean": 0.0026658197613,
+      "std": 0.20237890180477436,
+      "median": -0.0594165,
+      "mean_abs": 0.17372537624982,
+      "max_abs": 0.444448,
+      "p05": -0.21453244999999999,
+      "p95": 0.3755363,
+      "geom_id": 76,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20886,
+          "max_abs": 0.444448
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20886,
+          "max_abs": 0.444448
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20886,
+          "max_abs": 0.444448
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.223967,
+        "max": 0.444448,
+        "mean": 0.040236793798373964,
+        "std": 0.2523048215509121,
+        "median": -0.0560062,
+        "mean_abs": 0.2280993809528455,
+        "max_abs": 0.444448,
+        "p05": -0.22234869999999998,
+        "p95": 0.43519264999999996
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.223846,
+      "max": 0.444605,
+      "mean": 0.005713642982639999,
+      "std": 0.20285169690628968,
+      "median": -0.055623149999999996,
+      "mean_abs": 0.17462793777336,
+      "max_abs": 0.444605,
+      "p05": -0.2147611,
+      "p95": 0.37131455,
+      "geom_id": 77,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2087405,
+          "max_abs": 0.444605
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2087405,
+          "max_abs": 0.444605
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2087405,
+          "max_abs": 0.444605
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.223846,
+        "max": 0.444605,
+        "mean": 0.0403511379288618,
+        "std": 0.25229407041749535,
+        "median": -0.0559537,
+        "mean_abs": 0.22807753467682929,
+        "max_abs": 0.444605,
+        "p05": -0.2222443,
+        "p95": 0.43530185
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224401,
+      "max": 0.444138,
+      "mean": 0.000550623243420001,
+      "std": 0.20276327720526163,
+      "median": -0.06268504999999999,
+      "mean_abs": 0.17506017787582,
+      "max_abs": 0.444138,
+      "p05": -0.2160276,
+      "p95": 0.37014195000000005,
+      "geom_id": 78,
+      "stage": "val",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.209298,
+          "max_abs": 0.444138
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.209298,
+          "max_abs": 0.444138
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.209298,
+          "max_abs": 0.444138
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224401,
+        "max": 0.444138,
+        "mean": 0.0397826503211382,
+        "std": 0.25226015418572106,
+        "median": -0.05647505,
+        "mean_abs": 0.22809473358536583,
+        "max_abs": 0.444138,
+        "p05": -0.22277395,
+        "p95": 0.4345826
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.223873,
+      "max": 0.444716,
+      "mean": -0.0034361922083400004,
+      "std": 0.20213554260257555,
+      "median": -0.06898335,
+      "mean_abs": 0.17445292953754002,
+      "max_abs": 0.444716,
+      "p05": -0.2151848,
+      "p95": 0.37114460000000005,
+      "geom_id": 79,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.208782,
+          "max_abs": 0.444716
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.208782,
+          "max_abs": 0.444716
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.208782,
+          "max_abs": 0.444716
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.223873,
+        "max": 0.444716,
+        "mean": 0.04026427351036585,
+        "std": 0.25221094655473275,
+        "median": -0.0559105,
+        "mean_abs": 0.2279993298229675,
+        "max_abs": 0.444716,
+        "p05": -0.22224995,
+        "p95": 0.43497695
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.223849,
+      "max": 0.444956,
+      "mean": 0.0032632143399999995,
+      "std": 0.20368824989265072,
+      "median": -0.061471700000000004,
+      "mean_abs": 0.17498931348279997,
+      "max_abs": 0.444956,
+      "p05": -0.21433525,
+      "p95": 0.37811515,
+      "geom_id": 80,
+      "stage": "val",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20875549999999998,
+          "max_abs": 0.444956
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20875549999999998,
+          "max_abs": 0.444956
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20875549999999998,
+          "max_abs": 0.444956
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.223849,
+        "max": 0.444956,
+        "mean": 0.0403382221097561,
+        "std": 0.2522359120503958,
+        "median": -0.05574485,
+        "mean_abs": 0.22801476577642274,
+        "max_abs": 0.444956,
+        "p05": -0.2222204,
+        "p95": 0.4351065
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.225119,
+      "max": 0.443807,
+      "mean": 0.006633001150059998,
+      "std": 0.204495894058017,
+      "median": -0.0559516,
+      "mean_abs": 0.17586128870486,
+      "max_abs": 0.443807,
+      "p05": -0.21568574999999998,
+      "p95": 0.37825030000000004,
+      "geom_id": 81,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2100325,
+          "max_abs": 0.443807
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2100325,
+          "max_abs": 0.443807
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2100325,
+          "max_abs": 0.443807
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.225119,
+        "max": 0.443807,
+        "mean": 0.0390287626855691,
+        "std": 0.2521804755052597,
+        "median": -0.0569668,
+        "mean_abs": 0.22807925272621948,
+        "max_abs": 0.443807,
+        "p05": -0.2234875,
+        "p95": 0.43379314999999996
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224451,
+      "max": 0.444634,
+      "mean": 0.0015561787547599998,
+      "std": 0.20320969832129054,
+      "median": -0.0615437,
+      "mean_abs": 0.17531586323752,
+      "max_abs": 0.444634,
+      "p05": -0.21611025,
+      "p95": 0.37140835,
+      "geom_id": 82,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2093715,
+          "max_abs": 0.444634
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2093715,
+          "max_abs": 0.444634
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2093715,
+          "max_abs": 0.444634
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224451,
+        "max": 0.444634,
+        "mean": 0.039736467443089445,
+        "std": 0.2522069058962041,
+        "median": -0.05621305,
+        "mean_abs": 0.22803630487398371,
+        "max_abs": 0.444634,
+        "p05": -0.22281275,
+        "p95": 0.4344636
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224733,
+      "max": 0.444507,
+      "mean": -0.00038604520808000153,
+      "std": 0.20222814602645464,
+      "median": -0.0665938,
+      "mean_abs": 0.17416837349088,
+      "max_abs": 0.444507,
+      "p05": -0.2155481,
+      "p95": 0.37269850000000004,
+      "geom_id": 83,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2096565,
+          "max_abs": 0.444507
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2096565,
+          "max_abs": 0.444507
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2096565,
+          "max_abs": 0.444507
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224733,
+        "max": 0.444507,
+        "mean": 0.03945864012195121,
+        "std": 0.25219204923271066,
+        "median": -0.05638975,
+        "mean_abs": 0.2280452269512195,
+        "max_abs": 0.444507,
+        "p05": -0.22308805,
+        "p95": 0.4341505
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224723,
+      "max": 0.444622,
+      "mean": 0.0023955093178960004,
+      "std": 0.20319222198018286,
+      "median": -0.0595517,
+      "mean_abs": 0.174651961673704,
+      "max_abs": 0.444622,
+      "p05": -0.21579775,
+      "p95": 0.3714059,
+      "geom_id": 84,
+      "stage": "val",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2096515,
+          "max_abs": 0.444622
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2096515,
+          "max_abs": 0.444622
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2096515,
+          "max_abs": 0.444622
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224723,
+        "max": 0.444622,
+        "mean": 0.03945551841869918,
+        "std": 0.2521521635780507,
+        "median": -0.05626395,
+        "mean_abs": 0.22800262240243901,
+        "max_abs": 0.444622,
+        "p05": -0.22307944999999998,
+        "p95": 0.43415919999999997
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224969,
+      "max": 0.444516,
+      "mean": 0.003649302108260001,
+      "std": 0.20209613478657357,
+      "median": -0.05522405,
+      "mean_abs": 0.17384049795622,
+      "max_abs": 0.444516,
+      "p05": -0.21604864999999998,
+      "p95": 0.3707775500000003,
+      "geom_id": 85,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2099075,
+          "max_abs": 0.444516
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2099075,
+          "max_abs": 0.444516
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2099075,
+          "max_abs": 0.444516
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224969,
+        "max": 0.444516,
+        "mean": 0.03919746587398375,
+        "std": 0.25214031868628073,
+        "median": -0.0564993,
+        "mean_abs": 0.22801260441056911,
+        "max_abs": 0.444516,
+        "p05": -0.22332724999999998,
+        "p95": 0.43387245
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224803,
+      "max": 0.44482,
+      "mean": -0.00023608901696000063,
+      "std": 0.2007265144384566,
+      "median": -0.06358715000000001,
+      "mean_abs": 0.17247417531780002,
+      "max_abs": 0.44482,
+      "p05": -0.2157335,
+      "p95": 0.37116645000000004,
+      "geom_id": 86,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20974549999999997,
+          "max_abs": 0.44482
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20974549999999997,
+          "max_abs": 0.44482
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.20974549999999997,
+          "max_abs": 0.44482
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224803,
+        "max": 0.44482,
+        "mean": 0.03935730946341463,
+        "std": 0.2521221244402823,
+        "median": -0.056261099999999994,
+        "mean_abs": 0.2279767457235772,
+        "max_abs": 0.44482,
+        "p05": -0.22315565,
+        "p95": 0.4340266
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224058,
+      "max": 0.445645,
+      "mean": -0.00048135790517999977,
+      "std": 0.2016316971140284,
+      "median": -0.0632571,
+      "mean_abs": 0.17396956893838,
+      "max_abs": 0.445645,
+      "p05": -0.21551879999999998,
+      "p95": 0.368856,
+      "geom_id": 87,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2089995,
+          "max_abs": 0.445645
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2089995,
+          "max_abs": 0.445645
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2089995,
+          "max_abs": 0.445645
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224058,
+        "max": 0.445645,
+        "mean": 0.040127727689024395,
+        "std": 0.2521120258391992,
+        "median": -0.05539995,
+        "mean_abs": 0.22789426092886178,
+        "max_abs": 0.445645,
+        "p05": -0.22239435,
+        "p95": 0.43478154999999996
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.225103,
+      "max": 0.444823,
+      "mean": 0.002471678827399999,
+      "std": 0.20466433476129173,
+      "median": -0.06255944999999999,
+      "mean_abs": 0.1762488219766,
+      "max_abs": 0.444823,
+      "p05": -0.21552815,
+      "p95": 0.3783931000000001,
+      "geom_id": 88,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210061,
+          "max_abs": 0.444823
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210061,
+          "max_abs": 0.444823
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.210061,
+          "max_abs": 0.444823
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.225103,
+        "max": 0.444823,
+        "mean": 0.039042961575203254,
+        "std": 0.25206912392124337,
+        "median": -0.0564137,
+        "mean_abs": 0.22794839277439027,
+        "max_abs": 0.444823,
+        "p05": -0.223442,
+        "p95": 0.43363785
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.225523,
+      "max": 0.444482,
+      "mean": 0.0025801328267999976,
+      "std": 0.20312565033788804,
+      "median": -0.05903655,
+      "mean_abs": 0.174638465478,
+      "max_abs": 0.444482,
+      "p05": -0.21682995,
+      "p95": 0.37588505000000005,
+      "geom_id": 89,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21048450000000002,
+          "max_abs": 0.444482
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21048450000000002,
+          "max_abs": 0.444482
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21048450000000002,
+          "max_abs": 0.444482
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.225523,
+        "max": 0.444482,
+        "mean": 0.03864110710365853,
+        "std": 0.2520706724185616,
+        "median": -0.05677895,
+        "mean_abs": 0.2279853714735772,
+        "max_abs": 0.444482,
+        "p05": -0.22386175,
+        "p95": 0.43336895
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224839,
+      "max": 0.445321,
+      "mean": -0.00047087659568000116,
+      "std": 0.20185938744545312,
+      "median": -0.06949330000000001,
+      "mean_abs": 0.17423062989348,
+      "max_abs": 0.445321,
+      "p05": -0.21555449999999998,
+      "p95": 0.36902660000000015,
+      "geom_id": 90,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2098015,
+          "max_abs": 0.445321
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2098015,
+          "max_abs": 0.445321
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2098015,
+          "max_abs": 0.445321
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224839,
+        "max": 0.445321,
+        "mean": 0.0393349772804878,
+        "std": 0.25206209764832194,
+        "median": -0.05602245,
+        "mean_abs": 0.22790648073577235,
+        "max_abs": 0.445321,
+        "p05": -0.22316935000000002,
+        "p95": 0.4340361
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.224945,
+      "max": 0.445251,
+      "mean": 0.00156437967532,
+      "std": 0.2033107016070218,
+      "median": -0.0635713,
+      "mean_abs": 0.17514906915944,
+      "max_abs": 0.445251,
+      "p05": -0.2160472,
+      "p95": 0.37751700000000005,
+      "geom_id": 91,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2099135,
+          "max_abs": 0.445251
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2099135,
+          "max_abs": 0.445251
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2099135,
+          "max_abs": 0.445251
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.224945,
+        "max": 0.445251,
+        "mean": 0.03924697988658537,
+        "std": 0.25206844388370925,
+        "median": -0.05600065,
+        "mean_abs": 0.2279193037313008,
+        "max_abs": 0.445251,
+        "p05": -0.223292,
+        "p95": 0.4340285
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.22498,
+      "max": 0.44533,
+      "mean": -0.0008849070452000001,
+      "std": 0.20122900780372915,
+      "median": -0.06297515000000001,
+      "mean_abs": 0.1732970407732,
+      "max_abs": 0.44533,
+      "p05": -0.2162226,
+      "p95": 0.36547275,
+      "geom_id": 92,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2099525,
+          "max_abs": 0.44533
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2099525,
+          "max_abs": 0.44533
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2099525,
+          "max_abs": 0.44533
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.22498,
+        "max": 0.44533,
+        "mean": 0.03920847810365854,
+        "std": 0.2520441963799076,
+        "median": -0.05601145,
+        "mean_abs": 0.2278965185630081,
+        "max_abs": 0.44533,
+        "p05": -0.22330740000000002,
+        "p95": 0.43390979999999996
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.225276,
+      "max": 0.445078,
+      "mean": 0.0045099266838,
+      "std": 0.20436225849725786,
+      "median": -0.05820325,
+      "mean_abs": 0.17589873819388,
+      "max_abs": 0.445078,
+      "p05": -0.21540605,
+      "p95": 0.376575,
+      "geom_id": 93,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21023750000000002,
+          "max_abs": 0.445078
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21023750000000002,
+          "max_abs": 0.445078
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21023750000000002,
+          "max_abs": 0.445078
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.225276,
+        "max": 0.445078,
+        "mean": 0.038909376766260176,
+        "std": 0.2520248867533147,
+        "median": -0.056286050000000004,
+        "mean_abs": 0.22790639591666664,
+        "max_abs": 0.445078,
+        "p05": -0.2235933,
+        "p95": 0.43360709999999997
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.225502,
+      "max": 0.444829,
+      "mean": -0.00064894812474,
+      "std": 0.20352189545929053,
+      "median": -0.06303054999999999,
+      "mean_abs": 0.17551146891718,
+      "max_abs": 0.444829,
+      "p05": -0.2165533,
+      "p95": 0.3733773,
+      "geom_id": 94,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2104815,
+          "max_abs": 0.444829
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2104815,
+          "max_abs": 0.444829
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2104815,
+          "max_abs": 0.444829
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.225502,
+        "max": 0.444829,
+        "mean": 0.038658554717479685,
+        "std": 0.25200510108132984,
+        "median": -0.0564988,
+        "mean_abs": 0.22791121255894312,
+        "max_abs": 0.444829,
+        "p05": -0.2238295,
+        "p95": 0.4333785
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229263,
+      "max": 0.443107,
+      "mean": 0.0003772884834000009,
+      "std": 0.20422983544458886,
+      "median": -0.06000255,
+      "mean_abs": 0.1759545640294,
+      "max_abs": 0.443107,
+      "p05": -0.2195585,
+      "p95": 0.37529585000000004,
+      "geom_id": 95,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21353850000000002,
+          "max_abs": 0.443107
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21353850000000002,
+          "max_abs": 0.443107
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21353850000000002,
+          "max_abs": 0.443107
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229263,
+        "max": 0.443107,
+        "mean": 0.038714209146341466,
+        "std": 0.2543062564035857,
+        "median": -0.05493615,
+        "mean_abs": 0.23014347772357724,
+        "max_abs": 0.443107,
+        "p05": -0.22748005,
+        "p95": 0.43444015
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229501,
+      "max": 0.442828,
+      "mean": 0.00267629131872,
+      "std": 0.20478568854524934,
+      "median": -0.0584606,
+      "mean_abs": 0.17553868513072,
+      "max_abs": 0.442828,
+      "p05": -0.220062,
+      "p95": 0.38156210000000007,
+      "geom_id": 96,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2137705,
+          "max_abs": 0.442828
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2137705,
+          "max_abs": 0.442828
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2137705,
+          "max_abs": 0.442828
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229501,
+        "max": 0.442828,
+        "mean": 0.038456898556910556,
+        "std": 0.25428266785833004,
+        "median": -0.05519495,
+        "mean_abs": 0.23014396290650407,
+        "max_abs": 0.442828,
+        "p05": -0.22770435,
+        "p95": 0.4342146
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229164,
+      "max": 0.443118,
+      "mean": 0.005404952176859999,
+      "std": 0.20466665358932454,
+      "median": -0.05095425,
+      "mean_abs": 0.17571195576806,
+      "max_abs": 0.443118,
+      "p05": -0.21956910000000002,
+      "p95": 0.3786919,
+      "geom_id": 97,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2134345,
+          "max_abs": 0.443118
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2134345,
+          "max_abs": 0.443118
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2134345,
+          "max_abs": 0.443118
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229164,
+        "max": 0.443118,
+        "mean": 0.03875878105691058,
+        "std": 0.2542570111643788,
+        "median": -0.0548716,
+        "mean_abs": 0.23009158414634148,
+        "max_abs": 0.443118,
+        "p05": -0.2273741,
+        "p95": 0.43449119999999997
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229012,
+      "max": 0.443333,
+      "mean": -0.0009582026009999992,
+      "std": 0.2053885753318833,
+      "median": -0.06362999999999999,
+      "mean_abs": 0.1773690167574,
+      "max_abs": 0.443333,
+      "p05": -0.21914505,
+      "p95": 0.37622170000000016,
+      "geom_id": 98,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2132745,
+          "max_abs": 0.443333
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2132745,
+          "max_abs": 0.443333
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2132745,
+          "max_abs": 0.443333
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229012,
+        "max": 0.443333,
+        "mean": 0.03896001735772357,
+        "std": 0.2542892292862438,
+        "median": -0.05470625,
+        "mean_abs": 0.2301053449593496,
+        "max_abs": 0.443333,
+        "p05": -0.2272134,
+        "p95": 0.43470895
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.23011,
+      "max": 0.442237,
+      "mean": 0.002597224026400001,
+      "std": 0.20601595523873845,
+      "median": -0.057469450000000005,
+      "mean_abs": 0.1776882855052,
+      "max_abs": 0.442237,
+      "p05": -0.22076405,
+      "p95": 0.38260655000000005,
+      "geom_id": 99,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21437699999999998,
+          "max_abs": 0.442237
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21437699999999998,
+          "max_abs": 0.442237
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21437699999999998,
+          "max_abs": 0.442237
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.23011,
+        "max": 0.442237,
+        "mean": 0.03780894352032521,
+        "std": 0.25424762463224176,
+        "median": -0.055799299999999996,
+        "mean_abs": 0.2301660205121951,
+        "max_abs": 0.442237,
+        "p05": -0.22832045,
+        "p95": 0.43350374999999997
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229006,
+      "max": 0.443426,
+      "mean": 0.004387734983600001,
+      "std": 0.20672031420430098,
+      "median": -0.0573792,
+      "mean_abs": 0.1778251239672,
+      "max_abs": 0.443426,
+      "p05": -0.21948535000000002,
+      "p95": 0.38115400000000005,
+      "geom_id": 100,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21327849999999998,
+          "max_abs": 0.443426
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21327849999999998,
+          "max_abs": 0.443426
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21327849999999998,
+          "max_abs": 0.443426
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229006,
+        "max": 0.443426,
+        "mean": 0.038960870589430895,
+        "std": 0.25428910982296304,
+        "median": -0.0546718,
+        "mean_abs": 0.2301021492479675,
+        "max_abs": 0.443426,
+        "p05": -0.22722425000000002,
+        "p95": 0.43477145
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229973,
+      "max": 0.44244,
+      "mean": 0.0018808486921999986,
+      "std": 0.20574314985587208,
+      "median": -0.05894095,
+      "mean_abs": 0.17718090755928,
+      "max_abs": 0.44244,
+      "p05": -0.22036905,
+      "p95": 0.37749415000000014,
+      "geom_id": 101,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2142375,
+          "max_abs": 0.44244
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2142375,
+          "max_abs": 0.44244
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2142375,
+          "max_abs": 0.44244
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229973,
+        "max": 0.44244,
+        "mean": 0.037980866790650415,
+        "std": 0.25427468375311285,
+        "median": -0.0556282,
+        "mean_abs": 0.23017500081504066,
+        "max_abs": 0.44244,
+        "p05": -0.2281869,
+        "p95": 0.4337958
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229788,
+      "max": 0.442699,
+      "mean": 0.0022312095460399993,
+      "std": 0.2058451830376891,
+      "median": -0.0576181,
+      "mean_abs": 0.17769983030880002,
+      "max_abs": 0.442699,
+      "p05": -0.22089645,
+      "p95": 0.3740661,
+      "geom_id": 102,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2140745,
+          "max_abs": 0.442699
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2140745,
+          "max_abs": 0.442699
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2140745,
+          "max_abs": 0.442699
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229788,
+        "max": 0.442699,
+        "mean": 0.03817481479674798,
+        "std": 0.25427829437584654,
+        "median": -0.055413199999999996,
+        "mean_abs": 0.23015857121951216,
+        "max_abs": 0.442699,
+        "p05": -0.22801285,
+        "p95": 0.434036
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.228923,
+      "max": 0.443685,
+      "mean": 0.0030716447175400006,
+      "std": 0.2047043552203994,
+      "median": -0.05681425,
+      "mean_abs": 0.17618304401782003,
+      "max_abs": 0.443685,
+      "p05": -0.21909615000000002,
+      "p95": 0.3769749500000001,
+      "geom_id": 103,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21316849999999998,
+          "max_abs": 0.443685
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21316849999999998,
+          "max_abs": 0.443685
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21316849999999998,
+          "max_abs": 0.443685
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.228923,
+        "max": 0.443685,
+        "mean": 0.03908122142276423,
+        "std": 0.25429026326024096,
+        "median": -0.0544495,
+        "mean_abs": 0.23008827325203254,
+        "max_abs": 0.443685,
+        "p05": -0.22713885,
+        "p95": 0.4349797
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.22919,
+      "max": 0.443419,
+      "mean": 0.001160354763259999,
+      "std": 0.20337094014075074,
+      "median": -0.05786985,
+      "mean_abs": 0.17481564202365998,
+      "max_abs": 0.443419,
+      "p05": -0.21943744999999998,
+      "p95": 0.36986975,
+      "geom_id": 104,
+      "stage": "val",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213457,
+          "max_abs": 0.443419
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213457,
+          "max_abs": 0.443419
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213457,
+          "max_abs": 0.443419
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.22919,
+        "max": 0.443419,
+        "mean": 0.03880878178861788,
+        "std": 0.25429331495972063,
+        "median": -0.054702650000000005,
+        "mean_abs": 0.2301143999593496,
+        "max_abs": 0.443419,
+        "p05": -0.22739885,
+        "p95": 0.43472585
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229906,
+      "max": 0.442767,
+      "mean": -0.0009646780633400006,
+      "std": 0.20503369649156608,
+      "median": -0.06491659999999999,
+      "mean_abs": 0.17700159688869999,
+      "max_abs": 0.442767,
+      "p05": -0.2210236,
+      "p95": 0.37258385000000005,
+      "geom_id": 105,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2141835,
+          "max_abs": 0.442767
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2141835,
+          "max_abs": 0.442767
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2141835,
+          "max_abs": 0.442767
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229906,
+        "max": 0.442767,
+        "mean": 0.03808456201422764,
+        "std": 0.2542828667075693,
+        "median": -0.0553627,
+        "mean_abs": 0.23016712469715442,
+        "max_abs": 0.442767,
+        "p05": -0.22812459999999998,
+        "p95": 0.43404765
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.23082,
+      "max": 0.441872,
+      "mean": 0.0022219723565600003,
+      "std": 0.20601942537590076,
+      "median": -0.05854725,
+      "mean_abs": 0.17760357125211998,
+      "max_abs": 0.441872,
+      "p05": -0.22145455,
+      "p95": 0.37692555,
+      "geom_id": 106,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21509899999999998,
+          "max_abs": 0.441872
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21509899999999998,
+          "max_abs": 0.441872
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21509899999999998,
+          "max_abs": 0.441872
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.23082,
+        "max": 0.441872,
+        "mean": 0.037159185993089434,
+        "std": 0.2542745042174567,
+        "median": -0.0562693,
+        "mean_abs": 0.2302404803020325,
+        "max_abs": 0.441872,
+        "p05": -0.2290489,
+        "p95": 0.43314804999999995
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.230575,
+      "max": 0.442235,
+      "mean": 0.0009875519823199983,
+      "std": 0.20522129065284925,
+      "median": -0.0636368,
+      "mean_abs": 0.17806526934367997,
+      "max_abs": 0.442235,
+      "p05": -0.220991,
+      "p95": 0.3716051,
+      "geom_id": 107,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2148445,
+          "max_abs": 0.442235
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2148445,
+          "max_abs": 0.442235
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2148445,
+          "max_abs": 0.442235
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.230575,
+        "max": 0.442235,
+        "mean": 0.03742034989227644,
+        "std": 0.25427498677359356,
+        "median": -0.05603655,
+        "mean_abs": 0.23021493676219512,
+        "max_abs": 0.442235,
+        "p05": -0.2288006,
+        "p95": 0.4334867
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.230074,
+      "max": 0.44278,
+      "mean": 0.0041417663885399995,
+      "std": 0.20617408736267198,
+      "median": -0.0539857,
+      "mean_abs": 0.17816660754105998,
+      "max_abs": 0.44278,
+      "p05": -0.22121054999999998,
+      "p95": 0.37799820000000006,
+      "geom_id": 108,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21434799999999998,
+          "max_abs": 0.44278
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21434799999999998,
+          "max_abs": 0.44278
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21434799999999998,
+          "max_abs": 0.44278
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.230074,
+        "max": 0.44278,
+        "mean": 0.03794967282520324,
+        "std": 0.25429893390840896,
+        "median": -0.05543435,
+        "mean_abs": 0.23019023981707318,
+        "max_abs": 0.44278,
+        "p05": -0.228305,
+        "p95": 0.43410905
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.23008,
+      "max": 0.442901,
+      "mean": 0.0026096876831800007,
+      "std": 0.20535587935831678,
+      "median": -0.057770249999999995,
+      "mean_abs": 0.17738227936318,
+      "max_abs": 0.442901,
+      "p05": -0.2203783,
+      "p95": 0.3758415,
+      "geom_id": 109,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2143535,
+          "max_abs": 0.442901
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2143535,
+          "max_abs": 0.442901
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2143535,
+          "max_abs": 0.442901
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.23008,
+        "max": 0.442901,
+        "mean": 0.037991746144308954,
+        "std": 0.2543307586763492,
+        "median": -0.0553844,
+        "mean_abs": 0.23021598289227638,
+        "max_abs": 0.442901,
+        "p05": -0.22830245000000002,
+        "p95": 0.43417079999999997
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229545,
+      "max": 0.443457,
+      "mean": 0.0009551721399219997,
+      "std": 0.20656740170620014,
+      "median": -0.0619388,
+      "mean_abs": 0.178739450059718,
+      "max_abs": 0.443457,
+      "p05": -0.221067,
+      "p95": 0.38026045000000014,
+      "geom_id": 110,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213809,
+          "max_abs": 0.443457
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213809,
+          "max_abs": 0.443457
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213809,
+          "max_abs": 0.443457
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229545,
+        "max": 0.443457,
+        "mean": 0.038521489512195126,
+        "std": 0.2543260575209,
+        "median": -0.05479145,
+        "mean_abs": 0.23016300483739838,
+        "max_abs": 0.443457,
+        "p05": -0.22777035,
+        "p95": 0.4346831
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229678,
+      "max": 0.443303,
+      "mean": -0.0024257795556000016,
+      "std": 0.20452030688377587,
+      "median": -0.06440935,
+      "mean_abs": 0.17609408782719999,
+      "max_abs": 0.443303,
+      "p05": -0.22014805,
+      "p95": 0.37902210000000003,
+      "geom_id": 111,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2139395,
+          "max_abs": 0.443303
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2139395,
+          "max_abs": 0.443303
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2139395,
+          "max_abs": 0.443303
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229678,
+        "max": 0.443303,
+        "mean": 0.03835257955284553,
+        "std": 0.2542916838567784,
+        "median": -0.054947899999999994,
+        "mean_abs": 0.23014328776422763,
+        "max_abs": 0.443303,
+        "p05": -0.22790815,
+        "p95": 0.43450665
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.22906,
+      "max": 0.443977,
+      "mean": 0.0026076427530799993,
+      "std": 0.204702126497037,
+      "median": -0.05537805,
+      "mean_abs": 0.17610811809132002,
+      "max_abs": 0.443977,
+      "p05": -0.22010819999999998,
+      "p95": 0.37301335,
+      "geom_id": 112,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2133335,
+          "max_abs": 0.443977
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2133335,
+          "max_abs": 0.443977
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2133335,
+          "max_abs": 0.443977
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.22906,
+        "max": 0.443977,
+        "mean": 0.03898394678861789,
+        "std": 0.2543090820885529,
+        "median": -0.054340299999999994,
+        "mean_abs": 0.23010155056910567,
+        "max_abs": 0.443977,
+        "p05": -0.22729845,
+        "p95": 0.43523165
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229623,
+      "max": 0.443388,
+      "mean": 0.0010113103042000001,
+      "std": 0.20437653428106944,
+      "median": -0.05788165,
+      "mean_abs": 0.1758187705342,
+      "max_abs": 0.443388,
+      "p05": -0.22070175,
+      "p95": 0.37596145,
+      "geom_id": 113,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213895,
+          "max_abs": 0.443388
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213895,
+          "max_abs": 0.443388
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213895,
+          "max_abs": 0.443388
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229623,
+        "max": 0.443388,
+        "mean": 0.038383973008130075,
+        "std": 0.2542625621412239,
+        "median": -0.054877999999999996,
+        "mean_abs": 0.23011063772357726,
+        "max_abs": 0.443388,
+        "p05": -0.2278567,
+        "p95": 0.43455955
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229845,
+      "max": 0.443182,
+      "mean": -0.0013692467204000002,
+      "std": 0.20456763856685742,
+      "median": -0.0649512,
+      "mean_abs": 0.1761249911712,
+      "max_abs": 0.443182,
+      "p05": -0.22035169999999998,
+      "p95": 0.37646755000000015,
+      "geom_id": 114,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.214117,
+          "max_abs": 0.443182
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.214117,
+          "max_abs": 0.443182
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.214117,
+          "max_abs": 0.443182
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229845,
+        "max": 0.443182,
+        "mean": 0.038155842113821156,
+        "std": 0.25425692549048856,
+        "median": -0.05510825,
+        "mean_abs": 0.2301235217073171,
+        "max_abs": 0.443182,
+        "p05": -0.2280768,
+        "p95": 0.43434344999999996
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.228759,
+      "max": 0.444215,
+      "mean": 0.00029116969699999996,
+      "std": 0.20522033056178557,
+      "median": -0.0610649,
+      "mean_abs": 0.17666114929700003,
+      "max_abs": 0.444215,
+      "p05": -0.21942685,
+      "p95": 0.37764300000000006,
+      "geom_id": 115,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2130325,
+          "max_abs": 0.444215
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2130325,
+          "max_abs": 0.444215
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2130325,
+          "max_abs": 0.444215
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.228759,
+        "max": 0.444215,
+        "mean": 0.039221290589430906,
+        "std": 0.2542408060187125,
+        "median": -0.054034849999999995,
+        "mean_abs": 0.23001293359756098,
+        "max_abs": 0.444215,
+        "p05": -0.22699225,
+        "p95": 0.4354476
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229879,
+      "max": 0.443148,
+      "mean": -0.0018856686143199986,
+      "std": 0.20401646169838844,
+      "median": -0.062016749999999995,
+      "mean_abs": 0.17534298390071998,
+      "max_abs": 0.443148,
+      "p05": -0.22088635,
+      "p95": 0.3743385000000001,
+      "geom_id": 116,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21415099999999998,
+          "max_abs": 0.443148
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21415099999999998,
+          "max_abs": 0.443148
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21415099999999998,
+          "max_abs": 0.443148
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229879,
+        "max": 0.443148,
+        "mean": 0.038121670487804904,
+        "std": 0.2542569439708324,
+        "median": -0.05514245,
+        "mean_abs": 0.23012659304878047,
+        "max_abs": 0.443148,
+        "p05": -0.2281108,
+        "p95": 0.43430945
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229629,
+      "max": 0.443382,
+      "mean": 0.00278599940402,
+      "std": 0.20567981710447328,
+      "median": -0.055487800000000004,
+      "mean_abs": 0.17731639786078,
+      "max_abs": 0.443382,
+      "p05": -0.2203599,
+      "p95": 0.3757363,
+      "geom_id": 117,
+      "stage": "val",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213901,
+          "max_abs": 0.443382
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213901,
+          "max_abs": 0.443382
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213901,
+          "max_abs": 0.443382
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229629,
+        "max": 0.443382,
+        "mean": 0.038377960121951216,
+        "std": 0.2542625628122841,
+        "median": -0.054884050000000004,
+        "mean_abs": 0.23011117589430893,
+        "max_abs": 0.443382,
+        "p05": -0.2278627,
+        "p95": 0.43455355
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229042,
+      "max": 0.443995,
+      "mean": 0.0017201440065399978,
+      "std": 0.20493743489531396,
+      "median": -0.059372499999999995,
+      "mean_abs": 0.17703455982066,
+      "max_abs": 0.443995,
+      "p05": -0.2193375,
+      "p95": 0.3776695,
+      "geom_id": 118,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2133155,
+          "max_abs": 0.443995
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2133155,
+          "max_abs": 0.443995
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2133155,
+          "max_abs": 0.443995
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229042,
+        "max": 0.443995,
+        "mean": 0.03900172540650407,
+        "std": 0.25430906811185083,
+        "median": -0.054322499999999996,
+        "mean_abs": 0.23009995260162602,
+        "max_abs": 0.443995,
+        "p05": -0.22728045000000002,
+        "p95": 0.43524965
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229666,
+      "max": 0.443315,
+      "mean": 0.0021428635695200002,
+      "std": 0.20588238772154563,
+      "median": -0.06144265,
+      "mean_abs": 0.17822904083248,
+      "max_abs": 0.443315,
+      "p05": -0.2203373,
+      "p95": 0.37083975000000013,
+      "geom_id": 119,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2139275,
+          "max_abs": 0.443315
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2139275,
+          "max_abs": 0.443315
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2139275,
+          "max_abs": 0.443315
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229666,
+        "max": 0.443315,
+        "mean": 0.03836419439024391,
+        "std": 0.2542916677849036,
+        "median": -0.0549363,
+        "mean_abs": 0.23014223288617885,
+        "max_abs": 0.443315,
+        "p05": -0.22789615,
+        "p95": 0.43451819999999997
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229367,
+      "max": 0.443633,
+      "mean": 0.006764960809499999,
+      "std": 0.20631721944471154,
+      "median": -0.0529579,
+      "mean_abs": 0.1782495446887,
+      "max_abs": 0.443633,
+      "p05": -0.21977845,
+      "p95": 0.37379345,
+      "geom_id": 120,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21363100000000002,
+          "max_abs": 0.443633
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21363100000000002,
+          "max_abs": 0.443633
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21363100000000002,
+          "max_abs": 0.443633
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229367,
+        "max": 0.443633,
+        "mean": 0.038698090426829264,
+        "std": 0.25432330396920483,
+        "median": -0.0546105,
+        "mean_abs": 0.23014474380081298,
+        "max_abs": 0.443633,
+        "p05": -0.22759235,
+        "p95": 0.43485825
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.230122,
+      "max": 0.442859,
+      "mean": 0.0025921149103999993,
+      "std": 0.20770546108733326,
+      "median": -0.06444295,
+      "mean_abs": 0.1800018582592,
+      "max_abs": 0.442859,
+      "p05": -0.22058695,
+      "p95": 0.37745530000000027,
+      "geom_id": 121,
+      "stage": "val",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21439599999999998,
+          "max_abs": 0.442859
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21439599999999998,
+          "max_abs": 0.442859
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21439599999999998,
+          "max_abs": 0.442859
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.230122,
+        "max": 0.442859,
+        "mean": 0.03794914426626016,
+        "std": 0.2543307804750472,
+        "median": -0.055427000000000004,
+        "mean_abs": 0.23021981011991868,
+        "max_abs": 0.442859,
+        "p05": -0.2283449,
+        "p95": 0.4341288
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.230094,
+      "max": 0.44276,
+      "mean": 0.0032801894752400003,
+      "std": 0.2060805199704063,
+      "median": -0.0578604,
+      "mean_abs": 0.17817834168076002,
+      "max_abs": 0.44276,
+      "p05": -0.2206465,
+      "p95": 0.37663070000000004,
+      "geom_id": 122,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.214368,
+          "max_abs": 0.44276
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.214368,
+          "max_abs": 0.44276
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.214368,
+          "max_abs": 0.44276
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.230094,
+        "max": 0.44276,
+        "mean": 0.03792958631707319,
+        "std": 0.25429894866925445,
+        "median": -0.05545445,
+        "mean_abs": 0.230192051601626,
+        "max_abs": 0.44276,
+        "p05": -0.228325,
+        "p95": 0.43408905
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.230559,
+      "max": 0.442251,
+      "mean": 0.0009202086221600002,
+      "std": 0.2051814836917874,
+      "median": -0.06027285,
+      "mean_abs": 0.17773980489096,
+      "max_abs": 0.442251,
+      "p05": -0.2207384,
+      "p95": 0.3698145500000001,
+      "geom_id": 123,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2148285,
+          "max_abs": 0.442251
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2148285,
+          "max_abs": 0.442251
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2148285,
+          "max_abs": 0.442251
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.230559,
+        "max": 0.442251,
+        "mean": 0.03743641432317075,
+        "std": 0.2542749865082384,
+        "median": -0.0560205,
+        "mean_abs": 0.2302134971280488,
+        "max_abs": 0.442251,
+        "p05": -0.2287846,
+        "p95": 0.43350269999999996
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.23078,
+      "max": 0.441912,
+      "mean": 0.00336190623814,
+      "std": 0.20709489460411906,
+      "median": -0.060700000000000004,
+      "mean_abs": 0.17902900533814,
+      "max_abs": 0.441912,
+      "p05": -0.22135275000000001,
+      "p95": 0.37614020000000004,
+      "geom_id": 124,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21505849999999999,
+          "max_abs": 0.441912
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21505849999999999,
+          "max_abs": 0.441912
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21505849999999999,
+          "max_abs": 0.441912
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.23078,
+        "max": 0.441912,
+        "mean": 0.03719942899573171,
+        "std": 0.2542744973158964,
+        "median": -0.0562291,
+        "mean_abs": 0.23023687025589432,
+        "max_abs": 0.441912,
+        "p05": -0.2290089,
+        "p95": 0.43318805
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.22991,
+      "max": 0.442764,
+      "mean": 0.00229681894476,
+      "std": 0.20538598273259037,
+      "median": -0.0586147,
+      "mean_abs": 0.17704236249076,
+      "max_abs": 0.442764,
+      "p05": -0.2207191,
+      "p95": 0.37890525,
+      "geom_id": 125,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21418700000000002,
+          "max_abs": 0.442764
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21418700000000002,
+          "max_abs": 0.442764
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.21418700000000002,
+          "max_abs": 0.442764
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.22991,
+        "max": 0.442764,
+        "mean": 0.038080720016260165,
+        "std": 0.2542828810157363,
+        "median": -0.0553666,
+        "mean_abs": 0.23016747782113825,
+        "max_abs": 0.442764,
+        "p05": -0.2281286,
+        "p95": 0.43404365
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229177,
+      "max": 0.443432,
+      "mean": 0.0020920844868800013,
+      "std": 0.20703594844621853,
+      "median": -0.06347315,
+      "mean_abs": 0.17867454359031998,
+      "max_abs": 0.443432,
+      "p05": -0.21943285,
+      "p95": 0.38137085000000004,
+      "geom_id": 126,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213444,
+          "max_abs": 0.443432
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213444,
+          "max_abs": 0.443432
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213444,
+          "max_abs": 0.443432
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229177,
+        "max": 0.443432,
+        "mean": 0.03882177581300812,
+        "std": 0.25429330124734123,
+        "median": -0.05468965,
+        "mean_abs": 0.2301132243495935,
+        "max_abs": 0.443432,
+        "p05": -0.22738585,
+        "p95": 0.43473829999999997
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.228937,
+      "max": 0.443671,
+      "mean": -0.0007764762066400003,
+      "std": 0.20364780269972893,
+      "median": -0.06216835,
+      "mean_abs": 0.17540006417816,
+      "max_abs": 0.443671,
+      "p05": -0.21947295,
+      "p95": 0.3753168500000001,
+      "geom_id": 127,
+      "stage": "test",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213182,
+          "max_abs": 0.443671
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213182,
+          "max_abs": 0.443671
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.213182,
+          "max_abs": 0.443671
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.228937,
+        "max": 0.443671,
+        "mean": 0.039067539817073164,
+        "std": 0.2542901953566582,
+        "median": -0.0544632,
+        "mean_abs": 0.23008942973577234,
+        "max_abs": 0.443671,
+        "p05": -0.2271524,
+        "p95": 0.43496615
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.2298,
+      "max": 0.442687,
+      "mean": 0.0025581458967800005,
+      "std": 0.20553046983912665,
+      "median": -0.057152350000000005,
+      "mean_abs": 0.17675978367318002,
+      "max_abs": 0.442687,
+      "p05": -0.22051645,
+      "p95": 0.3796082,
+      "geom_id": 128,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.214086,
+          "max_abs": 0.442687
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.214086,
+          "max_abs": 0.442687
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.214086,
+          "max_abs": 0.442687
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.2298,
+        "max": 0.442687,
+        "mean": 0.03816338077235772,
+        "std": 0.25427832301543973,
+        "median": -0.0554247,
+        "mean_abs": 0.23015961613821137,
+        "max_abs": 0.442687,
+        "p05": -0.2280243,
+        "p95": 0.43402455
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229995,
+      "max": 0.442418,
+      "mean": 0.0005987888382939993,
+      "std": 0.2047598547954127,
+      "median": -0.058349200000000004,
+      "mean_abs": 0.176018164689466,
+      "max_abs": 0.442418,
+      "p05": -0.2203946,
+      "p95": 0.3775647000000001,
+      "geom_id": 129,
+      "stage": "val",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2142595,
+          "max_abs": 0.442418
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2142595,
+          "max_abs": 0.442418
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2142595,
+          "max_abs": 0.442418
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229995,
+        "max": 0.442418,
+        "mean": 0.037959404969512195,
+        "std": 0.2542746298394641,
+        "median": -0.055649699999999996,
+        "mean_abs": 0.23017687683943092,
+        "max_abs": 0.442418,
+        "p05": -0.2282079,
+        "p95": 0.4337738
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.228672,
+      "max": 0.443762,
+      "mean": 0.0036640265399999995,
+      "std": 0.2058942164053498,
+      "median": -0.05650705,
+      "mean_abs": 0.17747958418960003,
+      "max_abs": 0.443762,
+      "p05": -0.21925975,
+      "p95": 0.3742033,
+      "geom_id": 130,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2129445,
+          "max_abs": 0.443762
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2129445,
+          "max_abs": 0.443762
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2129445,
+          "max_abs": 0.443762
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.228672,
+        "max": 0.443762,
+        "mean": 0.03929592042682928,
+        "std": 0.2542911803187366,
+        "median": -0.054341150000000005,
+        "mean_abs": 0.2300742178658537,
+        "max_abs": 0.443762,
+        "p05": -0.2268907,
+        "p95": 0.435107
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.230109,
+      "max": 0.442237,
+      "mean": -1.4000551999999544e-05,
+      "std": 0.20409767057229783,
+      "median": -0.058971800000000005,
+      "mean_abs": 0.17581786253052,
+      "max_abs": 0.442237,
+      "p05": -0.2209846,
+      "p95": 0.37258240000000004,
+      "geom_id": 131,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2143765,
+          "max_abs": 0.442237
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2143765,
+          "max_abs": 0.442237
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2143765,
+          "max_abs": 0.442237
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.230109,
+        "max": 0.442237,
+        "mean": 0.03780958475203252,
+        "std": 0.2542476320453783,
+        "median": -0.055798650000000005,
+        "mean_abs": 0.23016596706910566,
+        "max_abs": 0.442237,
+        "p05": -0.22831945,
+        "p95": 0.43350475
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229018,
+      "max": 0.443328,
+      "mean": -0.0012177280816000001,
+      "std": 0.20468482453701217,
+      "median": -0.0643146,
+      "mean_abs": 0.1762978121092,
+      "max_abs": 0.443328,
+      "p05": -0.2199221,
+      "p95": 0.3767360500000001,
+      "geom_id": 132,
+      "stage": "val",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2132795,
+          "max_abs": 0.443328
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2132795,
+          "max_abs": 0.443328
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2132795,
+          "max_abs": 0.443328
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229018,
+        "max": 0.443328,
+        "mean": 0.03895488908536586,
+        "std": 0.2542892318391119,
+        "median": -0.05471135,
+        "mean_abs": 0.23010580839430897,
+        "max_abs": 0.443328,
+        "p05": -0.22721895,
+        "p95": 0.43470395
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.22916,
+      "max": 0.443122,
+      "mean": -0.00031169662937999976,
+      "std": 0.20628093394495214,
+      "median": -0.06469520000000001,
+      "mean_abs": 0.17827744110582,
+      "max_abs": 0.443122,
+      "p05": -0.21984510000000002,
+      "p95": 0.38051165000000003,
+      "geom_id": 133,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2134305,
+          "max_abs": 0.443122
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2134305,
+          "max_abs": 0.443122
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2134305,
+          "max_abs": 0.443122
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.22916,
+        "max": 0.443122,
+        "mean": 0.03876323983739838,
+        "std": 0.25425698825750714,
+        "median": -0.05486715,
+        "mean_abs": 0.23009115650406506,
+        "max_abs": 0.443122,
+        "p05": -0.22736965,
+        "p95": 0.4344962
+      }
+    },
+    {
+      "n": 5000,
+      "min": -0.229477,
+      "max": 0.442852,
+      "mean": -0.0007208290911399995,
+      "std": 0.20514221052296844,
+      "median": -0.06301205,
+      "mean_abs": 0.17681205028594,
+      "max_abs": 0.442852,
+      "p05": -0.22132264999999998,
+      "p95": 0.37682085000000004,
+      "geom_id": 134,
+      "stage": "train",
+      "tau": 1e-12,
+      "tau_rule": "1e-12*max(1,max_abs_p_per_geometry)",
+      "near_zero_outer": {
+        "tau": {
+          "threshold": 1e-12,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2137465,
+          "max_abs": 0.442852
+        },
+        "1e-10": {
+          "threshold": 1e-10,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2137465,
+          "max_abs": 0.442852
+        },
+        "1e-8": {
+          "threshold": 1e-08,
+          "count": 0,
+          "fraction": 0.0,
+          "median_abs": 0.2137465,
+          "max_abs": 0.442852
+        }
+      },
+      "outer_boundary": {
+        "n": 492,
+        "min": -0.229477,
+        "max": 0.442852,
+        "mean": 0.038480608008130066,
+        "std": 0.254282656643256,
+        "median": -0.05517125,
+        "mean_abs": 0.230141838699187,
+        "max_abs": 0.442852,
+        "p05": -0.22768035,
+        "p95": 0.43423815
+      }
+    }
+  ],
+  "all135_mean": 0.0020544469618538276,
+  "all135_std_sample": 0.20532419249074263,
+  "all135_mean_range": [
+    -0.0034361922083400004,
+    0.008112745450180002
+  ],
+  "all135_mean_abs_outer": 0.22988712515387985,
+  "interpretation": {
+    "data_description_only": true,
+    "historical_reference_identified": false,
+    "reason": "node arithmetic means are not zero; a coordinate candidate is only a data-compatible descriptive anchor, not a recovered historical gauge",
+    "mean_rule": "arithmetic equal node weight, not FEM area integral"
+  }
+}

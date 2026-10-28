@@ -1,0 +1,55 @@
+{
+  "task": "R2-REMAINING-EXECUTE-02 Transolver formal weights",
+  "server_root": "results/round2_remaining_closeout/formal/transolver/transolver",
+  "local_root": "results/round2_remaining_closeout/formal/transolver/transolver",
+  "weights": {
+    "seed0": {
+      "path": "seed0/checkpoint_best.pth",
+      "sha256": "c3503d5c4a9bb7aeb4f5a6950e98bbdb50d90ff69afc0b74c62f2b203a3f37c6",
+      "server_path": "results/round2_remaining_closeout/formal/transolver/transolver/seed0/checkpoint_best.pth"
+    },
+    "seed1": {
+      "path": "seed1/checkpoint_best.pth",
+      "sha256": "2f41e9857134250278cfbeb10b88815012b8224a58057a922fcbb082c7cf819e",
+      "server_path": "results/round2_remaining_closeout/formal/transolver/transolver/seed1/checkpoint_best.pth"
+    },
+    "seed2": {
+      "path": "seed2/checkpoint_best.pth",
+      "sha256": "e462a3f3cbd12273f4e3db198c5d4d1b6489a5bf28cd263e1a2672c81e5a3879",
+      "server_path": "results/round2_remaining_closeout/formal/transolver/transolver/seed2/checkpoint_best.pth"
+    },
+    "seed3": {
+      "path": "seed3/checkpoint_best.pth",
+      "sha256": "57c06632afa64533e0aa5a40cb4d7a013149b12250aeaf973f5a41ebf17aef61",
+      "server_path": "results/round2_remaining_closeout/formal/transolver/transolver/seed3/checkpoint_best.pth"
+    },
+    "seed4": {
+      "path": "seed4/checkpoint_best.pth",
+      "sha256": "c614fe7669d178ca2454c90b7157474132cbb02f0b16d1c1c341dc4ca6f3cbdf",
+      "server_path": "results/round2_remaining_closeout/formal/transolver/transolver/seed4/checkpoint_best.pth"
+    }
+  },
+  "metrics_local": {
+    "seed0": {
+      "path": "results/round2_remaining_closeout/formal/transolver/transolver/seed0/metrics_seed0.json",
+      "exists": true
+    },
+    "seed1": {
+      "path": "results/round2_remaining_closeout/formal/transolver/transolver/seed1/metrics_seed1.json",
+      "exists": true
+    },
+    "seed2": {
+      "path": "results/round2_remaining_closeout/formal/transolver/transolver/seed2/metrics_seed2.json",
+      "exists": true
+    },
+    "seed3": {
+      "path": "results/round2_remaining_closeout/formal/transolver/transolver/seed3/metrics_seed3.json",
+      "exists": true
+    },
+    "seed4": {
+      "path": "results/round2_remaining_closeout/formal/transolver/transolver/seed4/metrics_seed4.json",
+      "exists": true
+    }
+  },
+  "note": "weights retained on server; per-seed metrics/summary copied locally; no retraining"
+}

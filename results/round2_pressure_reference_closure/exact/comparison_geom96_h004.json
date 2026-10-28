@@ -1,0 +1,108 @@
+{
+  "n_valid": 5000,
+  "n_total": 5000,
+  "area_mean_point": 7.091646933282833e-17,
+  "mean_pA_minus_pB": 0.1883209070405259,
+  "centered_relative_difference": 8.403007425583298e-17,
+  "centered_absolute_difference": 1.1803820937159481e-15,
+  "max_abs_pA_minus_pB": 0.18832090704052595,
+  "pin_value": -0.18832090704052593,
+  "pressure_gauge": "point_reference_vs_integral_zero_mean",
+  "note": "integral gauge is exact constant shift; u/v/T identical by construction",
+  "geom_id": 96,
+  "target_h": 0.04,
+  "tag": "",
+  "pin_dof": 1590,
+  "pin_coord": [
+    -0.586961296814923,
+    -0.577474438126015
+  ],
+  "pin_margin": 0.41303870318507696,
+  "newton_reason": 2,
+  "newton_iterations": 1,
+  "continuation": [
+    {
+      "iteration": 1,
+      "update_rel": 6.5690377859979966e-09,
+      "linear_residual_rel": 1.4714493999169774e-14,
+      "pre_projection_integral": -7.771561172376096e-16,
+      "projection_constant_shift": -2.227926377812802e-16,
+      "constraint": -8.326672684688674e-17,
+      "c": 4.955879127472184e-19
+    }
+  ],
+  "diagnostics": {
+    "area": 3.488248646710483,
+    "divergence_l2": 0.09654204552222077,
+    "mass_flux": -2.313712847072484e-17,
+    "pressure_mean": 7.091646933282833e-17,
+    "pressure_std": 0.19585297552226485,
+    "velocity_l2": 0.2738864068641249,
+    "temperature_l2": 0.772476921131842,
+    "residual": {
+      "continuity_l2": 0.09654204552222077,
+      "momentum_l2": 0.11262240595789534,
+      "energy_l2": 0.05296025795442675
+    },
+    "boundary": {
+      "wall_velocity_max": 0.0,
+      "inner_temperature_max_dev": 0.0,
+      "outer_temperature_max_dev": 0.0
+    },
+    "finite": true
+  },
+  "weak_residual": {
+    "n_dirichlet_dofs": 1632,
+    "blocks": {
+      "full": {
+        "full": 0.10689375448681343,
+        "free": 1.9600175432994932e-16
+      },
+      "continuity": {
+        "full": 7.399109512772159e-17,
+        "free": 7.399109512772159e-17,
+        "relative_free": 2.7015249122760804e-16
+      },
+      "momentum": {
+        "full": 0.001336241055344244,
+        "free": 0.0012570348537153323,
+        "relative_free": 0.004589621179480249
+      },
+      "energy": {
+        "full": 0.0008203416912939495,
+        "free": 0.0008041391490309904,
+        "relative_free": 0.001040987927319248
+      }
+    },
+    "dirichlet_zeroed": 1.9600175432994932e-16,
+    "galerkin": {
+      "free_absolute": 1.9600175432994932e-16,
+      "free_relative_to_raw": 1.8336127800069776e-15,
+      "definition": "assembled nonlinear Galerkin residual after zeroing all velocity/temperature Dirichlet rows"
+    },
+    "cell_strong_against_test_projection": {
+      "continuity": {
+        "full": 7.399109512772159e-17,
+        "free": 7.399109512772159e-17,
+        "relative_free": 2.7015249122760804e-16
+      },
+      "momentum": {
+        "full": 0.001336241055344244,
+        "free": 0.0012570348537153323,
+        "relative_free": 0.004589621179480249
+      },
+      "energy": {
+        "full": 0.0008203416912939495,
+        "free": 0.0008041391490309904,
+        "relative_free": 0.001040987927319248
+      }
+    }
+  },
+  "pressure_gauge_eps": 0.0,
+  "integral_pressure": -1.2931821412320854e-16,
+  "final_constraint": -8.326672684688674e-17,
+  "final_linear_residual_rel": 1.4714493999169774e-14,
+  "gauge_definition": "point Dirichlet p(x_pin)=0; exact, no epsilon mass term",
+  "integral_gauge_definition": "p_integral = p_point - area_weighted_mean(p_point)",
+  "mean_rule": "support metrics use equal-weight arithmetic point mean"
+}

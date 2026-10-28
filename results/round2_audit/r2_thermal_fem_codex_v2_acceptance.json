@@ -1,0 +1,97 @@
+{
+  "status": "accepted_v2_numerical_results_with_v3_corrected_galerkin_gate_limited_representative_study",
+  "model_metric_cells_recomputed": 450,
+  "max_abs_metric_error": 1.926641580302091e-08,
+  "max_coordinate_float32_rounding": 2.9802322387695312e-08,
+  "nine_free_galerkin_residual_max": 2.8748059523935916e-16,
+  "same_support_three_grid_differences": {
+    "46": {
+      "u": {
+        "coarse_mid_abs_l2": 0.07521274072036886,
+        "mid_fine_abs_l2": 0.02078503121261393,
+        "decreased": true,
+        "mid_fine_relative_to_fine": 0.0041467127438303665
+      },
+      "v": {
+        "coarse_mid_abs_l2": 0.08077954240092913,
+        "mid_fine_abs_l2": 0.022374892614837334,
+        "decreased": true,
+        "mid_fine_relative_to_fine": 0.002711305125853327
+      },
+      "p": {
+        "coarse_mid_abs_l2": 0.15800358345862028,
+        "mid_fine_abs_l2": 0.1270636647538279,
+        "decreased": true,
+        "mid_fine_relative_to_fine": 0.009198562155627721
+      },
+      "T": {
+        "coarse_mid_abs_l2": 0.04054229809954312,
+        "mid_fine_abs_l2": 0.013460617571593796,
+        "decreased": true,
+        "mid_fine_relative_to_fine": 0.00044816925136698566
+      }
+    },
+    "17": {
+      "u": {
+        "coarse_mid_abs_l2": 0.05347860103591293,
+        "mid_fine_abs_l2": 0.018531937170174578,
+        "decreased": true,
+        "mid_fine_relative_to_fine": 0.003754867108307979
+      },
+      "v": {
+        "coarse_mid_abs_l2": 0.06487240219436301,
+        "mid_fine_abs_l2": 0.020076943498753896,
+        "decreased": true,
+        "mid_fine_relative_to_fine": 0.002450941526375186
+      },
+      "p": {
+        "coarse_mid_abs_l2": 0.12481437432987963,
+        "mid_fine_abs_l2": 0.1038433502011423,
+        "decreased": true,
+        "mid_fine_relative_to_fine": 0.007305608297882641
+      },
+      "T": {
+        "coarse_mid_abs_l2": 0.02686773369339417,
+        "mid_fine_abs_l2": 0.010607683117155577,
+        "decreased": true,
+        "mid_fine_relative_to_fine": 0.0003485608627910461
+      }
+    },
+    "96": {
+      "u": {
+        "coarse_mid_abs_l2": 0.0562190473499846,
+        "mid_fine_abs_l2": 0.018052985076739105,
+        "decreased": true,
+        "mid_fine_relative_to_fine": 0.0035988431968320598
+      },
+      "v": {
+        "coarse_mid_abs_l2": 0.06603388665176715,
+        "mid_fine_abs_l2": 0.01683021483348083,
+        "decreased": true,
+        "mid_fine_relative_to_fine": 0.002036110140794588
+      },
+      "p": {
+        "coarse_mid_abs_l2": 0.14012805660399785,
+        "mid_fine_abs_l2": 0.09309142045242151,
+        "decreased": true,
+        "mid_fine_relative_to_fine": 0.006629268848697776
+      },
+      "T": {
+        "coarse_mid_abs_l2": 0.028353866707412398,
+        "mid_fine_abs_l2": 0.0071329221055719105,
+        "decreased": true,
+        "mid_fine_relative_to_fine": 0.00023617251103908693
+      }
+    }
+  },
+  "coverage": "3 representative geometries only; differences not true-error bounds; historical gauge unrecovered",
+  "pending": [],
+  "v3_manifest_files_verified": 11,
+  "eps_independent_metric_max_abs_error": 0,
+  "galerkin_free_reacceptance": "9/9 verified; failure fixture large free residual rejected",
+  "limitations": [
+    "Three representatives only, not all135 original labels",
+    "Pressure penalty epsilon sensitivity checked on one coarse representative; not original gauge recovery",
+    "Adjacent grid differences are discretization diagnostics, not rigorous true-error bound"
+  ]
+}

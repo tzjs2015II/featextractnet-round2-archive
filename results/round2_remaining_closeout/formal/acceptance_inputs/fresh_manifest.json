@@ -1,0 +1,318 @@
+{
+  "created_local": "2026-10-27T09:46:06+08:00",
+  "rows": [
+    {
+      "name": "siren",
+      "summary": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren\\summary.json",
+      "summary_sha256": "a765a2b4ab136af5f27772edb7cfe888f19056d902c303084b1654a3fa552180",
+      "metrics": 5,
+      "files": [
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren\\seed0\\metrics_seed0.json",
+          "metrics_sha256": "1626574d3b81d1155601015b396d8848e22c529395fcc24e5197a480be94a9c9",
+          "seed": 0,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.057531530981836124
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren\\seed1\\metrics_seed1.json",
+          "metrics_sha256": "aa5e125982fcc06ae50ee786d5210d939016fed4e2950bcc69895373ac4e42a3",
+          "seed": 1,
+          "val_best": {
+            "epoch": 375,
+            "score": 0.05632003373191301
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren\\seed2\\metrics_seed2.json",
+          "metrics_sha256": "8d6588d4e246b547926786163242bb087c2f662d444803924ef8750b65daf9ec",
+          "seed": 2,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.05579024114111534
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren\\seed3\\metrics_seed3.json",
+          "metrics_sha256": "11465fa54c8e82a8cb774fd150e9970c1f4dfa9f90f64b4ee60768988dd5faae",
+          "seed": 3,
+          "val_best": {
+            "epoch": 425,
+            "score": 0.05719022956602638
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren\\seed4\\metrics_seed4.json",
+          "metrics_sha256": "f1c50b0248cc4e7f8ccd20f58b7b00494795d899ade8a95deff7a09623a8f2b1",
+          "seed": 4,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.05552393825964102
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        }
+      ]
+    },
+    {
+      "name": "pt",
+      "summary": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer\\summary.json",
+      "summary_sha256": "9374b1b517ad0fc90db957b64ea87400a450535b058043b65d2dee4ffd4c2c81",
+      "metrics": 5,
+      "files": [
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer\\seed0\\metrics_seed0.json",
+          "metrics_sha256": "cd943274822022868e824001899584f92f665131b943ea83a2a3b407771748d1",
+          "seed": 0,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.10920464030517764
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer\\seed1\\metrics_seed1.json",
+          "metrics_sha256": "78b85a676c7e5bf4cc0d4ca44a66674a4f57218911965d84ffbe31b0e43ad906",
+          "seed": 1,
+          "val_best": {
+            "epoch": 450,
+            "score": 0.11364233735667317
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer\\seed2\\metrics_seed2.json",
+          "metrics_sha256": "7a5739c71182bcb65aa5da1d5a5c25f39b00e637c7b583b97dfe9c1ea984f1d2",
+          "seed": 2,
+          "val_best": {
+            "epoch": 500,
+            "score": 0.10820496982545759
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer\\seed3\\metrics_seed3.json",
+          "metrics_sha256": "41b865d9c1cb4e71ac933769123e09c1724a09205904d91bdce09a54bba4c3eb",
+          "seed": 3,
+          "val_best": {
+            "epoch": 425,
+            "score": 0.11082447340160555
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer\\seed4\\metrics_seed4.json",
+          "metrics_sha256": "fe0d61f3277294e11b55877290d287ea7fe68539c16415e54484b4056d763f4c",
+          "seed": 4,
+          "val_best": {
+            "epoch": 475,
+            "score": 0.10915913196560119
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        }
+      ]
+    },
+    {
+      "name": "mlp_c",
+      "summary": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c\\summary.json",
+      "summary_sha256": "ede575c5004da1623959fcbafe607cd939a6af50efc8eeb20470bc56c8dc1d94",
+      "metrics": 5,
+      "files": [
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c\\seed0\\metrics_seed0.json",
+          "metrics_sha256": "acd55b500e80730d7d049cbd4f643977388be212c2467f87873972608302395e",
+          "seed": 0,
+          "val_best": {
+            "epoch": 800,
+            "score": 0.9999713253689496
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c\\seed1\\metrics_seed1.json",
+          "metrics_sha256": "f1e9f79d90df098c595841ff898104ab7c324493907fae440ba31285b7dfacf3",
+          "seed": 1,
+          "val_best": {
+            "epoch": 50,
+            "score": 1.0000546320408126
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c\\seed2\\metrics_seed2.json",
+          "metrics_sha256": "2c36b5dfa38db85bd8b76d3b6a7ca22b1d390675e9b0a2a7ff439446ebbe2fb2",
+          "seed": 2,
+          "val_best": {
+            "epoch": 850,
+            "score": 0.9999911783971073
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c\\seed3\\metrics_seed3.json",
+          "metrics_sha256": "b22aff48f42b5cac734299661a1e0c4d4901038577a66b2ffbd0c07f9134fc36",
+          "seed": 3,
+          "val_best": {
+            "epoch": 850,
+            "score": 0.9998542470723034
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c\\seed4\\metrics_seed4.json",
+          "metrics_sha256": "8571aca9fd3ed9fa76a7a5f991da933c682caf423639a0863955420c7d8d5567",
+          "seed": 4,
+          "val_best": {
+            "epoch": 900,
+            "score": 0.9999875754726859
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        }
+      ]
+    },
+    {
+      "name": "mlp_c_matched",
+      "summary": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched\\summary.json",
+      "summary_sha256": "2f352fce904cd5c2eb162f881efaba4ec8d81f1204d7aab020b5dcdedaea357f",
+      "metrics": 5,
+      "files": [
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched\\seed0\\metrics_seed0.json",
+          "metrics_sha256": "8a4230019c424185e5b91b3e48b37bf4359a795b1b718795245a4f4df3591ea9",
+          "seed": 0,
+          "val_best": {
+            "epoch": 750,
+            "score": 0.9999772644869105
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched\\seed1\\metrics_seed1.json",
+          "metrics_sha256": "5345118f452b077bbb50c69e8dfb538e00dc958d8bdff56b3dee649cf11c37c0",
+          "seed": 1,
+          "val_best": {
+            "epoch": 50,
+            "score": 1.0000630153690355
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched\\seed2\\metrics_seed2.json",
+          "metrics_sha256": "0145d90754243a72d44dd8c06acee96470d6ab1e7673de40de30b76a40432008",
+          "seed": 2,
+          "val_best": {
+            "epoch": 1000,
+            "score": 1.000005330847126
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched\\seed3\\metrics_seed3.json",
+          "metrics_sha256": "5d816c181ffb4e6a58d47c0c80a4062be733af658f4e1b88ff454ffe185e0116",
+          "seed": 3,
+          "val_best": {
+            "epoch": 1000,
+            "score": 0.9983663769311796
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched\\seed4\\metrics_seed4.json",
+          "metrics_sha256": "de0891dd93050a03a86a314c5915612f59f12f21f2a3a7f9d9d58fe51dc57532",
+          "seed": 4,
+          "val_best": {
+            "epoch": 100,
+            "score": 1.000034291790757
+          },
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": null,
+          "checkpoint_epoch_match": null,
+          "checkpoint_val_match": null
+        }
+      ]
+    }
+  ],
+  "n_metrics": 20
+}

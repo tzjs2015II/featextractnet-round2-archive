@@ -1,0 +1,183 @@
+{
+  "fourier_c": {
+    "root": "results/round2_remaining_closeout/combined/combined_summary.json",
+    "group": "acoustic_corrected_main_ablation/fourier_c",
+    "sources": [
+      "results/round2_acoustic_pointwise/fourier_c/seed0/metrics_seed0.json",
+      "results/round2_acoustic_pointwise/fourier_c/seed1/metrics_seed1.json",
+      "results/round2_acoustic_pointwise/fourier_c/seed2/metrics_seed2.json",
+      "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_c/seed3/metrics_seed3.json",
+      "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/fourier_c/seed4/metrics_seed4.json"
+    ],
+    "n": 5,
+    "metrics": {
+      "re": {
+        "mean": 1.2005383435436474,
+        "std": 0.0197845760283455
+      },
+      "mae": {
+        "mean": 0.613569368847276,
+        "std": 0.0068209377601203824
+      },
+      "max_err": {
+        "mean": 4.051343699991573,
+        "std": 0.10873321287292313
+      }
+    },
+    "precision": "strict FP32"
+  },
+  "ab_nofourier": {
+    "root": "results\\acoustic_wp5_ablation\\ab_nofourier",
+    "seed_re": [
+      1.0001020569573849,
+      1.0002165679272947,
+      1.0002118075843556
+    ],
+    "first_loss": 31.72205989890628,
+    "last_loss": 0.9578614566061233,
+    "n": 3,
+    "historical": true,
+    "note": "old 3-seed ab_nofourier is not the current S6 row; retained only as historical diagnostic, not used as new table reference",
+    "not_displayed": true,
+    "display_status": "historical_not_displayed"
+  },
+  "ab_nores": {
+    "root": "results/round2_remaining_closeout/combined/combined_summary.json",
+    "group": "acoustic_corrected_main_ablation/ab_nores",
+    "sources": [
+      "results/round2_acoustic_pointwise/ab_nores/seed0/metrics_seed0.json",
+      "results/round2_acoustic_pointwise/ab_nores/seed1/metrics_seed1.json",
+      "results/round2_acoustic_pointwise/ab_nores/seed2/metrics_seed2.json",
+      "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nores/seed3/metrics_seed3.json",
+      "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nores/seed4/metrics_seed4.json"
+    ],
+    "n": 5,
+    "metrics": {
+      "re": {
+        "mean": 1.15151275775601,
+        "std": 0.048255453540972104
+      },
+      "mae": {
+        "mean": 0.5892712888238635,
+        "std": 0.01571501092766927
+      },
+      "max_err": {
+        "mean": 4.10000017279436,
+        "std": 0.1290665966155303
+      }
+    },
+    "precision": "strict FP32"
+  },
+  "ab_nonorm": {
+    "root": "results/round2_remaining_closeout/combined/combined_summary.json",
+    "group": "acoustic_corrected_main_ablation/ab_nonorm",
+    "sources": [
+      "results/round2_acoustic_pointwise/ab_nonorm/seed0/metrics_seed0.json",
+      "results/round2_acoustic_pointwise/ab_nonorm/seed1/metrics_seed1.json",
+      "results/round2_acoustic_pointwise/ab_nonorm/seed2/metrics_seed2.json",
+      "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nonorm/seed3/metrics_seed3.json",
+      "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_nonorm/seed4/metrics_seed4.json"
+    ],
+    "n": 5,
+    "metrics": {
+      "re": {
+        "mean": 1.1859975455483844,
+        "std": 0.022482975558652016
+      },
+      "mae": {
+        "mean": 0.6083335792635183,
+        "std": 0.009104985795921719
+      },
+      "max_err": {
+        "mean": 4.032007257986892,
+        "std": 0.0330204952503009
+      }
+    },
+    "precision": "strict FP32"
+  },
+  "ab_L8": {
+    "root": "results/round2_remaining_closeout/combined/combined_summary.json",
+    "group": "acoustic_corrected_main_ablation/ab_L8",
+    "sources": [
+      "results/round2_acoustic_pointwise/ab_L8/seed0/metrics_seed0.json",
+      "results/round2_acoustic_pointwise/ab_L8/seed1/metrics_seed1.json",
+      "results/round2_acoustic_pointwise/ab_L8/seed2/metrics_seed2.json",
+      "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_L8/seed3/metrics_seed3.json",
+      "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_L8/seed4/metrics_seed4.json"
+    ],
+    "n": 5,
+    "metrics": {
+      "re": {
+        "mean": 1.2280062212304084,
+        "std": 0.02952674726373073
+      },
+      "mae": {
+        "mean": 0.623559943404546,
+        "std": 0.014665014104358977
+      },
+      "max_err": {
+        "mean": 4.321013145937919,
+        "std": 0.13267460764858002
+      }
+    },
+    "precision": "strict FP32"
+  },
+  "ab_L32": {
+    "root": "results/round2_remaining_closeout/combined/combined_summary.json",
+    "group": "acoustic_corrected_main_ablation/ab_L32",
+    "sources": [
+      "results/round2_acoustic_pointwise/ab_L32/seed0/metrics_seed0.json",
+      "results/round2_acoustic_pointwise/ab_L32/seed1/metrics_seed1.json",
+      "results/round2_acoustic_pointwise/ab_L32/seed2/metrics_seed2.json",
+      "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_L32/seed3/metrics_seed3.json",
+      "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3/ab_L32/seed4/metrics_seed4.json"
+    ],
+    "n": 5,
+    "metrics": {
+      "re": {
+        "mean": 1.1698579220540726,
+        "std": 0.010579202292385214
+      },
+      "mae": {
+        "mean": 0.6003227504327258,
+        "std": 0.011652821567065898
+      },
+      "max_err": {
+        "mean": 4.149718508956161,
+        "std": 0.14712565382198348
+      }
+    },
+    "precision": "strict FP32"
+  },
+  "coordinate_mlp_reference": {
+    "name": "Coordinate MLP reference",
+    "n": 5,
+    "params": 814501,
+    "metrics": {
+      "re": {
+        "mean": 1.0009381961431192,
+        "std": 0.0022950496385389235
+      },
+      "mae": {
+        "mean": 0.5413816016059617,
+        "std": 0.0009072749951621989
+      },
+      "max_err": {
+        "mean": 3.7373510477271843,
+        "std": 0.03402206376269049
+      }
+    },
+    "source": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched/summary.json",
+    "sources": [
+      "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched/seed0/metrics_seed0.json",
+      "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched/seed1/metrics_seed1.json",
+      "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched/seed2/metrics_seed2.json",
+      "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched/seed3/metrics_seed3.json",
+      "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched/seed4/metrics_seed4.json"
+    ],
+    "precision": "strict FP32",
+    "displayed": true,
+    "replaces": "ab_nofourier",
+    "note": "current S6 row: matched-coefficient coordinate MLP reference, strict five-seed"
+  }
+}

@@ -1,0 +1,23 @@
+# FeatExtractNet — optional dependencies (extended baselines only)
+# ---------------------------------------------------------------------------
+# NOT needed for the manuscript's main tables. Install these only if you want
+# to re-run the *extended* baseline rows (UNO / FNO for the acoustic task,
+# PointTransformer- and MeshGraphNet-style message-passing baselines for the
+# thermal task), which are reported in the manuscript as additional
+# comparisons and which perform *better* than the proposed architecture on the
+# thermal benchmark (see §4.2).
+#
+#     python -m pip install -r requirements-extended.txt
+#
+# Notes on naming (avoid confusion when comparing to the manuscript):
+#   * neuraloperator is imported as `neuralop`.  It provides FNO, TFNO, UNO,
+#     UQNO, FNOGNO, GINO, CODANO.  There is no standalone class named "GNO".
+#   * SIREN is not provided by any package; it is implemented in
+#     src/models/baselines/siren.py (sine activations, first-layer omega_0=30).
+#
+# Deliberately NOT listed: `pykan` (KAN/PIKAN).  Kolmogorov–Arnold networks are
+# discussed in the manuscript's Related Work as an alternative direction but
+# are **not evaluated**; no released result depends on that package.
+
+neuraloperator==2.0.0
+torch-geometric==2.8.0.post1

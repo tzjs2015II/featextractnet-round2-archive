@@ -1,0 +1,66 @@
+{
+  "task": "pressure_gauge_array_probe",
+  "protocol": "R2-THERMAL-REFERENCE-02 A",
+  "created_local": "2026-10-23T00:05:36+08:00",
+  "slurm_job_id": "51017",
+  "input_workspace": ".",
+  "out_dir": "results/round2_pressure_gauge",
+  "data": "HeatTransferData.npy",
+  "data_sha256": "e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26",
+  "splits": "configs/splits_thermal.json",
+  "splits_sha256": "6fa469f7dfa34748ccebf7903650b494c3e908033176a3d4f30ad7cecc853cfe",
+  "test_ids": [
+    17,
+    25,
+    32,
+    46,
+    47,
+    57,
+    66,
+    73,
+    83,
+    86,
+    96,
+    97,
+    98,
+    106,
+    109,
+    111,
+    113,
+    123,
+    126,
+    127
+  ],
+  "geometry_id": 17,
+  "seed": 0,
+  "source_sha256": {
+    "scripts/exp_r2_pressure_gauge.py": "4fcce71b1bf809f11b2e1e5d2ca509aa7acd5657bb7e573631812c60940c83d2",
+    "scripts/exp_thermal.py": "efb0419310b7b038ef12668d8d877440a69a81be9a966275daa4cce7d8632f22",
+    "src/core/thermal_io.py": "e0b44c31a8f3e2ac10cd3eca39b13c29ac32704c140222651bdc4bc219201e1d",
+    "src/models/featextractnet.py": "9f8d2acbd5a6441dbed2102f6d7a6d27d37669fe5ff1a4884f946a6ea44c02c7",
+    "src/models/baselines/meshgraphnet_style.py": "2a624cbf947e06c3aeb5b3df72d37dd74eccdac15ae67ea3ead3308256635637"
+  },
+  "inventory": {
+    "path": "baseline_inventory.json",
+    "sha256": "6afd30f020abaf2808a75c3973b83d3660abee0f06022abcb41fcde8ca2333a2"
+  },
+  "files": [
+    {
+      "path": "array_probe_fen_seed0_geom17.npz",
+      "sha256": "4e0c78366071cd1ebdc25d11889394586fbb75197acfb5e6d0258724c17d94fe",
+      "checkpoint_sha256": "4ca109452729bbc8c5dd435e5ff770441e98bdef3a69818a8a1546817ed2649a",
+      "metrics_sha256": "ba4d222605a3f05d96d3f7d755e3723be48c73553b54fa06c9d60e9ae6f18470",
+      "geometry_id": 17,
+      "seed": 0
+    },
+    {
+      "path": "array_probe_graph_seed0_geom17.npz",
+      "sha256": "3a8a4ce369a9586e642006e47849e654191758a5d604ec73d24aa78889d9c001",
+      "checkpoint_sha256": "41310eafd9be3126c83348cb918ddf4bc513713473554c7a89d0ab3d4aa6de90",
+      "metrics_sha256": "dff0c0c03f68e9a0f7158d05bf238a347a17bb02c49246a45fbc22da5648fce4",
+      "geometry_id": 17,
+      "seed": 0
+    }
+  ],
+  "note": "actual pred/ref arrays for independent NumPy verification; no science re-run"
+}

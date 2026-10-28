@@ -1,0 +1,583 @@
+{
+  "task": "R2-REMAINING-FINALIZE-03",
+  "created_local": "2026-10-27T10:15:13+08:00",
+  "protocol": "strict5 independent; old results read-only",
+  "preflight": {
+    "config": "configs/acoustic_cases.json",
+    "cases": {
+      "train": [
+        "200_0.3",
+        "200_0.5",
+        "200_0.7",
+        "300_0.5",
+        "400_0.3",
+        "400_0.5"
+      ],
+      "val": [
+        "400_0.7"
+      ],
+      "test": [
+        "100_0.3",
+        "100_0.5",
+        "100_0.7",
+        "300_0.3",
+        "300_0.7",
+        "400_0.5_srcR",
+        "500_0.2",
+        "500_0.3",
+        "500_0.5",
+        "500_0.7"
+      ]
+    },
+    "n_train": 6,
+    "n_val": 1,
+    "n_test": 10,
+    "p_stats": {
+      "n_points": 1388166,
+      "p_mean": -0.006129235494881868,
+      "p_std": 0.6219366788864136
+    },
+    "amp_used": false,
+    "models": {
+      "fno": {
+        "label": "FNO2d(modes=16, width=16, n_layers=4, in=2coord+2cond)",
+        "params": 1052049,
+        "steps_per_epoch": 6,
+        "x_shape": [
+          1,
+          4,
+          481,
+          481
+        ],
+        "y_shape": [
+          1,
+          1,
+          481,
+          481
+        ],
+        "out_shape": [
+          1,
+          1,
+          481,
+          481
+        ],
+        "loss": 0.9710350632667542,
+        "grad_finite": true,
+        "grad_nonzero": true
+      },
+      "uno": {
+        "label": "UNO2d(official neuralop.models.UNO, in=2coord+2cond, out=1)",
+        "params": 1181601,
+        "steps_per_epoch": 6,
+        "x_shape": [
+          1,
+          4,
+          481,
+          481
+        ],
+        "y_shape": [
+          1,
+          1,
+          481,
+          481
+        ],
+        "out_shape": [
+          1,
+          1,
+          481,
+          481
+        ],
+        "loss": 0.9122333526611328,
+        "grad_finite": true,
+        "grad_nonzero": true
+      }
+    },
+    "strict_fp32": {
+      "matmul_allow_tf32": false,
+      "cudnn_allow_tf32": false
+    },
+    "all_pass": true
+  },
+  "models": {
+    "fno": {
+      "summary": "results/round2_remaining_closeout/fno_uno_strict5/fno/summary.json",
+      "summary_sha256": "3df033ce414f27187f0f62684b3e8faeff8869aa6fb12604dc7ebb5263662d48",
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "model_params": 1052049,
+      "epochs": 1000,
+      "val_eval_every": 50,
+      "test_agg_over_cases": {
+        "re": {
+          "mean": 1.175184817148646,
+          "std": 0.016156160022245666,
+          "n": 5,
+          "field": "p_total",
+          "values": [
+            1.1596545388561454,
+            1.1866023727586426,
+            1.159235968164052,
+            1.1956304192047051,
+            1.1748007867596848
+          ]
+        },
+        "mae": {
+          "mean": 0.6083361273279254,
+          "std": 0.006784814104927249,
+          "n": 5,
+          "field": "p_total",
+          "values": [
+            0.6022621851836654,
+            0.616477938904415,
+            0.6031764264480032,
+            0.6148595282006225,
+            0.6049045579029211
+          ]
+        },
+        "max_err": {
+          "mean": 4.0025120867031365,
+          "std": 0.0850649788564391,
+          "n": 5,
+          "field": "p_total",
+          "values": [
+            3.961811000092862,
+            4.063145049151504,
+            3.917499270246726,
+            4.119510607389774,
+            3.950594506634814
+          ]
+        }
+      },
+      "files": [
+        {
+          "metrics": "results/round2_remaining_closeout/fno_uno_strict5/fno\\seed0\\metrics_seed0.json",
+          "metrics_sha256": "42cb83f21673858085582e083c6d668c081c71f713a91c8b37d85e1c96ae6561",
+          "seed": 0,
+          "val_best": {
+            "epoch": 50,
+            "score": 1.0201436691884471
+          },
+          "steps_per_epoch": 6,
+          "epochs": 1000,
+          "val_eval_every": 50,
+          "norm_n_train_points": 1388166,
+          "n_train_cases": 6,
+          "n_val_cases": 1,
+          "n_test_cases": 10,
+          "fixed_source_primary": true,
+          "tf32": [
+            false,
+            false
+          ],
+          "test_n_case": 9,
+          "test_n_primary": 9,
+          "test_n_diag": 1,
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": false,
+          "checkpoint_epoch": null,
+          "checkpoint_val": null,
+          "epoch_match": null,
+          "val_match": null,
+          "state_finite": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/fno_uno_strict5/fno\\seed1\\metrics_seed1.json",
+          "metrics_sha256": "d01331585554dd15fac0a0a5f59c77ab7e4713a6f63c46f4bddf40adbb21e75d",
+          "seed": 1,
+          "val_best": {
+            "epoch": 50,
+            "score": 1.0218503273057755
+          },
+          "steps_per_epoch": 6,
+          "epochs": 1000,
+          "val_eval_every": 50,
+          "norm_n_train_points": 1388166,
+          "n_train_cases": 6,
+          "n_val_cases": 1,
+          "n_test_cases": 10,
+          "fixed_source_primary": true,
+          "tf32": [
+            false,
+            false
+          ],
+          "test_n_case": 9,
+          "test_n_primary": 9,
+          "test_n_diag": 1,
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": false,
+          "checkpoint_epoch": null,
+          "checkpoint_val": null,
+          "epoch_match": null,
+          "val_match": null,
+          "state_finite": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/fno_uno_strict5/fno\\seed2\\metrics_seed2.json",
+          "metrics_sha256": "066e9b2d9d7a610bcfc3ed0915d1038914921745dc0bb9d0929ced13ab03a77f",
+          "seed": 2,
+          "val_best": {
+            "epoch": 50,
+            "score": 1.0053070877324934
+          },
+          "steps_per_epoch": 6,
+          "epochs": 1000,
+          "val_eval_every": 50,
+          "norm_n_train_points": 1388166,
+          "n_train_cases": 6,
+          "n_val_cases": 1,
+          "n_test_cases": 10,
+          "fixed_source_primary": true,
+          "tf32": [
+            false,
+            false
+          ],
+          "test_n_case": 9,
+          "test_n_primary": 9,
+          "test_n_diag": 1,
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": false,
+          "checkpoint_epoch": null,
+          "checkpoint_val": null,
+          "epoch_match": null,
+          "val_match": null,
+          "state_finite": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/fno_uno_strict5/fno\\seed3\\metrics_seed3.json",
+          "metrics_sha256": "14e567ce6f1e0be316a0ed1b5997176deb68e3e27985c533a50e1e55d4f7189e",
+          "seed": 3,
+          "val_best": {
+            "epoch": 50,
+            "score": 1.0392307898561077
+          },
+          "steps_per_epoch": 6,
+          "epochs": 1000,
+          "val_eval_every": 50,
+          "norm_n_train_points": 1388166,
+          "n_train_cases": 6,
+          "n_val_cases": 1,
+          "n_test_cases": 10,
+          "fixed_source_primary": true,
+          "tf32": [
+            false,
+            false
+          ],
+          "test_n_case": 9,
+          "test_n_primary": 9,
+          "test_n_diag": 1,
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": false,
+          "checkpoint_epoch": null,
+          "checkpoint_val": null,
+          "epoch_match": null,
+          "val_match": null,
+          "state_finite": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/fno_uno_strict5/fno\\seed4\\metrics_seed4.json",
+          "metrics_sha256": "a076a919564ad16bcca922e9ec8a4cc15a1b9319b040111a49fd031c01948ab5",
+          "seed": 4,
+          "val_best": {
+            "epoch": 50,
+            "score": 1.0212027973321711
+          },
+          "steps_per_epoch": 6,
+          "epochs": 1000,
+          "val_eval_every": 50,
+          "norm_n_train_points": 1388166,
+          "n_train_cases": 6,
+          "n_val_cases": 1,
+          "n_test_cases": 10,
+          "fixed_source_primary": true,
+          "tf32": [
+            false,
+            false
+          ],
+          "test_n_case": 9,
+          "test_n_primary": 9,
+          "test_n_diag": 1,
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": false,
+          "checkpoint_epoch": null,
+          "checkpoint_val": null,
+          "epoch_match": null,
+          "val_match": null,
+          "state_finite": null
+        }
+      ],
+      "jobid": "51529",
+      "log_epoch1000_count": 5,
+      "log_done": true,
+      "log_status_success": true
+    },
+    "uno": {
+      "summary": "results/round2_remaining_closeout/fno_uno_strict5/uno/summary.json",
+      "summary_sha256": "1472b9fed278d59d1f0a196b109707dec6aa53617062993992a2e2a471b00b8f",
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "model_params": 1181601,
+      "epochs": 1000,
+      "val_eval_every": 50,
+      "test_agg_over_cases": {
+        "re": {
+          "mean": 1.1394535319146468,
+          "std": 0.05908867175707099,
+          "n": 5,
+          "field": "p_total",
+          "values": [
+            1.163222404839448,
+            1.0728109938401604,
+            1.2275619141236942,
+            1.1261506913467012,
+            1.1075216554232308
+          ]
+        },
+        "mae": {
+          "mean": 0.5903564936752466,
+          "std": 0.024698627415723057,
+          "n": 5,
+          "field": "p_total",
+          "values": [
+            0.5991684132411346,
+            0.566653265956035,
+            0.6291531571635081,
+            0.5762036172131084,
+            0.5806040148024469
+          ]
+        },
+        "max_err": {
+          "mean": 3.814230043769718,
+          "std": 0.049650912018254716,
+          "n": 5,
+          "field": "p_total",
+          "values": [
+            3.7896371224251144,
+            3.768020085691415,
+            3.8409810904549087,
+            3.888384550032167,
+            3.784127370244985
+          ]
+        }
+      },
+      "files": [
+        {
+          "metrics": "results/round2_remaining_closeout/fno_uno_strict5/uno\\seed0\\metrics_seed0.json",
+          "metrics_sha256": "056693dde8bfcf1cb6ad58f8cb2fb2927520064d6ddcea22868640896c0f567a",
+          "seed": 0,
+          "val_best": {
+            "epoch": 250,
+            "score": 0.9762983782333597
+          },
+          "steps_per_epoch": 6,
+          "epochs": 1000,
+          "val_eval_every": 50,
+          "norm_n_train_points": 1388166,
+          "n_train_cases": 6,
+          "n_val_cases": 1,
+          "n_test_cases": 10,
+          "fixed_source_primary": true,
+          "tf32": [
+            false,
+            false
+          ],
+          "test_n_case": 9,
+          "test_n_primary": 9,
+          "test_n_diag": 1,
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": false,
+          "checkpoint_epoch": null,
+          "checkpoint_val": null,
+          "epoch_match": null,
+          "val_match": null,
+          "state_finite": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/fno_uno_strict5/uno\\seed1\\metrics_seed1.json",
+          "metrics_sha256": "1a0e45b80256db82b5a7d71a59de5d32bb842969a97d8d25cf5d1527cb2b2ff6",
+          "seed": 1,
+          "val_best": {
+            "epoch": 150,
+            "score": 0.9779553859631203
+          },
+          "steps_per_epoch": 6,
+          "epochs": 1000,
+          "val_eval_every": 50,
+          "norm_n_train_points": 1388166,
+          "n_train_cases": 6,
+          "n_val_cases": 1,
+          "n_test_cases": 10,
+          "fixed_source_primary": true,
+          "tf32": [
+            false,
+            false
+          ],
+          "test_n_case": 9,
+          "test_n_primary": 9,
+          "test_n_diag": 1,
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": false,
+          "checkpoint_epoch": null,
+          "checkpoint_val": null,
+          "epoch_match": null,
+          "val_match": null,
+          "state_finite": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/fno_uno_strict5/uno\\seed2\\metrics_seed2.json",
+          "metrics_sha256": "7f6c8a6a32d20f66788c5f9a695ad0b3a1a1c2ce2e4770c1081c763c9554a4b4",
+          "seed": 2,
+          "val_best": {
+            "epoch": 450,
+            "score": 0.9535271067752484
+          },
+          "steps_per_epoch": 6,
+          "epochs": 1000,
+          "val_eval_every": 50,
+          "norm_n_train_points": 1388166,
+          "n_train_cases": 6,
+          "n_val_cases": 1,
+          "n_test_cases": 10,
+          "fixed_source_primary": true,
+          "tf32": [
+            false,
+            false
+          ],
+          "test_n_case": 9,
+          "test_n_primary": 9,
+          "test_n_diag": 1,
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": false,
+          "checkpoint_epoch": null,
+          "checkpoint_val": null,
+          "epoch_match": null,
+          "val_match": null,
+          "state_finite": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/fno_uno_strict5/uno\\seed3\\metrics_seed3.json",
+          "metrics_sha256": "ec79dcfb62be1a5f34b329d2aeb61d55daef8ff7143cfca2b4347faf0547c15c",
+          "seed": 3,
+          "val_best": {
+            "epoch": 200,
+            "score": 0.9434937203380911
+          },
+          "steps_per_epoch": 6,
+          "epochs": 1000,
+          "val_eval_every": 50,
+          "norm_n_train_points": 1388166,
+          "n_train_cases": 6,
+          "n_val_cases": 1,
+          "n_test_cases": 10,
+          "fixed_source_primary": true,
+          "tf32": [
+            false,
+            false
+          ],
+          "test_n_case": 9,
+          "test_n_primary": 9,
+          "test_n_diag": 1,
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": false,
+          "checkpoint_epoch": null,
+          "checkpoint_val": null,
+          "epoch_match": null,
+          "val_match": null,
+          "state_finite": null
+        },
+        {
+          "metrics": "results/round2_remaining_closeout/fno_uno_strict5/uno\\seed4\\metrics_seed4.json",
+          "metrics_sha256": "f1e4a49c4a5c6982bc29ad38d79154476af3fb809c3435fb007a87aabd5d4a2f",
+          "seed": 4,
+          "val_best": {
+            "epoch": 250,
+            "score": 0.9656982083895645
+          },
+          "steps_per_epoch": 6,
+          "epochs": 1000,
+          "val_eval_every": 50,
+          "norm_n_train_points": 1388166,
+          "n_train_cases": 6,
+          "n_val_cases": 1,
+          "n_test_cases": 10,
+          "fixed_source_primary": true,
+          "tf32": [
+            false,
+            false
+          ],
+          "test_n_case": 9,
+          "test_n_primary": 9,
+          "test_n_diag": 1,
+          "checkpoint": null,
+          "checkpoint_sha256": null,
+          "checkpoint_loaded": false,
+          "checkpoint_epoch": null,
+          "checkpoint_val": null,
+          "epoch_match": null,
+          "val_match": null,
+          "state_finite": null
+        }
+      ],
+      "jobid": "51530",
+      "log_epoch1000_count": 5,
+      "log_done": true,
+      "log_status_success": true
+    }
+  },
+  "all_pass": true,
+  "old_results_read_only": {
+    "fno": [
+      {
+        "path": "results/acoustic_protocolA/fno\\seed0\\metrics_seed0.json",
+        "sha256": "deaded8b0d2aea401a60a9f788896a02612bf459af8783cfd78dc489ded07c6c"
+      },
+      {
+        "path": "results/acoustic_protocolA/fno\\seed1\\metrics_seed1.json",
+        "sha256": "937f73b1efa64203a5d44c02edd2901c1294b36545a82b472c49741e5b641f6e"
+      },
+      {
+        "path": "results/acoustic_protocolA/fno\\seed2\\metrics_seed2.json",
+        "sha256": "1098ae7eda5cdae94fdcdc12468de469bf813d62c45671e216ca394e658a9e67"
+      }
+    ],
+    "uno": [
+      {
+        "path": "results/acoustic_protocolA/uno\\seed0\\metrics_seed0.json",
+        "sha256": "b4eb8b710d63cb0db9d106cbf26811e699d8aa0b1b22057263c77938e3af8888"
+      },
+      {
+        "path": "results/acoustic_protocolA/uno\\seed1\\metrics_seed1.json",
+        "sha256": "294a4bdd11c6814150cd4942ad8c40f92e1a13b03da46ca470a36744258482c5"
+      },
+      {
+        "path": "results/acoustic_protocolA/uno\\seed2\\metrics_seed2.json",
+        "sha256": "1497ead9eee0c16d3e8d311b888620461cb8c8a4eab1ef984a49f2112d9da7c8"
+      }
+    ]
+  },
+  "current_exp_acoustic_sha256": "c7dd60300fd7228f45586ca3a26fe2b64ea6fe0fe3692938d66c585c5cddc27d",
+  "jobs": {
+    "fno": "51529",
+    "uno": "51530"
+  }
+}

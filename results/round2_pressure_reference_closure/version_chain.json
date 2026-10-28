@@ -1,0 +1,131 @@
+{
+  "task": "R3.16 protocol/version chain",
+  "created_local": "2026-10-23T12:29:33+08:00",
+  "protocol": "R2-PRESSURE-REFERENCE-CLOSURE-03",
+  "initial_snapshot": {
+    "path": "protocol_snapshot_initial.json",
+    "sha256": "757209b57b8c1bb90c04972daa01b85037a94774d02ae2cb030ea2120dc439c6"
+  },
+  "final_snapshot": {
+    "path": "protocol_snapshot.json",
+    "sha256": "95ac7df35c8359a672ee2d7ebef246a4912be87335c9be11766cb94e64de9207"
+  },
+  "failed_implementations": [
+    {
+      "path": "audit_snapshots/src_fem_reference_pressure_reference_audit.py",
+      "sha256": "9c03fa5dbdbedaa94370fb0467dadd9b8875bcb760959cf6495fd5b1dc96e3ad",
+      "reason": "pre-fix point-pin / augmented implementation"
+    },
+    {
+      "path": "audit_snapshots/scripts_exp_r2_exact_pressure_reference.py",
+      "sha256": "152499026ea8cd2001d1ef86e945e23a631c6ebea557693a173497f80a508f1f"
+    }
+  ],
+  "failed_pilot_snapshots": [],
+  "successful_exact_runs": {
+    "pilot_job": "51056",
+    "full_case_job": "51058",
+    "note": "51058 solved 17/46/96 but write was refused by an older comparison file; cases reused by compare mode with no extra solve",
+    "exact_case_sha256": {
+      "comparison_geom17_h004.json": "9687f1c68f4fe9184af5bde471a976c443dccd850f0c05864f81df70647355e7",
+      "comparison_geom46_h004.json": "a3206e79a36704c32a891147634877eb5061a63a0de31b3de26e74be1cb759c3",
+      "comparison_geom96_h004.json": "fa36b8dec26f268d7dd00c080b62c8926e8b4c31cab27383156ddfeb9246b916",
+      "fields_geom17_h004.npz": "23dd38cc891b2cb9809af0645df4838e0ef548452a88d4a4a6579195c92242d0",
+      "fields_geom46_h004.npz": "b0606dc86921d1f0d398dce1fec919de232117caffad3ed78ae11d5ba4017744",
+      "fields_geom96_h004.npz": "56ddebcbdc806a43e1c65e22149f59d626d199d031a2dcd9e61418d829c9ef7d",
+      "pilot_geom17_h004.json": "663a1d09e0bd8db74e98ae1c729b203e8cf5388fae505b9941de35acff09db97"
+    }
+  },
+  "model_sensitivity": {
+    "path": "model_metric_sensitivity.json",
+    "sha256": "93dc54ab5dfd35bafb0849d2b4675f39579780a070811f4387cb12555dc162d5",
+    "reference": "exact integral-zero Lagrange, eps=0"
+  },
+  "job_ledger": "job_ledger.json",
+  "note": "failed versions retained; no valid old data/weights/solver overwritten",
+  "manufactured_solution": {
+    "path": "manufactured_solution.json",
+    "sha256": "01fe797c013c77ef97225f11500a74108971cac51e23d5b230702ee3452feaf9",
+    "job": "51068",
+    "levels_h": [
+      0.2,
+      0.14,
+      0.1
+    ],
+    "counterexample": {
+      "initial_p_offset": 1.0,
+      "relaxation": 0.6,
+      "initial_integral": 3.469806640162439,
+      "final_constraint": 2.7755575615628914e-17,
+      "iterations": 16
+    },
+    "all_pass": true
+  },
+  "corrected_production": {
+    "old_snapshot": "audit_snapshots/uncorrected_production_51065/",
+    "correction": "rhs=-bscale*C + exact pressure projection",
+    "old_constraints": [
+      -3.915915328112085e-09,
+      2.47271954301187e-09,
+      -1.0948243700514837e-10
+    ],
+    "corrected_constraints": [
+      -2.7755575615628914e-17,
+      -2.7755575615628914e-17,
+      -8.326672684688674e-17
+    ],
+    "field_comparison": "only pressure constant changed; u/v/T max diff 0",
+    "files": {
+      "comparison_geom17_h004.json": "9687f1c68f4fe9184af5bde471a976c443dccd850f0c05864f81df70647355e7",
+      "comparison_geom46_h004.json": "a3206e79a36704c32a891147634877eb5061a63a0de31b3de26e74be1cb759c3",
+      "comparison_geom96_h004.json": "fa36b8dec26f268d7dd00c080b62c8926e8b4c31cab27383156ddfeb9246b916",
+      "fields_geom17_h004.npz": "23dd38cc891b2cb9809af0645df4838e0ef548452a88d4a4a6579195c92242d0",
+      "fields_geom46_h004.npz": "b0606dc86921d1f0d398dce1fec919de232117caffad3ed78ae11d5ba4017744",
+      "fields_geom96_h004.npz": "56ddebcbdc806a43e1c65e22149f59d626d199d031a2dcd9e61418d829c9ef7d",
+      "pilot_geom17_h004.json": "663a1d09e0bd8db74e98ae1c729b203e8cf5388fae505b9941de35acff09db97"
+    }
+  },
+  "corrected_constraint_comparison": {
+    "path": "corrected_constraint_comparison.json",
+    "sha256": "73c089bdd9d5434a680843e2ce946ccf254f43dcc55a4dc2ebc9f153d0827438"
+  },
+  "polynomial_mms": {
+    "path": "manufactured_polynomial_solution.json",
+    "sha256": "4b6143b564c1bd7c6bfd2dafced67236150fe4e6a5c2b9480a15e2e2ff8c1dbb",
+    "job": "51075",
+    "levels_h": [
+      0.2,
+      0.14,
+      0.1
+    ],
+    "all_pass": true,
+    "counterexample": {
+      "initial_p_offset": 1.0,
+      "relaxation": 0.6,
+      "initial_integral": 3.469806640162439,
+      "final_constraint": 1.3877787807814457e-17,
+      "iterations": 2
+    }
+  },
+  "trig_mms_compatibility": {
+    "path": "manufactured_solution.json",
+    "sha256": "01fe797c013c77ef97225f11500a74108971cac51e23d5b230702ee3452feaf9",
+    "note": "compatibility only; default weak_residual without source not an exact-F gate"
+  },
+  "nontrivial_initial": {
+    "path": "manufactured_nontrivial_initial_solution.json",
+    "sha256": "29e8524b371b985e62115349997df3139ec7edf7bf0b78bd19bbd2f485d19e4a",
+    "job": "51078",
+    "h": 0.14,
+    "iterations": 31,
+    "initial_perturbation": 0.05,
+    "initial_free": 1.982825683457229,
+    "final_free": 9.41020326626858e-13,
+    "relative": 3.0746445983299326e-14,
+    "all_pass": true
+  },
+  "artifact_manifest": {
+    "path": "artifact_manifest.json",
+    "sha256": "1d2481ae722171c0f884c3ac5c322ed28c6c990c55bf11c75aae905654ba1380"
+  }
+}

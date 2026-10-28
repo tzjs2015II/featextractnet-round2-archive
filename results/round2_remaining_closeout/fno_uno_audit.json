@@ -1,0 +1,25 @@
+{
+  "task": "R2-REMAINING-EXECUTE-02 FNO/UNO audit",
+  "created_local": "2026-10-26T21:11:59+08:00",
+  "current_code": {
+    "file": "scripts/exp_acoustic.py",
+    "fno_steps_per_epoch": 6,
+    "provider": "make_fno_provider loops groups[\"train\"] (6 cases); fullgrid; one grid pass per train case per epoch",
+    "epochs_default": 1000,
+    "norm": "current code uses p_stats from provider; inspect actual snapshot at run"
+  },
+  "historical_records": {
+    "paths": [
+      "results/acoustic_protocolA/fno/seed0/metrics_seed0.json",
+      "results/acoustic_protocolA/uno/seed0/metrics_seed0.json"
+    ],
+    "epochs": 1000,
+    "steps_per_epoch": 3,
+    "n_cases_train": 6,
+    "n_train_points": 1388166,
+    "norm_string": "fit on 3 train cases only (fit_stats_cases)",
+    "issue": "3 steps/epoch means only half of six train cases per epoch if provider iterates six; norm string says 3 cases while n_train_points equals six 481x481 fields (6*231361); not independently reproducible as a full 6-case/epoch protocol"
+  },
+  "conclusion": "FNO/UNO old scores retained historical; do not append seeds or mix with fresh strict5; fresh strict5 requires Codex-frozen step budget, normalization case set and precision before submission. No FNO/UNO job was submitted.",
+  "no_new_jobs": true
+}

@@ -1,0 +1,68 @@
+{
+  "task": "R2-REMAINING-FINALIZE-03",
+  "created_local": "2026-10-27T10:15:20+08:00",
+  "original_66_metrics": 66,
+  "transolver_metrics": 5,
+  "fno_uno_metrics": 10,
+  "total_trainings": 81,
+  "fresh_summaries_n5": {
+    "siren": {
+      "n": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "path": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren/summary.json"
+    },
+    "pt": {
+      "n": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "path": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3/pointtransformer/summary.json"
+    },
+    "mlp_c": {
+      "n": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c/summary.json"
+    },
+    "mlp_c_matched": {
+      "n": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "path": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3/mlp_c_matched/summary.json"
+    }
+  },
+  "combined_missing": 0,
+  "fno_uno_all_pass": true,
+  "checkpoint_validation_71_all_pass": true,
+  "canonical_has_transolver": false,
+  "errors": [],
+  "all_pass": true,
+  "fno_uno_epoch1000_log_counts": {
+    "fno": 5,
+    "uno": 5
+  },
+  "fno_uno_log_success": {
+    "fno": true,
+    "uno": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "FeatExtractNet round-two revision: code and completed metric records",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "mit",
+  "language": "eng",
+  "version": "round2-standalone",
+  "creators": [
+    {
+      "name": "Yuan, Xun",
+      "affiliation": "School of Computer Science and Engineering, Macau University of Science and Technology, Macau, China"
+    },
+    {
+      "name": "Wang, Gulin",
+      "affiliation": "School of Computer Science and Engineering, Macau University of Science and Technology, Macau, China"
+    },
+    {
+      "name": "Yang, Junxiang",
+      "affiliation": "School of Computer Science and Engineering, Macau University of Science and Technology, Macau, China"
+    },
+    {
+      "name": "Guo, Hongfei",
+      "affiliation": "College of Intelligent Science and Technology (College of Cyberspace Security), Inner Mongolia University of Technology, Hohhot, China"
+    },
+    {
+      "name": "Li, Jianqing",
+      "affiliation": "School of Computer Science and Engineering, Macau University of Science and Technology, Macau, China"
+    }
+  ],
+  "description": "Standalone code, metric records, 21 author-generated acoustic arrays, the attributed third-party thermal file, and all 85 current Table-1 weights for the FeatExtractNet round-two revision. Thermal HeatTransferData.npy is included with attribution; it retains original rights and is not relicensed. see DATA_SOURCES.md and LICENSES/THIRD-PARTY-NOTICES.md.",
+  "keywords": [
+    "physics-informed machine learning",
+    "point cloud neural network",
+    "PointNet",
+    "surrogate model",
+    "thermal field prediction",
+    "acoustic scattering",
+    "Fourier features",
+    "FDTD",
+    "negative result",
+    "geometric deep learning"
+  ],
+  "notes": "Single new revision-code DOI placeholder; old DOI is historical provenance only, not an input dependency. Software is MIT (code and Transolver). Author-generated acoustic arrays carry a separate CC BY 4.0 notice. The included third-party thermal HeatTransferData.npy retains original rights and has no separate data licence asserted; it is not relicensed as MIT or CC BY. See LICENSES/THIRD-PARTY-NOTICES.md.",
+  "doi": "10.5281/zenodo.XXXXXXX"
+}

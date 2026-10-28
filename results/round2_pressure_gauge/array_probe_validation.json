@@ -1,0 +1,79 @@
+{
+  "task": "pressure_gauge_array_probe_validation",
+  "created_local": "2026-10-23T00:06:54+08:00",
+  "arrays": {
+    "fen": {
+      "array_path": "array_probe_fen_seed0_geom17.npz",
+      "array_sha256": "4e0c78366071cd1ebdc25d11889394586fbb75197acfb5e6d0258724c17d94fe",
+      "n": 5000,
+      "numpy_recomputed": {
+        "original_re": 0.019245475056842463,
+        "centered_re": 0.01868223741132922,
+        "original_denominator": 14.760120232202569,
+        "centered_denominator": 14.759197820338992,
+        "bias": 0.0009657662468169292
+      },
+      "raw": {
+        "original": {
+          "re": 0.019245475056842463,
+          "mae": 0.002247197402994061,
+          "max": 0.03782106190919876,
+          "denominator": 14.760120232202569
+        },
+        "centered": {
+          "re": 0.01868223741132922,
+          "mae": 0.0019223354139265177,
+          "max": 0.036855295662381826,
+          "denominator": 14.759197820338992
+        },
+        "bias": 0.0009657662468169292
+      },
+      "abs_diff_vs_raw": {
+        "original_re": 0.0,
+        "centered_re": 0.0,
+        "original_denominator": 0.0,
+        "centered_denominator": 0.0,
+        "bias": 0.0
+      },
+      "identity_residual": -8.326672684688674e-17
+    },
+    "graph": {
+      "array_path": "array_probe_graph_seed0_geom17.npz",
+      "array_sha256": "3a8a4ce369a9586e642006e47849e654191758a5d604ec73d24aa78889d9c001",
+      "n": 5000,
+      "numpy_recomputed": {
+        "original_re": 0.012427041618099585,
+        "centered_re": 0.012427804027506725,
+        "original_denominator": 14.760120232202569,
+        "centered_denominator": 14.759197820338992,
+        "bias": -3.928055979668214e-06
+      },
+      "raw": {
+        "original": {
+          "re": 0.012427041493621964,
+          "mae": 0.0019755221669085585,
+          "max": 0.026094399392604828,
+          "denominator": 14.760120232202569
+        },
+        "centered": {
+          "re": 0.01242780390492767,
+          "mae": 0.001976017749412454,
+          "max": 0.026090471599420934,
+          "denominator": 14.759197820338992
+        },
+        "bias": -3.927793183902597e-06
+      },
+      "abs_diff_vs_raw": {
+        "original_re": 1.2447762091916115e-10,
+        "centered_re": 1.225790545456018e-10,
+        "original_denominator": 0.0,
+        "centered_denominator": 0.0,
+        "bias": 2.627957656174684e-10
+      },
+      "identity_residual": -7.632783294297951e-17
+    }
+  },
+  "max_abs_diff_vs_raw": 2.627957656174684e-10,
+  "tolerance": 1e-08,
+  "note": "arrays exported by SLURM 51017; independent NumPy recompute matches own arrays; raw comparison tolerance 1e-8 due separate GPU runs (FEN exact; graph mean 2.6e-10)"
+}

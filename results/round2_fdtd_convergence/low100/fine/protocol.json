@@ -1,0 +1,238 @@
+{
+  "task_id": "R2-FDTD-CONV-01",
+  "protocol_version": "R2_FDTD_CONV_v1",
+  "created_utc": "2026-10-21T12:13:19+00:00",
+  "status": "written_before_solve",
+  "matrix_position": {
+    "case": "low100",
+    "resolution": "fine",
+    "series": "space"
+  },
+  "fixed_protocol": {
+    "task_id": "R2-FDTD-CONV-01",
+    "protocol_version": "R2_FDTD_CONV_v1",
+    "purpose": "reviewer-requested pressure space/time convergence of the real Python-FDTD production solver; not a retraining or data change",
+    "cases": {
+      "low100": {
+        "f_hz": 100.0,
+        "Ma": 0.3,
+        "config_case_id": "100_0.3"
+      },
+      "high500": {
+        "f_hz": 500.0,
+        "Ma": 0.7,
+        "config_case_id": "500_0.7"
+      }
+    },
+    "physical": {
+      "c0_m_s": 340.0,
+      "rho0_kg_m3": 1.0,
+      "L_m": 1.0,
+      "alpha": 1.256431,
+      "gamma_coef": 2.8,
+      "sigma_pml": 100.0,
+      "air_domain_m": [
+        -15.0,
+        15.0
+      ],
+      "pml_thickness_m_per_side": 10.0
+    },
+    "grid": {
+      "dx_denoms": {
+        "coarse": 8,
+        "mid": 16,
+        "fine": 32,
+        "mid_dt2": 16,
+        "mid_dt4": 16
+      },
+      "n_pml_formula": "round(10 m / dx)",
+      "n_buffer_formula": "round(15 m / dx)",
+      "total_nodes_space_series": {
+        "coarse": 401,
+        "mid": 801,
+        "fine": 1601
+      },
+      "air_nodes_space_series": {
+        "coarse": 241,
+        "mid": 481,
+        "fine": 961
+      }
+    },
+    "time": {
+      "Ncycle_formula": "ceil(f * 4 * 30 / c0)",
+      "Ncycle_by_case": {
+        "low100": 36,
+        "high500": 177
+      },
+      "t_final_formula": "Ncycle / f",
+      "s0_formula": "ceil(c0*sqrt(2) / (f * (1/8) * 0.1))",
+      "spp_by_resolution": {
+        "coarse": "s0*1",
+        "mid": "s0*2",
+        "fine": "s0*4",
+        "mid_dt2": "s0*4",
+        "mid_dt4": "s0*8"
+      },
+      "dt_formula": "1 / (f * spp)",
+      "n_steps_formula": "Ncycle * spp",
+      "final_phase": "whole number of source cycles (sin(2*pi*f*t_final)=0)",
+      "courant_factor": "back-solved from the required dt; realized value verified"
+    },
+    "source": {
+      "side": "left",
+      "physical_x_m": -15.0,
+      "temporal": "hard line source sin(2*pi*f*t) injected on p and P",
+      "y_fraction": [
+        0.0,
+        1.0
+      ]
+    },
+    "comparison_contract": {
+      "primary_field": "p_total",
+      "secondary_fields": [
+        "p_scattered"
+      ],
+      "spatial_domain": "coarse air nodes (241x241), direct node extraction",
+      "temporal_domain": "mid air nodes (481x481), fixed grid",
+      "interpolation": false,
+      "phase_shift": false,
+      "metrics": "RE=||num-ref||_2/||ref||_2, MAE=|num-ref| mean, max=|num-ref| max",
+      "observed_order": "log2(||p_coarse-p_mid||_2 / ||p_mid-p_fine||_2)/log2(2), i.e. the same-node ABSOLUTE L2 difference-norm ratio (not the RE ratio: the two pairs have different reference norms); reported only for a strictly decreasing difference sequence with a non-zero denominator, else undefined",
+      "reference": "next finer grid is a numerical reference, not an analytic solution",
+      "fine_grid_is_analytic_truth": false,
+      "phasor": "supplementary only; fitted on actual phase-locked snapshot times and cropped to the air region with air_node_range",
+      "convergence_acceptance_threshold": null,
+      "single_final_time_snapshot": true,
+      "steady_state_measurement": false,
+      "under_resolved_note": "coarse 500 Hz ppw=5.44 is an under-resolved diagnostic and is retained, not excluded"
+    },
+    "inputs": {
+      "solver_path": "src/fdtd/python_fdtd.py",
+      "solver_sha256": "020cf4858cf8d65c27368a8bd9192df02917b7c077705a912c08ca2e4dbc7f00",
+      "config_path": "configs/acoustic_cases.json",
+      "config_sha256": "69a4b4bc047cca0b2b88e801f752001096289aee27dcd6c193f772eabafaae0b"
+    }
+  },
+  "identity": {
+    "task_id": "R2-FDTD-CONV-01",
+    "protocol_version": "R2_FDTD_CONV_v1",
+    "case": "low100",
+    "config_case_id": "100_0.3",
+    "f_hz": 100.0,
+    "Ma": 0.3,
+    "c0_m_s": 340.0,
+    "rho0_kg_m3": 1.0,
+    "L_m": 1.0,
+    "alpha": 1.256431,
+    "gamma_coef": 2.8,
+    "sigma_pml": 100.0,
+    "air_domain_x_m": [
+      -15.0,
+      15.0
+    ],
+    "air_domain_y_m": [
+      -15.0,
+      15.0
+    ],
+    "pml_thickness_m": 10.0,
+    "source_side": "left",
+    "source_x_target_m": -15.0,
+    "Ncycle": 36,
+    "t_final_target_s": 0.36,
+    "final_phase_cycles": 36,
+    "solver_path": "src/fdtd/python_fdtd.py",
+    "solver_sha256": "020cf4858cf8d65c27368a8bd9192df02917b7c077705a912c08ca2e4dbc7f00",
+    "config_path": "configs/acoustic_cases.json",
+    "config_sha256": "69a4b4bc047cca0b2b88e801f752001096289aee27dcd6c193f772eabafaae0b"
+  },
+  "plan": {
+    "task_id": "R2-FDTD-CONV-01",
+    "protocol_version": "R2_FDTD_CONV_v1",
+    "case": "low100",
+    "resolution": "fine",
+    "series": "space",
+    "f_hz": 100.0,
+    "Ma": 0.3,
+    "c0_m_s": 340.0,
+    "rho0_kg_m3": 1.0,
+    "L_m": 1.0,
+    "alpha": 1.256431,
+    "gamma_coef": 2.8,
+    "sigma_pml": 100.0,
+    "dx_m": 0.03125,
+    "dy_m": 0.03125,
+    "dx_denom": 32,
+    "dy_denom": 32,
+    "n_pml_cells": 320,
+    "n_buffer_cells": 480,
+    "nx_cells": 1600,
+    "ny_cells": 1600,
+    "nxp1": 1601,
+    "nyp1": 1601,
+    "air_nodes_x": 961,
+    "air_nodes_y": 961,
+    "air_node_range_0based": [
+      320,
+      1281,
+      320,
+      1281
+    ],
+    "grid_min_x_m": -25.0,
+    "grid_max_x_m": 25.0,
+    "air_x_min_m": -15.0,
+    "air_x_max_m": 15.0,
+    "pml_thickness_m": 10.0,
+    "air_half_width_m": 15.0,
+    "air_span_m": 30.0,
+    "Ncycle": 36,
+    "s0": 385,
+    "spp_mult": 4,
+    "spp": 1540,
+    "dt_s": 6.493506493506494e-06,
+    "n_steps": 55440,
+    "t_final_target_s": 0.36,
+    "t_final_steps_s": 0.36000000000000004,
+    "final_phase_cycles": 36,
+    "final_phase_residual_cycles_target": 0.0,
+    "courant_factor": 0.09991326986116414,
+    "cfl_max": 0.1,
+    "source_side": "left",
+    "source_y_frac": [
+      0.0,
+      1.0
+    ],
+    "source_x_m": -15.0,
+    "lambda_m": 3.4,
+    "ppw": 108.8,
+    "ppw_min_reference": 10.0,
+    "under_resolved_ppw": false
+  },
+  "save_phasor": false,
+  "hashes": {
+    "script_path": "scripts/exp_r2_fdtd_convergence.py",
+    "script_sha256": "d6d66843818867773e0f7473dc35e3144168fa15ea5644b006bfda422be827dd",
+    "solver_path": "src/fdtd/python_fdtd.py",
+    "solver_sha256": "020cf4858cf8d65c27368a8bd9192df02917b7c077705a912c08ca2e4dbc7f00",
+    "config_path": "configs/acoustic_cases.json",
+    "config_sha256": "69a4b4bc047cca0b2b88e801f752001096289aee27dcd6c193f772eabafaae0b"
+  },
+  "solve_gate": {
+    "requires_slurm": true,
+    "slurm_job_id": "50910",
+    "note": "the heavy solve runs only inside SLURM; else --dry-run/--aggregate-only"
+  },
+  "environment": {
+    "hostname": "gn1",
+    "platform": "Linux-6.8.0-57-generic-x86_64-with-glibc2.35",
+    "python": "3.13.9",
+    "numpy": "2.4.2",
+    "cpu_count": 96,
+    "slurm": {
+      "SLURM_JOB_ID": "50910",
+      "SLURM_JOBID": "50910",
+      "SLURM_JOB_NODELIST": "gn1",
+      "SLURM_JOB_PARTITION": "compute",
+      "SLURM_CPUS_PER_TASK": "4"
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "task": "new_query_distributions_interpolated_reference",
+  "r2_task": "R2-NEW-QUERY-01",
+  "created_local": "2026-10-21T21:53:28+08:00",
+  "input_workspace": ".",
+  "out_dir": "results/round2_new_queries",
+  "data": "HeatTransferData.npy",
+  "data_sha256": "e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26",
+  "split_config": "configs/splits_thermal.json",
+  "split_sha256": "6fa469f7dfa34748ccebf7903650b494c3e908033176a3d4f30ad7cecc853cfe",
+  "split_version": "splits_thermal_v1_protocolA",
+  "test_ids": [
+    17,
+    25,
+    32,
+    46,
+    47,
+    57,
+    66,
+    73,
+    83,
+    86,
+    96,
+    97,
+    98,
+    106,
+    109,
+    111,
+    113,
+    123,
+    126,
+    127
+  ],
+  "n_test_geom": 20,
+  "geometry_spec": "results/thermal_geometry_spec.json",
+  "geometry_spec_sha256": "9214c18a934dfddcf3dda09243f7fd434df24f605035e17ed361c7f93778d3d5",
+  "geometry_reconstruction": {
+    "rule": "regular n-gon from n/R/phase_deg/centre via verified regular_polygon_vertices; outer square [-1,1]^2; original double coordinates, no phase guessing",
+    "boundary_check_max_by_geom": {
+      "17": 2.482534153247273e-16,
+      "25": 2.2887833992611187e-16,
+      "32": 1.3877787807814457e-16,
+      "46": 7.264329320467944e-16,
+      "47": 1.3877787807814457e-15,
+      "57": 9.582710459383785e-16,
+      "66": 9.453208419344607e-16,
+      "73": 6.77599954797753e-16,
+      "83": 8.617648093045562e-16,
+      "86": 1.9279638981753172e-16,
+      "96": 2.7755575615628914e-16,
+      "97": 2.7755575615628914e-16,
+      "98": 2.2247786310271853e-16,
+      "106": 2.227212004505268e-16,
+      "109": 2.482534153247273e-16,
+      "111": 2.3551386880256624e-16,
+      "113": 2.3714374201337736e-16,
+      "123": 2.237726045655905e-16,
+      "126": 3.1676639673831405e-16,
+      "127": 1.8619006149354548e-16
+    }
+  },
+  "model": {
+    "token": "feat_extract",
+    "pool_context": "symmetric",
+    "label": "FeatExtractNet(scale=1.0, pool_mode=symmetric)",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "checkpoint_sha256": {
+    "0": "4ca109452729bbc8c5dd435e5ff770441e98bdef3a69818a8a1546817ed2649a",
+    "1": "32ab5318d1b0529b402f2e5d575bf070b0633f70b58ae963821873829ccdea8e",
+    "2": "70110e3c6296447261188808d2d42d348e19221ea691b8ee6bfffe71e66e330a",
+    "3": "f5c8d2e3f81d6bda7ff4f0732c633770ef9b11b632dc2060fc143c7001d8802a",
+    "4": "307a577c552af993f8ade96b00f0196b4fc0a8362911f7bc39126b4d0d4f48c7"
+  },
+  "metrics_sha256": {
+    "0": "ba4d222605a3f05d96d3f7d755e3723be48c73553b54fa06c9d60e9ae6f18470",
+    "1": "f7ee8ece03d876e8c8e701dbaa4e81b623294820b2a43db11dc3648d42c4ee20",
+    "2": "2416f5c6b76bb8deae374b511ef5c55c765b3f444554671c6da27dd7ca2d41f0",
+    "3": "c1af8b4548be2f8d8786e1291c7fcf2310f406b0669e653371c0272b5088ba9f",
+    "4": "dc3a6eac3737df7e0a6f85a23824db8588917d396fcc0120900e0e4d27aeafc2"
+  },
+  "source_sha256": {
+    "scripts/exp_r2_new_queries.py": "747680a0f80daf597a9cd5b8645aa71f87a2e606462502e8ceb05721afbadeea",
+    "scripts/exp_r2_local_error.py": "e4ad5284b2c6f301d5f43e13fc557bc1e4cdf34066af0054cbfe8fbb4a679a26",
+    "src/core/thermal_io.py": "e0b44c31a8f3e2ac10cd3eca39b13c29ac32704c140222651bdc4bc219201e1d",
+    "scripts/exp_thermal.py": "efb0419310b7b038ef12668d8d877440a69a81be9a966275daa4cce7d8632f22",
+    "src/models/featextractnet.py": "9f8d2acbd5a6441dbed2102f6d7a6d27d37669fe5ff1a4884f946a6ea44c02c7"
+  },
+  "distributions": {
+    "sobol": {
+      "definition": "qmc.Sobol(d=2, scramble=True, seed=20261022+gid), 2^16 candidates, filter to fluid region, take first 4340 accepted in Sobol order",
+      "scramble_seed_base": 20261022,
+      "candidates": 65536,
+      "n_interior": 4340,
+      "n_outer_wall": 492,
+      "n_inner_wall": 168,
+      "n_total": 5000,
+      "selection_basis": "geometry only, not errors"
+    },
+    "jittered": {
+      "definition": "90x90 cell centers on [-1,1]^2, uniform +/-0.4 cell (JITTER_FRACTION=0.8 of full cell width; half-width 0.4*cell) jitter per axis, filter to fluid region, fixed-rng shuffle, take first 4340",
+      "rng_seed_base": 20261022,
+      "cells": 90,
+      "jitter_fraction": 0.8,
+      "jitter_half_width_cells": 0.4,
+      "n_interior": 4340,
+      "n_outer_wall": 492,
+      "n_inner_wall": 168,
+      "n_total": 5000,
+      "selection_basis": "geometry only, not errors"
+    },
+    "wall_sampling": {
+      "outer": "square perimeter 8, 492 points at (i+0.5)*8/492, CCW from (-1,-1)",
+      "inner": "polygon perimeter, 168 points at (i+0.5)*P/168, CCW from first vertex",
+      "perimeter_rule": "equal arc length with half-step offset"
+    }
+  },
+  "reference": {
+    "interpolation": "k=8 inverse-distance squared IDW from the same geometry's published fields; exact coincidence returns the original label; pressure has no offset",
+    "interior": "IDW all four fields",
+    "walls": "u=v=0; T=0 on outer wall, T=1 on inner wall (known BC); p remains IDW",
+    "label_source": "per-channel fixed-width Unicode [N,4] (u,v,p,T): wall u/v/T are always wall_bc even at exact coincidence; p is always idw/exact_original; interior channels are idw/exact_original",
+    "labels_not_model_input": true,
+    "terminology": "interpolated reference (not FEM re-mesh, not new truth)"
+  },
+  "holdout_diagnostic": {
+    "rng": "np.random.default_rng(20261022 + 1000 + geom_id)",
+    "n": 868,
+    "fraction": 0.2,
+    "source": "all 660 wall nodes + remaining 3472 interior nodes",
+    "k": 8,
+    "note": "not a strict upper bound for new-point label error and not independent numerical validation; k not tuned"
+  },
+  "metrics": {
+    "normalization": "training-only stats saved in each seed's metrics",
+    "dtype": "float32 CPU, strict float32",
+    "forward": "single full-5000 symmetric context per distribution; no chunking",
+    "all5000": "RE/MAE/max per field over 5000 new points",
+    "wall": "RE/MAE/max per field over 660 wall points (zero denominator RE=null)",
+    "statistics_primary": "per seed: equal-weight mean over the 20 geometries (valid non-null only, count recorded); across seeds: mean/sample std (ddof=1). This is the main statistic.",
+    "per_geometry_supplement": "each geometry's 5-seed mean/std kept as supplement; median of per-geometry seed std is NOT the main seed std",
+    "aggregation": "primary per-seed 20-geometry mean -> 5-seed mean/sample std; per_geometry supplement; both distributions separate",
+    "reproduction": "original 5000-point RE vs metrics JSON per seed x geom <=1e-6"
+  },
+  "cuda_or_training": "none (CPU analysis only; no weight updates)"
+}

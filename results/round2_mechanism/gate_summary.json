@@ -1,0 +1,305 @@
+{
+  "registry_id": "M1_R2_symmetric_correctcurl",
+  "generated_local": "2026-10-21T15:48:15+08:00",
+  "partial": false,
+  "effective_protocol": {
+    "analysis": "M1 corrected gate-vs-physics (symmetric)",
+    "mode": "gate",
+    "pool_context": "symmetric",
+    "checkpoint_root": "results/round2_thermal_symmetric/feat_extract",
+    "out_dir": "results/round2_mechanism",
+    "fig_dir": "results/figures/round2_mechanism",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "test_geoms": [
+      17,
+      25,
+      32,
+      46,
+      47,
+      57,
+      66,
+      73,
+      83,
+      86,
+      96,
+      97,
+      98,
+      106,
+      109,
+      111,
+      113,
+      123,
+      126,
+      127
+    ],
+    "n_test_geom": 20,
+    "n_geometry_dataset": 135,
+    "split_version": "splits_thermal_v1_protocolA",
+    "split_seed": 123,
+    "split_counts": {
+      "train": 100,
+      "val": 15,
+      "test": 20
+    },
+    "splits_snapshot": {
+      "metrics_splits_config": "results/round2_execution_20261021_v3/configs/splits_thermal.json",
+      "snapshot_found": true,
+      "snapshot_matches": true
+    },
+    "data": "HeatTransferData.npy",
+    "n_points_full_field": 5000,
+    "chunked": false,
+    "boundary_n": 660,
+    "knn_k": 24,
+    "ridge": 1e-08,
+    "gate_def": "sigmoid of the real outputs of gate_low (64 ch), gate_mid (128 ch) and gate_high (256 ch), concatenated (448 channels) and averaged over those 448 channels per point; hooks on the actual gate Conv1d modules",
+    "curl_def": "|dv/dx - du/dy| per point, estimated by the k=24 nearest-neighbour local linear fit from the reference (ground-truth) u and v fields, not from model predictions",
+    "gradT_def": "||grad T|| per point from the reference (ground-truth) T field, k=24 nearest-neighbour local linear fit",
+    "wall_dist_def": "Euclidean distance to the nearest sampled boundary point (the first 660 points of each geometry; cKDTree k=1). Boundary points themselves are 0 because they are their own nearest sampled point; the second-nearest point is not used. This is distance to sampled boundary points, not an exact continuous wall distance",
+    "tf32": {
+      "cuda_matmul_allow_tf32": false,
+      "cudnn_allow_tf32": false
+    },
+    "device_type": "cuda",
+    "norm": {
+      "source": "per-seed metrics protocol (train-only z-score, fit on the 100 Protocol-A train geoms)",
+      "identical_across_seeds": true,
+      "reproduced_from_train_geoms": true
+    },
+    "statistics_note": "Descriptive association only; no causal interpretation and the sign of any correlation is not presupposed. Statistical unit: seed mean over the 20 test geometries; cross-seed mean/sample-std over 5 seeds.",
+    "hashes": {
+      "script_sha256": "0663f60178627bbed7c10d2775158d4461f8ebafbf22d27f3055189f894ac783",
+      "data_sha256": "e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26",
+      "checkpoint_sha256": {
+        "0": "4ca109452729bbc8c5dd435e5ff770441e98bdef3a69818a8a1546817ed2649a",
+        "1": "32ab5318d1b0529b402f2e5d575bf070b0633f70b58ae963821873829ccdea8e",
+        "2": "70110e3c6296447261188808d2d42d348e19221ea691b8ee6bfffe71e66e330a",
+        "3": "f5c8d2e3f81d6bda7ff4f0732c633770ef9b11b632dc2060fc143c7001d8802a",
+        "4": "307a577c552af993f8ade96b00f0196b4fc0a8362911f7bc39126b4d0d4f48c7"
+      },
+      "metrics_sha256": {
+        "0": "ba4d222605a3f05d96d3f7d755e3723be48c73553b54fa06c9d60e9ae6f18470",
+        "1": "f7ee8ece03d876e8c8e701dbaa4e81b623294820b2a43db11dc3648d42c4ee20",
+        "2": "2416f5c6b76bb8deae374b511ef5c55c765b3f444554671c6da27dd7ca2d41f0",
+        "3": "c1af8b4548be2f8d8786e1291c7fcf2310f406b0669e653371c0272b5088ba9f",
+        "4": "dc3a6eac3737df7e0a6f85a23824db8588917d396fcc0120900e0e4d27aeafc2"
+      }
+    },
+    "splits_config_version": "1.0",
+    "generated_local": "2026-10-21T15:48:15+08:00",
+    "partial": false
+  },
+  "per_seed": [
+    {
+      "seed": 0,
+      "n_test_geom": 20,
+      "summary": {
+        "gate_vs_wall_dist": {
+          "n_geom": 20,
+          "pearson_r_geom_mean": -0.25158009767831535,
+          "pearson_r_geom_std_sample": 0.00739655032082564,
+          "spearman_r_geom_mean": -0.3360995262924167,
+          "spearman_r_geom_std_sample": 0.00682797121639107
+        },
+        "gate_vs_vorticity": {
+          "n_geom": 20,
+          "pearson_r_geom_mean": -0.06838331687843993,
+          "pearson_r_geom_std_sample": 0.02005537050930757,
+          "spearman_r_geom_mean": -0.013677282780559274,
+          "spearman_r_geom_std_sample": 0.016027138222243144
+        },
+        "gate_vs_gradT": {
+          "n_geom": 20,
+          "pearson_r_geom_mean": -0.4202758682606399,
+          "pearson_r_geom_std_sample": 0.010016622516443545,
+          "spearman_r_geom_mean": -0.36918545896136523,
+          "spearman_r_geom_std_sample": 0.009348565766422443
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "n_test_geom": 20,
+      "summary": {
+        "gate_vs_wall_dist": {
+          "n_geom": 20,
+          "pearson_r_geom_mean": -0.24335662381386441,
+          "pearson_r_geom_std_sample": 0.006637030257831913,
+          "spearman_r_geom_mean": -0.3967376567959303,
+          "spearman_r_geom_std_sample": 0.006776966235470489
+        },
+        "gate_vs_vorticity": {
+          "n_geom": 20,
+          "pearson_r_geom_mean": -0.13138682196133555,
+          "pearson_r_geom_std_sample": 0.0200222350851945,
+          "spearman_r_geom_mean": -0.06100209202801989,
+          "spearman_r_geom_std_sample": 0.016393026531349303
+        },
+        "gate_vs_gradT": {
+          "n_geom": 20,
+          "pearson_r_geom_mean": -0.3388492849726415,
+          "pearson_r_geom_std_sample": 0.00976398644007117,
+          "spearman_r_geom_mean": -0.3161183583658827,
+          "spearman_r_geom_std_sample": 0.0093831671641747
+        }
+      }
+    },
+    {
+      "seed": 2,
+      "n_test_geom": 20,
+      "summary": {
+        "gate_vs_wall_dist": {
+          "n_geom": 20,
+          "pearson_r_geom_mean": -0.32278953208325006,
+          "pearson_r_geom_std_sample": 0.008205189215635907,
+          "spearman_r_geom_mean": -0.33370084112153303,
+          "spearman_r_geom_std_sample": 0.007595221787857015
+        },
+        "gate_vs_vorticity": {
+          "n_geom": 20,
+          "pearson_r_geom_mean": 0.11764644024956077,
+          "pearson_r_geom_std_sample": 0.016762675550057875,
+          "spearman_r_geom_mean": 0.14199844051491822,
+          "spearman_r_geom_std_sample": 0.012827217790303562
+        },
+        "gate_vs_gradT": {
+          "n_geom": 20,
+          "pearson_r_geom_mean": -0.4199777416166248,
+          "pearson_r_geom_std_sample": 0.011844602580634253,
+          "spearman_r_geom_mean": -0.3809988158605075,
+          "spearman_r_geom_std_sample": 0.012478538249915645
+        }
+      }
+    },
+    {
+      "seed": 3,
+      "n_test_geom": 20,
+      "summary": {
+        "gate_vs_wall_dist": {
+          "n_geom": 20,
+          "pearson_r_geom_mean": -0.09995209067817151,
+          "pearson_r_geom_std_sample": 0.007479868536423658,
+          "spearman_r_geom_mean": -0.26685637236218207,
+          "spearman_r_geom_std_sample": 0.008066917910652496
+        },
+        "gate_vs_vorticity": {
+          "n_geom": 20,
+          "pearson_r_geom_mean": -0.04323412678100465,
+          "pearson_r_geom_std_sample": 0.020990243839092464,
+          "spearman_r_geom_mean": 0.08980918561916534,
+          "spearman_r_geom_std_sample": 0.015209109722950432
+        },
+        "gate_vs_gradT": {
+          "n_geom": 20,
+          "pearson_r_geom_mean": -0.39368578716341907,
+          "pearson_r_geom_std_sample": 0.01142103105669986,
+          "spearman_r_geom_mean": -0.2332639548471666,
+          "spearman_r_geom_std_sample": 0.015936954007979672
+        }
+      }
+    },
+    {
+      "seed": 4,
+      "n_test_geom": 20,
+      "summary": {
+        "gate_vs_wall_dist": {
+          "n_geom": 20,
+          "pearson_r_geom_mean": -0.08566445727213333,
+          "pearson_r_geom_std_sample": 0.007633415241949987,
+          "spearman_r_geom_mean": -0.30604153536528217,
+          "spearman_r_geom_std_sample": 0.007248198808614945
+        },
+        "gate_vs_vorticity": {
+          "n_geom": 20,
+          "pearson_r_geom_mean": -0.20778038360982948,
+          "pearson_r_geom_std_sample": 0.021061307902897147,
+          "spearman_r_geom_mean": -0.1197865799189423,
+          "spearman_r_geom_std_sample": 0.016161386415916853
+        },
+        "gate_vs_gradT": {
+          "n_geom": 20,
+          "pearson_r_geom_mean": -0.4771207031215289,
+          "pearson_r_geom_std_sample": 0.008626702344930745,
+          "spearman_r_geom_mean": -0.4254736176476982,
+          "spearman_r_geom_std_sample": 0.011874443344263174
+        }
+      }
+    }
+  ],
+  "overall": {
+    "gate_vs_wall_dist": {
+      "pearson_r_cross_seed_mean": -0.20066856030514693,
+      "pearson_r_cross_seed_sample_std": 0.10331691308832446,
+      "pearson_r_seed_geom_means": [
+        -0.25158009767831535,
+        -0.24335662381386441,
+        -0.32278953208325006,
+        -0.09995209067817151,
+        -0.08566445727213333
+      ],
+      "spearman_r_cross_seed_mean": -0.32788718638746883,
+      "spearman_r_cross_seed_sample_std": 0.047548977677548544,
+      "spearman_r_seed_geom_means": [
+        -0.3360995262924167,
+        -0.3967376567959303,
+        -0.33370084112153303,
+        -0.26685637236218207,
+        -0.30604153536528217
+      ]
+    },
+    "gate_vs_vorticity": {
+      "pearson_r_cross_seed_mean": -0.06662764179620977,
+      "pearson_r_cross_seed_sample_std": 0.12106312835741315,
+      "pearson_r_seed_geom_means": [
+        -0.06838331687843993,
+        -0.13138682196133555,
+        0.11764644024956077,
+        -0.04323412678100465,
+        -0.20778038360982948
+      ],
+      "spearman_r_cross_seed_mean": 0.00746833428131242,
+      "spearman_r_cross_seed_sample_std": 0.10747966653080349,
+      "spearman_r_seed_geom_means": [
+        -0.013677282780559274,
+        -0.06100209202801989,
+        0.14199844051491822,
+        0.08980918561916534,
+        -0.1197865799189423
+      ]
+    },
+    "gate_vs_gradT": {
+      "pearson_r_cross_seed_mean": -0.40998187702697086,
+      "pearson_r_cross_seed_sample_std": 0.05009718986873778,
+      "pearson_r_seed_geom_means": [
+        -0.4202758682606399,
+        -0.3388492849726415,
+        -0.4199777416166248,
+        -0.39368578716341907,
+        -0.4771207031215289
+      ],
+      "spearman_r_cross_seed_mean": -0.34500804113652406,
+      "spearman_r_cross_seed_sample_std": 0.07361376738154478,
+      "spearman_r_seed_geom_means": [
+        -0.36918545896136523,
+        -0.3161183583658827,
+        -0.3809988158605075,
+        -0.2332639548471666,
+        -0.4254736176476982
+      ]
+    },
+    "n_seeds": 5,
+    "n_geom_per_seed": 20,
+    "statistical_unit": "Each seed value is the mean over the 20 test geometries; the cross-seed mean and sample std (ddof=1) are over the 5 seeds. Per-geometry p-values describe within-geometry association, not global significance; 5 seeds x 20 geometries are not 100 independent samples."
+  },
+  "figure": "../figures/round2_mechanism/gate_vs_physics.png",
+  "notes": {
+    "reading": "descriptive associations; no causal claim; the sign of any correlation is not presupposed",
+    "statistics": "Each seed value is the mean over the 20 test geometries; the cross-seed mean and sample std (ddof=1) are over the 5 seeds. Per-geometry p-values describe within-geometry association, not global significance; 5 seeds x 20 geometries are not 100 independent samples."
+  }
+}

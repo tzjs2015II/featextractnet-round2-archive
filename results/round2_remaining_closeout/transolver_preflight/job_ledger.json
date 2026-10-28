@@ -1,0 +1,40 @@
+{
+  "task": "R2-REMAINING-IMPLEMENT-01",
+  "mode": "transolver bounded GPU preflight only; no formal seed training",
+  "jobs": [
+    {
+      "jobid": "51481",
+      "mode": "preflight",
+      "status": "failed",
+      "returncode": 1,
+      "reason": "target tensor was B,N,4 while prediction was B,4,N; dimension mismatch caught before any formal training",
+      "fix": "permute target to B,4,N in scripts/exp_remaining_closeout.py",
+      "logs": [
+        "jobs/r2_remaining_preflight_51481.out",
+        "jobs/r2_remaining_preflight_51481.err"
+      ]
+    },
+    {
+      "jobid": "51482",
+      "mode": "preflight",
+      "status": "success",
+      "returncode": 0,
+      "gpu": "NVIDIA GeForce RTX 4090 D",
+      "torch": "2.10.0+cu128",
+      "parameters": 1805260,
+      "checks": {
+        "production_shape_B4_N5000_4out": true,
+        "permutation_equivariant_1e-5": true,
+        "forward_backward_update_finite": true,
+        "output_finite": true,
+        "no_truth_or_geometry_id_input": true
+      },
+      "logs": [
+        "jobs/r2_remaining_preflight_51482.out",
+        "jobs/r2_remaining_preflight_51482.err"
+      ]
+    }
+  ],
+  "formal_seed_matrix_submitted": false,
+  "registry_modified": false
+}

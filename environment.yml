@@ -1,0 +1,22 @@
+# FeatExtractNet — conda environment (equivalent to requirements.txt)
+# ---------------------------------------------------------------------------
+# Usage:
+#     conda env create -f environment.yml
+#     conda activate featextractnet
+#     python -m pip install -r requirements-extended.txt   # optional baselines
+#
+# The environment below reproduces the versions used for the released results
+# (Python 3.13.9, numpy 2.4.2, scipy 1.17.1, matplotlib 3.10.8,
+# torch 2.10.0).  All experiments also run on CPU.
+
+name: featextractnet
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pip
+  - pip:
+      - numpy==2.4.2
+      - scipy==1.17.1
+      - matplotlib==3.10.8
+      - torch==2.10.0

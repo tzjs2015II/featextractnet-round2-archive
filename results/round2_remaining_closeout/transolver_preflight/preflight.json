@@ -1,0 +1,124 @@
+{
+  "task": "R2-REMAINING-IMPLEMENT-01",
+  "mode": "transolver_preflight",
+  "created_local": "2026-10-26T16:19:45+08:00",
+  "model": "transolver",
+  "model_label": "Transolver official irregular-mesh commit=75e0f67643806a81cd1d3f6adc88dd8c02416fe7, layers=5 hidden=256 heads=8 slices=32 mlp_ratio=1 dropout=0 gelu, Time_Input=False unified_pos=False",
+  "official_commit": "75e0f67643806a81cd1d3f6adc88dd8c02416fe7",
+  "official_config": {
+    "space_dim": 2,
+    "fun_dim": 0,
+    "out_dim": 4,
+    "n_layers": 5,
+    "n_hidden": 256,
+    "n_head": 8,
+    "slice_num": 32,
+    "mlp_ratio": 1,
+    "dropout": 0.0,
+    "act": "gelu",
+    "Time_Input": false,
+    "unified_pos": false,
+    "ref": 8
+  },
+  "cwd": ".",
+  "data": "HeatTransferData.npy",
+  "data_sha256": "e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26",
+  "splits": "configs/splits_thermal.json",
+  "splits_sha256": "6fa469f7dfa34748ccebf7903650b494c3e908033176a3d4f30ad7cecc853cfe",
+  "split_seed": 123,
+  "split_counts": {
+    "train": 100,
+    "val": 15,
+    "test": 20
+  },
+  "batch_geom_ids": [
+    0,
+    1,
+    3,
+    4
+  ],
+  "shape": {
+    "input": [
+      4,
+      5000,
+      2
+    ],
+    "target": [
+      4,
+      4,
+      5000
+    ]
+  },
+  "parameters": 1805260,
+  "trainable_parameters": 1805260,
+  "torch": "2.10.0+cu128",
+  "cuda": "12.8",
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "strict_fp32": true,
+  "tf32_matmul_allow": false,
+  "tf32_cudnn_allow": false,
+  "test_ids_used": false,
+  "checks": {
+    "production_shape_B4_N5000_4out": true,
+    "permutation_equivariant_1e-5": true,
+    "forward_backward_update_finite": true,
+    "output_finite": true,
+    "no_truth_or_geometry_id_input": true
+  },
+  "production_forward": {
+    "output_shape": [
+      4,
+      4,
+      5000
+    ],
+    "finite": true,
+    "seconds": 0.13373541506007314,
+    "peak_allocated_gb": 0.164505088,
+    "peak_reserved_gb": 0.19922944
+  },
+  "permutation": {
+    "n": 5000,
+    "max_abs": 1.1324882507324219e-06,
+    "mean_abs_output": 0.27030840516090393,
+    "relative_max": 4.189615376770457e-06
+  },
+  "train_step": {
+    "loss": 1.105636715888977,
+    "grad_tensors": 109,
+    "grad_finite": true,
+    "parameter_max_abs_delta": 0.0010000001639127731,
+    "seconds": 0.1096089668571949,
+    "peak_allocated_gb": 1.355044352,
+    "peak_reserved_gb": 1.486880768
+  },
+  "input_contract": {
+    "forward_args": [
+      "x"
+    ],
+    "input_fields": [
+      "x",
+      "y"
+    ],
+    "truth_fields_used": [],
+    "geometry_id_used": false,
+    "time_input": false,
+    "unified_pos": false
+  },
+  "all_pass": true,
+  "status": "success",
+  "config_path": "configs/r2_remaining_closeout.json",
+  "config_sha256": "ddf52bceac3913623a03a9a6110685791349e2eaaec10d6bae667730b75f0d46",
+  "model_files": {
+    "Embedding.py": "00763ab050ea788b125d60c8e601428dde378d3873bd60c9e88daec3b036da06",
+    "LICENSE": "2c919cd03fa823bf7eefc00a957ff8324c865cd22aa5285e563dc4b558084f25",
+    "Physics_Attention.py": "6eea726f5502598c10468e63d85660b46b2b187fd46790d75f6c821d1d08cdad",
+    "SOURCE.md": "1217b2e62ddd18fd7617d65e8df1f5bc3127db2f9a2371518cb84949812fbeb8",
+    "Transolver_Irregular_Mesh.py": "49f9f9cc6c0ec9f81c95cab0980252bcc2356fa81da25a1d270c15f1d45ee873",
+    "__init__.py": "1412b8aa9f7139cda489ebee5c0eb1584b4b9ca038005ca02b8b36dcdd8804e5",
+    "adapter.py": "c39a448e6d544031fb0d823953fe4e35e30fee45b0016d93f591983a926d62df"
+  },
+  "config_sha256_at_run": "ddf52bceac3913623a03a9a6110685791349e2eaaec10d6bae667730b75f0d46",
+  "current_config_sha256": "64fc0a2fbd9ee1db407c5688db508025e44e50d95e5748a1786252a2d747b1ea",
+  "config_changed_after_preflight": true,
+  "config_change_note": "Post-preflight edits only changed the frozen missing-seed matrix attribution/precision plan; Transolver official_config, implementation and preflight metrics were unchanged."
+}

@@ -1,0 +1,280 @@
+{
+  "task": "R2-THERMAL-FEM-02-model-eval",
+  "created_local": "2026-10-23T01:14:08+08:00",
+  "reference": "independent FEM h=0.04, transferred to fixed support by CloughTocher/linear interpolation of FEM DOFs; not label interpolation",
+  "support": {
+    "n": 5000,
+    "boundary": 660,
+    "sobol_seed": 20261022,
+    "generator": "exp_r2_new_queries.build_distribution",
+    "geom46": {
+      "coords_sha256": "1e58029647ecff64e1534c9237874a684aac5ef2895001f629e5c7cdbd4835fc",
+      "fem_reference": "results/round2_thermal_fem/v2_reference/fem_reference_geom46_h0.04.npz",
+      "fem_reference_sha256": "ed0d569847e7963edb92d2b10f2649ab0ba1d713567d89ee51579e3c2034d83b",
+      "info": {
+        "candidates": 65536,
+        "accepted": 57603,
+        "scramble_seed": 20261068,
+        "take_rule": "first accepted in Sobol order",
+        "inner_perimeter": 2.5550000000000015,
+        "boundary_wall_max_dist": 6.206335383118183e-17,
+        "outer_wall_max_outer_dist": 0.0,
+        "inner_wall_max_inner_dist": 6.206335383118183e-17
+      },
+      "evaluation": "actual dolfinx mesh/Function.eval; outside points rejected"
+    },
+    "geom17": {
+      "coords_sha256": "64a86e7591829fa87b607c88d713ecd2a4564c4045ea3d71c71e417e36cedb7f",
+      "fem_reference": "results/round2_thermal_fem/v2_reference/fem_reference_geom17_h0.04.npz",
+      "fem_reference_sha256": "94d5691e503343668c9c64e6416648b54ffac23dc3bdce4ce75663a65f0522f3",
+      "info": {
+        "candidates": 65536,
+        "accepted": 56842,
+        "scramble_seed": 20261039,
+        "take_rule": "first accepted in Sobol order",
+        "inner_perimeter": 2.6509667991878083,
+        "boundary_wall_max_dist": 7.850462293418876e-17,
+        "outer_wall_max_outer_dist": 0.0,
+        "inner_wall_max_inner_dist": 7.850462293418876e-17
+      },
+      "evaluation": "actual dolfinx mesh/Function.eval; outside points rejected"
+    },
+    "geom96": {
+      "coords_sha256": "4ec912063028d7474260e6ef579512b28aa0c7a48139c160f0496fbfbb4f02b9",
+      "fem_reference": "results/round2_thermal_fem/v2_reference/fem_reference_geom96_h0.04.npz",
+      "fem_reference_sha256": "f93895574487dfc812f9443163f74ade4be483cfdffc430e7aedb4f58d2545fc",
+      "info": {
+        "candidates": 65536,
+        "accepted": 57152,
+        "scramble_seed": 20261118,
+        "take_rule": "first accepted in Sobol order",
+        "inner_perimeter": 2.589486697772757,
+        "boundary_wall_max_dist": 6.206335383118183e-17,
+        "outer_wall_max_outer_dist": 0.0,
+        "inner_wall_max_inner_dist": 6.206335383118183e-17
+      },
+      "evaluation": "actual dolfinx mesh/Function.eval; outside points rejected"
+    }
+  },
+  "geometries": [
+    46,
+    17,
+    96
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "models": {
+    "FEN": "results/round2_thermal_symmetric/feat_extract",
+    "graph": "results/round2_graph_five_seed_main/meshgraphnet"
+  },
+  "metrics": [
+    "re",
+    "mae",
+    "max_err",
+    "p_raw",
+    "p_centered"
+  ],
+  "source_hashes": {
+    "src/fem_reference/fenics_solver.py": "02d54782aa52b7aecc41f06d7bf2b82cd15d23f9fcc24add6fe5aa85f3bbb194",
+    "src/fem_reference/geometry.py": "5c694a0aac1cd4c50be88d8c7f4f73a1a0f214afa9f1f9a7440ac14653d0ab96",
+    "scripts/exp_r2_fem_model_eval.py": "2973caffdd5bea29806ffad700026a6609b134a43e69b322077ea4a263e50ddc",
+    "configs/splits_thermal.json": "6fa469f7dfa34748ccebf7903650b494c3e908033176a3d4f30ad7cecc853cfe",
+    "results/thermal_geometry_spec.json": "9214c18a934dfddcf3dda09243f7fd434df24f605035e17ed361c7f93778d3d5"
+  },
+  "input_hashes": {
+    "data": "e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26"
+  },
+  "same_coordinate_h_comparison_vs_h004": {
+    "46": {
+      "0.08": {
+        "u": {
+          "n": 5000,
+          "re": 0.014999502333925734,
+          "mae": 0.0002782385396939915,
+          "max_err": 0.017569635108700646,
+          "denominator": 5.014349079452682
+        },
+        "v": {
+          "n": 5000,
+          "re": 0.009782718337016992,
+          "mae": 0.000327455109103527,
+          "max_err": 0.026887405699556916,
+          "denominator": 8.257371787478135
+        },
+        "p": {
+          "n": 5000,
+          "re": 0.011432391164448785,
+          "mae": 0.0006732782906866761,
+          "max_err": 0.03411575797000947,
+          "denominator": 13.820694304964194
+        },
+        "T": {
+          "n": 5000,
+          "re": 0.0013495632373373288,
+          "mae": 0.0003376135111862961,
+          "max_err": 0.008592786784617501,
+          "denominator": 30.041051043693635
+        }
+      },
+      "0.02": {
+        "u": {
+          "n": 5000,
+          "re": 0.004145110538431565,
+          "mae": 6.569621962234709e-05,
+          "max_err": 0.008224199411166179,
+          "denominator": 5.014349079452682
+        },
+        "v": {
+          "n": 5000,
+          "re": 0.00270968695496643,
+          "mae": 8.308308732655929e-05,
+          "max_err": 0.008937027709383386,
+          "denominator": 8.257371787478135
+        },
+        "p": {
+          "n": 5000,
+          "re": 0.009193725145066589,
+          "mae": 0.00029217663128845104,
+          "max_err": 0.03421076578860673,
+          "denominator": 13.820694304964194
+        },
+        "T": {
+          "n": 5000,
+          "re": 0.00044807412204106336,
+          "mae": 0.00010789997573045587,
+          "max_err": 0.00495579072119412,
+          "denominator": 30.041051043693635
+        }
+      }
+    },
+    "17": {
+      "0.08": {
+        "u": {
+          "n": 5000,
+          "re": 0.010831412930865798,
+          "mae": 0.00020308649603268755,
+          "max_err": 0.013908439246662962,
+          "denominator": 4.937361485270064
+        },
+        "v": {
+          "n": 5000,
+          "re": 0.007915812523245953,
+          "mae": 0.0002536909066511337,
+          "max_err": 0.018751258315721525,
+          "denominator": 8.195292903142365
+        },
+        "p": {
+          "n": 5000,
+          "re": 0.00877743593626784,
+          "mae": 0.0005225407622051874,
+          "max_err": 0.025386611253840098,
+          "denominator": 14.219912880725692
+        },
+        "T": {
+          "n": 5000,
+          "re": 0.0008827220258760841,
+          "mae": 0.0002071960492776427,
+          "max_err": 0.00702185375833797,
+          "denominator": 30.437366357465113
+        }
+      },
+      "0.02": {
+        "u": {
+          "n": 5000,
+          "re": 0.003753409027364525,
+          "mae": 5.600905951915676e-05,
+          "max_err": 0.006889434130726839,
+          "denominator": 4.937361485270064
+        },
+        "v": {
+          "n": 5000,
+          "re": 0.0024498140256897574,
+          "mae": 6.910609442779e-05,
+          "max_err": 0.008302644950686652,
+          "denominator": 8.195292903142365
+        },
+        "p": {
+          "n": 5000,
+          "re": 0.007302671336467626,
+          "mae": 0.00025572529930810775,
+          "max_err": 0.025782816402560024,
+          "denominator": 14.219912880725692
+        },
+        "T": {
+          "n": 5000,
+          "re": 0.00034850857306693096,
+          "mae": 7.950542094901277e-05,
+          "max_err": 0.00595479929914966,
+          "denominator": 30.437366357465113
+        }
+      }
+    },
+    "96": {
+      "0.08": {
+        "u": {
+          "n": 5000,
+          "re": 0.011204309210195721,
+          "mae": 0.00022169101545161155,
+          "max_err": 0.012236523608386087,
+          "denominator": 5.0176272624488325
+        },
+        "v": {
+          "n": 5000,
+          "re": 0.007986251815947913,
+          "mae": 0.0002678539120750966,
+          "max_err": 0.01769774423315079,
+          "denominator": 8.268445345024396
+        },
+        "p": {
+          "n": 5000,
+          "re": 0.00997555891430056,
+          "mae": 0.0005997527788300243,
+          "max_err": 0.02913289973432978,
+          "denominator": 14.047138391726193
+        },
+        "T": {
+          "n": 5000,
+          "re": 0.000938678342498252,
+          "mae": 0.000234883733642399,
+          "max_err": 0.006115789729941978,
+          "denominator": 30.206158407735074
+        }
+      },
+      "0.02": {
+        "u": {
+          "n": 5000,
+          "re": 0.003597912744903339,
+          "mae": 4.833027142092516e-05,
+          "max_err": 0.006434184976315096,
+          "denominator": 5.0176272624488325
+        },
+        "v": {
+          "n": 5000,
+          "re": 0.0020354751263620004,
+          "mae": 5.4005341389028485e-05,
+          "max_err": 0.006379214250377074,
+          "denominator": 8.268445345024396
+        },
+        "p": {
+          "n": 5000,
+          "re": 0.006627073632822799,
+          "mae": 0.0002296528612570853,
+          "max_err": 0.029402648632709416,
+          "denominator": 14.047138391726193
+        },
+        "T": {
+          "n": 5000,
+          "re": 0.00023614131957095676,
+          "mae": 6.218800074565742e-05,
+          "max_err": 0.0015841054134368981,
+          "denominator": 30.206158407735074
+        }
+      }
+    }
+  }
+}

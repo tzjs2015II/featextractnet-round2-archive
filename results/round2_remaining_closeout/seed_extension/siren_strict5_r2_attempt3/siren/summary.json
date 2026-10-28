@@ -1,0 +1,151 @@
+{
+  "experiment_id": "T_T1_siren",
+  "model": "siren",
+  "pool_context": "legacy_index_bins",
+  "implementation_version": "R2-IMPL-01B",
+  "cuda_matmul_allow_tf32": false,
+  "cudnn_allow_tf32": false,
+  "model_label": "SIRENNet(hidden=512, layers=6, omega_0=30) 1,054,212 params (= CoordMLP capacity)",
+  "model_params": 1054212,
+  "split_version": "splits_thermal_v1_protocolA",
+  "n_seeds": 5,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "epochs": 500,
+  "lr": 0.001,
+  "agg": {
+    "re": {
+      "mean": {
+        "u": 0.08550724670137613,
+        "v": 0.07087293307346154,
+        "p": 0.024735668246449672,
+        "T": 0.028374813382774127
+      },
+      "std": {
+        "u": 0.0007719213453713509,
+        "v": 0.00218961430654873,
+        "p": 0.001066628330355549,
+        "T": 0.000998299239808066
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "mae": {
+      "mean": {
+        "u": 0.003114369165526753,
+        "v": 0.004675608658507831,
+        "p": 0.0034202640125631824,
+        "T": 0.007754604831865556
+      },
+      "std": {
+        "u": 7.93634735352631e-05,
+        "v": 0.00036588655819643124,
+        "p": 0.00024770300738095625,
+        "T": 0.0005662666448291532
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "max_err": {
+      "mean": {
+        "u": 0.050605321517214176,
+        "v": 0.10185781583189964,
+        "p": 0.04119678436778486,
+        "T": 0.10244830429553986
+      },
+      "std": {
+        "u": 0.0003069762548196679,
+        "v": 0.0037426216093035406,
+        "p": 0.002341546349838952,
+        "T": 0.0027226986561900745
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "re_bd": {
+      "mean": {
+        "u": null,
+        "v": null,
+        "p": 0.037653258245201084,
+        "T": 0.024315440242911258
+      },
+      "std": {
+        "u": null,
+        "v": null,
+        "p": 0.0006152994309370507,
+        "T": 0.001685355129460305
+      },
+      "n_per_field": {
+        "u": 0,
+        "v": 0,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "mae_bd": {
+      "mean": {
+        "u": 0.0024434311463812693,
+        "v": 0.004510140927184171,
+        "p": 0.005172463178660633,
+        "T": 0.0070145561136098905
+      },
+      "std": {
+        "u": 0.00020146537498491815,
+        "v": 0.0007056816933813689,
+        "p": 0.0002576430038462172,
+        "T": 0.0007596366156937586
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "max_bd": {
+      "mean": {
+        "u": 0.041998262144625195,
+        "v": 0.0863592890650034,
+        "p": 0.040986346630379554,
+        "T": 0.08627035677433015
+      },
+      "std": {
+        "u": 0.002713883949180857,
+        "v": 0.00885147373845218,
+        "p": 0.00259492019095948,
+        "T": 0.0069179157019452495
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    }
+  },
+  "seed_files": [
+    "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren/seed0/metrics_seed0.json",
+    "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren/seed1/metrics_seed1.json",
+    "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren/seed2/metrics_seed2.json",
+    "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren/seed3/metrics_seed3.json",
+    "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3/siren/seed4/metrics_seed4.json"
+  ],
+  "s_per_epoch_mean": 0.16324719999999998
+}

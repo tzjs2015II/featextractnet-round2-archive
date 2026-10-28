@@ -1,0 +1,131 @@
+{
+  "task": "pressure_gauge_postreview",
+  "protocol": "R2-THERMAL-REFERENCE-02 A",
+  "r2_task": "R2-PRESSURE-GAUGE-02",
+  "version": "postreview",
+  "created_local": "2026-10-23T00:06:27+08:00",
+  "input_workspace": ".",
+  "out_dir": "results/round2_pressure_gauge",
+  "data": "HeatTransferData.npy",
+  "data_sha256": "e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26",
+  "splits_config": "configs/splits_thermal.json",
+  "splits_sha256": "6fa469f7dfa34748ccebf7903650b494c3e908033176a3d4f30ad7cecc853cfe",
+  "test_ids": [
+    17,
+    25,
+    32,
+    46,
+    47,
+    57,
+    66,
+    73,
+    83,
+    86,
+    96,
+    97,
+    98,
+    106,
+    109,
+    111,
+    113,
+    123,
+    126,
+    127
+  ],
+  "models": [
+    {
+      "name": "fen",
+      "token": "feat_extract",
+      "pool_context": "symmetric",
+      "params": 1149512
+    },
+    {
+      "name": "graph",
+      "token": "meshgraphnet",
+      "pool_context": "legacy_index_bins",
+      "params": 976516
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "old_protocol_sha256": "7af39e6ad43e116d4e81b3bc80ed587bbd7de0d5567c458e466837f8a21a0a51",
+  "old_raw_sha256": "4654ea9b8d0a3ead277d4cf5a55ebe1f20f17021573283b7839cec3b21a3e7e6",
+  "old_delivery": {
+    "path": "results\\round2_pressure_gauge\\delivery_50961.json",
+    "sha256": "f74dd4d6d745d78c3ae45487277357ac4bf1ad3410f4c9b6f3497ae61b9cc322"
+  },
+  "new_source_sha256": {
+    "scripts/exp_r2_pressure_gauge.py": "6799ba85fe67cf1995ac356018cad7c60a84c65019eb822db8a88c5cf1379b9b",
+    "scripts/exp_thermal.py": "efb0419310b7b038ef12668d8d877440a69a81be9a966275daa4cce7d8632f22",
+    "src/core/thermal_io.py": "e0b44c31a8f3e2ac10cd3eca39b13c29ac32704c140222651bdc4bc219201e1d",
+    "src/models/featextractnet.py": "9f8d2acbd5a6441dbed2102f6d7a6d27d37669fe5ff1a4884f946a6ea44c02c7",
+    "src/models/baselines/meshgraphnet_style.py": "2a624cbf947e06c3aeb5b3df72d37dd74eccdac15ae67ea3ead3308256635637"
+  },
+  "inventory": {
+    "path": "results\\round2_pressure_gauge\\baseline_inventory.json",
+    "sha256": "6afd30f020abaf2808a75c3973b83d3660abee0f06022abcb41fcde8ca2333a2",
+    "source": "server array-probe job inventory"
+  },
+  "array_probes": {
+    "array_probe_fen_seed0_geom17.npz": "4e0c78366071cd1ebdc25d11889394586fbb75197acfb5e6d0258724c17d94fe",
+    "array_probe_graph_seed0_geom17.npz": "3a8a4ce369a9586e642006e47849e654191758a5d604ec73d24aa78889d9c001"
+  },
+  "statistics": {
+    "primary_cross_seed": "mean/sample std across the five seed means; each seed mean over 20 geometries",
+    "geometry_std_auxiliary": "std across 20 geometry seed means; not seed uncertainty",
+    "primary_paired_bootstrap": {
+      "definition": "per geometry mean of 5 seeds, then FEN-graph paired difference",
+      "reps": 20000,
+      "analysis_seed": 20261021,
+      "shared_geometry_resample_across_metrics": true,
+      "conditional_on_fixed_training_seeds": true,
+      "not_100_independent_geometries": true
+    },
+    "per_seed_bootstrap": "kept as supplementary"
+  },
+  "provenance": {
+    "original_job_id": "50961",
+    "original_protocol_sha256": "7af39e6ad43e116d4e81b3bc80ed587bbd7de0d5567c458e466837f8a21a0a51",
+    "postprocess_no_gpu_rerun": true,
+    "source_changed_since_original_50961": true,
+    "note": "original 50961 execution source is recorded in old protocol; new postreview source hashes recorded separately, not backfilled",
+    "array_probe_job": {
+      "job_id": "51017",
+      "mode": "probe-export",
+      "returncode": 0,
+      "state": "COMPLETED",
+      "logs": {
+        "r2_pressure_gauge_51017.err": {
+          "path": "job_51017/r2_pressure_gauge_51017.err",
+          "sha256": "a97731b4a10b4c9b9a6cf38c03b4692693042d681f3615ce5ea626680ef4dc42"
+        },
+        "r2_pressure_gauge_51017.out": {
+          "path": "job_51017/r2_pressure_gauge_51017.out",
+          "sha256": "c9907f45fe8b738f5499bf0f35239e89f6cd0df7ef84181b18bc43de04234a1a"
+        }
+      },
+      "manifest": "array_probe_manifest.json"
+    }
+  },
+  "notes": [
+    "postreview derived from original raw; original files retained",
+    "baseline inventory records actual checked roots; not global absence",
+    "array probes are for independent NumPy centered/pressure verification"
+  ],
+  "old_files_sha256": {
+    "protocol_snapshot.json": "7af39e6ad43e116d4e81b3bc80ed587bbd7de0d5567c458e466837f8a21a0a51",
+    "raw_results.json": "4654ea9b8d0a3ead277d4cf5a55ebe1f20f17021573283b7839cec3b21a3e7e6",
+    "summary.json": "d92c65542656ff4d895b02870ba458cf767849eb586b04a58ad4fc2cb0c784ed",
+    "report.md": "cfc6c414762ccaff642da8d4e5101a2c2e1d1f6531da80de2859441c286b2ede",
+    "delivery_50961.json": "f74dd4d6d745d78c3ae45487277357ac4bf1ad3410f4c9b6f3497ae61b9cc322"
+  },
+  "array_probe_validation": {
+    "path": "array_probe_validation.json",
+    "sha256": "1203db2bb59bb6f88560c65d86abdccc4e9f2e4e316370e30f68aca85a3cf4b7"
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "task": "R2-REMAINING-EXECUTE-02",
+  "updated_local": "2026-10-27T10:15:28+08:00",
+  "jobs": [
+    {
+      "jobid": "51490",
+      "mode": "transolver5",
+      "status": "failed_cli",
+      "returncode": 2,
+      "reason": "registry-path argument was not present in the uploaded exp_thermal at that moment",
+      "elapsed": ""
+    },
+    {
+      "jobid": "51491",
+      "mode": "transolver5",
+      "status": "failed_adapter_layout",
+      "returncode": 1,
+      "reason": "runner input [B,2,N] was rejected by the adapter; adapter now accepts both layouts",
+      "elapsed": ""
+    },
+    {
+      "jobid": "51492",
+      "mode": "transolver5",
+      "status": "success",
+      "returncode": 0,
+      "started": "2026-10-26T21:01:13+08:00",
+      "finished": "2026-10-26T21:33:29+08:00",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "metrics": "results/round2_remaining_closeout/formal/transolver/transolver/summary.json",
+      "registry": "results/round2_remaining_closeout/formal/registry_snapshot.json",
+      "note": "5-seed strict FP32; val-selected checkpoints; test frozen; isolated registry",
+      "elapsed": "32:19",
+      "reason": "Transolver 5seed completed"
+    },
+    {
+      "jobid": "51493",
+      "mode": "ablation_kaiming",
+      "status": "failed",
+      "returncode": 1,
+      "reason": "stale featextractnet_variants; synced",
+      "elapsed": "0:09"
+    },
+    {
+      "jobid": "51494",
+      "mode": "acoustic_fresh",
+      "status": "failed",
+      "returncode": 1,
+      "reason": "stale exp_acoustic seed override; fixed",
+      "elapsed": "0:06"
+    },
+    {
+      "jobid": "51495",
+      "mode": "ablation_kaiming",
+      "status": "failed",
+      "returncode": 1,
+      "note": "maininit six non-Full seeds3/4 then Kaiming S5 seven variants seeds3/4",
+      "elapsed": "25:23",
+      "reason": "maininit 6 non-Full seeds3/4 succeeded (12 metrics/checkpoints); Kaiming failed before any Kaiming metrics because output dir kaiming_si lacked r2; preserved maininit"
+    },
+    {
+      "jobid": "51496",
+      "mode": "acoustic_fresh",
+      "status": "failed",
+      "returncode": 1,
+      "note": "corrected acoustic, matched physics, SIREN/PT/MLP fresh strict5",
+      "elapsed": "0:10",
+      "reason": "remote CondFourierMLP lacked fourier_layout; no acoustic/matched/fresh metrics; cond_mlps synced"
+    },
+    {
+      "jobid": "51497",
+      "mode": "kaiming_recover",
+      "status": "success",
+      "returncode": 0,
+      "reason": "Kaiming S5 7 variants seeds3/4 completed; 14 metrics/checkpoints; no canonical registry",
+      "partial_metrics": [
+        "kaiming_si_r2/fen_full/seed3",
+        "kaiming_si_r2/fen_nocgf/seed3",
+        "kaiming_si_r2/fen_poolmax/seed3"
+      ],
+      "elapsed": "31:12"
+    },
+    {
+      "jobid": "51498",
+      "mode": "acoustic_fresh_recover",
+      "status": "failed",
+      "returncode": 1,
+      "reason": "fourier_c seed3 succeeded; acoustic out-dir was model-level but root passed, so fourier_nc seed3 collided with existing seed3 and stopped. Preserved fourier_c seed3.",
+      "elapsed": "9:18"
+    },
+    {
+      "jobid": "51507",
+      "mode": "acoustic_recover3",
+      "status": "failed",
+      "returncode": 1,
+      "reason": "fourier_c and fourier_nc seed3 succeeded; unif_acous seed3 needs --eval-chunk 0; failed before unif. Preserve two metrics.",
+      "partial": {
+        "fourier_c_seed3_metrics": 1,
+        "fourier_c_seed3_checkpoint": true,
+        "fourier_nc_seed3_checkpoint": true,
+        "note": "partial checkpoint is not a completed metric; do not aggregate"
+      },
+      "elapsed": "9:15"
+    },
+    {
+      "jobid": "51508",
+      "mode": "acoustic_recover5",
+      "status": "success",
+      "returncode": 0,
+      "reason": "all 14 acoustic +6 matched + SIREN5 + PT5 + MLP10 completed; no canonical registry write",
+      "elapsed": "6:55:30",
+      "all_66_jobs_completed": true
+    },
+    {
+      "jobid": "51529",
+      "model": "fno",
+      "mode": "fno_strict5",
+      "status": "success",
+      "returncode": 0,
+      "elapsed": "6:41",
+      "reason": "FNO 5 seeds complete; fixed-primary primary9+srcR; strict FP32"
+    },
+    {
+      "jobid": "51530",
+      "model": "uno",
+      "mode": "uno_strict5",
+      "status": "success",
+      "returncode": 0,
+      "reason": "UNO 5 seeds complete; fixed-primary primary9+srcR; strict FP32",
+      "elapsed": "30:48"
+    }
+  ],
+  "formal_training_submitted": true,
+  "transolver_5seed_completed": true,
+  "other_jobs_completed": true,
+  "canonical_registry_touched": false,
+  "maininit_successful_seeds": {
+    "root": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit",
+    "seeds": [
+      3,
+      4
+    ],
+    "variants": [
+      "fen_nocgf",
+      "fen_nocgf_pm",
+      "fen_single128",
+      "fen_cgfonly_pm",
+      "fen_noshortcut",
+      "fen_poolmax"
+    ]
+  },
+  "kaiming_successful": true,
+  "acoustic_fresh_running": false,
+  "acoustic_successful_seed3": [
+    "fourier_c",
+    "fourier_nc",
+    "unif_acous",
+    "ab_L8",
+    "ab_L32",
+    "ab_nores",
+    "ab_nonorm"
+  ],
+  "all_66_training_completed": true,
+  "acoustic_successful_seed4": [
+    "fourier_c",
+    "fourier_nc",
+    "unif_acous",
+    "ab_L8",
+    "ab_L32",
+    "ab_nores",
+    "ab_nonorm"
+  ],
+  "fno_uno_strict5": {
+    "status": "success",
+    "fno_job": "51529",
+    "uno_job": "51530",
+    "fno_metrics": 5,
+    "uno_metrics": 5,
+    "old_results_read_only": true
+  },
+  "all_81_trainings_completed": true
+}

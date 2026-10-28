@@ -1,0 +1,3059 @@
+{
+  "task": "R2-REMAINING-EVIDENCE-INVENTORY-20261026",
+  "created_local": "2026-10-26T16:10:22+08:00",
+  "cwd": ".",
+  "scope": "inventory only; no training/submission/install/code change",
+  "policy": {
+    "main_thermal": "5 seeds",
+    "baselines_ablations": "at least 3; reported n per row",
+    "acoustic": "3 seeds allowed",
+    "test": "frozen after val selection",
+    "current_main_inputs": [
+      "paper/main.tex",
+      "paper/supplementary.tex",
+      "paper/response_round2.tex"
+    ]
+  },
+  "manuscript": {
+    "main_sha256": "85c5f5c22c178f2d6ef79b865b70cc43c7888f41801fbd0c2235fdadb902b22d",
+    "supplementary_sha256": "bd03dcdb6fd411d1bb91c3e6ba29dd0da29d2bc748aaa6a69da34d32c94f970d",
+    "response_sha256": "1a4b317d3b730442e0c7a573ef0388917e92e0c4612dd71d1c6d0c2cb086d8ac",
+    "historical_diagnostics_sha256": "194834e5a66f6e6fc9e971d80105474b0b92bc7791190ad22ae4170796beb797"
+  },
+  "groups": [
+    {
+      "id": "main_thermal_fen",
+      "title": "主热场 FeatExtractNet（Table 1）",
+      "root": "results/round2_thermal_symmetric/feat_extract",
+      "declared_seeds": 5,
+      "actual_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_seeds": 5,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [],
+      "optional_uniform5": [],
+      "checkpoint_count": 5,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/round2_thermal_symmetric/feat_extract\\seed0\\checkpoint_best.pth",
+          "sha256": "4ca109452729bbc8c5dd435e5ff770441e98bdef3a69818a8a1546817ed2649a"
+        },
+        {
+          "seed": 1,
+          "path": "results/round2_thermal_symmetric/feat_extract\\seed1\\checkpoint_best.pth",
+          "sha256": "32ab5318d1b0529b402f2e5d575bf070b0633f70b58ae963821873829ccdea8e"
+        },
+        {
+          "seed": 2,
+          "path": "results/round2_thermal_symmetric/feat_extract\\seed2\\checkpoint_best.pth",
+          "sha256": "70110e3c6296447261188808d2d42d348e19221ea691b8ee6bfffe71e66e330a"
+        },
+        {
+          "seed": 3,
+          "path": "results/round2_thermal_symmetric/feat_extract\\seed3\\checkpoint_best.pth",
+          "sha256": "f5c8d2e3f81d6bda7ff4f0732c633770ef9b11b632dc2060fc143c7001d8802a"
+        },
+        {
+          "seed": 4,
+          "path": "results/round2_thermal_symmetric/feat_extract\\seed4\\checkpoint_best.pth",
+          "sha256": "307a577c552af993f8ade96b00f0196b4fc0a8362911f7bc39126b4d0d4f48c7"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 400,
+        "1": 475,
+        "2": 450,
+        "3": 425,
+        "4": 425
+      },
+      "models": [
+        "FeatExtractNet"
+      ],
+      "mean_s_per_epoch": 0.319615,
+      "mean_wall_time_s": 159.8,
+      "test_re_first": {
+        "u": 0.07612536006584235,
+        "v": 0.05675287132829265,
+        "p": 0.020165382078271267,
+        "T": 0.018700171091884134
+      },
+      "table": "Table 1 tab:res",
+      "entry": "scripts/exp_thermal.py",
+      "config": "configs/splits_thermal.json + metrics.protocol",
+      "precision_note": "strict FP32; cuda_matmul_allow_tf32=False, cudnn_allow_tf32=False",
+      "optional_uniform5_cost_estimate_s": 0.0
+    },
+    {
+      "id": "main_thermal_graph5",
+      "title": "主热场 MeshGraphNet-style fresh 5 seed（Table 1）",
+      "root": "results/round2_graph_five_seed_main/meshgraphnet",
+      "declared_seeds": 5,
+      "actual_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_seeds": 5,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [],
+      "optional_uniform5": [],
+      "checkpoint_count": 5,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/round2_graph_five_seed_main/meshgraphnet\\seed0\\checkpoint_best.pth",
+          "sha256": "41310eafd9be3126c83348cb918ddf4bc513713473554c7a89d0ab3d4aa6de90"
+        },
+        {
+          "seed": 1,
+          "path": "results/round2_graph_five_seed_main/meshgraphnet\\seed1\\checkpoint_best.pth",
+          "sha256": "e6b81c39387662f70a3b5a6dd3229de7d1e0aceae7957f06e29bdcf035f7a5e9"
+        },
+        {
+          "seed": 2,
+          "path": "results/round2_graph_five_seed_main/meshgraphnet\\seed2\\checkpoint_best.pth",
+          "sha256": "8d2db1f2180ac4d6b10354a82903917aad5021474725240b5d5cee64ff6e4c31"
+        },
+        {
+          "seed": 3,
+          "path": "results/round2_graph_five_seed_main/meshgraphnet\\seed3\\checkpoint_best.pth",
+          "sha256": "43a51662d16b3f04d25951bd41cc0e53d4ecf47157a6f0c39695ea147d56a619"
+        },
+        {
+          "seed": 4,
+          "path": "results/round2_graph_five_seed_main/meshgraphnet\\seed4\\checkpoint_best.pth",
+          "sha256": "05c2752bb1d7b4e216307e3ef3061d8c261c6be7468ddd06425f13548f700b75"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 325,
+        "1": 350,
+        "2": 500,
+        "3": 475,
+        "4": 475
+      },
+      "models": [
+        "MeshGraphNetStyleBaseline"
+      ],
+      "mean_s_per_epoch": 2.640538,
+      "mean_wall_time_s": 1320.3,
+      "test_re_first": {
+        "u": 0.04846933427184895,
+        "v": 0.03669390007514859,
+        "p": 0.015125739260369604,
+        "T": 0.01565025147784995
+      },
+      "table": "Table 1 tab:res",
+      "entry": "scripts/exp_thermal.py",
+      "config": "configs/splits_thermal.json + metrics.protocol",
+      "precision_note": "strict FP32; fresh seeds 0-4",
+      "optional_uniform5_cost_estimate_s": 0.0
+    },
+    {
+      "id": "baseline_dgcnn_5",
+      "title": "DGCNN 5seed（Table 1）",
+      "root": "results/thermal_protocolA/dgcnn",
+      "declared_seeds": 5,
+      "actual_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_seeds": 5,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [],
+      "optional_uniform5": [],
+      "checkpoint_count": 5,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/thermal_protocolA/dgcnn\\seed0\\checkpoint_best.pth",
+          "sha256": "07feab1604f9aabcf71483215d3c669b14a9fcb6c7e91f06d83235994b0ff142"
+        },
+        {
+          "seed": 1,
+          "path": "results/thermal_protocolA/dgcnn\\seed1\\checkpoint_best.pth",
+          "sha256": "4f0410b9484d456703f1dbfa9ebbe0786384313af9c621cc3cc91f5f499b6c70"
+        },
+        {
+          "seed": 2,
+          "path": "results/thermal_protocolA/dgcnn\\seed2\\checkpoint_best.pth",
+          "sha256": "8881344861e881f43fcf27dfd41b599523e0260b50a2dc993c7902a942736a9b"
+        },
+        {
+          "seed": 3,
+          "path": "results/thermal_protocolA/dgcnn\\seed3\\checkpoint_best.pth",
+          "sha256": "6978a0eb9bdc62e2033be86821f012f93c939ba0fca42b70c52250e20c02fc23"
+        },
+        {
+          "seed": 4,
+          "path": "results/thermal_protocolA/dgcnn\\seed4\\checkpoint_best.pth",
+          "sha256": "3a6f478edee9a129ac99cbc7a7647021d5e7fd1f09d09b6cf731b0d530b4574c"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 425,
+        "1": 500,
+        "2": 500,
+        "3": 475,
+        "4": 475
+      },
+      "models": [
+        "DGCNN"
+      ],
+      "mean_s_per_epoch": 0.624123,
+      "mean_wall_time_s": 312.1,
+      "test_re_first": {
+        "u": 0.07792651152201825,
+        "v": 0.0632033546971928,
+        "p": 0.023405882337280283,
+        "T": 0.025114536378685486
+      },
+      "table": "Table 1 tab:res",
+      "entry": "scripts/exp_thermal.py",
+      "config": "configs/splits_thermal.json + metrics.protocol",
+      "precision_note": "strict FP32",
+      "optional_uniform5_cost_estimate_s": 0.0
+    },
+    {
+      "id": "baseline_pipn_5",
+      "title": "PIPN-style 5seed（Table 1）",
+      "root": "results/thermal_protocolA/pipn",
+      "declared_seeds": 5,
+      "actual_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_seeds": 5,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [],
+      "optional_uniform5": [],
+      "checkpoint_count": 5,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/thermal_protocolA/pipn\\seed0\\checkpoint_best.pth",
+          "sha256": "001f5c247df9eb5cd8a3be355b313791cc11c646165a10a60faa02af1a6076c1"
+        },
+        {
+          "seed": 1,
+          "path": "results/thermal_protocolA/pipn\\seed1\\checkpoint_best.pth",
+          "sha256": "e7d1714960d761ddb7045c5428bf7445ba7fa65e61c59dc56bc332f2bf68ee4a"
+        },
+        {
+          "seed": 2,
+          "path": "results/thermal_protocolA/pipn\\seed2\\checkpoint_best.pth",
+          "sha256": "3f1534cc472cc7277c33e117b226c94b87208b86b8dea90d00198edd96f99bfc"
+        },
+        {
+          "seed": 3,
+          "path": "results/thermal_protocolA/pipn\\seed3\\checkpoint_best.pth",
+          "sha256": "da717fa408e9dcebff20297b6b44b004a1e62ba6d81de43e876b387945f450b1"
+        },
+        {
+          "seed": 4,
+          "path": "results/thermal_protocolA/pipn\\seed4\\checkpoint_best.pth",
+          "sha256": "c3c71911a321358a32226bf773ac99984e899c922fd579e7b55b35598d53cf92"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 475,
+        "1": 325,
+        "2": 275,
+        "3": 475,
+        "4": 475
+      },
+      "models": [
+        "PipnStyleBaseline"
+      ],
+      "mean_s_per_epoch": 0.180534,
+      "mean_wall_time_s": 90.3,
+      "test_re_first": {
+        "u": 0.08613671335939636,
+        "v": 0.06981858885576514,
+        "p": 0.027844661955386714,
+        "T": 0.026530236746778225
+      },
+      "table": "Table 1 tab:res",
+      "entry": "scripts/exp_thermal.py",
+      "config": "configs/splits_thermal.json + metrics.protocol",
+      "precision_note": "strict FP32",
+      "optional_uniform5_cost_estimate_s": 0.0
+    },
+    {
+      "id": "baseline_pointnet_5",
+      "title": "PointNet 5seed（Table 1）",
+      "root": "results/thermal_protocolA/pointnet",
+      "declared_seeds": 5,
+      "actual_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_seeds": 5,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [],
+      "optional_uniform5": [],
+      "checkpoint_count": 5,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/thermal_protocolA/pointnet\\seed0\\checkpoint_best.pth",
+          "sha256": "8a870a76175c46f9275f3ad6a64e74873eead0f130a37a954aae06e440c9af43"
+        },
+        {
+          "seed": 1,
+          "path": "results/thermal_protocolA/pointnet\\seed1\\checkpoint_best.pth",
+          "sha256": "4e9758a44534b2544fc5c2459e4a0038fb15e5033a5758564ccc7c74f49b118c"
+        },
+        {
+          "seed": 2,
+          "path": "results/thermal_protocolA/pointnet\\seed2\\checkpoint_best.pth",
+          "sha256": "bb9477edd2c0e8903cc7bc8e7e46e429086e36595a5dcbf8a35f7566f2d24957"
+        },
+        {
+          "seed": 3,
+          "path": "results/thermal_protocolA/pointnet\\seed3\\checkpoint_best.pth",
+          "sha256": "6d6cd77165b89a745998581873bbeb4eb7d704db827a260d860addc24941572c"
+        },
+        {
+          "seed": 4,
+          "path": "results/thermal_protocolA/pointnet\\seed4\\checkpoint_best.pth",
+          "sha256": "d43d8f669b4539693e69ea90c6134d433bbfb4be2e81395ed82553a4c64668e9"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 500,
+        "1": 500,
+        "2": 475,
+        "3": 475,
+        "4": 475
+      },
+      "models": [
+        "PointNetBaseline"
+      ],
+      "mean_s_per_epoch": 0.072186,
+      "mean_wall_time_s": 36.1,
+      "test_re_first": {
+        "u": 0.0837850975552312,
+        "v": 0.07757371904560086,
+        "p": 0.028718518736908838,
+        "T": 0.024075165585838755
+      },
+      "table": "Table 1 tab:res",
+      "entry": "scripts/exp_thermal.py",
+      "config": "configs/splits_thermal.json + metrics.protocol",
+      "precision_note": "strict FP32",
+      "optional_uniform5_cost_estimate_s": 0.0
+    },
+    {
+      "id": "baseline_coordmlp_5",
+      "title": "Coordinate MLP 5seed（Table 1）",
+      "root": "results/thermal_protocolA/mlp",
+      "declared_seeds": 5,
+      "actual_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_seeds": 5,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [],
+      "optional_uniform5": [],
+      "checkpoint_count": 5,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/thermal_protocolA/mlp\\seed0\\checkpoint_best.pth",
+          "sha256": "de36941d8205a118d0e2fa73d2c99c87effcce61b2bf8b8b917271402f1738da"
+        },
+        {
+          "seed": 1,
+          "path": "results/thermal_protocolA/mlp\\seed1\\checkpoint_best.pth",
+          "sha256": "11da624156e9892f08c7fbeca5e3dd527c8d2b51f03c061acd9501c497d4a066"
+        },
+        {
+          "seed": 2,
+          "path": "results/thermal_protocolA/mlp\\seed2\\checkpoint_best.pth",
+          "sha256": "394bcd118614f1c3614dad8f3d8a9e718211458ff7c75c31dcd7eac5e18aad02"
+        },
+        {
+          "seed": 3,
+          "path": "results/thermal_protocolA/mlp\\seed3\\checkpoint_best.pth",
+          "sha256": "f1050641f8d48bb77af3f500f2c5956c17053fb0e55aecb7aa9529b45a771022"
+        },
+        {
+          "seed": 4,
+          "path": "results/thermal_protocolA/mlp\\seed4\\checkpoint_best.pth",
+          "sha256": "71665dc4ccc181cfa87b620fbf532b5c866ccce5c25f5d10a6ab488c93e63da5"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 350,
+        "1": 200,
+        "2": 475,
+        "3": 325,
+        "4": 250
+      },
+      "models": [
+        "CoordMLP"
+      ],
+      "mean_s_per_epoch": 0.1128,
+      "mean_wall_time_s": 56.4,
+      "test_re_first": {
+        "u": 0.09263915425244218,
+        "v": 0.07695915924615557,
+        "p": 0.026646265831852665,
+        "T": 0.028373545788476846
+      },
+      "table": "Table 1 tab:res",
+      "entry": "scripts/exp_thermal.py",
+      "config": "configs/splits_thermal.json + metrics.protocol",
+      "precision_note": "strict FP32",
+      "optional_uniform5_cost_estimate_s": 0.0
+    },
+    {
+      "id": "baseline_pointnetpp_5",
+      "title": "PointNet++ 5seed（Table 1）",
+      "root": "results/thermal_protocolA/pointnetpp",
+      "declared_seeds": 5,
+      "actual_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_seeds": 5,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [],
+      "optional_uniform5": [],
+      "checkpoint_count": 5,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/thermal_protocolA/pointnetpp\\seed0\\checkpoint_best.pth",
+          "sha256": "ccae6a1fb423ce68761272c439f2cecd74d11e3cac13ac519241467fbe945dbc"
+        },
+        {
+          "seed": 1,
+          "path": "results/thermal_protocolA/pointnetpp\\seed1\\checkpoint_best.pth",
+          "sha256": "a2815c78c814caca638db5f4abeef1fbd8ae844069533fa00cda1d2402a0bc15"
+        },
+        {
+          "seed": 2,
+          "path": "results/thermal_protocolA/pointnetpp\\seed2\\checkpoint_best.pth",
+          "sha256": "7e7c55f02abe333e0849be2440a3db124c8b6b8f846c1bc4757a2d624272005b"
+        },
+        {
+          "seed": 3,
+          "path": "results/thermal_protocolA/pointnetpp\\seed3\\checkpoint_best.pth",
+          "sha256": "e4fef79e88cbe97e0aeb8e89f87be779cec70a8bc779167814ebfef1c9bf3094"
+        },
+        {
+          "seed": 4,
+          "path": "results/thermal_protocolA/pointnetpp\\seed4\\checkpoint_best.pth",
+          "sha256": "49116122a8137d4da0443e84bdad765c8129190927302dcf4342bc30a22af74b"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 500,
+        "1": 500,
+        "2": 500,
+        "3": 475,
+        "4": 475
+      },
+      "models": [
+        "PointNetPlusPlusBaseline"
+      ],
+      "mean_s_per_epoch": 0.886023,
+      "mean_wall_time_s": 443.0,
+      "test_re_first": {
+        "u": 0.09647623816656765,
+        "v": 0.09386300345734883,
+        "p": 0.02552463006616688,
+        "T": 0.029177371173310273
+      },
+      "table": "Table 1 tab:res",
+      "entry": "scripts/exp_thermal.py",
+      "config": "configs/splits_thermal.json + metrics.protocol",
+      "precision_note": "strict FP32",
+      "optional_uniform5_cost_estimate_s": 0.0
+    },
+    {
+      "id": "baseline_siren_3",
+      "title": "SIREN 3seed（Table 1）",
+      "root": "results/baselines_ext/thermal_protocolA/siren",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 3,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/baselines_ext/thermal_protocolA/siren\\seed0\\checkpoint_best.pth",
+          "sha256": "4879ab3e089348dbba8a735d0ded3cf575d503f0bc2311f7f94b72d9b9a43a56"
+        },
+        {
+          "seed": 1,
+          "path": "results/baselines_ext/thermal_protocolA/siren\\seed1\\checkpoint_best.pth",
+          "sha256": "75d4518b0b2951dd190081436a9506e40c0e1098240301320c24ad80a39c43a5"
+        },
+        {
+          "seed": 2,
+          "path": "results/baselines_ext/thermal_protocolA/siren\\seed2\\checkpoint_best.pth",
+          "sha256": "e7944ac8ea5fab54f0a79128f4278c9dd636178e1bcb2f781c0bd6c3f43290a0"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 500,
+        "1": 375,
+        "2": 500
+      },
+      "models": [
+        "SIRENNet"
+      ],
+      "mean_s_per_epoch": 0.166714,
+      "mean_wall_time_s": 83.4,
+      "test_re_first": {
+        "u": 0.08626960543181676,
+        "v": 0.0729308339205628,
+        "p": 0.024016827500760868,
+        "T": 0.029836721650694654
+      },
+      "table": "Table 1 tab:res",
+      "entry": "scripts/exp_thermal.py",
+      "config": "configs/splits_thermal.json + metrics.protocol",
+      "precision_note": "historical recorded numerical settings; no strict-FP32 flag in archived protocol",
+      "optional_uniform5_cost_estimate_s": 166.8
+    },
+    {
+      "id": "baseline_pt_3",
+      "title": "PointTransformer 3seed（Table 1）",
+      "root": "results/baselines_ext/thermal_protocolA/pointtransformer",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 3,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/baselines_ext/thermal_protocolA/pointtransformer\\seed0\\checkpoint_best.pth",
+          "sha256": "0efdd7928c912f924e1108a413090aca7f2746094b7fdd286c4159ae155c9506"
+        },
+        {
+          "seed": 1,
+          "path": "results/baselines_ext/thermal_protocolA/pointtransformer\\seed1\\checkpoint_best.pth",
+          "sha256": "cf23e245b3d8dda8d25f99bcfc0828d00acdc7a9ac041af3aa557b582477bd8d"
+        },
+        {
+          "seed": 2,
+          "path": "results/baselines_ext/thermal_protocolA/pointtransformer\\seed2\\checkpoint_best.pth",
+          "sha256": "ccde4c076298fc0a24caacdfb4407be05dfc831c618b9dc7dd22ec9dbc041187"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 400,
+        "1": 450,
+        "2": 500
+      },
+      "models": [
+        "PointTransformerBaseline"
+      ],
+      "mean_s_per_epoch": 2.863326,
+      "mean_wall_time_s": 1431.7,
+      "test_re_first": {
+        "u": 0.18838057987876977,
+        "v": 0.13988200073241322,
+        "p": 0.06693166199557896,
+        "T": 0.06112786536828747
+      },
+      "table": "Table 1 tab:res",
+      "entry": "scripts/exp_thermal.py",
+      "config": "configs/splits_thermal.json + metrics.protocol",
+      "precision_note": "historical recorded numerical settings; no strict-FP32 flag in archived protocol",
+      "optional_uniform5_cost_estimate_s": 2863.4
+    },
+    {
+      "id": "ablation_current",
+      "title": "当前初始化对齐消融（Table ablation）",
+      "root": "results/round2_ablation_maininit/fen_nocgf",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 18,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/round2_ablation_maininit/fen_nocgf\\seed0\\checkpoint_best.pth",
+          "sha256": "0120f6b7549ffefd8077382723aa874a27469081f471ee51fa96fe90a86dc115"
+        },
+        {
+          "seed": 1,
+          "path": "results/round2_ablation_maininit/fen_nocgf\\seed1\\checkpoint_best.pth",
+          "sha256": "32cea1745c0afdff6346a5a1ce39eaaa3d90a2d46817bd58b92d4acc3522bc17"
+        },
+        {
+          "seed": 2,
+          "path": "results/round2_ablation_maininit/fen_nocgf\\seed2\\checkpoint_best.pth",
+          "sha256": "cd3c72a2cf4db83a37fb12afe660c4f6c9fe8c7ae4d66bc594403af949281ed0"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 475,
+        "1": 350,
+        "2": 450
+      },
+      "models": [
+        "FeatExtractNetVariants"
+      ],
+      "mean_s_per_epoch": 0.176588,
+      "mean_wall_time_s": 88.3,
+      "test_re_first": {
+        "u": 0.07553863258336188,
+        "v": 0.05609746014207254,
+        "p": 0.019721181554714157,
+        "T": 0.019309010719399812
+      },
+      "table": "Table tab:ablation; Full reuses main seeds0-2",
+      "entry": "scripts/exp_ablation_thermal.py",
+      "config": "configs/splits_thermal.json; init_mode=main_default",
+      "precision_note": "strict FP32; seeds 0-2",
+      "variants": {
+        "fen_nocgf": {
+          "root": "results/round2_ablation_maininit/fen_nocgf",
+          "declared_seeds": 3,
+          "actual_seeds": [
+            0,
+            1,
+            2
+          ],
+          "n_seeds": 3,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [
+            3,
+            4
+          ],
+          "optional_uniform5": [
+            3,
+            4
+          ],
+          "checkpoint_count": 3,
+          "checkpoints": [
+            {
+              "seed": 0,
+              "path": "results/round2_ablation_maininit/fen_nocgf\\seed0\\checkpoint_best.pth",
+              "sha256": "0120f6b7549ffefd8077382723aa874a27469081f471ee51fa96fe90a86dc115"
+            },
+            {
+              "seed": 1,
+              "path": "results/round2_ablation_maininit/fen_nocgf\\seed1\\checkpoint_best.pth",
+              "sha256": "32cea1745c0afdff6346a5a1ce39eaaa3d90a2d46817bd58b92d4acc3522bc17"
+            },
+            {
+              "seed": 2,
+              "path": "results/round2_ablation_maininit/fen_nocgf\\seed2\\checkpoint_best.pth",
+              "sha256": "cd3c72a2cf4db83a37fb12afe660c4f6c9fe8c7ae4d66bc594403af949281ed0"
+            }
+          ],
+          "missing_checkpoint_seeds": [],
+          "selected_best_epochs": {
+            "0": 475,
+            "1": 350,
+            "2": 450
+          },
+          "models": [
+            "FeatExtractNetVariants"
+          ],
+          "mean_s_per_epoch": 0.176588,
+          "mean_wall_time_s": 88.3,
+          "test_re_first": {
+            "u": 0.07553863258336188,
+            "v": 0.05609746014207254,
+            "p": 0.019721181554714157,
+            "T": 0.019309010719399812
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "fen_nocgf_pm": {
+          "root": "results/round2_ablation_maininit/fen_nocgf_pm",
+          "declared_seeds": 3,
+          "actual_seeds": [
+            0,
+            1,
+            2
+          ],
+          "n_seeds": 3,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [
+            3,
+            4
+          ],
+          "optional_uniform5": [
+            3,
+            4
+          ],
+          "checkpoint_count": 3,
+          "checkpoints": [
+            {
+              "seed": 0,
+              "path": "results/round2_ablation_maininit/fen_nocgf_pm\\seed0\\checkpoint_best.pth",
+              "sha256": "8cee6622b061faeb8390a3161d127a9f33e5a3e1139ec06d891ec50e55a19d0c"
+            },
+            {
+              "seed": 1,
+              "path": "results/round2_ablation_maininit/fen_nocgf_pm\\seed1\\checkpoint_best.pth",
+              "sha256": "64ee86a7e49253bc1c51595bbdc4cb768a7d53242b6f869c18b3aac88026882e"
+            },
+            {
+              "seed": 2,
+              "path": "results/round2_ablation_maininit/fen_nocgf_pm\\seed2\\checkpoint_best.pth",
+              "sha256": "640438789e1b916ca15dbb8f4d77655cfc57891527a4b12757e6abecbdeb7101"
+            }
+          ],
+          "missing_checkpoint_seeds": [],
+          "selected_best_epochs": {
+            "0": 475,
+            "1": 500,
+            "2": 500
+          },
+          "models": [
+            "FeatExtractNetVariants"
+          ],
+          "mean_s_per_epoch": 0.206087,
+          "mean_wall_time_s": 103.0,
+          "test_re_first": {
+            "u": 0.07645965199953411,
+            "v": 0.056160550945570764,
+            "p": 0.018968534839838132,
+            "T": 0.02072902986925145
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "fen_single128": {
+          "root": "results/round2_ablation_maininit/fen_single128",
+          "declared_seeds": 3,
+          "actual_seeds": [
+            0,
+            1,
+            2
+          ],
+          "n_seeds": 3,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [
+            3,
+            4
+          ],
+          "optional_uniform5": [
+            3,
+            4
+          ],
+          "checkpoint_count": 3,
+          "checkpoints": [
+            {
+              "seed": 0,
+              "path": "results/round2_ablation_maininit/fen_single128\\seed0\\checkpoint_best.pth",
+              "sha256": "447452ac1842307990a1ac1231bb6d98f019136577a52e87e5a864fc19064103"
+            },
+            {
+              "seed": 1,
+              "path": "results/round2_ablation_maininit/fen_single128\\seed1\\checkpoint_best.pth",
+              "sha256": "3f619734411df03ab08cd019bd2cda873ef8062adfdf6dd6e5879df851982d07"
+            },
+            {
+              "seed": 2,
+              "path": "results/round2_ablation_maininit/fen_single128\\seed2\\checkpoint_best.pth",
+              "sha256": "d19101d519458c672278df5ffaa4cd20da608c5852e7d64ac7fed5f6fd953cf8"
+            }
+          ],
+          "missing_checkpoint_seeds": [],
+          "selected_best_epochs": {
+            "0": 475,
+            "1": 500,
+            "2": 500
+          },
+          "models": [
+            "FeatExtractNetVariants"
+          ],
+          "mean_s_per_epoch": 0.164118,
+          "mean_wall_time_s": 82.1,
+          "test_re_first": {
+            "u": 0.07634136994754923,
+            "v": 0.05652278112567648,
+            "p": 0.019876803721860757,
+            "T": 0.019089971597207545
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "fen_cgfonly_pm": {
+          "root": "results/round2_ablation_maininit/fen_cgfonly_pm",
+          "declared_seeds": 3,
+          "actual_seeds": [
+            0,
+            1,
+            2
+          ],
+          "n_seeds": 3,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [
+            3,
+            4
+          ],
+          "optional_uniform5": [
+            3,
+            4
+          ],
+          "checkpoint_count": 3,
+          "checkpoints": [
+            {
+              "seed": 0,
+              "path": "results/round2_ablation_maininit/fen_cgfonly_pm\\seed0\\checkpoint_best.pth",
+              "sha256": "468ff183b2215457a29ae202b5fc6516aafda93de5d8cfeabd040fd09948fc6b"
+            },
+            {
+              "seed": 1,
+              "path": "results/round2_ablation_maininit/fen_cgfonly_pm\\seed1\\checkpoint_best.pth",
+              "sha256": "29e2d6c444f1e08fb783daca95d94ff831bbc8254cc6ec831549b6b53d96db8f"
+            },
+            {
+              "seed": 2,
+              "path": "results/round2_ablation_maininit/fen_cgfonly_pm\\seed2\\checkpoint_best.pth",
+              "sha256": "280254f97350c3834253e55e20eb98b42facbc3a9f3c23870932d72ae7e0d30a"
+            }
+          ],
+          "missing_checkpoint_seeds": [],
+          "selected_best_epochs": {
+            "0": 400,
+            "1": 325,
+            "2": 450
+          },
+          "models": [
+            "FeatExtractNetVariants"
+          ],
+          "mean_s_per_epoch": 0.212395,
+          "mean_wall_time_s": 106.2,
+          "test_re_first": {
+            "u": 0.07691452412859709,
+            "v": 0.057657034253907,
+            "p": 0.02109773762738487,
+            "T": 0.01963410908293921
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "fen_noshortcut": {
+          "root": "results/round2_ablation_maininit/fen_noshortcut",
+          "declared_seeds": 3,
+          "actual_seeds": [
+            0,
+            1,
+            2
+          ],
+          "n_seeds": 3,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [
+            3,
+            4
+          ],
+          "optional_uniform5": [
+            3,
+            4
+          ],
+          "checkpoint_count": 3,
+          "checkpoints": [
+            {
+              "seed": 0,
+              "path": "results/round2_ablation_maininit/fen_noshortcut\\seed0\\checkpoint_best.pth",
+              "sha256": "a886ce8cd79e364bb960ad66a47e0f72ec13ca8317cfb4080d9a44dfab712830"
+            },
+            {
+              "seed": 1,
+              "path": "results/round2_ablation_maininit/fen_noshortcut\\seed1\\checkpoint_best.pth",
+              "sha256": "cc503d99612749e3d960f7d4f66ec9e22598e475bb24129112c6b83d2596f157"
+            },
+            {
+              "seed": 2,
+              "path": "results/round2_ablation_maininit/fen_noshortcut\\seed2\\checkpoint_best.pth",
+              "sha256": "401d343a79e69db981cf7ed5f95851135570fbe0a9c0525a4e1d1b61ea565d6e"
+            }
+          ],
+          "missing_checkpoint_seeds": [],
+          "selected_best_epochs": {
+            "0": 475,
+            "1": 400,
+            "2": 450
+          },
+          "models": [
+            "FeatExtractNetVariants"
+          ],
+          "mean_s_per_epoch": 0.313538,
+          "mean_wall_time_s": 156.8,
+          "test_re_first": {
+            "u": 0.07607471962585417,
+            "v": 0.05647956337894515,
+            "p": 0.01959779150921371,
+            "T": 0.01881077495706067
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "fen_poolmax": {
+          "root": "results/round2_ablation_maininit/fen_poolmax",
+          "declared_seeds": 3,
+          "actual_seeds": [
+            0,
+            1,
+            2
+          ],
+          "n_seeds": 3,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [
+            3,
+            4
+          ],
+          "optional_uniform5": [
+            3,
+            4
+          ],
+          "checkpoint_count": 3,
+          "checkpoints": [
+            {
+              "seed": 0,
+              "path": "results/round2_ablation_maininit/fen_poolmax\\seed0\\checkpoint_best.pth",
+              "sha256": "a2e027c664e90c77eac6a463497a9516bbf9fd7f216e13df3f188d44b066c699"
+            },
+            {
+              "seed": 1,
+              "path": "results/round2_ablation_maininit/fen_poolmax\\seed1\\checkpoint_best.pth",
+              "sha256": "12f7df71c2271db2144c0f7c5edc8f7805f25fcacd063b971ab4a661f665890b"
+            },
+            {
+              "seed": 2,
+              "path": "results/round2_ablation_maininit/fen_poolmax\\seed2\\checkpoint_best.pth",
+              "sha256": "f2309c311ec962b643904442fcccca8adacb82ad60d40e3af9198b791fd4dd28"
+            }
+          ],
+          "missing_checkpoint_seeds": [],
+          "selected_best_epochs": {
+            "0": 475,
+            "1": 500,
+            "2": 500
+          },
+          "models": [
+            "FeatExtractNetVariants"
+          ],
+          "mean_s_per_epoch": 0.314906,
+          "mean_wall_time_s": 157.5,
+          "test_re_first": {
+            "u": 0.07774458080771621,
+            "v": 0.057142490405795776,
+            "p": 0.019638731307732735,
+            "T": 0.020887179402350013
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        }
+      },
+      "notes": "Full uses actual main seeds 0-2; six variants independently trained; 7 table rows.",
+      "mean_wall_time_s_group_sum": 693.9,
+      "metrics_count": 18,
+      "missing_checkpoint_count": 0,
+      "optional_uniform5_seed_rows": 12,
+      "optional_uniform5_cost_estimate_s": 1387.8,
+      "full_reuses": "main_thermal_fen seeds 0-2; no independent Full training"
+    },
+    {
+      "id": "ablation_kaiming_historical",
+      "title": "历史 Kaiming-normal 消融（S5）",
+      "root": "results/round2_ablation_symmetric/fen_nocgf",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 21,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/round2_ablation_symmetric/fen_nocgf\\seed0\\checkpoint_best.pth",
+          "sha256": "2aa7ba4a249f0bc2aaf93b152a273e7848ffb54519b3ecddd427ff3842431740"
+        },
+        {
+          "seed": 1,
+          "path": "results/round2_ablation_symmetric/fen_nocgf\\seed1\\checkpoint_best.pth",
+          "sha256": "b43d6ab0f38719c9df2d8e857b6d3e9caf3a27066267681157fe3b49e20f6042"
+        },
+        {
+          "seed": 2,
+          "path": "results/round2_ablation_symmetric/fen_nocgf\\seed2\\checkpoint_best.pth",
+          "sha256": "9d1c97cd21a3295a1d3e79d0af514a3dc11c3ad1c6f8cc451d512f11294351c6"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 475,
+        "1": 350,
+        "2": 500
+      },
+      "models": [
+        "FeatExtractNetVariants"
+      ],
+      "mean_s_per_epoch": 0.174638,
+      "mean_wall_time_s": 87.3,
+      "test_re_first": {
+        "u": 0.07903253821912709,
+        "v": 0.05840358304418092,
+        "p": 0.02787676900617677,
+        "T": 0.022641383437378072
+      },
+      "table": "Table S5 tab:ablation_kaiming",
+      "entry": "scripts/exp_ablation_thermal.py",
+      "config": "configs/splits_thermal.json; historical Kaiming init",
+      "precision_note": "strict FP32; historical initialization family, not mixed with main table",
+      "variants": {
+        "fen_full": {
+          "root": "results/round2_ablation_symmetric/fen_full",
+          "declared_seeds": 3,
+          "actual_seeds": [
+            0,
+            1,
+            2
+          ],
+          "n_seeds": 3,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [
+            3,
+            4
+          ],
+          "optional_uniform5": [
+            3,
+            4
+          ],
+          "checkpoint_count": 3,
+          "checkpoints": [
+            {
+              "seed": 0,
+              "path": "results/round2_ablation_symmetric/fen_full\\seed0\\checkpoint_best.pth",
+              "sha256": "632f04bfe41aef9b6c8ed0c759e173dc237378d1a5f367af9ad56a8a7678f917"
+            },
+            {
+              "seed": 1,
+              "path": "results/round2_ablation_symmetric/fen_full\\seed1\\checkpoint_best.pth",
+              "sha256": "316fbad83b5ba6cd669a09ca81c6a88f44bbdeaa88fe17186307e40d0a0c76b8"
+            },
+            {
+              "seed": 2,
+              "path": "results/round2_ablation_symmetric/fen_full\\seed2\\checkpoint_best.pth",
+              "sha256": "3320b03530f3a748b51c3ba4ebc75c822883ca9f2198cb29c4c524644e9fb46d"
+            }
+          ],
+          "missing_checkpoint_seeds": [],
+          "selected_best_epochs": {
+            "0": 500,
+            "1": 350,
+            "2": 500
+          },
+          "models": [
+            "FeatExtractNetVariants"
+          ],
+          "mean_s_per_epoch": 0.323817,
+          "mean_wall_time_s": 161.9,
+          "test_re_first": {
+            "u": 0.09695776982911354,
+            "v": 0.07420681800927542,
+            "p": 0.02333967291579886,
+            "T": 0.025635412327616736
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "fen_nocgf": {
+          "root": "results/round2_ablation_symmetric/fen_nocgf",
+          "declared_seeds": 3,
+          "actual_seeds": [
+            0,
+            1,
+            2
+          ],
+          "n_seeds": 3,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [
+            3,
+            4
+          ],
+          "optional_uniform5": [
+            3,
+            4
+          ],
+          "checkpoint_count": 3,
+          "checkpoints": [
+            {
+              "seed": 0,
+              "path": "results/round2_ablation_symmetric/fen_nocgf\\seed0\\checkpoint_best.pth",
+              "sha256": "2aa7ba4a249f0bc2aaf93b152a273e7848ffb54519b3ecddd427ff3842431740"
+            },
+            {
+              "seed": 1,
+              "path": "results/round2_ablation_symmetric/fen_nocgf\\seed1\\checkpoint_best.pth",
+              "sha256": "b43d6ab0f38719c9df2d8e857b6d3e9caf3a27066267681157fe3b49e20f6042"
+            },
+            {
+              "seed": 2,
+              "path": "results/round2_ablation_symmetric/fen_nocgf\\seed2\\checkpoint_best.pth",
+              "sha256": "9d1c97cd21a3295a1d3e79d0af514a3dc11c3ad1c6f8cc451d512f11294351c6"
+            }
+          ],
+          "missing_checkpoint_seeds": [],
+          "selected_best_epochs": {
+            "0": 475,
+            "1": 350,
+            "2": 500
+          },
+          "models": [
+            "FeatExtractNetVariants"
+          ],
+          "mean_s_per_epoch": 0.174638,
+          "mean_wall_time_s": 87.3,
+          "test_re_first": {
+            "u": 0.07903253821912709,
+            "v": 0.05840358304418092,
+            "p": 0.02787676900617677,
+            "T": 0.022641383437378072
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "fen_nocgf_pm": {
+          "root": "results/round2_ablation_symmetric/fen_nocgf_pm",
+          "declared_seeds": 3,
+          "actual_seeds": [
+            0,
+            1,
+            2
+          ],
+          "n_seeds": 3,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [
+            3,
+            4
+          ],
+          "optional_uniform5": [
+            3,
+            4
+          ],
+          "checkpoint_count": 3,
+          "checkpoints": [
+            {
+              "seed": 0,
+              "path": "results/round2_ablation_symmetric/fen_nocgf_pm\\seed0\\checkpoint_best.pth",
+              "sha256": "7175316579ae3c70881ca0e8306f2deab7a419636d8bffd8f069324b7e0d23b8"
+            },
+            {
+              "seed": 1,
+              "path": "results/round2_ablation_symmetric/fen_nocgf_pm\\seed1\\checkpoint_best.pth",
+              "sha256": "4b58907b44932528c3e7ff7d9e57538c9abc78ff35067a84457a035fc030f74e"
+            },
+            {
+              "seed": 2,
+              "path": "results/round2_ablation_symmetric/fen_nocgf_pm\\seed2\\checkpoint_best.pth",
+              "sha256": "a7c7e9b8da42b03b761939df4b09721dcc071820f34f7b0e1ca1286bca9dfd26"
+            }
+          ],
+          "missing_checkpoint_seeds": [],
+          "selected_best_epochs": {
+            "0": 500,
+            "1": 400,
+            "2": 500
+          },
+          "models": [
+            "FeatExtractNetVariants"
+          ],
+          "mean_s_per_epoch": 0.208017,
+          "mean_wall_time_s": 104.0,
+          "test_re_first": {
+            "u": 0.08973698664970156,
+            "v": 0.06776775863246406,
+            "p": 0.020189055155657387,
+            "T": 0.03127819910033598
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "fen_single128": {
+          "root": "results/round2_ablation_symmetric/fen_single128",
+          "declared_seeds": 3,
+          "actual_seeds": [
+            0,
+            1,
+            2
+          ],
+          "n_seeds": 3,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [
+            3,
+            4
+          ],
+          "optional_uniform5": [
+            3,
+            4
+          ],
+          "checkpoint_count": 3,
+          "checkpoints": [
+            {
+              "seed": 0,
+              "path": "results/round2_ablation_symmetric/fen_single128\\seed0\\checkpoint_best.pth",
+              "sha256": "c1973eb83b503e11346f8995e92a12beda3168504d26b9dd6a167953d96cd788"
+            },
+            {
+              "seed": 1,
+              "path": "results/round2_ablation_symmetric/fen_single128\\seed1\\checkpoint_best.pth",
+              "sha256": "ee02329cf6ea9f9061741306a1f4b848cc9d58466443dc6fb4719bcaca960dd2"
+            },
+            {
+              "seed": 2,
+              "path": "results/round2_ablation_symmetric/fen_single128\\seed2\\checkpoint_best.pth",
+              "sha256": "23ebef16389be86790300604916d0f1752d7d48356ca03abe6f38abe4943177c"
+            }
+          ],
+          "missing_checkpoint_seeds": [],
+          "selected_best_epochs": {
+            "0": 325,
+            "1": 500,
+            "2": 450
+          },
+          "models": [
+            "FeatExtractNetVariants"
+          ],
+          "mean_s_per_epoch": 0.164337,
+          "mean_wall_time_s": 82.2,
+          "test_re_first": {
+            "u": 0.09067138921102404,
+            "v": 0.07194836894803826,
+            "p": 0.02295299815035776,
+            "T": 0.02642940821658251
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "fen_cgfonly_pm": {
+          "root": "results/round2_ablation_symmetric/fen_cgfonly_pm",
+          "declared_seeds": 3,
+          "actual_seeds": [
+            0,
+            1,
+            2
+          ],
+          "n_seeds": 3,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [
+            3,
+            4
+          ],
+          "optional_uniform5": [
+            3,
+            4
+          ],
+          "checkpoint_count": 3,
+          "checkpoints": [
+            {
+              "seed": 0,
+              "path": "results/round2_ablation_symmetric/fen_cgfonly_pm\\seed0\\checkpoint_best.pth",
+              "sha256": "fcf225a6e0c0997f83de1daa78fd59a675e74fdf2e40e3aa39bd1d069c44a9ba"
+            },
+            {
+              "seed": 1,
+              "path": "results/round2_ablation_symmetric/fen_cgfonly_pm\\seed1\\checkpoint_best.pth",
+              "sha256": "97d950fcb8a98539f6410f3eceb55d0094af6ead8c60caad8c6c195c4ff6f7c5"
+            },
+            {
+              "seed": 2,
+              "path": "results/round2_ablation_symmetric/fen_cgfonly_pm\\seed2\\checkpoint_best.pth",
+              "sha256": "59403da90b819acebc12aa10a7fb64f18c10332e49fc2a78a2354da314513175"
+            }
+          ],
+          "missing_checkpoint_seeds": [],
+          "selected_best_epochs": {
+            "0": 475,
+            "1": 475,
+            "2": 500
+          },
+          "models": [
+            "FeatExtractNetVariants"
+          ],
+          "mean_s_per_epoch": 0.213435,
+          "mean_wall_time_s": 106.7,
+          "test_re_first": {
+            "u": 0.0818359472980901,
+            "v": 0.0611564435934446,
+            "p": 0.03061693649643322,
+            "T": 0.03480121756470711
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "fen_noshortcut": {
+          "root": "results/round2_ablation_symmetric/fen_noshortcut",
+          "declared_seeds": 3,
+          "actual_seeds": [
+            0,
+            1,
+            2
+          ],
+          "n_seeds": 3,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [
+            3,
+            4
+          ],
+          "optional_uniform5": [
+            3,
+            4
+          ],
+          "checkpoint_count": 3,
+          "checkpoints": [
+            {
+              "seed": 0,
+              "path": "results/round2_ablation_symmetric/fen_noshortcut\\seed0\\checkpoint_best.pth",
+              "sha256": "1d211f0f6803945806119f7be3b8230723163ee2ec554d302e404b694e7d6b17"
+            },
+            {
+              "seed": 1,
+              "path": "results/round2_ablation_symmetric/fen_noshortcut\\seed1\\checkpoint_best.pth",
+              "sha256": "9fd2a5070fb05055f7c40232dcf66dacf584e55809de95c9d16d478199889022"
+            },
+            {
+              "seed": 2,
+              "path": "results/round2_ablation_symmetric/fen_noshortcut\\seed2\\checkpoint_best.pth",
+              "sha256": "9e94a6f327944980c38f664ff967627e85c6090eab33af2805524ed3e298aa02"
+            }
+          ],
+          "missing_checkpoint_seeds": [],
+          "selected_best_epochs": {
+            "0": 250,
+            "1": 350,
+            "2": 500
+          },
+          "models": [
+            "FeatExtractNetVariants"
+          ],
+          "mean_s_per_epoch": 0.315161,
+          "mean_wall_time_s": 157.6,
+          "test_re_first": {
+            "u": 0.09066651269913997,
+            "v": 0.08197894844886203,
+            "p": 0.02666506272624116,
+            "T": 0.02684590998760105
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "fen_poolmax": {
+          "root": "results/round2_ablation_symmetric/fen_poolmax",
+          "declared_seeds": 3,
+          "actual_seeds": [
+            0,
+            1,
+            2
+          ],
+          "n_seeds": 3,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [
+            3,
+            4
+          ],
+          "optional_uniform5": [
+            3,
+            4
+          ],
+          "checkpoint_count": 3,
+          "checkpoints": [
+            {
+              "seed": 0,
+              "path": "results/round2_ablation_symmetric/fen_poolmax\\seed0\\checkpoint_best.pth",
+              "sha256": "ff49ec816a4af0e44bd909158d0b9ab29a3ffab21fc9f35ca325636904c970ed"
+            },
+            {
+              "seed": 1,
+              "path": "results/round2_ablation_symmetric/fen_poolmax\\seed1\\checkpoint_best.pth",
+              "sha256": "4c2e7bafa10455eb67cdd8a01a8203c486b31a0e2c31dc5bb1acf9c1085d1566"
+            },
+            {
+              "seed": 2,
+              "path": "results/round2_ablation_symmetric/fen_poolmax\\seed2\\checkpoint_best.pth",
+              "sha256": "b14cdf883aabef1a4b0aa127c8ff12e9daf4c710aff7c5d92f47d1471e911618"
+            }
+          ],
+          "missing_checkpoint_seeds": [],
+          "selected_best_epochs": {
+            "0": 225,
+            "1": 475,
+            "2": 500
+          },
+          "models": [
+            "FeatExtractNetVariants"
+          ],
+          "mean_s_per_epoch": 0.319598,
+          "mean_wall_time_s": 159.8,
+          "test_re_first": {
+            "u": 0.10512901067282146,
+            "v": 0.08485284063991597,
+            "p": 0.02370188008323453,
+            "T": 0.03490567595408796
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        }
+      },
+      "mean_wall_time_s_group_sum": 859.5,
+      "metrics_count": 21,
+      "missing_checkpoint_count": 0,
+      "optional_uniform5_seed_rows": 14,
+      "optional_uniform5_cost_estimate_s": 1719.0
+    },
+    {
+      "id": "acoustic_fourier_c_3",
+      "title": "Conditional Fourier MLP corrected pointwise（Table 2/S6）",
+      "root": "results/round2_acoustic_pointwise/fourier_c",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 3,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/round2_acoustic_pointwise/fourier_c\\seed0\\checkpoint_best.pth",
+          "sha256": "eb9c45db64655e156dfc07acf23e6abe12a4d3fe053e20cdd80c8038bedb2ab9"
+        },
+        {
+          "seed": 1,
+          "path": "results/round2_acoustic_pointwise/fourier_c\\seed1\\checkpoint_best.pth",
+          "sha256": "31f67148ffc8f9b9d50d3ffa208b6cc3d1e48ff48ab3746c23d1ce0927cc2c77"
+        },
+        {
+          "seed": 2,
+          "path": "results/round2_acoustic_pointwise/fourier_c\\seed2\\checkpoint_best.pth",
+          "sha256": "124db5b45f96533ff63de9af33ff13dfbedb0a07f87cf522205997ca7456dd39"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 450,
+        "1": 600,
+        "2": 600
+      },
+      "models": [
+        "AcousticHead"
+      ],
+      "mean_s_per_epoch": 0.532863,
+      "mean_wall_time_s": 532.9,
+      "test_re_first": {
+        "p_total": 1.1751630712230952
+      },
+      "table": "Table 2 tab:res_a; S6",
+      "entry": "scripts/exp_acoustic.py",
+      "config": "configs/acoustic_cases.json; pointwise Fourier; strict FP32; test 9 left-source + 1 diagnostic",
+      "precision_note": "tf32_matmul_allow=False, tf32_cudnn_allow=False",
+      "optional_uniform5_cost_estimate_s": 1065.8
+    },
+    {
+      "id": "acoustic_fourier_nc_3",
+      "title": "Unconditioned Fourier MLP corrected pointwise（Table 2）",
+      "root": "results/round2_acoustic_pointwise/fourier_nc",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 3,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/round2_acoustic_pointwise/fourier_nc\\seed0\\checkpoint_best.pth",
+          "sha256": "2d1a5e86ddd2b795d3b214662616be7a3d9f495b5ba12c57e9feb6ba1f27c278"
+        },
+        {
+          "seed": 1,
+          "path": "results/round2_acoustic_pointwise/fourier_nc\\seed1\\checkpoint_best.pth",
+          "sha256": "31d987ba32b7a361433477ba2bb5cff13a4c897ff47bff6297691dd0a2d166c1"
+        },
+        {
+          "seed": 2,
+          "path": "results/round2_acoustic_pointwise/fourier_nc\\seed2\\checkpoint_best.pth",
+          "sha256": "1386b0ec7c876d1fe5febd6def0c00c0609ba193a86d6e7dc6f17da0c6d1d010"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 100,
+        "1": 100,
+        "2": 100
+      },
+      "models": [
+        "AcousticHead"
+      ],
+      "mean_s_per_epoch": 0.533839,
+      "mean_wall_time_s": 533.8,
+      "test_re_first": {
+        "p_total": 1.0706850340021423
+      },
+      "table": "Table 2 tab:res_a; S6",
+      "entry": "scripts/exp_acoustic.py",
+      "config": "configs/acoustic_cases.json; pointwise Fourier; strict FP32; test 9 left-source + 1 diagnostic",
+      "precision_note": "tf32_matmul_allow=False, tf32_cudnn_allow=False",
+      "optional_uniform5_cost_estimate_s": 1067.6
+    },
+    {
+      "id": "acoustic_unified_3",
+      "title": "UnifiedNet acoustic corrected pointwise（Table 2）",
+      "root": "results/round2_acoustic_pointwise/unif_acous",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 3,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/round2_acoustic_pointwise/unif_acous\\seed0\\checkpoint_best.pth",
+          "sha256": "3ac91402c6010fd76088cf7314b1226bff328c19bd702e3ba518b97c4a3201f3"
+        },
+        {
+          "seed": 1,
+          "path": "results/round2_acoustic_pointwise/unif_acous\\seed1\\checkpoint_best.pth",
+          "sha256": "5da954913c7a0968aca5affa53d0643d2db88916ea3b5f2ed3a67dab2446e431"
+        },
+        {
+          "seed": 2,
+          "path": "results/round2_acoustic_pointwise/unif_acous\\seed2\\checkpoint_best.pth",
+          "sha256": "52a32d11685781463cf615f3a9d3b42efaf59b872a3260123bf84bd839ab93dc"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 250,
+        "1": 200,
+        "2": 250
+      },
+      "models": [
+        "AcousticHead"
+      ],
+      "mean_s_per_epoch": 1.432951,
+      "mean_wall_time_s": 1433.0,
+      "test_re_first": {
+        "p_total": 1.190883176786653
+      },
+      "table": "Table 2 tab:res_a; S6",
+      "entry": "scripts/exp_acoustic.py",
+      "config": "configs/acoustic_cases.json; pointwise Fourier; strict FP32; test 9 left-source + 1 diagnostic",
+      "precision_note": "tf32_matmul_allow=False, tf32_cudnn_allow=False",
+      "optional_uniform5_cost_estimate_s": 2866.0
+    },
+    {
+      "id": "acoustic_mlp_c_3",
+      "title": "Conditional coord MLP historical（Table 2）",
+      "root": "results/acoustic_protocolA/mlp_c",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 3,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/acoustic_protocolA/mlp_c\\seed0\\checkpoint_best.pth",
+          "sha256": "d6da5fb4c518043616f03b207710c5058a204e53f0e18d8c5db137c67cb5049c"
+        },
+        {
+          "seed": 1,
+          "path": "results/acoustic_protocolA/mlp_c\\seed1\\checkpoint_best.pth",
+          "sha256": "f58ccee17cf2b97d50de5f527e0d7082db4c29d138d312f9ae45a461d8dd75cc"
+        },
+        {
+          "seed": 2,
+          "path": "results/acoustic_protocolA/mlp_c\\seed2\\checkpoint_best.pth",
+          "sha256": "39027e316088d46b4cd93aeb45c6646541603503931d99ca91b317e57e36b256"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 100,
+        "1": 750,
+        "2": 900
+      },
+      "models": [
+        "AcousticHead"
+      ],
+      "mean_s_per_epoch": 0.279459,
+      "mean_wall_time_s": 279.5,
+      "test_re_first": {
+        "p_total": 0.9990658852228087
+      },
+      "table": "Table 2 tab:res_a",
+      "entry": "scripts/exp_acoustic.py",
+      "config": "configs/acoustic_cases.json; historical numerical settings/step-count caveat",
+      "precision_note": "historical recorded settings; cuda flags not recorded in protocol; not strict FP32 claim",
+      "optional_uniform5_cost_estimate_s": 559.0
+    },
+    {
+      "id": "acoustic_mlp_c_matched_3",
+      "title": "Conditional coord MLP matched historical（Table 2）",
+      "root": "results/acoustic_protocolA/mlp_c_matched",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 3,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/acoustic_protocolA/mlp_c_matched\\seed0\\checkpoint_best.pth",
+          "sha256": "2529288e22e6c1a914adae24afc431547c939132f845d6f402314aaa98df991d"
+        },
+        {
+          "seed": 1,
+          "path": "results/acoustic_protocolA/mlp_c_matched\\seed1\\checkpoint_best.pth",
+          "sha256": "d5137d7b46f24853144ac0c6f7f4d6ccfebee010d29c15b0cf8a2e827c0516fa"
+        },
+        {
+          "seed": 2,
+          "path": "results/acoustic_protocolA/mlp_c_matched\\seed2\\checkpoint_best.pth",
+          "sha256": "6769693805c6f13f74ffc32f9d33dd02fc0e8d75987278c44011232ffb5adf24"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 750,
+        "1": 950,
+        "2": 800
+      },
+      "models": [
+        "AcousticHead"
+      ],
+      "mean_s_per_epoch": 0.301808,
+      "mean_wall_time_s": 301.8,
+      "test_re_first": {
+        "p_total": 1.0056040764443601
+      },
+      "table": "Table 2 tab:res_a",
+      "entry": "scripts/exp_acoustic.py",
+      "config": "configs/acoustic_cases.json; historical numerical settings/step-count caveat",
+      "precision_note": "historical recorded settings; cuda flags not recorded in protocol; not strict FP32 claim",
+      "optional_uniform5_cost_estimate_s": 603.6
+    },
+    {
+      "id": "acoustic_fno_3",
+      "title": "FNO2d historical（Table 2）",
+      "root": "results/acoustic_protocolA/fno",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 3,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/acoustic_protocolA/fno\\seed0\\checkpoint_best.pth",
+          "sha256": "9389b51183f89839a281c11a390416b63ab8112720be43a354297f19ccb60416"
+        },
+        {
+          "seed": 1,
+          "path": "results/acoustic_protocolA/fno\\seed1\\checkpoint_best.pth",
+          "sha256": "a2f1297e33f46aa5822fc38fc3bb7028658cdd6b0404aac59197e27368720b49"
+        },
+        {
+          "seed": 2,
+          "path": "results/acoustic_protocolA/fno\\seed2\\checkpoint_best.pth",
+          "sha256": "a4a139e8bd33fd55eaf83a3a8d03e4232c79d59ae97226d9cec3b725420a14d4"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 50,
+        "1": 50,
+        "2": 50
+      },
+      "models": [
+        "GridModel"
+      ],
+      "mean_s_per_epoch": 0.039721,
+      "mean_wall_time_s": 39.7,
+      "test_re_first": {
+        "p_total": 1.1439482188358068
+      },
+      "table": "Table 2 tab:res_a",
+      "entry": "scripts/exp_acoustic.py",
+      "config": "configs/acoustic_cases.json; historical numerical settings/step-count caveat",
+      "precision_note": "historical recorded settings; cuda flags not recorded in protocol; not strict FP32 claim",
+      "optional_uniform5_cost_estimate_s": 79.4
+    },
+    {
+      "id": "acoustic_uno_3",
+      "title": "UNO historical（Table 2）",
+      "root": "results/acoustic_protocolA/uno",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 3,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/acoustic_protocolA/uno\\seed0\\checkpoint_best.pth",
+          "sha256": "ff251a012d20f363352dab80cce656b6561b5cc1068cabe48fe4819102e2c165"
+        },
+        {
+          "seed": 1,
+          "path": "results/acoustic_protocolA/uno\\seed1\\checkpoint_best.pth",
+          "sha256": "051186bd4cea5c3d944576e148e1917028d4511dd0cb3bd8d7e056f9aa84bad1"
+        },
+        {
+          "seed": 2,
+          "path": "results/acoustic_protocolA/uno\\seed2\\checkpoint_best.pth",
+          "sha256": "8f0c746ef7e385741bcfd6c7526ec80e86fec246ef2c29064a41cf4ec4e40ed8"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 250,
+        "1": 350,
+        "2": 350
+      },
+      "models": [
+        "GridModel"
+      ],
+      "mean_s_per_epoch": 0.266475,
+      "mean_wall_time_s": 266.5,
+      "test_re_first": {
+        "p_total": 1.1356733580805767
+      },
+      "table": "Table 2 tab:res_a",
+      "entry": "scripts/exp_acoustic.py",
+      "config": "configs/acoustic_cases.json; historical numerical settings/step-count caveat",
+      "precision_note": "historical recorded settings; cuda flags not recorded in protocol; not strict FP32 claim",
+      "optional_uniform5_cost_estimate_s": 533.0
+    },
+    {
+      "id": "acoustic_ab_L8_3",
+      "title": "Acoustic ablation L=8 corrected（S6）",
+      "root": "results/round2_acoustic_pointwise/ab_L8",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 3,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/round2_acoustic_pointwise/ab_L8\\seed0\\checkpoint_best.pth",
+          "sha256": "e474b79530bc71a659dae930eb9204bb3cfc1e6b76f0dcede9da2e167ec203b6"
+        },
+        {
+          "seed": 1,
+          "path": "results/round2_acoustic_pointwise/ab_L8\\seed1\\checkpoint_best.pth",
+          "sha256": "fc93e66e946bf50a2e5d85ead4735fe844360797dd9dcbefdde23008665b826f"
+        },
+        {
+          "seed": 2,
+          "path": "results/round2_acoustic_pointwise/ab_L8\\seed2\\checkpoint_best.pth",
+          "sha256": "8e391a4461846476ac55858a5442f93cf6b52850515071b2f2872d42ab3d1583"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 900,
+        "1": 550,
+        "2": 650
+      },
+      "models": [
+        "AcousticHead"
+      ],
+      "mean_s_per_epoch": 0.525128,
+      "mean_wall_time_s": 525.1,
+      "test_re_first": {
+        "p_total": 1.177133316960611
+      },
+      "table": "Table S6 tab:ablation_a",
+      "entry": "scripts/exp_acoustic.py",
+      "config": "configs/acoustic_cases.json; pointwise Fourier; strict FP32",
+      "precision_note": "strict FP32; corrected pointwise layout",
+      "optional_uniform5_cost_estimate_s": 1050.2
+    },
+    {
+      "id": "acoustic_ab_L32_3",
+      "title": "Acoustic ablation L=32 corrected（S6）",
+      "root": "results/round2_acoustic_pointwise/ab_L32",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 3,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/round2_acoustic_pointwise/ab_L32\\seed0\\checkpoint_best.pth",
+          "sha256": "843f24476189ab6d929f6dd892a5010301fdf0263b3cee9c067ca4412624d610"
+        },
+        {
+          "seed": 1,
+          "path": "results/round2_acoustic_pointwise/ab_L32\\seed1\\checkpoint_best.pth",
+          "sha256": "1019790d5fb70369aa26b6691937344bbf9267b5788b455657995752bbf0b421"
+        },
+        {
+          "seed": 2,
+          "path": "results/round2_acoustic_pointwise/ab_L32\\seed2\\checkpoint_best.pth",
+          "sha256": "1b6fad761f9c70469becd569c54b4fdc02b84990258bc4cb9030602d935599fb"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 550,
+        "1": 550,
+        "2": 500
+      },
+      "models": [
+        "AcousticHead"
+      ],
+      "mean_s_per_epoch": 0.537451,
+      "mean_wall_time_s": 537.5,
+      "test_re_first": {
+        "p_total": 1.1706038507804741
+      },
+      "table": "Table S6 tab:ablation_a",
+      "entry": "scripts/exp_acoustic.py",
+      "config": "configs/acoustic_cases.json; pointwise Fourier; strict FP32",
+      "precision_note": "strict FP32; corrected pointwise layout",
+      "optional_uniform5_cost_estimate_s": 1075.0
+    },
+    {
+      "id": "acoustic_ab_nores_3",
+      "title": "Acoustic ablation without residual corrected（S6）",
+      "root": "results/round2_acoustic_pointwise/ab_nores",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 3,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/round2_acoustic_pointwise/ab_nores\\seed0\\checkpoint_best.pth",
+          "sha256": "7e0c99f2b6037d2293c80d80900f6f56fdfd2c72f9ac5b8978545dd62e101d9c"
+        },
+        {
+          "seed": 1,
+          "path": "results/round2_acoustic_pointwise/ab_nores\\seed1\\checkpoint_best.pth",
+          "sha256": "3760ceb19c5637448e9faab02f7e59d9daaa6f6767716830daffed8a9b687d09"
+        },
+        {
+          "seed": 2,
+          "path": "results/round2_acoustic_pointwise/ab_nores\\seed2\\checkpoint_best.pth",
+          "sha256": "9b439efa6b7ea58129b23362b4d5cf4b2b14789adce509a7c071ce895544d2be"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 50,
+        "1": 200,
+        "2": 150
+      },
+      "models": [
+        "AcousticHead"
+      ],
+      "mean_s_per_epoch": 0.47664,
+      "mean_wall_time_s": 476.6,
+      "test_re_first": {
+        "p_total": 1.0657117455786782
+      },
+      "table": "Table S6 tab:ablation_a",
+      "entry": "scripts/exp_acoustic.py",
+      "config": "configs/acoustic_cases.json; pointwise Fourier; strict FP32",
+      "precision_note": "strict FP32; corrected pointwise layout",
+      "optional_uniform5_cost_estimate_s": 953.2
+    },
+    {
+      "id": "acoustic_ab_nonorm_3",
+      "title": "Acoustic ablation without LN corrected（S6）",
+      "root": "results/round2_acoustic_pointwise/ab_nonorm",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 3,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/round2_acoustic_pointwise/ab_nonorm\\seed0\\checkpoint_best.pth",
+          "sha256": "91535fa0ed7a8d8686d26bd362d959fccb8e083bdf428678bbeba68ae41b5c3e"
+        },
+        {
+          "seed": 1,
+          "path": "results/round2_acoustic_pointwise/ab_nonorm\\seed1\\checkpoint_best.pth",
+          "sha256": "25fcc2fd8b7c9cda66c7dfe2818c80008dfd4242ccb522a43d2367e4fc215d8e"
+        },
+        {
+          "seed": 2,
+          "path": "results/round2_acoustic_pointwise/ab_nonorm\\seed2\\checkpoint_best.pth",
+          "sha256": "112631d45deaa358030d56734bad4aeb35d530f40ddd0cdbe3510e71fc4e3f05"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 850,
+        "1": 1000,
+        "2": 900
+      },
+      "models": [
+        "AcousticHead"
+      ],
+      "mean_s_per_epoch": 0.39833,
+      "mean_wall_time_s": 398.3,
+      "test_re_first": {
+        "p_total": 1.2044766430543214
+      },
+      "table": "Table S6 tab:ablation_a",
+      "entry": "scripts/exp_acoustic.py",
+      "config": "configs/acoustic_cases.json; pointwise Fourier; strict FP32",
+      "precision_note": "strict FP32; corrected pointwise layout",
+      "optional_uniform5_cost_estimate_s": 796.6
+    },
+    {
+      "id": "matched_supervised_3",
+      "title": "Matched physics Supervised（S11/S12）",
+      "root": "results/round2_pinn_thermal_matched/supervised",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 3,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/round2_pinn_thermal_matched/supervised\\seed0\\checkpoint_best.pth",
+          "sha256": "22af0573989056f41c605479833e6934199a24760903bf62aa7fd28e4cfdb78c"
+        },
+        {
+          "seed": 1,
+          "path": "results/round2_pinn_thermal_matched/supervised\\seed1\\checkpoint_best.pth",
+          "sha256": "bc9a48917f2de056c417c18ad18821057335185546884aaa5cda73d54e29c4a9"
+        },
+        {
+          "seed": 2,
+          "path": "results/round2_pinn_thermal_matched/supervised\\seed2\\checkpoint_best.pth",
+          "sha256": "d70a1a682520ce69ae795a83e87e2836057a0e5fac4d0357381835146c8c42f5"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 425,
+        "1": 425,
+        "2": 500
+      },
+      "models": [
+        "{'name': 'CoordMLP', 'hidden': 512, 'num_layers': 6, 'params': 1054212}"
+      ],
+      "mean_s_per_epoch": null,
+      "mean_wall_time_s": 79.2,
+      "test_re_first": {
+        "u": 0.13236057931631967,
+        "v": 0.12446844540876115,
+        "p": 0.028561981193691577,
+        "T": 0.04504877372045957
+      },
+      "table": "Table S11/S12",
+      "entry": "scripts/exp_r2_pinn_thermal.py",
+      "config": "configs/splits_thermal.json; 10 train/3 val; 600 epochs",
+      "precision_note": "strict FP32; fixed residual scales; val3 selection, test20 frozen",
+      "optional_uniform5_cost_estimate_s": 158.4
+    },
+    {
+      "id": "matched_bc_3",
+      "title": "Matched physics Supervised+BC（S11/S12）",
+      "root": "results/round2_pinn_thermal_matched/bc",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 3,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/round2_pinn_thermal_matched/bc\\seed0\\checkpoint_best.pth",
+          "sha256": "d1282b7c3a1445694cc8ca81e2deccf7c410e3424d0f34b639800f39cd669290"
+        },
+        {
+          "seed": 1,
+          "path": "results/round2_pinn_thermal_matched/bc\\seed1\\checkpoint_best.pth",
+          "sha256": "82a7a6e04405003442f315ecead90a0cabb063ab2706cc0a4c60da2e09039710"
+        },
+        {
+          "seed": 2,
+          "path": "results/round2_pinn_thermal_matched/bc\\seed2\\checkpoint_best.pth",
+          "sha256": "2bdaf3cd3b88b446cedd4f177c269114fe9b371519c9690835da36c2819e0137"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 600,
+        "1": 600,
+        "2": 575
+      },
+      "models": [
+        "{'name': 'CoordMLP', 'hidden': 512, 'num_layers': 6, 'params': 1054212}"
+      ],
+      "mean_s_per_epoch": null,
+      "mean_wall_time_s": 80.0,
+      "test_re_first": {
+        "u": 0.12975048660592325,
+        "v": 0.11378503202414694,
+        "p": 0.029240911468698512,
+        "T": 0.044664419555866676
+      },
+      "table": "Table S11/S12",
+      "entry": "scripts/exp_r2_pinn_thermal.py",
+      "config": "configs/splits_thermal.json; 10 train/3 val; 600 epochs",
+      "precision_note": "strict FP32; fixed residual scales; val3 selection, test20 frozen",
+      "optional_uniform5_cost_estimate_s": 160.0
+    },
+    {
+      "id": "matched_bc_pde_3",
+      "title": "Matched physics Supervised+BC+PDE（S11/S12）",
+      "root": "results/round2_pinn_thermal_matched/bc_pde",
+      "declared_seeds": 3,
+      "actual_seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        3,
+        4
+      ],
+      "optional_uniform5": [
+        3,
+        4
+      ],
+      "checkpoint_count": 3,
+      "checkpoints": [
+        {
+          "seed": 0,
+          "path": "results/round2_pinn_thermal_matched/bc_pde\\seed0\\checkpoint_best.pth",
+          "sha256": "de74e820ae9d6531ab398d11968cf49387b56ed6f8b86398e2a65fd36755abc6"
+        },
+        {
+          "seed": 1,
+          "path": "results/round2_pinn_thermal_matched/bc_pde\\seed1\\checkpoint_best.pth",
+          "sha256": "7cba17cfe476a66519911b3ecdc0c660d258d5296aeccd95bc1556014a573ed4"
+        },
+        {
+          "seed": 2,
+          "path": "results/round2_pinn_thermal_matched/bc_pde\\seed2\\checkpoint_best.pth",
+          "sha256": "9226c2288e2112abcc5069549c9b43846e3999e2de9f8821aa8b5bc711be8df9"
+        }
+      ],
+      "missing_checkpoint_seeds": [],
+      "selected_best_epochs": {
+        "0": 600,
+        "1": 500,
+        "2": 550
+      },
+      "models": [
+        "{'name': 'CoordMLP', 'hidden': 512, 'num_layers': 6, 'params': 1054212}"
+      ],
+      "mean_s_per_epoch": null,
+      "mean_wall_time_s": 169.7,
+      "test_re_first": {
+        "u": 0.24332447367989912,
+        "v": 0.27546260184590265,
+        "p": 0.07288689101322111,
+        "T": 0.07595221382653906
+      },
+      "table": "Table S11/S12",
+      "entry": "scripts/exp_r2_pinn_thermal.py",
+      "config": "configs/splits_thermal.json; 10 train/3 val; 600 epochs",
+      "precision_note": "strict FP32; fixed residual scales; val3 selection, test20 frozen",
+      "optional_uniform5_cost_estimate_s": 339.4
+    },
+    {
+      "id": "geometry_family_sep",
+      "title": "完整家族 + 分离角度（Table 5）",
+      "table": "Table 5 tab:family_generalization",
+      "entry": "scripts/exp_r2_geometry.py",
+      "config": "configs/r2_geometry_protocols.json",
+      "declared_seeds": 5,
+      "actual_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "n_seeds": 5,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [],
+      "variants": {
+        "leave_family_7/feat_extract": {
+          "root": "results/round2_geometry/leave_family_7/feat_extract",
+          "declared_seeds": 5,
+          "actual_seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "n_seeds": 5,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [],
+          "optional_uniform5": [],
+          "checkpoint_count": 1,
+          "checkpoints": [
+            {
+              "seed": 0,
+              "path": "results/round2_geometry/leave_family_7/feat_extract\\seed0\\checkpoint_best.pth",
+              "sha256": "25c05aa9c83892f3bc7257c213305bf577335fa8368e7713fd39678419ad7eae"
+            }
+          ],
+          "missing_checkpoint_seeds": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "selected_best_epochs": {
+            "0": 100,
+            "1": 500,
+            "2": 450,
+            "3": 475,
+            "4": 450
+          },
+          "models": [
+            "feat_extract"
+          ],
+          "mean_s_per_epoch": null,
+          "mean_wall_time_s": null,
+          "test_re_first": {
+            "u": 0.1295303328769236,
+            "v": 0.11386570636378471,
+            "p": 0.03212331193820514,
+            "T": 0.04922075130377666
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "leave_family_7/meshgraphnet": {
+          "root": "results/round2_geometry/leave_family_7/meshgraphnet",
+          "declared_seeds": 5,
+          "actual_seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "n_seeds": 5,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [],
+          "optional_uniform5": [],
+          "checkpoint_count": 2,
+          "checkpoints": [
+            {
+              "seed": 3,
+              "path": "results/round2_geometry/leave_family_7/meshgraphnet\\seed3\\checkpoint_best.pth",
+              "sha256": "424df8ad2cc26e064d293a3d5712d75114c666a34ad0ba5caa079e0d5f3800dd"
+            },
+            {
+              "seed": 4,
+              "path": "results/round2_geometry/leave_family_7/meshgraphnet\\seed4\\checkpoint_best.pth",
+              "sha256": "c1d1143b64b8afae683a8875b772db778f6b12039f0abad831ef9249ae15444e"
+            }
+          ],
+          "missing_checkpoint_seeds": [
+            0,
+            1,
+            2
+          ],
+          "selected_best_epochs": {
+            "0": 500,
+            "1": 475,
+            "2": 450,
+            "3": 500,
+            "4": 500
+          },
+          "models": [
+            "meshgraphnet"
+          ],
+          "mean_s_per_epoch": null,
+          "mean_wall_time_s": null,
+          "test_re_first": {
+            "u": 0.0986509872147139,
+            "v": 0.07797951287276271,
+            "p": 0.024222840923628818,
+            "T": 0.03647365659479108
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "leave_family_8/feat_extract": {
+          "root": "results/round2_geometry/leave_family_8/feat_extract",
+          "declared_seeds": 5,
+          "actual_seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "n_seeds": 5,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [],
+          "optional_uniform5": [],
+          "checkpoint_count": 0,
+          "checkpoints": [],
+          "missing_checkpoint_seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "selected_best_epochs": {
+            "0": 375,
+            "1": 450,
+            "2": 450,
+            "3": 475,
+            "4": 500
+          },
+          "models": [
+            "feat_extract"
+          ],
+          "mean_s_per_epoch": null,
+          "mean_wall_time_s": null,
+          "test_re_first": {
+            "u": 0.09635412638721934,
+            "v": 0.07895592853988913,
+            "p": 0.022805116584883243,
+            "T": 0.03060115385367582
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "leave_family_8/meshgraphnet": {
+          "root": "results/round2_geometry/leave_family_8/meshgraphnet",
+          "declared_seeds": 5,
+          "actual_seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "n_seeds": 5,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [],
+          "optional_uniform5": [],
+          "checkpoint_count": 2,
+          "checkpoints": [
+            {
+              "seed": 3,
+              "path": "results/round2_geometry/leave_family_8/meshgraphnet\\seed3\\checkpoint_best.pth",
+              "sha256": "bb9c32118377936d21ce780040ac1d8c78e6d09f735f2f4b8879f336b8b416a7"
+            },
+            {
+              "seed": 4,
+              "path": "results/round2_geometry/leave_family_8/meshgraphnet\\seed4\\checkpoint_best.pth",
+              "sha256": "bc887a1e79480c3c6746e85139f866daa515f2dc094cb1e0f928e4665e6dc1af"
+            }
+          ],
+          "missing_checkpoint_seeds": [
+            0,
+            1,
+            2
+          ],
+          "selected_best_epochs": {
+            "0": 375,
+            "1": 500,
+            "2": 500,
+            "3": 475,
+            "4": 375
+          },
+          "models": [
+            "meshgraphnet"
+          ],
+          "mean_s_per_epoch": null,
+          "mean_wall_time_s": null,
+          "test_re_first": {
+            "u": 0.08296644751461425,
+            "v": 0.08116052443199062,
+            "p": 0.01738646697465635,
+            "T": 0.031108108017215672
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "leave_family_9/feat_extract": {
+          "root": "results/round2_geometry/leave_family_9/feat_extract",
+          "declared_seeds": 5,
+          "actual_seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "n_seeds": 5,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [],
+          "optional_uniform5": [],
+          "checkpoint_count": 0,
+          "checkpoints": [],
+          "missing_checkpoint_seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "selected_best_epochs": {
+            "0": 500,
+            "1": 450,
+            "2": 500,
+            "3": 475,
+            "4": 425
+          },
+          "models": [
+            "feat_extract"
+          ],
+          "mean_s_per_epoch": null,
+          "mean_wall_time_s": null,
+          "test_re_first": {
+            "u": 0.06318426589380499,
+            "v": 0.04922689133066085,
+            "p": 0.01641936241232237,
+            "T": 0.01569812515322302
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "leave_family_9/meshgraphnet": {
+          "root": "results/round2_geometry/leave_family_9/meshgraphnet",
+          "declared_seeds": 5,
+          "actual_seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "n_seeds": 5,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [],
+          "optional_uniform5": [],
+          "checkpoint_count": 2,
+          "checkpoints": [
+            {
+              "seed": 3,
+              "path": "results/round2_geometry/leave_family_9/meshgraphnet\\seed3\\checkpoint_best.pth",
+              "sha256": "634f36397e7b850e7e9ff03a330346c8c64da661bda4dde80e080ef7351f44b8"
+            },
+            {
+              "seed": 4,
+              "path": "results/round2_geometry/leave_family_9/meshgraphnet\\seed4\\checkpoint_best.pth",
+              "sha256": "6b68ac28ca59f496058acf823cc6d658e6468037b8a936d99d22dd2f9eea7bf0"
+            }
+          ],
+          "missing_checkpoint_seeds": [
+            0,
+            1,
+            2
+          ],
+          "selected_best_epochs": {
+            "0": 500,
+            "1": 475,
+            "2": 475,
+            "3": 475,
+            "4": 500
+          },
+          "models": [
+            "meshgraphnet"
+          ],
+          "mean_s_per_epoch": null,
+          "mean_wall_time_s": null,
+          "test_re_first": {
+            "u": 0.03862015948593347,
+            "v": 0.03472989517718937,
+            "p": 0.02209877746930372,
+            "T": 0.012893675759601802
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "separated_angles/feat_extract": {
+          "root": "results/round2_geometry/separated_angles/feat_extract",
+          "declared_seeds": 5,
+          "actual_seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "n_seeds": 5,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [],
+          "optional_uniform5": [],
+          "checkpoint_count": 0,
+          "checkpoints": [],
+          "missing_checkpoint_seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "selected_best_epochs": {
+            "0": 400,
+            "1": 350,
+            "2": 500,
+            "3": 400,
+            "4": 350
+          },
+          "models": [
+            "feat_extract"
+          ],
+          "mean_s_per_epoch": null,
+          "mean_wall_time_s": null,
+          "test_re_first": {
+            "u": 0.11643302174275322,
+            "v": 0.10439954823173306,
+            "p": 0.027994772629778845,
+            "T": 0.03309603876194354
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        },
+        "separated_angles/meshgraphnet": {
+          "root": "results/round2_geometry/separated_angles/meshgraphnet",
+          "declared_seeds": 5,
+          "actual_seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "n_seeds": 5,
+          "missing_seeds_vs_declared": [],
+          "missing_seeds_0_4": [],
+          "optional_uniform5": [],
+          "checkpoint_count": 2,
+          "checkpoints": [
+            {
+              "seed": 3,
+              "path": "results/round2_geometry/separated_angles/meshgraphnet\\seed3\\checkpoint_best.pth",
+              "sha256": "c6bd71f0224590d075d716bdadde7d204242ae57d33de113c50b74d8d52a5cbb"
+            },
+            {
+              "seed": 4,
+              "path": "results/round2_geometry/separated_angles/meshgraphnet\\seed4\\checkpoint_best.pth",
+              "sha256": "4f57742e62a7c84e66b575222df725bd6ae116890959b7f743246ba2d1770e9f"
+            }
+          ],
+          "missing_checkpoint_seeds": [
+            0,
+            1,
+            2
+          ],
+          "selected_best_epochs": {
+            "0": 400,
+            "1": 300,
+            "2": 450,
+            "3": 475,
+            "4": 450
+          },
+          "models": [
+            "meshgraphnet"
+          ],
+          "mean_s_per_epoch": null,
+          "mean_wall_time_s": null,
+          "test_re_first": {
+            "u": 0.07927863779578942,
+            "v": 0.057957700159076975,
+            "p": 0.025976462680465353,
+            "T": 0.02292510320610453
+          },
+          "table": null,
+          "entry": null,
+          "config": null,
+          "precision_note": null
+        }
+      },
+      "checkpoint_count": 9,
+      "metrics_count": 40,
+      "notes": "40 seed rows total (8 protocols/models x 5 seeds); only 9 checkpoint_best.pth present. Metrics/protocol/report exist for all; missing checkpoints limit reuse for new inference, not the reported test metrics.",
+      "mean_wall_time_s_group_sum": null,
+      "missing_checkpoint_count": 31,
+      "optional_uniform5_seed_rows": 0,
+      "optional_uniform5_cost_estimate_s": null,
+      "checkpoint_gap": 31,
+      "precision_note": "strict FP32 via fp32_flags (cuda_matmul_allow_tf32=False, cudnn_allow_tf32=False)"
+    },
+    {
+      "id": "local_error_analysis",
+      "title": "局部误差分析（S6/S8）",
+      "root": "results/round2_local_error",
+      "declared_seeds": 5,
+      "note": "5 main seeds x 20 test geometries; no training",
+      "table": "局部误差分析（S6/S8）",
+      "entry": "analysis scripts",
+      "config": "existing frozen predictions",
+      "optional_uniform5_cost_estimate_s": null
+    },
+    {
+      "id": "support_sensitivity",
+      "title": "支撑点密度敏感性（S7）",
+      "root": "results/round2_support_sensitivity",
+      "declared_seeds": 3,
+      "note": "analysis on seeds 0-2; no training",
+      "table": "支撑点密度敏感性（S7）",
+      "entry": "analysis scripts",
+      "config": "existing frozen predictions",
+      "optional_uniform5_cost_estimate_s": null
+    },
+    {
+      "id": "new_query",
+      "title": "新坐标/Sobol/jittered 分析（S14）",
+      "root": "results/round2_new_queries",
+      "declared_seeds": 5,
+      "note": "analysis on 5 seeds; no training",
+      "table": "新坐标/Sobol/jittered 分析（S14）",
+      "entry": "analysis scripts",
+      "config": "existing frozen predictions",
+      "optional_uniform5_cost_estimate_s": null
+    },
+    {
+      "id": "fivefold_historical",
+      "title": "单seed 5折历史材料",
+      "root": "results/thermal_cv",
+      "table": "historical_diagnostics.tex (not included in current main)",
+      "entry": "scripts/exp_thermal_cv.py",
+      "config": "configs/splits_thermal.json Protocol-B",
+      "declared_seeds": 1,
+      "actual_seeds": [
+        0
+      ],
+      "n_seeds": 1,
+      "missing_seeds_vs_declared": [],
+      "missing_seeds_0_4": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "variants": {
+        "feat_extract/fold0": {
+          "fold": 0,
+          "seed": 0,
+          "metrics": [
+            "results/thermal_cv/feat_extract/fold0/seed0/metrics_seed0.json"
+          ],
+          "checkpoint": true
+        },
+        "feat_extract/fold1": {
+          "fold": 1,
+          "seed": 0,
+          "metrics": [
+            "results/thermal_cv/feat_extract/fold1/seed0/metrics_seed0.json"
+          ],
+          "checkpoint": true
+        },
+        "feat_extract/fold2": {
+          "fold": 2,
+          "seed": 0,
+          "metrics": [
+            "results/thermal_cv/feat_extract/fold2/seed0/metrics_seed0.json"
+          ],
+          "checkpoint": true
+        },
+        "feat_extract/fold3": {
+          "fold": 3,
+          "seed": 0,
+          "metrics": [
+            "results/thermal_cv/feat_extract/fold3/seed0/metrics_seed0.json"
+          ],
+          "checkpoint": true
+        },
+        "feat_extract/fold4": {
+          "fold": 4,
+          "seed": 0,
+          "metrics": [
+            "results/thermal_cv/feat_extract/fold4/seed0/metrics_seed0.json"
+          ],
+          "checkpoint": true
+        },
+        "unif_therm/fold0": {
+          "fold": 0,
+          "seed": 0,
+          "metrics": [
+            "results/thermal_cv/unif_therm/fold0/seed0/metrics_seed0.json"
+          ],
+          "checkpoint": true
+        },
+        "unif_therm/fold1": {
+          "fold": 1,
+          "seed": 0,
+          "metrics": [
+            "results/thermal_cv/unif_therm/fold1/seed0/metrics_seed0.json"
+          ],
+          "checkpoint": true
+        },
+        "unif_therm/fold2": {
+          "fold": 2,
+          "seed": 0,
+          "metrics": [
+            "results/thermal_cv/unif_therm/fold2/seed0/metrics_seed0.json"
+          ],
+          "checkpoint": true
+        },
+        "unif_therm/fold3": {
+          "fold": 3,
+          "seed": 0,
+          "metrics": [
+            "results/thermal_cv/unif_therm/fold3/seed0/metrics_seed0.json"
+          ],
+          "checkpoint": true
+        },
+        "unif_therm/fold4": {
+          "fold": 4,
+          "seed": 0,
+          "metrics": [
+            "results/thermal_cv/unif_therm/fold4/seed0/metrics_seed0.json"
+          ],
+          "checkpoint": true
+        }
+      },
+      "notes": "One training seed per fold; no current manuscript input; do not compare as seed uncertainty or retrain in this inventory.",
+      "mean_wall_time_s_group_sum": null,
+      "checkpoint_count": 0,
+      "metrics_count": 0,
+      "missing_checkpoint_count": 0,
+      "optional_uniform5_seed_rows": 0,
+      "optional_uniform5_cost_estimate_s": null,
+      "not_required_missing": "historical single-seed fivefold; not a current table row; do not retrain without new protocol"
+    }
+  ],
+  "excluded_historical_or_invalid": [
+    {
+      "path": "results/thermal_protocolA/feat_extract",
+      "reason": "old K=32/index-bin context implementation; current main table uses round2_thermal_symmetric"
+    },
+    {
+      "path": "results/thermal_protocolA/unif_therm",
+      "reason": "historical unified thermal model; not current main table"
+    },
+    {
+      "path": "results/ablation_thermal_protocolA",
+      "reason": "old legacy-context ablation; not current symmetric/maininit table"
+    },
+    {
+      "path": "results/acoustic_broken_archive",
+      "reason": "incorrect Fourier layout; invalid for corrected model"
+    },
+    {
+      "path": "results/acoustic_protocolA/fourier_c",
+      "reason": "old Fourier helper layout; superseded by round2_acoustic_pointwise; do not mix weights"
+    },
+    {
+      "path": "results/acoustic_protocolA/fourier_nc",
+      "reason": "old Fourier helper layout; superseded by round2_acoustic_pointwise"
+    },
+    {
+      "path": "results/acoustic_protocolA/unif_acous",
+      "reason": "old Fourier helper layout; superseded by round2_acoustic_pointwise"
+    },
+    {
+      "path": "results/acoustic_wp5_ablation",
+      "reason": "old Fourier-helper ablation; not current corrected S6 rows"
+    },
+    {
+      "path": "results/joint",
+      "reason": "old shared-backbone/joint experiments affected by Fourier helper and not current thermal/acoustic split"
+    },
+    {
+      "path": "results/pinn_thermal",
+      "reason": "old coefficient-mismatch P1; not correct matched physics"
+    },
+    {
+      "path": "results/pinn_acoustic",
+      "reason": "historical unstable acoustic PINN; not current evidence"
+    }
+  ],
+  "kan_operator": {
+    "real_results_in_repo": false,
+    "evidence": "No KAN/PIKAN/Geo-FNO/GNO/DeepONet training result in results; only FNO/UNO acoustic grid baselines and literature discussion.",
+    "reusable_interface": [
+      "src/models/baselines/fno.py",
+      "src/models/baselines/meshgraphnet_style.py",
+      "src/core/runner.py",
+      "src/core/thermal_io.py",
+      "scripts/exp_thermal.py",
+      "scripts/exp_r2_geometry.py"
+    ],
+    "missing_work": "Need Codex-frozen model identity, parameter matching, split/normalization/val rule and cost budget before any implementation/training. No seed count can be assigned yet."
+  },
+  "fivefold": {
+    "current_main_references": false,
+    "current_tables": "none",
+    "historical_file": "paper/historical_diagnostics.tex",
+    "note": "single seed per fold; not used for seed uncertainty; no retraining in this inventory"
+  },
+  "open_items": [
+    "No training submitted; wait for Codex frozen protocol.",
+    "Geometry protocol has 40 metrics but only 9 checkpoints; reuse for new-prediction tasks is blocked without regeneration/retraining.",
+    "KAN/geometry-aware operator has no real benchmark result; only literature.",
+    "R3.11/R3.14 remain partial as documented in current matrix; inventory does not claim acceptance."
+  ],
+  "minimal_missing_matrix": [
+    {
+      "item": "Current manuscript rows, declared-seed basis",
+      "required_missing": [],
+      "action": "none; all rows have their declared n seeds and metrics/checkpoints except geometry checkpoint gap below"
+    },
+    {
+      "item": "Optional uniform 5-seed extension of 3-seed rows",
+      "required_missing": "seeds 3,4 for SIREN, PointTransformer, current 6 ablation variants, corrected acoustic models/ablations, matched physics; Full thermal reuses main 3-4",
+      "action": "NOT AUTHORIZED here; costs listed per group; wait for Codex freeze"
+    },
+    {
+      "item": "Geometry family/separated checkpoints",
+      "required_missing": "no missing seed metrics; 31/40 checkpoint_best.pth absent",
+      "action": "reported metrics usable; new inference/reuse blocked; regeneration/retraining decision belongs to Codex; no training this round"
+    },
+    {
+      "item": "Recent geometry-aware operator / KAN quantitative baseline",
+      "required_missing": "no real result in repo; model identity/hyperparams/protocol not frozen",
+      "action": "literature only; require Codex protocol freeze and implementation authorization; no seed/cost estimate"
+    },
+    {
+      "item": "Single-seed fivefold",
+      "required_missing": "none for current main; not referenced by main/supplementary",
+      "action": "historical_diagnostics only; do not retrain/mix"
+    }
+  ],
+  "seed_count_summary": {
+    "canonical_training_groups": 27,
+    "reported_main_fen_seeds": 5,
+    "reported_graph_seeds": 5,
+    "three_seed_groups": "see groups",
+    "current_main_fivefold_table": false
+  },
+  "checkpoint_smoke": {
+    "tool": "local torch 2.5.1+cu121",
+    "files": 18,
+    "loaded_ok": 18,
+    "scope": "5 main FEN + 5 main graph + 3 corrected acoustic Fourier + 3 matched supervised + one geometry FEN + one geometry graph",
+    "note": "existence/load smoke only; not a numerical equivalence or PyTorch 2.10 training-environment test"
+  },
+  "checks_performed": [
+    "Read root AGENTS.md, DSH_COLLABORATION.md, EXPERIMENTS.md, EXPERIMENTS.local.md, ENGINEERING.md, VERIFICATION.md, current 返稿修订 · 实验计划.md, docs/二轮返稿整改矩阵.md, paper/main.tex, supplementary.tex, response_round2.tex",
+    "Walked results/**/metrics_seed*.json and grouped actual seed dirs; counted declared vs actual seeds, selected epochs and protocol fields",
+    "Inspected checkpoint_best.pth existence for each group; computed SHA256 for available checkpoints",
+    "Smoke-loaded 18 representative checkpoints (5 main FEN, 5 main graph, 3 corrected acoustic Fourier, 3 matched supervised, 1 geometry FEN, 1 geometry graph) with local torch 2.5.1+cu121; all 18 loaded (load-only, not training-environment equivalence)",
+    "Searched current main/supplementary/response for five-fold and KAN/operator claims; checked main/supplementary \\input graph",
+    "Searched results/src for KAN/PIKAN/Geo-FNO/GNO/DeepONet artifacts; only FNO/UNO acoustic grid baselines and literature found",
+    "No training, no SLURM submission, no dependency install, no code change, no data/weight/paper/registry modification"
+  ],
+  "required_seed_gaps": [],
+  "source_configs": {
+    "configs/splits_thermal.json": "6fa469f7dfa34748ccebf7903650b494c3e908033176a3d4f30ad7cecc853cfe",
+    "configs/acoustic_cases.json": "69a4b4bc047cca0b2b88e801f752001096289aee27dcd6c193f772eabafaae0b",
+    "configs/r2_geometry_protocols.json": "9465f07a71eddfdaf4b95c2a8535a21572a9242f94c0ae2b98f2ec8a1c726bf3"
+  },
+  "paper_sections_checked": {
+    "Table 1": "paper/main.tex lines 114-136",
+    "Table 2": "paper/main.tex lines 147-172",
+    "Ablation": "paper/main.tex lines 188-207",
+    "Table 5": "paper/main.tex lines 321-344",
+    "Acoustic S6": "paper/supplementary.tex lines 163-180",
+    "Matched S11": "paper/supplementary.tex lines 294-312",
+    "S15 five-seed": "paper/supplementary.tex tab:thermal_per_geometry",
+    "Historical fivefold": "paper/historical_diagnostics.tex (not input)"
+  }
+}

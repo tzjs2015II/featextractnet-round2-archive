@@ -1,0 +1,85 @@
+{
+  "status": "accepted_postreview_pressure_sensitivity_only",
+  "raw_records": 200,
+  "unique_ids_complete": true,
+  "outputs_hashes_match": true,
+  "all10_checkpoint_and_metrics_hashes_match": true,
+  "independent_p_squared_error_decomposition_passed": true,
+  "original_p_re_mae_max_matches_saved_metrics": true,
+  "per_geometry_mean_sample_std_recalculated": true,
+  "seed_level_statistics_independent": {
+    "fen": {
+      "original": {
+        "re": {
+          "seed_mean": 0.02062959211512039,
+          "seed_std_sample": 0.0016836554813407108
+        },
+        "mae": {
+          "seed_mean": 0.002484959572299745,
+          "seed_std_sample": 0.0005422029650106087
+        },
+        "max": {
+          "seed_mean": 0.03820091698318719,
+          "seed_std_sample": 0.0008149713984140378
+        }
+      },
+      "centered": {
+        "re": {
+          "seed_mean": 0.01963436631122513,
+          "seed_std_sample": 0.001324107670791636
+        },
+        "mae": {
+          "seed_mean": 0.002075033148749386,
+          "seed_std_sample": 0.0004404267933959099
+        },
+        "max": {
+          "seed_mean": 0.037976916010062166,
+          "seed_std_sample": 0.0015671211940064672
+        }
+      }
+    },
+    "graph": {
+      "original": {
+        "re": {
+          "seed_mean": 0.014664433209334133,
+          "seed_std_sample": 0.000999716881986271
+        },
+        "mae": {
+          "seed_mean": 0.002421673843691055,
+          "seed_std_sample": 0.0001427630231141001
+        },
+        "max": {
+          "seed_mean": 0.01822771569946781,
+          "seed_std_sample": 0.004757588766831336
+        }
+      },
+      "centered": {
+        "re": {
+          "seed_mean": 0.013377233191385101,
+          "seed_std_sample": 0.001612273601840152
+        },
+        "mae": {
+          "seed_mean": 0.002205143574828363,
+          "seed_std_sample": 0.0002746873462302273
+        },
+        "max": {
+          "seed_mean": 0.018555344539388556,
+          "seed_std_sample": 0.004698778828742897
+        }
+      }
+    }
+  },
+  "coverage_limit": "Supplementary two-model pressure sensitivity; does not recover historical FEM gauge. All prior 200-record identity/hash/arithmetic checks retained.",
+  "findings": [
+    "report headings say mean±std but top tables omit std and use geometry variation; primary seed std should be explicit",
+    "per-seed bootstrap is supplementary; add planned seed-averaged per-geometry paired interval as primary",
+    "excluded main baselines described as missing weights without recorded inventory; avoid unverified blanket absence claim"
+  ],
+  "array_probe_max_abs_metric_error": 1.4901161193847656e-08,
+  "primary_bootstrap_max_abs_ci_error": 0,
+  "findings_closed": [
+    "seed standard deviations explicitly separated from geometry variation",
+    "primary paired geometry bootstrap verified independently",
+    "actual arrays for both model seed0 geometry17 independently scored"
+  ]
+}

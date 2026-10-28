@@ -1,0 +1,23 @@
+# FeatExtractNet — core dependencies
+# ---------------------------------------------------------------------------
+# These are the only third-party packages needed for the manuscript's main
+# results: the thermal tables (§4.2, §4.4, §4.6, §4.7, §5), the acoustic
+# tables (§4.3), the mechanism analysis (§4.9) and the efficiency table (§5).
+#
+# Versions are pinned to the environment in which the released results were
+# produced and verified:
+#     Python 3.13.9 | Linux x86_64 | NVIDIA RTX 4090 D (24 GB)
+#     torch 2.10.0+cu128 (CUDA 12.8 build) | numpy 2.4.2 | scipy 1.17.1
+#     matplotlib 3.10.8
+#
+# Installation (CPU or CUDA build of PyTorch both work; all code paths also run
+# on CPU, only much more slowly):
+#     python -m pip install -r requirements.txt
+# For the CUDA 12.8 build used in the paper:
+#     python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cu128
+#     python -m pip install -r requirements.txt
+
+numpy==2.4.2
+scipy==1.17.1
+matplotlib==3.10.8
+torch==2.10.0

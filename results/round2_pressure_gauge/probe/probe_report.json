@@ -1,0 +1,207 @@
+{
+  "task": "pressure_gauge_probe",
+  "protocol": "R2-THERMAL-REFERENCE-02 A",
+  "created_local": "2026-10-22T22:36:52+08:00",
+  "slurm_job_id": null,
+  "workspace": ".",
+  "data": "HeatTransferData.npy",
+  "analytic": {
+    "translation_invariance": {
+      "pass": true,
+      "centered_and_mae_max_invariant": true,
+      "original_re_changes_as_expected": true,
+      "note": "original RE denominator ||ref|| changes under translation; centered metrics are translation invariant",
+      "shifts": {
+        "-3.7": {
+          "original_re_same": false,
+          "original_mae_same": true,
+          "original_max_same": true,
+          "centered_re_same": true,
+          "centered_mae_same": true,
+          "centered_max_same": true,
+          "bias_same": true,
+          "mean_ref_shifted": true
+        },
+        "2.5": {
+          "original_re_same": false,
+          "original_mae_same": true,
+          "original_max_same": true,
+          "centered_re_same": true,
+          "centered_mae_same": true,
+          "centered_max_same": true,
+          "bias_same": true,
+          "mean_ref_shifted": true
+        },
+        "0.125": {
+          "original_re_same": false,
+          "original_mae_same": true,
+          "original_max_same": true,
+          "centered_re_same": true,
+          "centered_mae_same": true,
+          "centered_max_same": true,
+          "bias_same": true,
+          "mean_ref_shifted": true
+        }
+      }
+    },
+    "zero_centered_norm_undefined": {
+      "pass": true,
+      "centered_re": null,
+      "epsilon_bad_detected": true,
+      "epsilon_bad_re": 6633249580710.8
+    },
+    "identity_decomposition": {
+      "pass": true,
+      "residual": 2.2737367544323206e-13,
+      "relative_residual": 3.6019592149422903e-16,
+      "centered_re": 3.8175436652324884e-16,
+      "bias": 2.4999999999999996
+    },
+    "equal_weight_mean": {
+      "pass": true,
+      "mean": 34.333333333333336,
+      "area_weighted_mean": 1.9803921568627452
+    },
+    "bad_implementation_detectable": {
+      "pass": true,
+      "correct_centered_re": 0.0,
+      "wrong_one_sided_centered_re": 0.9128709291752769
+    },
+    "all_pass": true
+  },
+  "real_smoke": {
+    "split": {
+      "path": "configs/splits_thermal.json",
+      "sha256": "6fa469f7dfa34748ccebf7903650b494c3e908033176a3d4f30ad7cecc853cfe",
+      "test_ids": [
+        17,
+        25,
+        32,
+        46,
+        47,
+        57,
+        66,
+        73,
+        83,
+        86,
+        96,
+        97,
+        98,
+        106,
+        109,
+        111,
+        113,
+        123,
+        126,
+        127
+      ]
+    },
+    "data": {
+      "path": "HeatTransferData.npy",
+      "sha256": "e9bb20c51105607f2e20b6003fc387e8eaed5ad8906a8f11d8f83bc1cf535e26"
+    },
+    "models": {
+      "fen": {
+        "name": "fen",
+        "status": "ok",
+        "geoms": [
+          {
+            "geom_id": 17,
+            "checkpoint": "results/round2_thermal_symmetric/feat_extract/seed0/checkpoint_best.pth",
+            "checkpoint_sha256": "4ca109452729bbc8c5dd435e5ff770441e98bdef3a69818a8a1546817ed2649a",
+            "metrics": "results/round2_thermal_symmetric/feat_extract/seed0/metrics_seed0.json",
+            "metrics_sha256": "ba4d222605a3f05d96d3f7d755e3723be48c73553b54fa06c9d60e9ae6f18470",
+            "original_reproduction_max_abs_error": 1.7881393432617188e-07,
+            "p": {
+              "n": 5000,
+              "mean_ref": 0.002333622470606497,
+              "mean_pred": 0.003299384029919747,
+              "bias_pred_minus_ref": 0.0009657615593132501,
+              "original": {
+                "re": 0.01924548719862574,
+                "mae": 0.0022472057503044197,
+                "max": 0.03782111778855324,
+                "denominator": 14.760120232202569
+              },
+              "centered": {
+                "re": 0.0186822554826896,
+                "mae": 0.0019223485475049489,
+                "max": 0.03685535622923998,
+                "denominator": 14.759197820338992
+              },
+              "identity": {
+                "err_sq": 0.08069332474523408,
+                "centered_err_sq": 0.0760298477979983,
+                "n_times_bias_sq": 0.004663476947235802,
+                "residual": -2.6020852139652106e-17,
+                "relative_residual": 3.2246598119244e-16
+              },
+              "mean_rule": "arithmetic_equal_node_weight (not FEM area integral)"
+            }
+          }
+        ],
+        "artifact_binding": {
+          "pass": true,
+          "checks": {
+            "model": true,
+            "model_label": true,
+            "model_params": true,
+            "strict_fp32": true,
+            "epochs": true,
+            "pool_context": true,
+            "seed": true,
+            "test_20": true,
+            "checkpoint_seed": true,
+            "checkpoint_epoch_binds_val_best": true,
+            "checkpoint_score_binds_val_best": true,
+            "all_pass": true
+          },
+          "checkpoint": "results/round2_thermal_symmetric/feat_extract/seed0/checkpoint_best.pth",
+          "checkpoint_sha256": "4ca109452729bbc8c5dd435e5ff770441e98bdef3a69818a8a1546817ed2649a",
+          "metrics": "results/round2_thermal_symmetric/feat_extract/seed0/metrics_seed0.json",
+          "metrics_sha256": "ba4d222605a3f05d96d3f7d755e3723be48c73553b54fa06c9d60e9ae6f18470",
+          "val_best": {
+            "epoch": 400,
+            "score": 0.04540121550377148
+          }
+        }
+      },
+      "graph": {
+        "name": "graph",
+        "status": "skipped",
+        "geoms": [],
+        "artifact_binding": {
+          "pass": true,
+          "checks": {
+            "model": true,
+            "model_label": true,
+            "model_params": true,
+            "strict_fp32": true,
+            "epochs": true,
+            "pool_context": true,
+            "seed": true,
+            "test_20": true,
+            "checkpoint_seed": true,
+            "checkpoint_epoch_binds_val_best": true,
+            "checkpoint_score_binds_val_best": true,
+            "all_pass": true
+          },
+          "checkpoint": "results/round2_graph_five_seed_main/meshgraphnet/seed0/checkpoint_best.pth",
+          "checkpoint_sha256": "41310eafd9be3126c83348cb918ddf4bc513713473554c7a89d0ab3d4aa6de90",
+          "metrics": "results/round2_graph_five_seed_main/meshgraphnet/seed0/metrics_seed0.json",
+          "metrics_sha256": "dff0c0c03f68e9a0f7158d05bf238a347a17bb02c49246a45fbc22da5648fce4",
+          "val_best": {
+            "epoch": 325,
+            "score": 0.030770865365200434
+          }
+        },
+        "reason": "missing optional dependency: RuntimeError: torch_geometric is not importable here: ModuleNotFoundError(\"No module named 'torch_geometric'\"). Install it (see requirements_ext.txt) or report the row as unavailable."
+      }
+    }
+  },
+  "notes": [
+    "CPU only; no training; no batch GPU inference",
+    "graph skip is explicit if optional dependency unavailable locally",
+    "probe does not write protocol/raw/summary main outputs"
+  ]
+}

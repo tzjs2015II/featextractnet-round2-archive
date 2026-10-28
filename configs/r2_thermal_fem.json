@@ -1,0 +1,176 @@
+{
+  "protocol_id": "R2-THERMAL-REFERENCE-02-v2",
+  "protocol_version": "v2",
+  "module": "R2-THERMAL-FEM-02",
+  "status": "implementation_for_review_no_formal_run",
+  "notes": [
+    "Independent finite-element reference for the thermal Boussinesq benchmark; this is not a PINN, not finite-difference and not interpolation of the stored labels.",
+    "No formal natural-convection solve is run on a login node by the implementing worker; execution is scheduled separately by Codex through SLURM.",
+    "Physical coefficients are frozen from paper/docs; never tune them against the test set or rescale old labels."
+  ],
+  "physics": {
+    "pressure_gauge_eps": 1e-08,
+    "domain": "square [-1,1]^2 minus a centred regular polygon hole",
+    "boundary_conditions": {
+      "walls_velocity": "u = v = 0 on both the outer square and the inner polygon",
+      "temperature": "T = 1 on the inner polygon, T = 0 on the outer square"
+    },
+    "rho": 1.0,
+    "cp": 1.0,
+    "g_beta": 1.0,
+    "T_ref": 0.0,
+    "mu": 0.00894427190999916,
+    "kappa": 0.00894427190999916,
+    "Ra": 100000.0,
+    "Pr": 1.0,
+    "Ra_identity": "Ra = rho^2 cp g_beta DeltaT L^3 / (mu kappa) with L=2, DeltaT=1",
+    "pressure": {
+      "meaning": "pressure enters only through its gradient",
+      "gauge": "mass-penalty zero-mean: add eps*integral(p*q); eps must be reported with true constraint div(u)=-eps*p and sensitivity; not exact gauge",
+      "gauge_alternative": "fixed reference DOF is allowed by the protocol but was replaced after an environment-specific BC issue; the mass penalty is an explicit gauge choice, not a physical force"
+    },
+    "sign_check": {
+      "convention": "y upward; buoyancy term +rho*g_beta*(T-T_ref) in the y-momentum equation",
+      "source_evidence": "paper/main.tex modelling assumptions; docs/P1_热场NS_PINN设计.md residual definitions; data boundary T=1 inner/T=0 outer; data velocity ~0 on all walls"
+    }
+  },
+  "geometries": {
+    "geometry_spec": "results/thermal_geometry_spec.json",
+    "split_config": "configs/splits_thermal.json",
+    "split_protocol": "protocol_A",
+    "boundary_data": "../../HeatTransferData.npy",
+    "boundary_n": 660,
+    "outer_n": 492,
+    "representative": {
+      "seven": 46,
+      "eight": 17,
+      "nine": 96
+    },
+    "pilot": 17,
+    "geometry_classes": {
+      "46": 7,
+      "17": 8,
+      "96": 9
+    }
+  },
+  "mesh": {
+    "type": "independent polar triangle mesh: radial rays from the domain centre between the polygon and the outer square",
+    "radial_distribution": "cosine",
+    "levels": [
+      {
+        "name": "h008",
+        "target_h": 0.08
+      },
+      {
+        "name": "h004",
+        "target_h": 0.04
+      },
+      {
+        "name": "h002",
+        "target_h": 0.02
+      }
+    ],
+    "probe": {
+      "n_theta": 32,
+      "n_radial": 10
+    },
+    "record": "node/element counts, actual h_max, boundary tags, area conservation, min triangle angle and edge ratios are written for every mesh"
+  },
+  "elements": {
+    "velocity": "P2 (Taylor-Hood)",
+    "pressure": "P1 (Taylor-Hood)",
+    "temperature": "P2",
+    "quadrature": "Dunavant degree-5 (7 points)",
+    "verified_by": "manufactured Stokes and advection-diffusion convergence; pressure nullspace; boundary probes"
+  },
+  "solver": {
+    "steady": true,
+    "nonlinear_method": "Picard (Oseen) iterations with under-relaxation",
+    "max_iterations": 200,
+    "relaxation": 0.7,
+    "convergence": {
+      "update_rel_tolerance": 1e-08,
+      "weak_residual_rel_tolerance": 1e-08,
+      "absolute_update_tolerance": 1e-12
+    },
+    "linear_solver": "scipy.sparse.linalg.spsolve (SuperLU)",
+    "stabilization": "none in this first review implementation; if a real pilot shows unresolved oscillation/divergence, record it as a blocker instead of claiming convergence or tuning test-set coefficients",
+    "continuation_gbeta": [
+      0.01,
+      0.1,
+      0.5,
+      1.0
+    ]
+  },
+  "acceptance_thresholds": {
+    "geometry": {
+      "inner_point_to_polygon_rms_max": 1e-09,
+      "outer_hausdorff_max": 1e-09,
+      "boundary_counts": {
+        "outer": 492,
+        "inner": 168
+      }
+    },
+    "boundary": {
+      "wall_velocity_max": 1e-12,
+      "temperature_inner_max_dev": 1e-12,
+      "temperature_outer_max_dev": 1e-12
+    },
+    "mesh": {
+      "area_relative_error": 1e-10,
+      "min_triangle_angle_deg": 1.0,
+      "max_edge_ratio": 50.0,
+      "quality_note": "threshold pre-registered for the independent polar probe mesh; production gmsh meshes must report their own quality and are not silently substituted"
+    },
+    "pressure": {
+      "constant_mode_null_residual_rel": 1e-10,
+      "pinned_value": 0.0
+    },
+    "manufactured": {
+      "stokes_velocity_l2_order_min": 2.5,
+      "stokes_pressure_l2_order_min": 1.5,
+      "energy_temperature_l2_order_min": 2.5,
+      "stokes_velocity_h1_order_min": 1.5,
+      "errors_must_decrease": true
+    },
+    "natural_convection": {
+      "weak_continuity_rel_residual_max": 1e-08,
+      "strong_momentum_l2_max": 1e-06,
+      "strong_energy_l2_max": 1e-06,
+      "wall_velocity_max": 1e-10,
+      "temperature_bc_max_dev": 1e-10,
+      "finite_all_fields": true,
+      "newton_reason_must_be_converged": true,
+      "mass_flux_relative_max": 1e-08,
+      "note": "a finite field or a Stokes pass is NOT natural-convection acceptance; all of these must hold, and no threshold may be tuned on test labels",
+      "weak_momentum_rel_residual_max": 0.01,
+      "weak_energy_rel_residual_max": 0.01,
+      "weak_residual_definition": "variational residual vector assembled at solution, all velocity/T Dirichlet rows zeroed; block norms relative to velocity/temperature L2 scales",
+      "galerkin_free_absolute_max": 1e-12,
+      "galerkin_free_relative_max": 1e-08,
+      "galerkin_residual_definition": "assembly of full nonlinear residual, all velocity/Temperature Dirichlet rows zeroed; free absolute and free/raw relative"
+    }
+  },
+  "runtime": {
+    "python": "tools/envs/pinnap-fem/bin/python",
+    "required_packages": [
+      "numpy",
+      "scipy"
+    ],
+    "external_fem_packages": {
+      "dolfinx": "not installed in any known environment on 2026-10-22",
+      "dolfin": "not installed",
+      "gmsh": "not installed",
+      "skfem": "not installed",
+      "petsc4py": "not installed"
+    },
+    "parallel": "CPU only; SLURM compute partition, no GPU"
+  },
+  "outputs": {
+    "root": "results/round2_thermal_fem",
+    "probe_dir": "results/round2_thermal_fem/probe",
+    "pilot_dir": "results/round2_thermal_fem/pilot",
+    "levels_dir": "results/round2_thermal_fem/levels",
+    "report": "results/round2_thermal_fem/report.md"
+  }
+}

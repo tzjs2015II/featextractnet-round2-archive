@@ -1,0 +1,128 @@
+{
+  "jobs": [
+    [
+      "51013",
+      "r2_fem_v2verify",
+      "FAILED",
+      "1:0",
+      "00:00:09",
+      "v2 probe, pre-fix snapshot/self-test"
+    ],
+    [
+      "51014",
+      "r2_fem_v2verify",
+      "COMPLETED",
+      "0:0",
+      "00:00:08",
+      "v2 probe early"
+    ],
+    [
+      "51015",
+      "r2_fem_v2pilot",
+      "COMPLETED",
+      "0:0",
+      "00:00:09",
+      "v2 pilot early"
+    ],
+    [
+      "51016",
+      "r2_fem_v2levels",
+      "COMPLETED",
+      "0:0",
+      "00:01:27",
+      "geom17 levels 3h + support"
+    ],
+    [
+      "51018",
+      "r2_fem_v2reps",
+      "COMPLETED",
+      "0:0",
+      "00:03:15",
+      "46/96 reps 3h + support (before weak output)"
+    ],
+    [
+      "51019",
+      "r2_fem_v2modeleval",
+      "COMPLETED",
+      "0:0",
+      "00:00:21",
+      "model eval early"
+    ],
+    [
+      "51020",
+      "r2_fem_v2reps2",
+      "COMPLETED",
+      "0:0",
+      "00:03:18",
+      "46/96 reps 3h + weak residual"
+    ],
+    [
+      "51021",
+      "r2_fem_v2me2",
+      "COMPLETED",
+      "0:0",
+      "00:00:20",
+      "model eval final actual refs"
+    ],
+    [
+      "51022",
+      "r2_fem_v2pilot2",
+      "COMPLETED",
+      "0:0",
+      "00:00:07",
+      "geom17 pilot final"
+    ],
+    [
+      "51023",
+      "r2_fem_eps",
+      "COMPLETED",
+      "0:0",
+      "00:00:12",
+      "eps sensitivity 1e-9/1e-7"
+    ],
+    [
+      "51024",
+      "r2_fem_v2verify2",
+      "FAILED",
+      "1:0",
+      "00:00:08",
+      "probe snapshot/self-test pre-final"
+    ],
+    [
+      "51025",
+      "r2_fem_v2verify3",
+      "FAILED",
+      "1:0",
+      "00:00:08",
+      "probe snapshot/self-test pre-final"
+    ],
+    [
+      "51026",
+      "r2_fem_v2verify4",
+      "COMPLETED",
+      "0:0",
+      "00:00:08",
+      "final v2 probe 37 checks"
+    ],
+    [
+      "50910",
+      "pinnap_r2fdtdconv",
+      "RUNNING",
+      "n/a",
+      "running",
+      "pre-existing FDTD untouched"
+    ]
+  ],
+  "source_hashes": {
+    "src/fem_reference/__init__.py": "32affee2eda9846f578235d127ba82135ac629db0469332d668bdaff578f0fc7",
+    "src/fem_reference/geometry.py": "5c694a0aac1cd4c50be88d8c7f4f73a1a0f214afa9f1f9a7440ac14653d0ab96",
+    "src/fem_reference/fenics_solver.py": "004f87096e032552e2f0039c5ffd3e0fd84d53a2c77e0a0301c895adf2f2ce18",
+    "src/fem_reference/featextractnet_symmetric.py": "9f8d2acbd5a6441dbed2102f6d7a6d27d37669fe5ff1a4884f946a6ea44c02c7",
+    "scripts/exp_r2_thermal_fem.py": "c6fff713ff5ceaa74aadb6d2f27ff75cf2c08466dcda83ad5e371fb7e57e343c",
+    "scripts/probe_r2_thermal_fem.py": "63ed9aa8391c345c049666112ec03572030cbe5b871fe50d18b22f8a0d450d4d",
+    "scripts/exp_r2_fem_model_eval.py": "2973caffdd5bea29806ffad700026a6609b134a43e69b322077ea4a263e50ddc",
+    "scripts/probe_r2_fem_model_eval.py": "f84fa42894b125a50ad85ec0b641fb07f133e83aeccfbc334568b94fbe1ca340",
+    "scripts/sbatch/r2_thermal_fem.sbatch": "802aa5f0d82231f1eb488b117f345e14591f8bdafade0a5b15406cfb04d238ef",
+    "configs/r2_thermal_fem.json": "35464cf2357baf407e56f3266eeed175779656d32fb4b8cf5bb67da790816c0e"
+  }
+}

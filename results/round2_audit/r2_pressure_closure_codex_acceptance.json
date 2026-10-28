@@ -1,0 +1,32 @@
+{
+  "scope": "Codex bounded acceptance audit",
+  "artifact_hash_mismatches": [],
+  "prediction_hashes_match": true,
+  "coordinates_and_validity_match": true,
+  "metric_cells": 450,
+  "max_abs_metric_difference": 0,
+  "mms_review": "Passed nontrivial internal u/T perturbation, fixed Dirichlet DOFs, p+1 and relaxation0.6 through actual production solver",
+  "status": "accepted_exact_gauge_representative_study_and_nontrivial_MMS",
+  "coordinate_comparison": "same float32 inference inputs; reference coordinates float64",
+  "coordinate_max_abs_difference": 2.9802322387695312e-08,
+  "accepted_local": "2026-10-23",
+  "manifest_files_checked": 19,
+  "nontrivial_initial_residual": 1.982825683457229,
+  "nontrivial_iterations": 31,
+  "final_free_residual": 9.41020326626858e-13,
+  "slurm_verified": {
+    "51075": "COMPLETED 0:0",
+    "51078": "COMPLETED 0:0"
+  },
+  "historical_reference_identified": false,
+  "accepted_scope": [
+    "exact pressure constraint implementation and representative geometries17/46/96",
+    "polynomial assembly checks and nontrivial Newton convergence",
+    "30 frozen predictions and450 independently recomputed metrics"
+  ],
+  "remaining": [
+    "historical generator gauge remains unavailable",
+    "paper/SI/rebuttal integration and final reviewer still pending",
+    "FDTD50910 still running9/10"
+  ]
+}

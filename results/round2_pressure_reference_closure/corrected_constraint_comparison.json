@@ -1,0 +1,57 @@
+{
+  "task": "R3.16 constraint RHS correction / old-vs-new exact pressure gauge",
+  "created_local": "2026-10-23T11:18:59+08:00",
+  "bug": "Newton unknown is delta; old augmented RHS bottom was 0, so it enforced b^T delta=0 and preserved the initial integral; should be -bscale*C.",
+  "fix": "bottom RHS = -bscale*C; exact pressure-constant projection after each update; final convergence requires integral and free residual, not only update_rel.",
+  "old_constraints": [
+    -3.915915328112085e-09,
+    2.47271954301187e-09,
+    -1.0948243700514837e-10
+  ],
+  "corrected_constraints": [
+    -2.7755575615628914e-17,
+    -2.7755575615628914e-17,
+    -8.326672684688674e-17
+  ],
+  "field_comparison": {
+    "17": {
+      "u": 0.0,
+      "v": 0.0,
+      "T": 0.0,
+      "p_integral_max_abs_delta": 1.1285688494844237e-09,
+      "p_point_max_abs_delta": 2.220446049250313e-16,
+      "p_delta_std": 2.4334127195224725e-17
+    },
+    "46": {
+      "u": 0.0,
+      "v": 0.0,
+      "T": 0.0,
+      "p_integral_max_abs_delta": 7.033020277269486e-10,
+      "p_point_max_abs_delta": 1.1102230246251565e-16,
+      "p_delta_std": 2.276410049723696e-17
+    },
+    "96": {
+      "u": 0.0,
+      "v": 0.0,
+      "T": 0.0,
+      "p_integral_max_abs_delta": 3.138617143960687e-11,
+      "p_point_max_abs_delta": 1.1102230246251565e-16,
+      "p_delta_std": 2.202238941852184e-17
+    }
+  },
+  "model_metric_difference": {
+    "centered_re_max_abs": 3.469446951953614e-17,
+    "raw_re_max_abs": 1.7580316785670291e-09
+  },
+  "conclusion": "Only the pressure additive constant was wrong in the old production result; u/v/T and point gauge were unchanged; centered model metrics unchanged. Old results preserved, not deleted. Corrected production result is the canonical one.",
+  "old_snapshot": "audit_snapshots/uncorrected_production_51065/",
+  "corrected_files": {
+    "comparison_geom17_h004.json": "9687f1c68f4fe9184af5bde471a976c443dccd850f0c05864f81df70647355e7",
+    "comparison_geom46_h004.json": "a3206e79a36704c32a891147634877eb5061a63a0de31b3de26e74be1cb759c3",
+    "comparison_geom96_h004.json": "fa36b8dec26f268d7dd00c080b62c8926e8b4c31cab27383156ddfeb9246b916",
+    "fields_geom17_h004.npz": "23dd38cc891b2cb9809af0645df4838e0ef548452a88d4a4a6579195c92242d0",
+    "fields_geom46_h004.npz": "b0606dc86921d1f0d398dce1fec919de232117caffad3ed78ae11d5ba4017744",
+    "fields_geom96_h004.npz": "56ddebcbdc806a43e1c65e22149f59d626d199d031a2dcd9e61418d829c9ef7d",
+    "pilot_geom17_h004.json": "663a1d09e0bd8db74e98ae1c729b203e8cf5388fae505b9941de35acff09db97"
+  }
+}

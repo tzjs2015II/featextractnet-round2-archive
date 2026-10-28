@@ -1,0 +1,48 @@
+{
+  "sha": "23bc8d020d47f108b5bf8963e0305d0712d726b47b1343beca7e6bbbac57c38d",
+  "members": 677,
+  "missing": [],
+  "forbidden": [],
+  "n_forbidden": 0,
+  "json_bad": [],
+  "private": [],
+  "idx": 81,
+  "thermal_keys": [
+    "meshgraphnet",
+    "feat_extract",
+    "dgcnn",
+    "pipn",
+    "pointnet",
+    "mlp",
+    "pointnetpp",
+    "siren",
+    "pointtransformer",
+    "transolver"
+  ],
+  "thermal_siren_n": 5,
+  "transolver": true,
+  "acoustic_n": {
+    "mlp_c": 5,
+    "mlp_c_matched": 5,
+    "unif_acous": 5,
+    "fourier_c": 5,
+    "fourier_nc": 5,
+    "fno": 5,
+    "uno": 5
+  },
+  "paired": [
+    "mlp",
+    "pointnet",
+    "dgcnn",
+    "meshgraphnet",
+    "siren",
+    "pointtransformer",
+    "transolver"
+  ],
+  "table_counts": {
+    "thermal": 10,
+    "acoustic": 7,
+    "paired": 7
+  },
+  "all_pass": true
+}

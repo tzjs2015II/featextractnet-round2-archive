@@ -1,0 +1,94 @@
+Info    : [  0%] Difference                                                                                  
+Info    : [ 10%] Difference                                                                                  
+Info    : [ 20%] Difference                                                                                  
+Info    : [ 30%] Difference                                                                                  
+Info    : [ 40%] Difference                                                                                  
+Info    : [ 50%] Difference - Repeat intersection                                                                                
+Info    : [ 60%] Difference                                                                                  
+Info    : [ 70%] Difference                                                                                  
+Info    : [ 80%] Difference - Making faces                                                                                
+Info    : [ 90%] Difference - Adding holes                                                                                
+                                                                                
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 5 (Line)
+Info    : [ 10%] Meshing curve 6 (Line)
+Info    : [ 20%] Meshing curve 7 (Line)
+Info    : [ 30%] Meshing curve 8 (Line)
+Info    : [ 40%] Meshing curve 9 (Line)
+Info    : [ 50%] Meshing curve 10 (Line)
+Info    : [ 60%] Meshing curve 11 (Line)
+Info    : [ 60%] Meshing curve 12 (Line)
+Info    : [ 70%] Meshing curve 13 (Line)
+Info    : [ 80%] Meshing curve 14 (Line)
+Info    : [ 90%] Meshing curve 15 (Line)
+Info    : [100%] Meshing curve 16 (Line)
+Info    : Done meshing 1D (Wall 0.000579382s, CPU 0.000236s)
+Info    : Meshing 2D...
+Info    : Meshing surface 1 (Plane, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.0132971s, CPU 0.012759s)
+Info    : 808 nodes 1628 elements
+CONT_STAGE 0.01 2 4
+CONT_STAGE 0.1 2 6
+CONT_STAGE 0.5 2 6
+CONT_STAGE 1.0 2 7
+Info    : [  0%] Difference                                                                                  
+Info    : [ 10%] Difference                                                                                  
+Info    : [ 20%] Difference                                                                                  
+Info    : [ 30%] Difference                                                                                  
+Info    : [ 40%] Difference                                                                                  
+Info    : [ 50%] Difference - Repeat intersection                                                                                
+Info    : [ 60%] Difference                                                                                  
+Info    : [ 70%] Difference                                                                                  
+Info    : [ 80%] Difference - Making faces                                                                                
+Info    : [ 90%] Difference - Adding holes                                                                                
+                                                                                
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 5 (Line)
+Info    : [ 10%] Meshing curve 6 (Line)
+Info    : [ 20%] Meshing curve 7 (Line)
+Info    : [ 30%] Meshing curve 8 (Line)
+Info    : [ 40%] Meshing curve 9 (Line)
+Info    : [ 50%] Meshing curve 10 (Line)
+Info    : [ 60%] Meshing curve 11 (Line)
+Info    : [ 60%] Meshing curve 12 (Line)
+Info    : [ 70%] Meshing curve 13 (Line)
+Info    : [ 80%] Meshing curve 14 (Line)
+Info    : [ 90%] Meshing curve 15 (Line)
+Info    : [100%] Meshing curve 16 (Line)
+Info    : Done meshing 1D (Wall 0.000714018s, CPU 0.005597s)
+Info    : Meshing 2D...
+Info    : Meshing surface 1 (Plane, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.0130709s, CPU 0.100646s)
+Info    : 808 nodes 1628 elements
+CONT_STAGE 0.01 2 4
+CONT_STAGE 0.1 2 4
+CONT_STAGE 0.5 2 6
+CONT_STAGE 1.0 2 7
+EPS_SENSITIVITY [
+ {
+  "eps": 1e-09,
+  "reason": 2,
+  "p_mean": 1.0672430090026226e-08,
+  "p_std": 0.19856479025650992,
+  "div_l2": 0.16618151734379283,
+  "mass_flux": 4.975217422287584e-17,
+  "weak": {
+   "continuity": 9.306380436971571e-11,
+   "momentum": 0.00800943215257028,
+   "energy": 0.0017983904646359994
+  }
+ },
+ {
+  "eps": 1e-07,
+  "reason": 2,
+  "p_mean": -1.0367344607455373e-11,
+  "p_std": 0.19856477054158533,
+  "div_l2": 0.16618152900218228,
+  "mass_flux": 5.021126608028767e-17,
+  "weak": {
+   "continuity": 9.306379510802932e-09,
+   "momentum": 0.008009432769866919,
+   "energy": 0.0017983906080365011
+  }
+ }
+]

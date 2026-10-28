@@ -1,0 +1,82 @@
+{
+  "task": "pressure_gauge_fen_local_cpu_validation",
+  "protocol": "R2-THERMAL-REFERENCE-02 A",
+  "created_local": "2026-10-22T22:38:26+08:00",
+  "device": "cpu",
+  "n_seeds": 5,
+  "test_ids": [
+    17,
+    25,
+    32,
+    46,
+    47,
+    57,
+    66,
+    73,
+    83,
+    86,
+    96,
+    97,
+    98,
+    106,
+    109,
+    111,
+    113,
+    123,
+    126,
+    127
+  ],
+  "n_cases": 100,
+  "elapsed_s": 5.841,
+  "max_original_reproduction_abs_error": 7.152557373046875e-07,
+  "reproduction_tolerance": 1e-06,
+  "p_original_re": {
+    "min": 0.015511635875070172,
+    "max": 0.02999741591344285,
+    "mean": 0.02062959458041344
+  },
+  "p_centered_re": {
+    "min": 0.015080226040695425,
+    "max": 0.026809962253419906,
+    "mean": 0.019634371038298
+  },
+  "identity_max_relative_residual": 4.125689687188032e-15,
+  "bias": {
+    "min": -0.0029185093695678916,
+    "max": 0.0024888861240408003,
+    "mean": 0.0002240019864849414
+  },
+  "artifacts": {
+    "0": {
+      "checkpoint": "results\\round2_thermal_symmetric\\feat_extract\\seed0\\checkpoint_best.pth",
+      "checkpoint_sha256": "4ca109452729bbc8c5dd435e5ff770441e98bdef3a69818a8a1546817ed2649a",
+      "metrics": "results\\round2_thermal_symmetric\\feat_extract\\seed0\\metrics_seed0.json",
+      "metrics_sha256": "ba4d222605a3f05d96d3f7d755e3723be48c73553b54fa06c9d60e9ae6f18470"
+    },
+    "1": {
+      "checkpoint": "results\\round2_thermal_symmetric\\feat_extract\\seed1\\checkpoint_best.pth",
+      "checkpoint_sha256": "32ab5318d1b0529b402f2e5d575bf070b0633f70b58ae963821873829ccdea8e",
+      "metrics": "results\\round2_thermal_symmetric\\feat_extract\\seed1\\metrics_seed1.json",
+      "metrics_sha256": "f7ee8ece03d876e8c8e701dbaa4e81b623294820b2a43db11dc3648d42c4ee20"
+    },
+    "2": {
+      "checkpoint": "results\\round2_thermal_symmetric\\feat_extract\\seed2\\checkpoint_best.pth",
+      "checkpoint_sha256": "70110e3c6296447261188808d2d42d348e19221ea691b8ee6bfffe71e66e330a",
+      "metrics": "results\\round2_thermal_symmetric\\feat_extract\\seed2\\metrics_seed2.json",
+      "metrics_sha256": "2416f5c6b76bb8deae374b511ef5c55c765b3f444554671c6da27dd7ca2d41f0"
+    },
+    "3": {
+      "checkpoint": "results\\round2_thermal_symmetric\\feat_extract\\seed3\\checkpoint_best.pth",
+      "checkpoint_sha256": "f5c8d2e3f81d6bda7ff4f0732c633770ef9b11b632dc2060fc143c7001d8802a",
+      "metrics": "results\\round2_thermal_symmetric\\feat_extract\\seed3\\metrics_seed3.json",
+      "metrics_sha256": "c1af8b4548be2f8d8786e1291c7fcf2310f406b0669e653371c0272b5088ba9f"
+    },
+    "4": {
+      "checkpoint": "results\\round2_thermal_symmetric\\feat_extract\\seed4\\checkpoint_best.pth",
+      "checkpoint_sha256": "307a577c552af993f8ade96b00f0196b4fc0a8362911f7bc39126b4d0d4f48c7",
+      "metrics": "results\\round2_thermal_symmetric\\feat_extract\\seed4\\metrics_seed4.json",
+      "metrics_sha256": "dc3a6eac3737df7e0a6f85a23824db8588917d396fcc0120900e0e4d27aeafc2"
+    }
+  },
+  "note": "local CPU validation only; not canonical GPU output; graph not evaluated here"
+}

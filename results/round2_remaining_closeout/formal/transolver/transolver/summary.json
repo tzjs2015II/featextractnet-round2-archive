@@ -1,0 +1,151 @@
+{
+  "experiment_id": "T_T1_transolver",
+  "model": "transolver",
+  "pool_context": "legacy_index_bins",
+  "implementation_version": "R2-IMPL-01B",
+  "cuda_matmul_allow_tf32": false,
+  "cudnn_allow_tf32": false,
+  "model_label": "Transolver official irregular-mesh commit=75e0f67643806a81cd1d3f6adc88dd8c02416fe7, layers=5 hidden=256 heads=8 slices=32 mlp_ratio=1 dropout=0 gelu, Time_Input=False unified_pos=False",
+  "model_params": 1805260,
+  "split_version": "splits_thermal_v1_protocolA",
+  "n_seeds": 5,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "epochs": 500,
+  "lr": 0.001,
+  "agg": {
+    "re": {
+      "mean": {
+        "u": 0.07692762902851151,
+        "v": 0.05705616036634355,
+        "p": 0.020470042652902025,
+        "T": 0.018936134076074935
+      },
+      "std": {
+        "u": 0.0011664440720036541,
+        "v": 0.0013549144181355384,
+        "p": 0.0009927769552339327,
+        "T": 0.0008572021071636089
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "mae": {
+      "mean": {
+        "u": 0.0027226986929058603,
+        "v": 0.003389301999372492,
+        "p": 0.002393471108631148,
+        "T": 0.004291281504047362
+      },
+      "std": {
+        "u": 0.00015091649709581933,
+        "v": 0.00020487635337850183,
+        "p": 0.0003276473452531349,
+        "T": 0.0005670649716791791
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "max_err": {
+      "mean": {
+        "u": 0.04622165285050869,
+        "v": 0.08951156901195645,
+        "p": 0.03872873779386282,
+        "T": 0.09231419801712035
+      },
+      "std": {
+        "u": 0.0010846530719463875,
+        "v": 0.0031558430806915582,
+        "p": 0.0024807614946987665,
+        "T": 0.00714697243143389
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "re_bd": {
+      "mean": {
+        "u": null,
+        "v": null,
+        "p": 0.03553036903491017,
+        "T": 0.02143844062095097
+      },
+      "std": {
+        "u": null,
+        "v": null,
+        "p": 0.0006988121903325464,
+        "T": 0.002037688019628862
+      },
+      "n_per_field": {
+        "u": 0,
+        "v": 0,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "mae_bd": {
+      "mean": {
+        "u": 0.002087135099515335,
+        "v": 0.0038731951796098277,
+        "p": 0.00446487364937658,
+        "T": 0.004641600457539704
+      },
+      "std": {
+        "u": 0.00018665323465575083,
+        "v": 0.0008265252444541913,
+        "p": 0.00030341379723308965,
+        "T": 0.0005129816157157007
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    },
+    "max_bd": {
+      "mean": {
+        "u": 0.045053033083677294,
+        "v": 0.08563059505075217,
+        "p": 0.03872873779386282,
+        "T": 0.08932569384574889
+      },
+      "std": {
+        "u": 0.0009375642130237126,
+        "v": 0.004153869315347575,
+        "p": 0.0024807614946987665,
+        "T": 0.009663801772045422
+      },
+      "n_per_field": {
+        "u": 5,
+        "v": 5,
+        "p": 5,
+        "T": 5
+      }
+    }
+  },
+  "seed_files": [
+    "results/round2_remaining_closeout/formal/transolver/transolver/seed0/metrics_seed0.json",
+    "results/round2_remaining_closeout/formal/transolver/transolver/seed1/metrics_seed1.json",
+    "results/round2_remaining_closeout/formal/transolver/transolver/seed2/metrics_seed2.json",
+    "results/round2_remaining_closeout/formal/transolver/transolver/seed3/metrics_seed3.json",
+    "results/round2_remaining_closeout/formal/transolver/transolver/seed4/metrics_seed4.json"
+  ],
+  "s_per_epoch_mean": 0.7592384
+}

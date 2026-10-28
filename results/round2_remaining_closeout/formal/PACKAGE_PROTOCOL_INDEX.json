@@ -1,0 +1,1789 @@
+{
+  "task": "R2-REMAINING-FINALIZE-03",
+  "created_local": "2026-10-27T14:32:32+08:00",
+  "n": 81,
+  "entries": [
+    {
+      "family": "maininit",
+      "model": "fen_cgfonly_pm = CGF-only 参数匹配（scaling=1.660，1,152,970 参数 vs Full 1,149,512） [pool_context=symmetric] [init_mode=main_default]",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit\\fen_cgfonly_pm\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1152970,
+      "val_best": {
+        "epoch": 425,
+        "score": 0.04641573844535203
+      }
+    },
+    {
+      "family": "maininit",
+      "model": "fen_cgfonly_pm = CGF-only 参数匹配（scaling=1.660，1,152,970 参数 vs Full 1,149,512） [pool_context=symmetric] [init_mode=main_default]",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit\\fen_cgfonly_pm\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1152970,
+      "val_best": {
+        "epoch": 500,
+        "score": 0.04628062752993999
+      }
+    },
+    {
+      "family": "maininit",
+      "model": "fen_nocgf = 去 CGF（门控+compress），局部特征直接 concat global [pool_context=symmetric] [init_mode=main_default]",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit\\fen_nocgf\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 833224,
+      "val_best": {
+        "epoch": 450,
+        "score": 0.045015279884216476
+      }
+    },
+    {
+      "family": "maininit",
+      "model": "fen_nocgf = 去 CGF（门控+compress），局部特征直接 concat global [pool_context=symmetric] [init_mode=main_default]",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit\\fen_nocgf\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 833224,
+      "val_best": {
+        "epoch": 475,
+        "score": 0.04532982374696252
+      }
+    },
+    {
+      "family": "maininit",
+      "model": "fen_nocgf_pm = MLFE-only 参数匹配（scaling=1.175，1,144,209 参数 vs Full 1,149,512） [pool_context=symmetric] [init_mode=main_default]",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit\\fen_nocgf_pm\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1144209,
+      "val_best": {
+        "epoch": 400,
+        "score": 0.046923167344534375
+      }
+    },
+    {
+      "family": "maininit",
+      "model": "fen_nocgf_pm = MLFE-only 参数匹配（scaling=1.175，1,144,209 参数 vs Full 1,149,512） [pool_context=symmetric] [init_mode=main_default]",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit\\fen_nocgf_pm\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1144209,
+      "val_best": {
+        "epoch": 400,
+        "score": 0.04498972933906973
+      }
+    },
+    {
+      "family": "maininit",
+      "model": "fen_noshortcut = 去 head residual shortcut [pool_context=symmetric] [init_mode=main_default]",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit\\fen_noshortcut\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1146692,
+      "val_best": {
+        "epoch": 425,
+        "score": 0.045913209762455526
+      }
+    },
+    {
+      "family": "maininit",
+      "model": "fen_noshortcut = 去 head residual shortcut [pool_context=symmetric] [init_mode=main_default]",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit\\fen_noshortcut\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1146692,
+      "val_best": {
+        "epoch": 275,
+        "score": 0.04447045719578491
+      }
+    },
+    {
+      "family": "maininit",
+      "model": "fen_poolmax = 三统计池化 -> 仅 max（去 avg/var 通道） [pool_context=symmetric] [init_mode=main_default]",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit\\fen_poolmax\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1018440,
+      "val_best": {
+        "epoch": 425,
+        "score": 0.05623630431571909
+      }
+    },
+    {
+      "family": "maininit",
+      "model": "fen_poolmax = 三统计池化 -> 仅 max（去 avg/var 通道） [pool_context=symmetric] [init_mode=main_default]",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit\\fen_poolmax\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1018440,
+      "val_best": {
+        "epoch": 500,
+        "score": 0.04482925381442454
+      }
+    },
+    {
+      "family": "maininit",
+      "model": "fen_single128 = CGF-only 单尺度 128x3（历史 CGF† 421,960 参数移植） [pool_context=symmetric] [init_mode=main_default]",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit\\fen_single128\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 421960,
+      "val_best": {
+        "epoch": 500,
+        "score": 0.04965749214616466
+      }
+    },
+    {
+      "family": "maininit",
+      "model": "fen_single128 = CGF-only 单尺度 128x3（历史 CGF† 421,960 参数移植） [pool_context=symmetric] [init_mode=main_default]",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/main_ablation_maininit\\fen_single128\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 421960,
+      "val_best": {
+        "epoch": 300,
+        "score": 0.04566750139858042
+      }
+    },
+    {
+      "family": "kaiming",
+      "model": "fen_cgfonly_pm = CGF-only 参数匹配（scaling=1.660，1,152,970 参数 vs Full 1,149,512） [pool_context=symmetric]",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2\\fen_cgfonly_pm\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1152970,
+      "val_best": {
+        "epoch": 125,
+        "score": 0.05992048507196824
+      }
+    },
+    {
+      "family": "kaiming",
+      "model": "fen_cgfonly_pm = CGF-only 参数匹配（scaling=1.660，1,152,970 参数 vs Full 1,149,512） [pool_context=symmetric]",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2\\fen_cgfonly_pm\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1152970,
+      "val_best": {
+        "epoch": 475,
+        "score": 0.05464381401111905
+      }
+    },
+    {
+      "family": "kaiming",
+      "model": "fen_full = FeatExtractNet 结构（tri+CGF+shortcut，参数量对照 1,149,512） [pool_context=symmetric]",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2\\fen_full\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1149512,
+      "val_best": {
+        "epoch": 450,
+        "score": 0.05737499653500612
+      }
+    },
+    {
+      "family": "kaiming",
+      "model": "fen_full = FeatExtractNet 结构（tri+CGF+shortcut，参数量对照 1,149,512） [pool_context=symmetric]",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2\\fen_full\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1149512,
+      "val_best": {
+        "epoch": 150,
+        "score": 0.06075136976664087
+      }
+    },
+    {
+      "family": "kaiming",
+      "model": "fen_nocgf = 去 CGF（门控+compress），局部特征直接 concat global [pool_context=symmetric]",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2\\fen_nocgf\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 833224,
+      "val_best": {
+        "epoch": 375,
+        "score": 0.04847196228332279
+      }
+    },
+    {
+      "family": "kaiming",
+      "model": "fen_nocgf = 去 CGF（门控+compress），局部特征直接 concat global [pool_context=symmetric]",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2\\fen_nocgf\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 833224,
+      "val_best": {
+        "epoch": 500,
+        "score": 0.05127239695728251
+      }
+    },
+    {
+      "family": "kaiming",
+      "model": "fen_nocgf_pm = MLFE-only 参数匹配（scaling=1.175，1,144,209 参数 vs Full 1,149,512） [pool_context=symmetric]",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2\\fen_nocgf_pm\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1144209,
+      "val_best": {
+        "epoch": 450,
+        "score": 0.04835735888765166
+      }
+    },
+    {
+      "family": "kaiming",
+      "model": "fen_nocgf_pm = MLFE-only 参数匹配（scaling=1.175，1,144,209 参数 vs Full 1,149,512） [pool_context=symmetric]",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2\\fen_nocgf_pm\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1144209,
+      "val_best": {
+        "epoch": 475,
+        "score": 0.048475335534269984
+      }
+    },
+    {
+      "family": "kaiming",
+      "model": "fen_noshortcut = 去 head residual shortcut [pool_context=symmetric]",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2\\fen_noshortcut\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1146692,
+      "val_best": {
+        "epoch": 475,
+        "score": 0.04589825255142164
+      }
+    },
+    {
+      "family": "kaiming",
+      "model": "fen_noshortcut = 去 head residual shortcut [pool_context=symmetric]",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2\\fen_noshortcut\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1146692,
+      "val_best": {
+        "epoch": 475,
+        "score": 0.056034162072266205
+      }
+    },
+    {
+      "family": "kaiming",
+      "model": "fen_poolmax = 三统计池化 -> 仅 max（去 avg/var 通道） [pool_context=symmetric]",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2\\fen_poolmax\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1018440,
+      "val_best": {
+        "epoch": 450,
+        "score": 0.05942095351141348
+      }
+    },
+    {
+      "family": "kaiming",
+      "model": "fen_poolmax = 三统计池化 -> 仅 max（去 avg/var 通道） [pool_context=symmetric]",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2\\fen_poolmax\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1018440,
+      "val_best": {
+        "epoch": 475,
+        "score": 0.06189420449385581
+      }
+    },
+    {
+      "family": "kaiming",
+      "model": "fen_single128 = CGF-only 单尺度 128x3（历史 CGF† 421,960 参数移植） [pool_context=symmetric]",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2\\fen_single128\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 421960,
+      "val_best": {
+        "epoch": 450,
+        "score": 0.0590748994356699
+      }
+    },
+    {
+      "family": "kaiming",
+      "model": "fen_single128 = CGF-only 单尺度 128x3（历史 CGF† 421,960 参数移植） [pool_context=symmetric]",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/kaiming_si_r2\\fen_single128\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 421960,
+      "val_best": {
+        "epoch": 500,
+        "score": 0.046359342366344834
+      }
+    },
+    {
+      "family": "acoustic",
+      "model": "CondFourierMLP(levels=32, blocks=6, hidden=256) == fourier_c with doubled Fourier bandwidth",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3\\ab_L32\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 829953,
+      "val_best": {
+        "epoch": 550,
+        "score": 0.9736510910744329
+      }
+    },
+    {
+      "family": "acoustic",
+      "model": "CondFourierMLP(levels=32, blocks=6, hidden=256) == fourier_c with doubled Fourier bandwidth",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3\\ab_L32\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 829953,
+      "val_best": {
+        "epoch": 550,
+        "score": 0.988078100322848
+      }
+    },
+    {
+      "family": "acoustic",
+      "model": "CondFourierMLP(levels=8, blocks=6, hidden=256) == fourier_c with reduced Fourier bandwidth",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3\\ab_L8\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 805377,
+      "val_best": {
+        "epoch": 800,
+        "score": 1.0315515530688828
+      }
+    },
+    {
+      "family": "acoustic",
+      "model": "CondFourierMLP(levels=8, blocks=6, hidden=256) == fourier_c with reduced Fourier bandwidth",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3\\ab_L8\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 805377,
+      "val_best": {
+        "epoch": 900,
+        "score": 1.0223347412634787
+      }
+    },
+    {
+      "family": "acoustic",
+      "model": "CondFourierMLP(levels=16, blocks=6, hidden=256, no LayerNorm) == fourier_c minus LayerNorm",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3\\ab_nonorm\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 807425,
+      "val_best": {
+        "epoch": 850,
+        "score": 0.9913294319785722
+      }
+    },
+    {
+      "family": "acoustic",
+      "model": "CondFourierMLP(levels=16, blocks=6, hidden=256, no LayerNorm) == fourier_c minus LayerNorm",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3\\ab_nonorm\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 807425,
+      "val_best": {
+        "epoch": 950,
+        "score": 0.989593336642473
+      }
+    },
+    {
+      "family": "acoustic",
+      "model": "CondFourierMLP(levels=16, blocks=6, hidden=256, no residual) == fourier_c minus residual skip",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3\\ab_nores\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 813569,
+      "val_best": {
+        "epoch": 150,
+        "score": 0.9447800297821433
+      }
+    },
+    {
+      "family": "acoustic",
+      "model": "CondFourierMLP(levels=16, blocks=6, hidden=256, no residual) == fourier_c minus residual skip",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3\\ab_nores\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 813569,
+      "val_best": {
+        "epoch": 150,
+        "score": 0.9382956401130801
+      }
+    },
+    {
+      "family": "acoustic",
+      "model": "CondFourierMLP(levels=16, blocks=6, hidden=256, cond concat, fourier_layout=pointwise)",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3\\fourier_c\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 813569,
+      "val_best": {
+        "epoch": 750,
+        "score": 0.9797376469224431
+      }
+    },
+    {
+      "family": "acoustic",
+      "model": "CondFourierMLP(levels=16, blocks=6, hidden=256, cond concat, fourier_layout=pointwise)",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3\\fourier_c\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 813569,
+      "val_best": {
+        "epoch": 1000,
+        "score": 0.9796483810494246
+      }
+    },
+    {
+      "family": "acoustic",
+      "model": "FourierMLP(levels=16, blocks=6, hidden=256), unconditional, fourier_layout=pointwise",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3\\fourier_nc\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 813057,
+      "val_best": {
+        "epoch": 50,
+        "score": 1.0361395848019126
+      }
+    },
+    {
+      "family": "acoustic",
+      "model": "FourierMLP(levels=16, blocks=6, hidden=256), unconditional, fourier_layout=pointwise",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3\\fourier_nc\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 813057,
+      "val_best": {
+        "epoch": 100,
+        "score": 1.037132670621728
+      }
+    },
+    {
+      "family": "acoustic",
+      "model": "UnifiedNet(cond_dim=2, branch=unified, task=acoustic, soft route, fourier_layout=pointwise)",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3\\unif_acous\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1908504,
+      "val_best": {
+        "epoch": 150,
+        "score": 0.8471652919921823
+      }
+    },
+    {
+      "family": "acoustic",
+      "model": "UnifiedNet(cond_dim=2, branch=unified, task=acoustic, soft route, fourier_layout=pointwise)",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_corrected_r2_attempt3\\unif_acous\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1908504,
+      "val_best": {
+        "epoch": 200,
+        "score": 0.8592750599797637
+      }
+    },
+    {
+      "family": "matched",
+      "model": {
+        "name": "CoordMLP",
+        "hidden": 512,
+        "num_layers": 6,
+        "params": 1054212
+      },
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3\\bc\\seed3\\metrics_seed3.json",
+      "implementation_version": null,
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 600,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": null,
+      "n_val": null,
+      "norm": {
+        "source": "train-only z-score fit on the 10 train-subset geoms",
+        "x_mean": [
+          -0.0032184559386223555,
+          0.003448842791840434
+        ],
+        "x_std": [
+          0.624695897102356,
+          0.6252803206443787
+        ],
+        "y_mean": [
+          -5.326687642082106e-06,
+          0.0012050520163029432,
+          0.002807439537718892,
+          0.3228507936000824
+        ],
+        "y_std": [
+          0.06887034326791763,
+          0.11744168400764465,
+          0.20773378014564514,
+          0.2971595823764801
+        ]
+      },
+      "model_params": 1054212,
+      "val_best": {
+        "epoch": 575,
+        "score": 0.06090933693942837
+      }
+    },
+    {
+      "family": "matched",
+      "model": {
+        "name": "CoordMLP",
+        "hidden": 512,
+        "num_layers": 6,
+        "params": 1054212
+      },
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3\\bc\\seed4\\metrics_seed4.json",
+      "implementation_version": null,
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 600,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": null,
+      "n_val": null,
+      "norm": {
+        "source": "train-only z-score fit on the 10 train-subset geoms",
+        "x_mean": [
+          -0.0032184559386223555,
+          0.003448842791840434
+        ],
+        "x_std": [
+          0.624695897102356,
+          0.6252803206443787
+        ],
+        "y_mean": [
+          -5.326687642082106e-06,
+          0.0012050520163029432,
+          0.002807439537718892,
+          0.3228507936000824
+        ],
+        "y_std": [
+          0.06887034326791763,
+          0.11744168400764465,
+          0.20773378014564514,
+          0.2971595823764801
+        ]
+      },
+      "model_params": 1054212,
+      "val_best": {
+        "epoch": 600,
+        "score": 0.057715413877438976
+      }
+    },
+    {
+      "family": "matched",
+      "model": {
+        "name": "CoordMLP",
+        "hidden": 512,
+        "num_layers": 6,
+        "params": 1054212
+      },
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3\\bc_pde\\seed3\\metrics_seed3.json",
+      "implementation_version": null,
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 600,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": null,
+      "n_val": null,
+      "norm": {
+        "source": "train-only z-score fit on the 10 train-subset geoms",
+        "x_mean": [
+          -0.0032184559386223555,
+          0.003448842791840434
+        ],
+        "x_std": [
+          0.624695897102356,
+          0.6252803206443787
+        ],
+        "y_mean": [
+          -5.326687642082106e-06,
+          0.0012050520163029432,
+          0.002807439537718892,
+          0.3228507936000824
+        ],
+        "y_std": [
+          0.06887034326791763,
+          0.11744168400764465,
+          0.20773378014564514,
+          0.2971595823764801
+        ]
+      },
+      "model_params": 1054212,
+      "val_best": {
+        "epoch": 550,
+        "score": 0.16913485173856274
+      }
+    },
+    {
+      "family": "matched",
+      "model": {
+        "name": "CoordMLP",
+        "hidden": 512,
+        "num_layers": 6,
+        "params": 1054212
+      },
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3\\bc_pde\\seed4\\metrics_seed4.json",
+      "implementation_version": null,
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 600,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": null,
+      "n_val": null,
+      "norm": {
+        "source": "train-only z-score fit on the 10 train-subset geoms",
+        "x_mean": [
+          -0.0032184559386223555,
+          0.003448842791840434
+        ],
+        "x_std": [
+          0.624695897102356,
+          0.6252803206443787
+        ],
+        "y_mean": [
+          -5.326687642082106e-06,
+          0.0012050520163029432,
+          0.002807439537718892,
+          0.3228507936000824
+        ],
+        "y_std": [
+          0.06887034326791763,
+          0.11744168400764465,
+          0.20773378014564514,
+          0.2971595823764801
+        ]
+      },
+      "model_params": 1054212,
+      "val_best": {
+        "epoch": 575,
+        "score": 0.17398706170628642
+      }
+    },
+    {
+      "family": "matched",
+      "model": {
+        "name": "CoordMLP",
+        "hidden": 512,
+        "num_layers": 6,
+        "params": 1054212
+      },
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3\\supervised\\seed3\\metrics_seed3.json",
+      "implementation_version": null,
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 600,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": null,
+      "n_val": null,
+      "norm": {
+        "source": "train-only z-score fit on the 10 train-subset geoms",
+        "x_mean": [
+          -0.0032184559386223555,
+          0.003448842791840434
+        ],
+        "x_std": [
+          0.624695897102356,
+          0.6252803206443787
+        ],
+        "y_mean": [
+          -5.326687642082106e-06,
+          0.0012050520163029432,
+          0.002807439537718892,
+          0.3228507936000824
+        ],
+        "y_std": [
+          0.06887034326791763,
+          0.11744168400764465,
+          0.20773378014564514,
+          0.2971595823764801
+        ]
+      },
+      "model_params": 1054212,
+      "val_best": {
+        "epoch": 600,
+        "score": 0.05958171237733878
+      }
+    },
+    {
+      "family": "matched",
+      "model": {
+        "name": "CoordMLP",
+        "hidden": 512,
+        "num_layers": 6,
+        "params": 1054212
+      },
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/matched_r2_attempt3\\supervised\\seed4\\metrics_seed4.json",
+      "implementation_version": null,
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 600,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": null,
+      "n_val": null,
+      "norm": {
+        "source": "train-only z-score fit on the 10 train-subset geoms",
+        "x_mean": [
+          -0.0032184559386223555,
+          0.003448842791840434
+        ],
+        "x_std": [
+          0.624695897102356,
+          0.6252803206443787
+        ],
+        "y_mean": [
+          -5.326687642082106e-06,
+          0.0012050520163029432,
+          0.002807439537718892,
+          0.3228507936000824
+        ],
+        "y_std": [
+          0.06887034326791763,
+          0.11744168400764465,
+          0.20773378014564514,
+          0.2971595823764801
+        ]
+      },
+      "model_params": 1054212,
+      "val_best": {
+        "epoch": 475,
+        "score": 0.06325528214444408
+      }
+    },
+    {
+      "family": "siren",
+      "model": "SIRENNet(hidden=512, layers=6, omega_0=30) 1,054,212 params (= CoordMLP capacity)",
+      "seed": 0,
+      "metrics": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3\\siren\\seed0\\metrics_seed0.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1054212,
+      "val_best": {
+        "epoch": 500,
+        "score": 0.057531530981836124
+      }
+    },
+    {
+      "family": "siren",
+      "model": "SIRENNet(hidden=512, layers=6, omega_0=30) 1,054,212 params (= CoordMLP capacity)",
+      "seed": 1,
+      "metrics": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3\\siren\\seed1\\metrics_seed1.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1054212,
+      "val_best": {
+        "epoch": 375,
+        "score": 0.05632003373191301
+      }
+    },
+    {
+      "family": "siren",
+      "model": "SIRENNet(hidden=512, layers=6, omega_0=30) 1,054,212 params (= CoordMLP capacity)",
+      "seed": 2,
+      "metrics": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3\\siren\\seed2\\metrics_seed2.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1054212,
+      "val_best": {
+        "epoch": 500,
+        "score": 0.05579024114111534
+      }
+    },
+    {
+      "family": "siren",
+      "model": "SIRENNet(hidden=512, layers=6, omega_0=30) 1,054,212 params (= CoordMLP capacity)",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3\\siren\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1054212,
+      "val_best": {
+        "epoch": 425,
+        "score": 0.05719022956602638
+      }
+    },
+    {
+      "family": "siren",
+      "model": "SIRENNet(hidden=512, layers=6, omega_0=30) 1,054,212 params (= CoordMLP capacity)",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/siren_strict5_r2_attempt3\\siren\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1054212,
+      "val_best": {
+        "epoch": 475,
+        "score": 0.05552393825964102
+      }
+    },
+    {
+      "family": "pt",
+      "model": "PointTransformerBaseline(official PointTransformerConv, hidden=320, layers=3, k=16) 928,644 params",
+      "seed": 0,
+      "metrics": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3\\pointtransformer\\seed0\\metrics_seed0.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 928644,
+      "val_best": {
+        "epoch": 475,
+        "score": 0.10920464030517764
+      }
+    },
+    {
+      "family": "pt",
+      "model": "PointTransformerBaseline(official PointTransformerConv, hidden=320, layers=3, k=16) 928,644 params",
+      "seed": 1,
+      "metrics": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3\\pointtransformer\\seed1\\metrics_seed1.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 928644,
+      "val_best": {
+        "epoch": 450,
+        "score": 0.11364233735667317
+      }
+    },
+    {
+      "family": "pt",
+      "model": "PointTransformerBaseline(official PointTransformerConv, hidden=320, layers=3, k=16) 928,644 params",
+      "seed": 2,
+      "metrics": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3\\pointtransformer\\seed2\\metrics_seed2.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 928644,
+      "val_best": {
+        "epoch": 500,
+        "score": 0.10820496982545759
+      }
+    },
+    {
+      "family": "pt",
+      "model": "PointTransformerBaseline(official PointTransformerConv, hidden=320, layers=3, k=16) 928,644 params",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3\\pointtransformer\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 928644,
+      "val_best": {
+        "epoch": 425,
+        "score": 0.11082447340160555
+      }
+    },
+    {
+      "family": "pt",
+      "model": "PointTransformerBaseline(official PointTransformerConv, hidden=320, layers=3, k=16) 928,644 params",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/pointtransformer_strict5_r2_attempt3\\pointtransformer\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 928644,
+      "val_best": {
+        "epoch": 475,
+        "score": 0.10915913196560119
+      }
+    },
+    {
+      "family": "mlp",
+      "model": "CondCoordMLP(hidden=512, layers=6, cond concat) ~1.05M",
+      "seed": 0,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3\\mlp_c\\seed0\\metrics_seed0.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1053697,
+      "val_best": {
+        "epoch": 800,
+        "score": 0.9999713253689496
+      }
+    },
+    {
+      "family": "mlp",
+      "model": "CondCoordMLP(hidden=512, layers=6, cond concat) ~1.05M",
+      "seed": 1,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3\\mlp_c\\seed1\\metrics_seed1.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1053697,
+      "val_best": {
+        "epoch": 50,
+        "score": 1.0000546320408126
+      }
+    },
+    {
+      "family": "mlp",
+      "model": "CondCoordMLP(hidden=512, layers=6, cond concat) ~1.05M",
+      "seed": 2,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3\\mlp_c\\seed2\\metrics_seed2.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1053697,
+      "val_best": {
+        "epoch": 850,
+        "score": 0.9999911783971073
+      }
+    },
+    {
+      "family": "mlp",
+      "model": "CondCoordMLP(hidden=512, layers=6, cond concat) ~1.05M",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3\\mlp_c\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1053697,
+      "val_best": {
+        "epoch": 850,
+        "score": 0.9998542470723034
+      }
+    },
+    {
+      "family": "mlp",
+      "model": "CondCoordMLP(hidden=512, layers=6, cond concat) ~1.05M",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3\\mlp_c\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1053697,
+      "val_best": {
+        "epoch": 900,
+        "score": 0.9999875754726859
+      }
+    },
+    {
+      "family": "mlp",
+      "model": "CondCoordMLP(hidden=450, layers=6, cond concat) ~0.81M (capacity-matched to fourier_c)",
+      "seed": 0,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3\\mlp_c_matched\\seed0\\metrics_seed0.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 814501,
+      "val_best": {
+        "epoch": 750,
+        "score": 0.9999772644869105
+      }
+    },
+    {
+      "family": "mlp",
+      "model": "CondCoordMLP(hidden=450, layers=6, cond concat) ~0.81M (capacity-matched to fourier_c)",
+      "seed": 1,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3\\mlp_c_matched\\seed1\\metrics_seed1.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 814501,
+      "val_best": {
+        "epoch": 50,
+        "score": 1.0000630153690355
+      }
+    },
+    {
+      "family": "mlp",
+      "model": "CondCoordMLP(hidden=450, layers=6, cond concat) ~0.81M (capacity-matched to fourier_c)",
+      "seed": 2,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3\\mlp_c_matched\\seed2\\metrics_seed2.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 814501,
+      "val_best": {
+        "epoch": 1000,
+        "score": 1.000005330847126
+      }
+    },
+    {
+      "family": "mlp",
+      "model": "CondCoordMLP(hidden=450, layers=6, cond concat) ~0.81M (capacity-matched to fourier_c)",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3\\mlp_c_matched\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 814501,
+      "val_best": {
+        "epoch": 1000,
+        "score": 0.9983663769311796
+      }
+    },
+    {
+      "family": "mlp",
+      "model": "CondCoordMLP(hidden=450, layers=6, cond concat) ~0.81M (capacity-matched to fourier_c)",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/seed_extension/acoustic_mlp_strict5_r2_attempt3\\mlp_c_matched\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 814501,
+      "val_best": {
+        "epoch": 100,
+        "score": 1.000034291790757
+      }
+    },
+    {
+      "family": "transolver",
+      "model": "transolver",
+      "seed": 0,
+      "metrics": "results/round2_remaining_closeout/formal/transolver/transolver\\seed0\\metrics_seed0.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1805260,
+      "val_best": {
+        "epoch": 500,
+        "score": 0.04462453141216402
+      }
+    },
+    {
+      "family": "transolver",
+      "model": "transolver",
+      "seed": 1,
+      "metrics": "results/round2_remaining_closeout/formal/transolver/transolver\\seed1\\metrics_seed1.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1805260,
+      "val_best": {
+        "epoch": 325,
+        "score": 0.046017041193569634
+      }
+    },
+    {
+      "family": "transolver",
+      "model": "transolver",
+      "seed": 2,
+      "metrics": "results/round2_remaining_closeout/formal/transolver/transolver\\seed2\\metrics_seed2.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1805260,
+      "val_best": {
+        "epoch": 325,
+        "score": 0.04675759808895485
+      }
+    },
+    {
+      "family": "transolver",
+      "model": "transolver",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/formal/transolver/transolver\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1805260,
+      "val_best": {
+        "epoch": 450,
+        "score": 0.045170501832741496
+      }
+    },
+    {
+      "family": "transolver",
+      "model": "transolver",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/formal/transolver/transolver\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-01B",
+      "split_version": "splits_thermal_v1_protocolA",
+      "split_seed": 123,
+      "epochs": 500,
+      "lr": 0.001,
+      "val_eval_every": 25,
+      "n_train": 100,
+      "n_val": 15,
+      "norm": "train-only z-score (fit on 100 Protocol-A train geoms)",
+      "model_params": 1805260,
+      "val_best": {
+        "epoch": 500,
+        "score": 0.04618703641797829
+      }
+    },
+    {
+      "family": "fno_uno",
+      "model": "fno",
+      "seed": 0,
+      "metrics": "results/round2_remaining_closeout/fno_uno_strict5\\fno\\seed0\\metrics_seed0.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1052049,
+      "val_best": {
+        "epoch": 50,
+        "score": 1.0201436691884471
+      }
+    },
+    {
+      "family": "fno_uno",
+      "model": "fno",
+      "seed": 1,
+      "metrics": "results/round2_remaining_closeout/fno_uno_strict5\\fno\\seed1\\metrics_seed1.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1052049,
+      "val_best": {
+        "epoch": 50,
+        "score": 1.0218503273057755
+      }
+    },
+    {
+      "family": "fno_uno",
+      "model": "fno",
+      "seed": 2,
+      "metrics": "results/round2_remaining_closeout/fno_uno_strict5\\fno\\seed2\\metrics_seed2.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1052049,
+      "val_best": {
+        "epoch": 50,
+        "score": 1.0053070877324934
+      }
+    },
+    {
+      "family": "fno_uno",
+      "model": "fno",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/fno_uno_strict5\\fno\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1052049,
+      "val_best": {
+        "epoch": 50,
+        "score": 1.0392307898561077
+      }
+    },
+    {
+      "family": "fno_uno",
+      "model": "fno",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/fno_uno_strict5\\fno\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1052049,
+      "val_best": {
+        "epoch": 50,
+        "score": 1.0212027973321711
+      }
+    },
+    {
+      "family": "fno_uno",
+      "model": "uno",
+      "seed": 0,
+      "metrics": "results/round2_remaining_closeout/fno_uno_strict5\\uno\\seed0\\metrics_seed0.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1181601,
+      "val_best": {
+        "epoch": 250,
+        "score": 0.9762983782333597
+      }
+    },
+    {
+      "family": "fno_uno",
+      "model": "uno",
+      "seed": 1,
+      "metrics": "results/round2_remaining_closeout/fno_uno_strict5\\uno\\seed1\\metrics_seed1.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1181601,
+      "val_best": {
+        "epoch": 150,
+        "score": 0.9779553859631203
+      }
+    },
+    {
+      "family": "fno_uno",
+      "model": "uno",
+      "seed": 2,
+      "metrics": "results/round2_remaining_closeout/fno_uno_strict5\\uno\\seed2\\metrics_seed2.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1181601,
+      "val_best": {
+        "epoch": 450,
+        "score": 0.9535271067752484
+      }
+    },
+    {
+      "family": "fno_uno",
+      "model": "uno",
+      "seed": 3,
+      "metrics": "results/round2_remaining_closeout/fno_uno_strict5\\uno\\seed3\\metrics_seed3.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1181601,
+      "val_best": {
+        "epoch": 200,
+        "score": 0.9434937203380911
+      }
+    },
+    {
+      "family": "fno_uno",
+      "model": "uno",
+      "seed": 4,
+      "metrics": "results/round2_remaining_closeout/fno_uno_strict5\\uno\\seed4\\metrics_seed4.json",
+      "implementation_version": "R2-IMPL-04B",
+      "split_version": "acoustic_protocolA_v1",
+      "split_seed": null,
+      "epochs": 1000,
+      "lr": 0.001,
+      "val_eval_every": 50,
+      "n_train": 6,
+      "n_val": 1,
+      "norm": "p_total pooled z-score + coord affine [-1,1], fit on 6 train cases only (fit_stats_cases)",
+      "model_params": 1181601,
+      "val_best": {
+        "epoch": 250,
+        "score": 0.9656982083895645
+      }
+    }
+  ]
+}
