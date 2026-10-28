@@ -1,8 +1,8 @@
-# FeatExtractNet round-2 standalone reproducible archive
+# FeatExtractNet standalone reproducible archive
 
-This repository is the **standalone, self-contained reproducibility archive for the
-second-round revision of FeatExtractNet**. It freezes, in one public place, everything
-needed to understand and reproduce the results reported in the revised manuscript:
+This repository is the **standalone, self-contained reproducibility archive for
+FeatExtractNet**. It freezes, in one public place, everything
+needed to understand and reproduce the results reported in the manuscript:
 
 - the model source code and experiment scripts;
 - the configuration and geometry/split files;
